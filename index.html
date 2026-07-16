@@ -1135,35 +1135,28 @@ footer {
   </div>
 
   <ul class="nav-links" id="navLinks">
-      <li><a id="nl-home"     onclick="showPage('home')"     class="active">Home</a></li>
-      <li><a id="nl-about"    onclick="showPage('about')">About</a></li>
-      <li><a id="nl-services" onclick="showPage('services')">Services</a></li>
-      <li class="nav-dropdown" id="loansDropdown">
-        <a onclick="toggleNavDropdown('loansDropdown')">Loans ▾</a>
-        <ul class="nav-dropdown-menu">
-          <li><a href="business-loans.html">Business Loans</a></li>
-        </ul>
-      </li>
-      <li class="nav-dropdown" id="insDropdown">
-        <a onclick="toggleNavDropdown('insDropdown')">Insurance ▾</a>
-        <ul class="nav-dropdown-menu">
-          <li><a href="two-wheeler-third-party-insurance.html">2W Insurance</a></li>
-        </ul>
-      </li>
-      <li><a id="nl-contact" onclick="showPage('contact')" class="nav-cta">Get In Touch</a></li>
-    </ul>    </li>
-      <li style="position:relative;" onmouseenter="document.getElementById('insDD').style.display='block'" onmouseleave="document.getElementById('insDD').style.display='none'">
-        <a href="#" onclick="return false;" style="cursor:pointer;">Insurance ▾</a>
-        <ul id="insDD" style="display:none;position:absolute;top:100%;left:0;background:#1A2F52;min-width:190px;list-style:none;margin:0;padding:8px 0;border-radius:8px;box-shadow:0 10px 24px rgba(0,0,0,0.35);z-index:200;">
-          <li><a href="two-wheeler-third-party-insurance.html" style="display:block;padding:10px 16px;white-space:nowrap;color:#F8F5EE;">2W Insurance</a></li>
-        </ul>
-      </li>      <li><a id="nl-contact" onclick="showPage('contact')" class="nav-cta">Get In Touch</a></li>
-    </ul>
+    <li><a id="nl-home" onclick="showPage('home')" class="active">Home</a></li>
+    <li><a id="nl-about" onclick="showPage('about')">About</a></li>
+    <li><a id="nl-services" onclick="showPage('services')">Services</a></li>
+    <li class="nav-dropdown" id="loansDropdown">
+      <a onclick="toggleNavDropdown('loansDropdown')">Loans ▾</a>
+      <ul class="nav-dropdown-menu">
+        <li><a href="business-loans.html">Business Loans</a></li>
+      </ul>
+    </li>
+    <li class="nav-dropdown" id="insDropdown">
+      <a onclick="toggleNavDropdown('insDropdown')">Insurance ▾</a>
+      <ul class="nav-dropdown-menu">
+        <li><a href="two-wheeler-third-party-insurance.html">2W Insurance</a></li>
+      </ul>
+    </li>
+    <li><a id="nl-contact" onclick="showPage('contact')" class="nav-cta">Get In Touch</a></li>
+  </ul>
+
   <button class="hamburger" id="hbg" onclick="toggleMobileNav()" aria-label="Toggle menu">
-    <span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span>
   </button>
 </nav>
-
 <!-- Mobile nav -->
 <div class="mobile-nav" id="mobileNav">
     <a onclick="showPage('home');closeMobileNav()">Home</a>
