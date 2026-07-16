@@ -229,35 +229,36 @@ nav {
 
 /* Desktop links */
 .nav-links {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  list-style: none;
-}
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+      height: 100%;
+    }
+    .nav-links li { display: flex; align-items: center; height: 100%; }
+    .nav-links a {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      transition: color 0.2s;
+      cursor: pointer;
+    }
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--gold); }
 
-.nav-links a {
-  color: var(--muted);
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: 0.3px;
-  transition: color 0.2s;
-  cursor: pointer;
-}
-
-.nav-links a:hover,
-.nav-links a.active { color: var(--gold); }
-
-.nav-cta {
-  background: var(--gold);
-  color: var(--navy) !important;
-  padding: 8px 18px;
-  border-radius: 4px;
-  font-weight: 600 !important;
-}
-
-.nav-cta:hover { background: var(--gold-light) !important; }
-
+    .nav-cta {
+      background: var(--gold);
+      color: var(--navy) !important;
+      padding: 8px 18px;
+      border-radius: 4px;
+      font-weight: 600 !important;
+    }
+    .nav-cta:hover { background: var(--gold-light) !important; }
 /* Hamburger (mobile) */
 .hamburger {
   display: none;
@@ -1086,8 +1087,7 @@ footer {
   .cta-channels { gap: 1rem; }
   .cta-card { min-width: 140px; padding: 18px 16px; }
      /* Nav dropdowns */
-   .nav-dropdown { position: relative; }
-    .nav-dropdown > a { cursor: pointer; line-height: var(--nav-h); }
+    .nav-dropdown { position: relative; }
     .nav-dropdown-menu {
       display: none;
       position: absolute;
@@ -1103,24 +1103,14 @@ footer {
       z-index: 500;
     }
     .nav-dropdown.open .nav-dropdown-menu { display: block; }
-    .nav-dropdown-menu li { width: 100%; }
+    .nav-dropdown-menu li { height: auto; }
     .nav-dropdown-menu li a {
-      display: block;
+      height: auto;
       padding: 10px 16px;
       white-space: nowrap;
       color: var(--cream);
     }
-    .nav-dropdown-menu li a:hover { background: rgba(255,255,255,0.06); }    }
-    .nav-dropdown:hover .nav-dropdown-menu,
-    .nav-dropdown:focus-within .nav-dropdown-menu { display: block !important; }
-    .nav-dropdown-menu li a {
-      display: block;
-      padding: 10px 16px;
-      white-space: nowrap;
-      color: inherit;
-    }
     .nav-dropdown-menu li a:hover { background: rgba(255,255,255,0.06); }
-}
 </style>
 </head>
 <body>
