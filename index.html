@@ -1087,12 +1087,12 @@ footer {
   .cta-card { min-width: 140px; padding: 18px 16px; }
      /* Nav dropdowns */
     .nav-dropdown { position: relative; }
-    .nav-dropdown-toggle { cursor: pointer; }
+    .nav-dropdown > a { cursor: pointer; }
     .nav-dropdown-menu {
-      display: none !important;
+      display: none;
       position: absolute;
       top: 100%;
-      left: 0;
+      right: 0;
       background: var(--navy-light);
       min-width: 190px;
       list-style: none;
@@ -1100,8 +1100,17 @@ footer {
       padding: 8px 0;
       border-radius: 8px;
       box-shadow: 0 10px 24px rgba(0,0,0,0.35);
-      z-index: 200;
+      z-index: 500;
     }
+    .nav-dropdown.open .nav-dropdown-menu { display: block; }
+    .nav-dropdown-menu li { width: 100%; }
+    .nav-dropdown-menu li a {
+      display: block;
+      padding: 10px 16px;
+      white-space: nowrap;
+      color: var(--cream);
+    }
+    .nav-dropdown-menu li a:hover { background: rgba(255,255,255,0.06); }    }
     .nav-dropdown:hover .nav-dropdown-menu,
     .nav-dropdown:focus-within .nav-dropdown-menu { display: block !important; }
     .nav-dropdown-menu li a {
@@ -1129,12 +1138,20 @@ footer {
       <li><a id="nl-home"     onclick="showPage('home')"     class="active">Home</a></li>
       <li><a id="nl-about"    onclick="showPage('about')">About</a></li>
       <li><a id="nl-services" onclick="showPage('services')">Services</a></li>
-      <li style="position:relative;" onmouseenter="document.getElementById('loansDD').style.display='block'" onmouseleave="document.getElementById('loansDD').style.display='none'">
-        <a href="#" onclick="return false;" style="cursor:pointer;">Loans ▾</a>
-        <ul id="loansDD" style="display:none;position:absolute;top:100%;left:0;background:#1A2F52;min-width:190px;list-style:none;margin:0;padding:8px 0;border-radius:8px;box-shadow:0 10px 24px rgba(0,0,0,0.35);z-index:200;">
-          <li><a href="business-loans.html" style="display:block;padding:10px 16px;white-space:nowrap;color:#F8F5EE;>Business Loans</a></li>
+      <li class="nav-dropdown" id="loansDropdown">
+        <a onclick="toggleNavDropdown('loansDropdown')">Loans ▾</a>
+        <ul class="nav-dropdown-menu">
+          <li><a href="business-loans.html">Business Loans</a></li>
         </ul>
       </li>
+      <li class="nav-dropdown" id="insDropdown">
+        <a onclick="toggleNavDropdown('insDropdown')">Insurance ▾</a>
+        <ul class="nav-dropdown-menu">
+          <li><a href="two-wheeler-third-party-insurance.html">2W Insurance</a></li>
+        </ul>
+      </li>
+      <li><a id="nl-contact" onclick="showPage('contact')" class="nav-cta">Get In Touch</a></li>
+    </ul>    </li>
       <li style="position:relative;" onmouseenter="document.getElementById('insDD').style.display='block'" onmouseleave="document.getElementById('insDD').style.display='none'">
         <a href="#" onclick="return false;" style="cursor:pointer;">Insurance ▾</a>
         <ul id="insDD" style="display:none;position:absolute;top:100%;left:0;background:#1A2F52;min-width:190px;list-style:none;margin:0;padding:8px 0;border-radius:8px;box-shadow:0 10px 24px rgba(0,0,0,0.35);z-index:200;">
@@ -2165,6 +2182,15 @@ footer {
      ============================================================ -->
 <script>
 /* Page switching */
+     function toggleNavDropdown(id) {
+      document.querySelectorAll('.nav-dropdown.open').forEach(function(el){ if (el.id !== id) el.classList.remove('open'); });
+      document.getElementById(id).classList.toggle('open');
+    }
+    document.addEventListener('click', function(e){
+      if (!e.target.closest('.nav-dropdown')) {
+        document.querySelectorAll('.nav-dropdown.open').forEach(function(el){ el.classList.remove('open'); });
+      }
+    });
 function showPage(id) {
   document.querySelectorAll('.page').forEach(function(p) {
     p.classList.remove('active');
