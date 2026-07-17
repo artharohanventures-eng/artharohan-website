@@ -950,6 +950,62 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,68,0.12);padding
   </div>
 </div>
 
+     <!-- ============================================================
+     EMI CALCULATOR
+     ============================================================ -->
+<div class="wrap wrap--cream">
+  <div class="inner">
+    <span class="eyebrow">Free Tool</span>
+    <h2 class="h2">Calculate Your Business Loan EMI</h2>
+    <p class="lead">Enter your loan amount, interest rate, and tenure to see your estimated monthly EMI instantly. No sign-up, no data stored.</p>
+
+    <div style="max-width:480px;margin-top:2rem;background:var(--white);padding:2rem;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.06);">
+      <div style="margin-bottom:1.2rem;">
+        <label style="display:block;font-size:0.85rem;font-weight:600;margin-bottom:0.4rem;">Loan Amount (₹)</label>
+        <input type="number" id="emiAmount" value="500000" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px;font-size:1rem;">
+      </div>
+      <div style="margin-bottom:1.2rem;">
+        <label style="display:block;font-size:0.85rem;font-weight:600;margin-bottom:0.4rem;">Interest Rate (% per year)</label>
+        <input type="number" id="emiRate" value="14" step="0.1" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px;font-size:1rem;">
+      </div>
+      <div style="margin-bottom:1.5rem;">
+        <label style="display:block;font-size:0.85rem;font-weight:600;margin-bottom:0.4rem;">Tenure (months)</label>
+        <input type="number" id="emiTenure" value="36" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px;font-size:1rem;">
+      </div>
+      <button onclick="calculateEMI()" class="btn-gold" style="width:100%;padding:12px;border:none;border-radius:6px;font-weight:700;font-size:1rem;cursor:pointer;">Calculate EMI</button>
+
+      <div id="emiResult" style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid #eee;display:none;">
+        <p style="font-size:0.85rem;color:var(--muted);margin-bottom:0.3rem;">Your Estimated Monthly EMI</p>
+        <p style="font-size:2rem;font-weight:700;color:var(--gold);margin-bottom:1rem;" id="emiValue"></p>
+        <p style="font-size:0.85rem;color:var(--muted);">Total Interest: <strong id="emiInterest"></strong></p>
+        <p style="font-size:0.85rem;color:var(--muted);">Total Payment: <strong id="emiTotal"></strong></p>
+      </div>
+    </div>
+    <p style="font-size:0.78rem;color:var(--muted);margin-top:1rem;max-width:480px;">This is an estimate only. Actual EMI depends on lender, processing fees, and final approved terms. <a href="#enquiry-form" style="color:var(--gold);">Talk to us</a> for exact figures.</p>
+  </div>
+</div>
+
+<script>
+function calculateEMI(){
+  var P = parseFloat(document.getElementById('emiAmount').value);
+  var annualRate = parseFloat(document.getElementById('emiRate').value);
+  var N = parseFloat(document.getElementById('emiTenure').value);
+  if(!P || !annualRate || !N || P<=0 || annualRate<=0 || N<=0){
+    alert('Please enter valid positive numbers in all fields.');
+    return;
+  }
+  var R = annualRate / 12 / 100;
+  var emi = (P * R * Math.pow(1+R, N)) / (Math.pow(1+R, N) - 1);
+  var totalPayment = emi * N;
+  var totalInterest = totalPayment - P;
+
+  document.getElementById('emiValue').textContent = '₹' + Math.round(emi).toLocaleString('en-IN');
+  document.getElementById('emiInterest').textContent = '₹' + Math.round(totalInterest).toLocaleString('en-IN');
+  document.getElementById('emiTotal').textContent = '₹' + Math.round(totalPayment).toLocaleString('en-IN');
+  document.getElementById('emiResult').style.display = 'block';
+}
+</script>
+
 
 <!-- ============================================================
      ENQUIRY FORM + WA BUTTON
