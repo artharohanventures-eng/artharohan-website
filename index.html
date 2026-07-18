@@ -1145,9 +1145,10 @@ footer {
 <!-- ============================================================
      NAV
      ============================================================ -->
-<nav>
+
+     <nav>
   <div class="nav-logo" onclick="showPage('home')">
-    <div class="nav-mark">आ</div>
+    <div class="nav-mark">अ</div>
     <span class="nav-brand">ARTHAROHAN</span>
   </div>
 
@@ -1162,31 +1163,31 @@ footer {
       </ul>
     </li>
     <li class="nav-dropdown" id="insDropdown">
-      <a onclick="toggleNavDropdown('insDropdown')">Insurance ▾</a>
+      <a onclick="toggleNavDropdown('insDropdown')">Motor Insurance ▾</a>
       <ul class="nav-dropdown-menu">
         <li><a href="two-wheeler-third-party-insurance.html">2W Insurance</a></li>
-
-          <li><a href="four-wheeler-third-party-insurance.html">4W Insurance</a></li>
+        <li><a href="four-wheeler-third-party-insurance.html">4W Insurance</a></li>
+      </ul>
+    </li>
+    <li class="nav-dropdown" id="lifeDropdown">
+      <a onclick="toggleNavDropdown('lifeDropdown')">Life Insurance ▾</a>
+      <ul class="nav-dropdown-menu">
+        <li><a href="term-life-insurance.html">Term Plan</a></li>
       </ul>
     </li>
     <li><a id="nl-contact" onclick="showPage('contact')" class="nav-cta">Get In Touch</a></li>
-  </ul>
-
-  <button class="hamburger" id="hbg" onclick="toggleMobileNav()" aria-label="Toggle menu">
-    <span></span><span></span><span></span><span></span>
-  </button>
-</nav>
-<!-- Mobile nav -->
+ 
+  <!-- Mobile nav -->
 <div class="mobile-nav" id="mobileNav">
-    <a onclick="showPage('home');closeMobileNav()">Home</a>
-    <a onclick="showPage('about');closeMobileNav()">About</a>
-    <a onclick="showPage('services');closeMobileNav()">Services</a>
-         <a href="business-loans.html" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Business Loans</a>
-    <a href="two-wheeler-third-party-insurance.html" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">2W Insurance</a>
-     <a href="four-wheeler-third-party-insurance.html" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">4W Insurance</a>
-    <a onclick="showPage('contact');closeMobileNav()" class="nav-cta">Get In Touch</a>
-     
-  </div>
+  <a onclick="showPage('home');closeMobileNav()">Home</a>
+  <a onclick="showPage('about');closeMobileNav()">About</a>
+  <a onclick="showPage('services');closeMobileNav()">Services</a>
+  <a href="business-loans.html" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Business Loans</a>
+  <a href="two-wheeler-third-party-insurance.html" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">2W Insurance</a>
+  <a href="four-wheeler-third-party-insurance.html" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">4W Insurance</a>
+  <a href="term-life-insurance.html" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Term Plan</a>
+  <a onclick="showPage('contact');closeMobileNav()" class="nav-cta">Get In Touch</a>
+     </div>
 
 <!-- ============================================================
      HOME PAGE
