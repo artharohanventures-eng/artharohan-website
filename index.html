@@ -231,11 +231,15 @@ nav {
 .nav-links {
       display: flex;
       align-items: center;
-      gap: 2rem;
+      gap: 1.1rem;
       list-style: none;
       height: 100%;
     }
-    .nav-links li { display: flex; align-items: center; height: 100%; }
+    .nav-links li { display: flex; align-items: center; height: 100%;
+}
+.nav-links li > a {
+  white-space: nowrap;
+}
     .nav-links li.nav-dropdown { display: flex; }
     .nav-links li.nav-dropdown .nav-dropdown-menu { display: none; }
     .nav-links li.nav-dropdown.open .nav-dropdown-menu { display: block; }
