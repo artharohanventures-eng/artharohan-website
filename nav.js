@@ -29,6 +29,22 @@
    ============================================================ */
 
 (function () {
+  // Inject the CSS needed for dropdowns/mobile menu to work correctly,
+  // so no page ever needs to have this copied into its own <style> block.
+  if (!document.getElementById("nav-shared-styles")) {
+    var css = document.createElement("style");
+    css.id = "nav-shared-styles";
+    css.textContent =
+      ".nav-links li.nav-dropdown{display:flex;}" +
+      ".nav-dropdown{position:relative;}" +
+      ".nav-dropdown-menu{display:none;position:absolute;top:100%;right:0;background:var(--navy-light);min-width:190px;list-style:none;margin:0;padding:8px 0;border-radius:8px;box-shadow:0 10px 24px rgba(0,0,0,0.35);z-index:500;}" +
+      ".nav-dropdown.open .nav-dropdown-menu{display:block;}" +
+      ".nav-dropdown-menu li{height:auto;}" +
+      ".nav-dropdown-menu li a{height:auto;padding:10px 16px;white-space:nowrap;color:var(--cream);}" +
+      ".nav-dropdown-menu li a:hover{background:rgba(255,255,255,0.06);}";
+    document.head.appendChild(css);
+  }
+
   var current = window.SITE_NAV_CURRENT || "";
   var isHome = !!window.SITE_NAV_IS_HOME;
 
