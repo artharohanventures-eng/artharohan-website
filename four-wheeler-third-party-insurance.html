@@ -220,34 +220,12 @@ footer{padding:36px 5%;text-align:center;background:var(--navy);border-top:1px s
 </head>
 <body>
 
-<nav>
-  <a class="nav-logo" href="https://artharohan.in">
-    <div class="nav-mark">अ</div>
-    <span class="nav-brand">ARTHAROHAN</span>
-  </a>
-  <ul class="nav-links">
-    <li><a href="https://artharohan.in">Home</a></li>
-    <li><a href="https://artharohan.in/#about">About</a></li>
-    <li><a href="https://artharohan.in/#services">Services</a></li>
-    <li><a href="https://artharohan.in/business-loans.html">Business Loans</a></li>
-    <li><a href="https://artharohan.in/two-wheeler-third-party-insurance.html">2W Insurance</a></li>
-    <li><a class="nav-active" href="#">4W Insurance</a></li>
-    <li><a class="nav-cta" href="https://artharohan.in/#contact">Get In Touch</a></li>
-  </ul>
-  <button class="hamburger" id="hbg" onclick="toggleMobileNav()" aria-label="Toggle menu">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-
-<div class="mobile-nav" id="mobileNav">
-  <a href="https://artharohan.in">Home</a>
-  <a href="https://artharohan.in/#about">About</a>
-  <a href="https://artharohan.in/#services">Services</a>
-  <a href="https://artharohan.in/business-loans.html">Business Loans</a>
-  <a href="https://artharohan.in/two-wheeler-third-party-insurance.html">2W Insurance</a>
-  <a href="#" style="color:var(--gold);font-weight:600">4W Insurance</a>
-  <a href="https://artharohan.in/#contact" class="nav-cta">Get In Touch</a>
-</div>
+<div id="site-nav"></div>
+<script>
+  var SITE_NAV_CURRENT = "four-wheeler";
+  var SITE_NAV_IS_HOME = false;
+</script>
+<script src="nav.js"></script>
 
 <!-- ============================================================
      HERO
