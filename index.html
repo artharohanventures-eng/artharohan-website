@@ -2317,8 +2317,10 @@ function toggleMobileNav() {
 }
 
 function closeMobileNav() {
-  document.getElementById('mobileNav').classList.remove('open');
-  document.getElementById('hbg').classList.remove('open');
+  var mn = document.getElementById('mobileNav');
+  var hb = document.getElementById('hbg');
+  if (mn) mn.classList.remove('open');
+  if (hb) hb.classList.remove('open');
 }
      </script>
 <style>
