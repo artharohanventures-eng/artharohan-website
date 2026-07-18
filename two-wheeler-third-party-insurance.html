@@ -101,34 +101,12 @@
 </head>
 <body>
 
-<nav>
-  <div class="nav-brand">ARTHAROHAN</div>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="index.html">About</a></li>
-    <li><a href="index.html">Services</a></li>
-    <li><a href="business-loans.html">Business Loans</a></li>
-    <li><a href="two-wheeler-third-party-insurance.html" style="color:var(--gold);">2W Insurance</a></li>
-
-  <li><a href="four-wheeler-third-party-insurance.html">4W Insurance</a></li>
-    <li><a href="index.html" class="nav-cta">Get In Touch</a></li>
-  </ul>
-  <button class="hamburger" id="hbg" onclick="toggleMobileNav()" aria-label="Toggle menu">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-
-  <div class="mobile-nav" id="mobileNav">
-  <a href="index.html">Home</a>
-  <a href="index.html">About</a>
-  <a href="index.html">Services</a>
-      <a href="business-loans.html">Business Loans</a>
-  <a href="#" style="color:var(--gold);font-weight:600">2W Insurance</a>
-    <a href="four-wheeler-third-party-insurance.html" style="color:var(--gold);font-weight:600">4W Insurance</a>
-
-  <a href="index.html" class="nav-cta">Get In Touch</a>
-</div>
-
+<div id="site-nav"></div>
+<script>
+  var SITE_NAV_CURRENT = "two-wheeler";
+  var SITE_NAV_IS_HOME = false;
+</script>
+<script src="nav.js"></script>
 <section class="hero">
   <div class="hero-tag">📍 Delhi NCR · Mandatory Cover</div>
   <h1>Two Wheeler Third Party Insurance — Explained Without Jargon</h1>
