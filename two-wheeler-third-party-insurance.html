@@ -32,6 +32,8 @@
     flex-wrap:wrap;
   }
   .nav-brand{font-size:20px;font-weight:bold;color:var(--gold);letter-spacing:1px;}
+  .nav-logo{display:flex;align-items:center;gap:10px;cursor:pointer;}
+.nav-mark{width:36px;height:36px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:18px;line-height:1;}
   .nav-links{list-style:none;display:flex;gap:24px;flex-wrap:wrap;}
   .nav-links a{color:var(--text);font-size:15px;}
   .nav-links a:hover{color:var(--gold);}
@@ -202,15 +204,6 @@
 </footer>
 
 <a href="https://wa.me/917838355855" class="whatsapp-float">💬</a>
-  <script>
-function toggleMobileNav(){
-  var mn = document.getElementById('mobileNav');
-  var hb = document.getElementById('hbg');
-  var open = mn.classList.contains('open');
-  mn.classList.toggle('open', !open);
-  hb.classList.toggle('open', !open);
-}
-</script>
-
+  
 </body>
 </html>
