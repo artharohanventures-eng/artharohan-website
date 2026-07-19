@@ -50,6 +50,7 @@
 
   var groupOf = {
     "business-loans": "loans",
+     "car-loan": "loans",
     "real-estate": "loans",
     "two-wheeler": "motor",
     "four-wheeler": "motor",
@@ -89,9 +90,11 @@
         '<li>' + about + '</li>' +
         '<li>' + services + '</li>' +
         '<li class="nav-dropdown" id="loansDropdown">' +
+     
           '<a onclick="toggleNavDropdown(\'loansDropdown\')"' + dropCls("loans") + '>Loans \u25be</a>' +
           '<ul class="nav-dropdown-menu">' +
             '<li><a href="business-loans.html"' + cls("business-loans") + '>Business Loans</a></li>' +
+     '<li><a href="car-loan.html"' + cls("car-loan") + '>Car Loan</a></li>' +
           '</ul>' +
         '</li>' +
         '<li class="nav-dropdown" id="insDropdown">' +
@@ -133,6 +136,7 @@
     '<div class="mobile-nav" id="mobileNav">' +
       mHome + mAbout + mServices +
       '<a href="business-loans.html" onclick="closeMobileNav()" ' + goldStyle + '>Business Loans</a>' +
+     '<a href="car-loan.html" onclick="closeMobileNav()" ' + goldStyle + '>Car Loan</a>' +
       '<a href="two-wheeler-third-party-insurance.html" onclick="closeMobileNav()" ' + goldStyle + '>2W Insurance</a>' +
       '<a href="four-wheeler-third-party-insurance.html" onclick="closeMobileNav()" ' + goldStyle + '>4W Insurance</a>' +
      '<a href="commercial-vehicle-insurance.html" onclick="closeMobileNav()" ' + goldStyle + '>Commercial Vehicle</a>' +
