@@ -53,6 +53,7 @@
     "real-estate": "loans",
     "two-wheeler": "motor",
     "four-wheeler": "motor",
+     "commercial-vehicle": "motor",
     "term-plan": "life"
   };
   var activeGroup = groupOf[current] || "";
@@ -98,6 +99,7 @@
           '<ul class="nav-dropdown-menu">' +
             '<li><a href="two-wheeler-third-party-insurance.html"' + cls("two-wheeler") + '>2W Insurance</a></li>' +
             '<li><a href="four-wheeler-third-party-insurance.html"' + cls("four-wheeler") + '>4W Insurance</a></li>' +
+     '<li><a href="commercial-vehicle-insurance.html"' + cls("commercial-vehicle") + '>Commercial Vehicle</a></li>' +
           '</ul>' +
         '</li>' +
         '<li class="nav-dropdown" id="lifeDropdown">' +
@@ -133,6 +135,7 @@
       '<a href="business-loans.html" onclick="closeMobileNav()" ' + goldStyle + '>Business Loans</a>' +
       '<a href="two-wheeler-third-party-insurance.html" onclick="closeMobileNav()" ' + goldStyle + '>2W Insurance</a>' +
       '<a href="four-wheeler-third-party-insurance.html" onclick="closeMobileNav()" ' + goldStyle + '>4W Insurance</a>' +
+     '<a href="commercial-vehicle-insurance.html" onclick="closeMobileNav()" ' + goldStyle + '>Commercial Vehicle</a>' +
       '<a href="term-life-insurance.html" onclick="closeMobileNav()" ' + goldStyle + '>Term Plan</a>' +
       mContact +
     '</div>';
