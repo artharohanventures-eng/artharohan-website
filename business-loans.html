@@ -10,7 +10,7 @@
      ============================================================ -->
 <title>Business Loan for Self-Employed in Delhi NCR | Artharohan</title>
 <meta name="description" content="Unsecured Business Loans, Working Capital, Credit Limit and Mudra Loan for self-employed individuals in Delhi, Noida, Gurgaon, Faridabad and Ghaziabad. No collateral. Clear guidance. Free enquiry.">
-<meta name="keywords" content="business loan self employed Delhi NCR, unsecured business loan Delhi, working capital loan Delhi, business loan without collateral Delhi, MSME loan Delhi NCR, business loan Noida, business loan Gurgaon, Mudra loan Delhi, credit limit self employed, business loan kaise milega, business loan reject kyon hota hai, business loan documents self employed">
+<meta name="keywords" content="business loan self employed Delhi NCR, unsecured business loan Delhi, working capital loan Delhi, business loan without collateral Delhi, MSME loan Delhi NCR, business loan Noida, business loan Gurgaon, Mudra loan Delhi, credit limit self employed, business loan kaise milega, business loan reject kyon hota hai, business loan documents self employed, business loan EMI calculator">
 <link rel="canonical" href="https://artharohan.in/business-loans">
 
 <!-- Open Graph -->
@@ -66,7 +66,17 @@
         }
       },
       "areaServed": ["Delhi","Noida","Gurgaon","Faridabad","Ghaziabad","NCR"],
-      "serviceType": "Financial Education and Loan Guidance"
+      "serviceType": "Financial Education and Loan Guidance",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Business Loan Types",
+        "itemListElement": [
+          {"@type":"Offer","itemOffered":{"@type":"FinancialProduct","name":"Unsecured Business Loan"}},
+          {"@type":"Offer","itemOffered":{"@type":"FinancialProduct","name":"Working Capital Loan"}},
+          {"@type":"Offer","itemOffered":{"@type":"FinancialProduct","name":"Credit Limit / Overdraft"}},
+          {"@type":"Offer","itemOffered":{"@type":"FinancialProduct","name":"Mudra Loan"}}
+        ]
+      }
     },
     {
       "@type": "FAQPage",
@@ -110,6 +120,11 @@
           "@type":"Question",
           "name":"What documents are required for a business loan for self-employed in Delhi?",
           "acceptedAnswer":{"@type":"Answer","text":"Documents required for a business loan for self-employed in Delhi: PAN Card and Aadhaar Card, last 2 years ITR with P&L and balance sheet, 6-12 months current account bank statements, GST registration certificate or trade licence, business address proof, and CIBIL consent form."}
+        },
+        {
+          "@type":"Question",
+          "name":"Does Artharohan only help businesses in Delhi NCR, or across India too?",
+          "acceptedAnswer":{"@type":"Answer","text":"Artharohan is based in Delhi NCR and has the deepest local lender relationships here. That said, business loan guidance itself — understanding eligibility, documentation, and lender selection — applies anywhere in India, and we do assist clients across India over WhatsApp on request."}
         }
       ]
     }
@@ -117,7 +132,7 @@
 }
 </script>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 /* ============================================================
    DESIGN TOKENS
@@ -144,6 +159,7 @@ html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--navy);font-size:16px;line-height:1.6}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
+.mono{font-family:'JetBrains Mono',monospace}
 
 /* ============================================================
    NAV
@@ -181,6 +197,30 @@ nav{
 .mobile-nav a{color:var(--muted);font-size:0.95rem;font-weight:500;padding:12px 0;border-bottom:1px solid rgba(201,168,68,0.08);cursor:pointer;transition:color 0.2s}
 .mobile-nav a:last-child{border-bottom:none}
 .mobile-nav a:hover{color:var(--gold)}
+
+/* Breadcrumb */
+.crumb{
+  background:var(--navy-mid);
+  padding:10px 5%;
+  font-size:0.76rem;
+  color:var(--muted);
+  margin-top:var(--nav-h);
+  border-bottom:1px solid rgba(201,168,68,0.1);
+}
+.crumb a{color:var(--gold-light)}
+.crumb span{opacity:0.4;margin:0 6px}
+
+/* Jump nav */
+.jumpnav{
+  background:var(--white);
+  border-bottom:1px solid rgba(201,168,68,0.15);
+  padding:12px 5%;
+  position:sticky;top:var(--nav-h);z-index:150;
+  overflow-x:auto;white-space:nowrap;
+}
+.jumpnav-inner{max-width:1100px;margin:0 auto;display:flex;gap:1.6rem}
+.jumpnav a{font-size:0.78rem;color:var(--body);font-weight:600;letter-spacing:0.2px;transition:color 0.2s}
+.jumpnav a:hover{color:var(--gold-dim)}
 
 /* Sticky WA button mobile */
 .wa-sticky{
@@ -226,7 +266,7 @@ nav{
    ============================================================ */
 .hero{
   background:var(--navy);
-  padding:calc(var(--nav-h) + 52px) 5% 72px;
+  padding:52px 5% 0;
   position:relative;overflow:hidden;
 }
 .hero::before{
@@ -235,7 +275,7 @@ nav{
   background:radial-gradient(circle,rgba(201,168,68,0.055) 0%,transparent 70%);
   pointer-events:none;
 }
-.hero-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.15fr 0.85fr;gap:64px;align-items:start}
+.hero-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.15fr 0.85fr;gap:64px;align-items:start;position:relative;z-index:1}
 .hero-badge{
   display:inline-flex;align-items:center;gap:8px;
   background:rgba(201,168,68,0.1);border:1px solid rgba(201,168,68,0.22);
@@ -245,18 +285,26 @@ nav{
 }
 .hero-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,3.8vw,3.4rem);font-weight:900;color:var(--white);line-height:1.1;margin-bottom:1.2rem}
 .hero-title em{color:var(--gold);font-style:normal;display:block}
-.hero-sub{color:var(--muted);font-size:0.97rem;line-height:1.75;font-weight:300;max-width:500px;margin-bottom:1.8rem}
-.hero-checks{list-style:none;margin-bottom:2rem;display:flex;flex-direction:column;gap:0.6rem}
-.hero-checks li{display:flex;align-items:flex-start;gap:10px;color:var(--muted);font-size:0.85rem;font-weight:300}
-.hero-checks li::before{content:'✓';color:var(--gold);font-weight:700;font-size:0.82rem;flex-shrink:0;margin-top:2px}
-.hero-btns{display:flex;gap:0.9rem;flex-wrap:wrap}
+.hero-sub{color:var(--muted);font-size:0.97rem;line-height:1.75;font-weight:300;max-width:500px;margin-bottom:1.4rem}
+
+/* Honest trust strip — no fabricated numbers */
+.trust-strip{display:flex;flex-wrap:wrap;gap:0.6rem;margin-bottom:1.6rem}
+.trust-pill{
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(255,255,255,0.04);border:1px solid rgba(201,168,68,0.18);
+  border-radius:20px;padding:6px 13px;
+  font-size:0.74rem;color:var(--gold-light);font-weight:500;
+}
+.trust-pill::before{content:'✓';color:var(--gold);font-weight:700}
+
+.hero-btns{display:flex;gap:0.9rem;flex-wrap:wrap;padding-bottom:52px}
 
 /* Sticky quick card */
 .quick-card{
   background:var(--navy-mid);
   border:1px solid rgba(201,168,68,0.2);
   border-radius:12px;padding:28px;
-  position:sticky;top:calc(var(--nav-h) + 16px);
+  position:sticky;top:calc(var(--nav-h) + 68px);
 }
 .quick-card h3{color:var(--gold-light);font-size:0.9rem;font-weight:700;margin-bottom:1.2rem;padding-bottom:0.75rem;border-bottom:1px solid rgba(201,168,68,0.12)}
 .qs-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(201,168,68,0.06)}
@@ -265,6 +313,49 @@ nav{
 .qs-val{color:var(--gold);font-size:0.84rem;font-weight:700}
 .quick-card .btn-gold{width:100%;text-align:center;display:block;margin-top:1.25rem}
 .quick-card .btn-wa{width:100%;text-align:center;display:block;margin-top:0.6rem;padding:11px}
+
+/* ============================================================
+   EMI CALCULATOR — now near top, slider-based, signature moment
+   ============================================================ */
+.emi-section{background:var(--navy-light);padding:56px 5%;position:relative}
+.emi-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center}
+.emi-grid .eyebrow{color:var(--gold-light)}
+.emi-grid .h2{color:var(--white)}
+.emi-card{
+  background:var(--white);border-radius:14px;padding:32px;
+  box-shadow:0 20px 50px -15px rgba(0,0,0,0.35);
+}
+.emi-field{margin-bottom:1.6rem}
+.emi-field-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:0.5rem}
+.emi-field label{font-size:0.8rem;font-weight:600;color:var(--body)}
+.emi-field-val{font-family:'JetBrains Mono',monospace;font-size:0.95rem;font-weight:700;color:var(--gold-dim)}
+input[type="range"]{
+  width:100%;height:4px;border-radius:2px;background:#e5ddc8;
+  appearance:none;-webkit-appearance:none;outline:none;
+}
+input[type="range"]::-webkit-slider-thumb{
+  appearance:none;-webkit-appearance:none;
+  width:20px;height:20px;border-radius:50%;
+  background:var(--gold);cursor:pointer;
+  border:3px solid var(--white);box-shadow:0 2px 8px rgba(0,0,0,0.25);
+}
+input[type="range"]::-moz-range-thumb{
+  width:20px;height:20px;border-radius:50%;
+  background:var(--gold);cursor:pointer;border:3px solid var(--white);
+}
+.emi-result{
+  background:var(--navy);border-radius:10px;padding:22px 24px;
+  margin-top:1.8rem;text-align:center;
+}
+.emi-result-label{color:var(--muted);font-size:0.78rem;margin-bottom:4px}
+.emi-result-val{font-family:'JetBrains Mono',monospace;color:var(--gold-light);font-size:2.1rem;font-weight:700;margin-bottom:14px}
+.emi-sub-row{display:flex;justify-content:space-around;border-top:1px solid rgba(201,168,68,0.15);padding-top:12px}
+.emi-sub-row div{text-align:center}
+.emi-sub-row span{display:block;color:var(--muted);font-size:0.7rem}
+.emi-sub-row b{color:var(--white);font-family:'JetBrains Mono',monospace;font-size:0.85rem;font-weight:600}
+.emi-card .btn-wa{width:100%;text-align:center;display:block;margin-top:1.4rem;padding:13px}
+.emi-note{font-size:0.72rem;color:var(--muted);margin-top:0.8rem;text-align:center}
+.emi-note a{color:var(--gold-light)}
 
 /* ============================================================
    LOAN TYPE TABS
@@ -310,15 +401,20 @@ nav{
 .step-body p{color:var(--body);font-size:0.83rem;line-height:1.65;font-weight:300}
 
 /* ============================================================
-   REJECTION REASONS
+   REJECTION REASONS — gold accent, icon-led, not red
    ============================================================ */
 .rejection-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;margin-top:2.2rem}
 .rejection-card{
   background:var(--white);border-radius:10px;padding:22px;
-  border-left:3px solid #E85454;
+  border-left:3px solid var(--gold);
   box-shadow:0 3px 14px rgba(11,22,40,0.05);
+  position:relative;
 }
-.rejection-card h4{color:var(--navy);font-size:0.85rem;font-weight:700;margin-bottom:0.4rem}
+.rejection-num{
+  position:absolute;top:18px;right:20px;
+  font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--gold-dim);opacity:0.6;
+}
+.rejection-card h4{color:var(--navy);font-size:0.85rem;font-weight:700;margin-bottom:0.4rem;padding-right:24px}
 .rejection-card p{color:var(--body);font-size:0.81rem;line-height:1.6;font-weight:300}
 .rejection-card .fix{color:var(--gold-dim);font-size:0.75rem;font-weight:600;margin-top:0.6rem;display:block}
 
@@ -335,6 +431,12 @@ nav{
 .area-icon{font-size:1.6rem;margin-bottom:6px}
 .area-card h4{color:var(--gold-light);font-size:0.82rem;font-weight:600;margin-bottom:3px}
 .area-card p{color:var(--muted);font-size:0.72rem;font-weight:300}
+.india-note{
+  margin-top:1.6rem;padding:14px 18px;
+  background:rgba(201,168,68,0.06);border:1px solid rgba(201,168,68,0.15);
+  border-radius:8px;font-size:0.82rem;color:var(--muted);
+}
+.india-note strong{color:var(--gold-light)}
 
 /* ============================================================
    FAQ
@@ -353,6 +455,15 @@ nav{
 .faq-item.open .faq-arrow{transform:rotate(180deg)}
 .faq-a{display:none;padding:0 0 1rem;color:var(--body);font-size:0.84rem;line-height:1.72;font-weight:300}
 .faq-item.open .faq-a{display:block}
+
+/* ============================================================
+   RELATED GUIDANCE
+   ============================================================ */
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem}
+.card{background:var(--white);border-radius:10px;padding:22px;border-top:3px solid var(--gold);box-shadow:0 3px 14px rgba(11,22,40,0.05);transition:transform 0.2s}
+.card:hover{transform:translateY(-2px)}
+.card h3{font-size:1rem;margin-bottom:0.4rem}
+.card p{color:var(--body);font-size:0.85rem;font-weight:300}
 
 /* ============================================================
    ENQUIRY FORM SECTION
@@ -415,6 +526,9 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,68,0.12);padding
   .wrap{padding:52px 5%}
   .form-box{padding:22px 18px}
   .areas-grid{grid-template-columns:repeat(auto-fit,minmax(130px,1fr))}
+  .emi-grid{grid-template-columns:1fr;gap:32px}
+  .cards{grid-template-columns:1fr}
+  .jumpnav{top:0}
 }
 </style>
 </head>
@@ -429,6 +543,22 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,68,0.12);padding
   var SITE_NAV_IS_HOME = false;
 </script>
 <script src="nav.js"></script>
+
+<!-- BREADCRUMB -->
+<div class="crumb"><a href="/">Home</a><span>/</span><a href="/#services">Loans</a><span>/</span>Business Loan</div>
+
+<!-- JUMP NAV -->
+<div class="jumpnav">
+  <div class="jumpnav-inner">
+    <a href="#emi-calc">EMI Calculator</a>
+    <a href="#loan-types">Loan Types</a>
+    <a href="#process">How It Works</a>
+    <a href="#rejections">Why Loans Get Rejected</a>
+    <a href="#areas">Areas We Serve</a>
+    <a href="#faq">FAQ</a>
+  </div>
+</div>
+
 <!-- ============================================================
      HERO
      TARGET KEYWORD: business loan self employed Delhi NCR
@@ -438,22 +568,19 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,68,0.12);padding
     <div>
       <div class="hero-badge">📍 Delhi · Noida · Gurgaon · Faridabad · Ghaziabad</div>
 
-      <!-- H1 — primary keyword -->
       <h1 class="hero-title">
         Business Loan for
         <em>Self-Employed in Delhi NCR</em>
       </h1>
 
-      <p class="hero-sub">Unsecured Business Loans · Working Capital · Credit Limit · Mudra Loan — complete, honest guidance for shop owners, traders, and self-employed professionals in Delhi NCR. No upfront fee. No pressure. Free enquiry.</p>
+      <p class="hero-sub">Unsecured Business Loans · Working Capital · Credit Limit · Mudra Loan — complete, honest guidance for shop owners, traders, and self-employed professionals in Delhi NCR.</p>
 
-      <ul class="hero-checks">
-        <li>Unsecured business loans up to ₹50 Lakh — no collateral required</li>
-        <li>Working capital loans for traders, retailers, and service businesses</li>
-        <li>Credit limit and overdraft for self-employed professionals</li>
-        <li>Mudra Loan guidance — Shishu, Kishor, Tarun categories explained</li>
-        <li>Serving Delhi, Noida, Gurgaon, Faridabad, and Ghaziabad</li>
-        <li>Free guidance — no brokerage, no upfront fee, no pressure</li>
-      </ul>
+      <div class="trust-strip">
+        <span class="trust-pill">No Brokerage Ever</span>
+        <span class="trust-pill">Zero Upfront Fee</span>
+        <span class="trust-pill">Direct WhatsApp Guidance</span>
+        <span class="trust-pill">Honest, Even If The Answer Is "Not Yet"</span>
+      </div>
 
       <div class="hero-btns">
         <a href="https://wa.me/917838355855?text=Hello%20Artharohan!%20I%20need%20business%20loan%20guidance." target="_blank" rel="noopener noreferrer" class="btn btn-wa">💬 WhatsApp Now — Free</a>
@@ -481,14 +608,63 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,68,0.12);padding
 
 
 <!-- ============================================================
+     EMI CALCULATOR — moved to top, slider-based, signature moment
+     ============================================================ -->
+<section class="emi-section" id="emi-calc">
+  <div class="emi-grid">
+    <div>
+      <span class="eyebrow">Free Tool — Takes 10 Seconds</span>
+      <h2 class="h2">See Your EMI Before You Talk to Anyone</h2>
+      <p class="lead-light">Slide to your loan amount, rate, and tenure — get an honest estimate instantly. No sign-up. No data stored. Then send it to us directly if you want it confirmed against real lenders.</p>
+    </div>
+
+    <div class="emi-card">
+      <div class="emi-field">
+        <div class="emi-field-top">
+          <label>Loan Amount</label>
+          <span class="emi-field-val mono" id="amtDisplay">₹5,00,000</span>
+        </div>
+        <input type="range" id="emiAmount" min="100000" max="5000000" step="50000" value="500000" oninput="calculateEMI()">
+      </div>
+      <div class="emi-field">
+        <div class="emi-field-top">
+          <label>Interest Rate</label>
+          <span class="emi-field-val mono" id="rateDisplay">14.0% p.a.</span>
+        </div>
+        <input type="range" id="emiRate" min="9" max="26" step="0.5" value="14" oninput="calculateEMI()">
+      </div>
+      <div class="emi-field">
+        <div class="emi-field-top">
+          <label>Tenure</label>
+          <span class="emi-field-val mono" id="tenureDisplay">36 months</span>
+        </div>
+        <input type="range" id="emiTenure" min="6" max="60" step="6" value="36" oninput="calculateEMI()">
+      </div>
+
+      <div class="emi-result">
+        <div class="emi-result-label">Your Estimated Monthly EMI</div>
+        <div class="emi-result-val mono" id="emiValue">₹17,090</div>
+        <div class="emi-sub-row">
+          <div><span>Total Interest</span><b class="mono" id="emiInterest">₹1,15,240</b></div>
+          <div><span>Total Payment</span><b class="mono" id="emiTotal">₹6,15,240</b></div>
+        </div>
+      </div>
+
+      <a href="#" id="emiWaBtn" target="_blank" rel="noopener noreferrer" class="btn btn-wa">💬 Get This Confirmed on WhatsApp →</a>
+      <p class="emi-note">This is an estimate only. Actual EMI depends on lender, processing fees, and final approved terms. <a href="#enquiry-form">Talk to us</a> for exact figures.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
      LOAN TYPES
      TARGET KEYWORDS: unsecured business loan, working capital,
      credit limit, Mudra loan Delhi NCR
      ============================================================ -->
-<div class="wrap wrap--cream">
+<div class="wrap wrap--cream" id="loan-types">
   <div class="inner">
     <span class="eyebrow">Types of Business Loans</span>
-    <!-- H2 — secondary keyword -->
     <h2 class="h2">Which Business Loan Do You Need?</h2>
     <p class="lead">Every self-employed business has different requirements. Understanding which loan matches your situation is the first and most important step — before you approach any lender.</p>
 
@@ -501,7 +677,6 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,68,0.12);padding
 
     <!-- Tab 1: Unsecured Business Loan -->
     <div id="t1" class="panel active">
-      <!-- H3 keyword: unsecured business loan Delhi self employed -->
       <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--navy);margin-bottom:1.2rem;">Unsecured Business Loan in Delhi NCR for Self-Employed</h3>
       <div class="panel-grid">
         <div class="info-card">
@@ -674,12 +849,10 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,68,0.12);padding
 
 <!-- ============================================================
      HOW TO APPLY — PROCESS STEPS
-     TARGET KEYWORD: business loan kaise milega self employed
      ============================================================ -->
-<div class="wrap wrap--white">
+<div class="wrap wrap--white" id="process">
   <div class="inner">
     <span class="eyebrow">Step-by-Step Process</span>
-    <!-- H2 — long tail keyword: business loan kaise milega -->
     <h2 class="h2">Business Loan Kaise Milega — Complete Process</h2>
     <p class="lead">Most business loan rejections in Delhi NCR happen not because of ineligibility — but because people apply without understanding the process. Here is the complete picture, step by step.</p>
 
@@ -726,7 +899,6 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,68,0.12);padding
       </div>
       <div class="step">
         <div class="step-num">06</div>
-        <div class="step-line"></div>
         <div class="step-body">
           <h4>Read the Sanction Letter Before Signing</h4>
           <p>Read the sanction letter completely before accepting. Check: interest rate type (flat vs reducing balance), processing fee, prepayment penalty, foreclosure charges, and insurance bundling. The difference between a flat rate and reducing balance rate on the same loan amount can mean paying 40–50% more interest. Never sign under time pressure or without understanding every term.</p>
@@ -738,43 +910,47 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,68,0.12);padding
 
 
 <!-- ============================================================
-     REJECTION REASONS
-     TARGET KEYWORD: business loan reject kyon hota hai Delhi
+     REJECTION REASONS — now gold, not red; numbered
      ============================================================ -->
-<div class="wrap wrap--dark">
+<div class="wrap wrap--dark" id="rejections">
   <div class="inner">
     <span class="eyebrow">Why Loans Get Rejected</span>
-    <!-- H2 — educational keyword -->
     <h2 class="h2 light">Business Loan Reject Kyon Hota Hai — 6 Real Reasons</h2>
     <p class="lead-light">Understanding why business loans get rejected in Delhi NCR is as important as knowing how to apply. Every rejection also damages your CIBIL score — so knowing these reasons in advance prevents unnecessary applications.</p>
 
     <div class="rejection-grid">
       <div class="rejection-card">
+        <span class="rejection-num mono">01</span>
         <h4>Low CIBIL Score</h4>
         <p>A score below 700 signals credit risk to lenders. Even one missed EMI or late credit card payment in the past 12 months can trigger rejection.</p>
         <span class="fix">Fix: Check CIBIL, clear overdue payments, wait 3–6 months before applying.</span>
       </div>
       <div class="rejection-card">
+        <span class="rejection-num mono">02</span>
         <h4>ITR Not Filed or Too Low</h4>
         <p>Banks calculate loan eligibility based on your declared income in ITR. If income shown is too low — even if your actual business does well — the eligible loan amount will be low or zero.</p>
         <span class="fix">Fix: File ITR accurately, reflect real business income, maintain 2 years of continuous filing.</span>
       </div>
       <div class="rejection-card">
+        <span class="rejection-num mono">03</span>
         <h4>Bank Statement vs ITR Mismatch</h4>
         <p>If your bank deposits show higher cash flow than what's declared in ITR, lenders get suspicious about undisclosed income. This is one of the most common rejection triggers in Delhi NCR.</p>
         <span class="fix">Fix: Ensure ITR and bank statements tell a consistent story about income.</span>
       </div>
       <div class="rejection-card">
+        <span class="rejection-num mono">04</span>
         <h4>Business Too New</h4>
         <p>Most unsecured business loan lenders require 2–3 years of business vintage. A business younger than 2 years has very limited options, and those available come at significantly higher rates.</p>
         <span class="fix">Fix: Explore Mudra Loan for newer businesses — more accessible for early-stage ventures.</span>
       </div>
       <div class="rejection-card">
+        <span class="rejection-num mono">05</span>
         <h4>High Existing Debt (FOIR)</h4>
         <p>Fixed Obligation to Income Ratio — if your current EMIs already consume 50–60% of your income, lenders won't add more debt load. Existing personal loans and credit card dues reduce your business loan eligibility.</p>
         <span class="fix">Fix: Reduce existing EMI burden before applying for a new business loan.</span>
       </div>
       <div class="rejection-card">
+        <span class="rejection-num mono">06</span>
         <h4>Wrong Loan Structuring</h4>
         <p>Applying for a working capital loan when you actually need a term loan — or applying to a bank when an NBFC would be better suited — leads to rejection that could have been avoided with better guidance.</p>
         <span class="fix">Fix: Get guidance on which loan type and which lender suits your specific profile before applying.</span>
@@ -786,12 +962,10 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,68,0.12);padding
 
 <!-- ============================================================
      AREAS COVERED
-     TARGET KEYWORDS: business loan Noida, Gurgaon, Faridabad, etc.
      ============================================================ -->
-<div class="wrap wrap--cream">
+<div class="wrap wrap--cream" id="areas">
   <div class="inner">
     <span class="eyebrow">Areas We Serve</span>
-    <!-- H2 — local SEO keyword -->
     <h2 class="h2">Business Loan Guidance Across All of Delhi NCR</h2>
     <p class="lead">Artharohan provides free business loan guidance for self-employed individuals across Delhi, Noida, Gurgaon, Faridabad, and Ghaziabad — covering all major commercial and business hubs in the National Capital Region.</p>
 
@@ -827,19 +1001,20 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,68,0.12);padding
         <p>Chandni Chowk, Karol Bagh, Lajpat Rai, Nehru Place, Sadar Bazar</p>
       </div>
     </div>
+
+    <div class="india-note">
+      <strong>Outside Delhi NCR?</strong> We're based here and know these local lenders best — but business loan guidance (eligibility, documentation, lender selection) applies anywhere in India. Message us on WhatsApp and we'll tell you honestly if we can help.
+    </div>
   </div>
 </div>
 
 
 <!-- ============================================================
      FAQ SECTION
-     TARGET KEYWORDS: long tail informational queries
-     Each Q&A is structured for Google Featured Snippets
      ============================================================ -->
-<div class="wrap wrap--white">
+<div class="wrap wrap--white" id="faq">
   <div class="inner">
     <span class="eyebrow">Frequently Asked Questions</span>
-    <!-- H2 — captures question-based searches -->
     <h2 class="h2">Business Loan Questions — Answered Honestly</h2>
     <p class="lead">Questions that self-employed individuals in Delhi NCR ask most — with straight answers. No sales pitch. No pressure.</p>
 
@@ -925,86 +1100,42 @@ footer{background:var(--navy);border-top:1px solid rgba(201,168,68,0.12);padding
         <div class="faq-a">Business loan timelines in Delhi NCR vary by lender type. NBFCs and fintech lenders can sanction in 3–7 working days with complete documentation. Banks typically take 10–20 working days due to more thorough processing. Government scheme loans like Mudra can take longer. The most common cause of delay is incomplete or inconsistent documentation submitted by the applicant — having all documents ready before applying significantly reduces processing time.</div>
       </div>
 
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Does Artharohan only help businesses in Delhi NCR, or across India too?
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">Artharohan is based in Delhi NCR and has the deepest local lender relationships here. That said, business loan guidance itself — understanding eligibility, documentation, and lender selection — applies anywhere in India, and we do assist clients across India over WhatsApp on request.</div>
+      </div>
+
     </div>
   </div>
 </div>
 
-     <!-- ============================================================
-     EMI CALCULATOR
+
+<!-- ============================================================
+     RELATED GUIDANCE
      ============================================================ -->
-<div class="wrap wrap--cream">
-  <div class="inner">
-    <span class="eyebrow">Free Tool</span>
-    <h2 class="h2">Calculate Your Business Loan EMI</h2>
-    <p class="lead">Enter your loan amount, interest rate, and tenure to see your estimated monthly EMI instantly. No sign-up, no data stored.</p>
-
-    <div style="max-width:480px;margin-top:2rem;background:var(--white);padding:2rem;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.06);">
-      <div style="margin-bottom:1.2rem;">
-        <label style="display:block;font-size:0.85rem;font-weight:600;margin-bottom:0.4rem;">Loan Amount (₹)</label>
-        <input type="number" id="emiAmount" value="500000" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px;font-size:1rem;">
-      </div>
-      <div style="margin-bottom:1.2rem;">
-        <label style="display:block;font-size:0.85rem;font-weight:600;margin-bottom:0.4rem;">Interest Rate (% per year)</label>
-        <input type="number" id="emiRate" value="14" step="0.1" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px;font-size:1rem;">
-      </div>
-      <div style="margin-bottom:1.5rem;">
-        <label style="display:block;font-size:0.85rem;font-weight:600;margin-bottom:0.4rem;">Tenure (months)</label>
-        <input type="number" id="emiTenure" value="36" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px;font-size:1rem;">
-      </div>
-      <button onclick="calculateEMI()" class="btn-gold" style="width:100%;padding:12px;border:none;border-radius:6px;font-weight:700;font-size:1rem;cursor:pointer;">Calculate EMI</button>
-
-      <div id="emiResult" style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid #eee;display:none;">
-        <p style="font-size:0.85rem;color:var(--muted);margin-bottom:0.3rem;">Your Estimated Monthly EMI</p>
-        <p style="font-size:2rem;font-weight:700;color:var(--gold);margin-bottom:1rem;" id="emiValue"></p>
-        <p style="font-size:0.85rem;color:var(--muted);">Total Interest: <strong id="emiInterest"></strong></p>
-        <p style="font-size:0.85rem;color:var(--muted);">Total Payment: <strong id="emiTotal"></strong></p>
-      </div>
-    </div>
-    <p style="font-size:0.78rem;color:var(--muted);margin-top:1rem;max-width:480px;">This is an estimate only. Actual EMI depends on lender, processing fees, and final approved terms. <a href="#enquiry-form" style="color:var(--gold);">Talk to us</a> for exact figures.</p>
-  </div>
-</div>
-
-<script>
-function calculateEMI(){
-  var P = parseFloat(document.getElementById('emiAmount').value);
-  var annualRate = parseFloat(document.getElementById('emiRate').value);
-  var N = parseFloat(document.getElementById('emiTenure').value);
-  if(!P || !annualRate || !N || P<=0 || annualRate<=0 || N<=0){
-    alert('Please enter valid positive numbers in all fields.');
-    return;
-  }
-  var R = annualRate / 12 / 100;
-  var emi = (P * R * Math.pow(1+R, N)) / (Math.pow(1+R, N) - 1);
-  var totalPayment = emi * N;
-  var totalInterest = totalPayment - P;
-
-  document.getElementById('emiValue').textContent = '₹' + Math.round(emi).toLocaleString('en-IN');
-  document.getElementById('emiInterest').textContent = '₹' + Math.round(totalInterest).toLocaleString('en-IN');
-  document.getElementById('emiTotal').textContent = '₹' + Math.round(totalPayment).toLocaleString('en-IN');
-  document.getElementById('emiResult').style.display = 'block';
-}
-</script>
-
-
 <div class="wrap wrap--cream">
   <div class="inner">
     <span class="eyebrow">You Might Also Need</span>
     <h2 class="h2">Related Guidance</h2>
     <div class="cards">
-      <a href="commercial-vehicle-insurance.html" class="card" style="display:block;">
+      <a href="commercial-vehicle-insurance.html" class="card">
         <h3>🚛 Commercial Vehicle Insurance</h3>
         <p>Business vehicle? Get your truck, taxi, or fleet insured right.</p>
       </a>
-      <a href="term-life-insurance.html" class="card" style="display:block;">
+      <a href="term-life-insurance.html" class="card">
         <h3>🛡️ Term Life Insurance</h3>
         <p>Protect your family while you build your business.</p>
       </a>
     </div>
   </div>
-</div><!-- ============================================================
-     
+</div>
+
+
+<!-- ============================================================
      ENQUIRY FORM + WA BUTTON
-     Both capture mechanisms on one section
      ============================================================ -->
 <div class="form-section" id="enquiry-form">
   <div class="form-grid">
@@ -1019,17 +1150,15 @@ function calculateEMI(){
         <div class="fp"><div class="fp-dot"></div><p>We explain which documents you need and how to present them for the strongest application.</p></div>
         <div class="fp"><div class="fp-dot"></div><p>We tell you upfront if your profile needs improvement before applying — saving you from rejections that damage your CIBIL score.</p></div>
         <div class="fp"><div class="fp-dot"></div><p>No upfront fee. No spam. No pressure to proceed. One conversation, focused entirely on your requirement.</p></div>
-        <div class="fp"><div class="fp-dot"></div><p>Serving Delhi, Noida, Gurgaon, Faridabad, and Ghaziabad.</p></div>
+        <div class="fp"><div class="fp-dot"></div><p>Serving Delhi, Noida, Gurgaon, Faridabad, and Ghaziabad — and assisting clients across India on request.</p></div>
       </div>
 
-      <!-- WhatsApp CTA button — visible always -->
       <div style="margin-top:2rem">
         <a href="https://wa.me/917838355855?text=Hello%20Artharohan!%20I%20need%20business%20loan%20guidance%20in%20Delhi%20NCR." target="_blank" rel="noopener noreferrer" class="btn btn-wa" style="font-size:1rem;padding:15px 28px">💬 WhatsApp Now — Instant Response</a>
         <p style="color:var(--muted);font-size:0.72rem;margin-top:0.7rem;">+91 78383 55855 · artharohanventures@gmail.com</p>
       </div>
     </div>
 
-    <!-- Embedded form -->
     <div class="form-box">
       <p class="form-box-title">Business Loan Enquiry Form</p>
       <form id="blForm" onsubmit="submitForm(event)" novalidate>
@@ -1073,6 +1202,7 @@ function calculateEMI(){
             <option value="Faridabad">Faridabad</option>
             <option value="Ghaziabad">Ghaziabad</option>
             <option value="Other NCR">Other NCR</option>
+            <option value="Outside NCR — India">Outside NCR — India</option>
           </select>
         </div>
         <div class="fg">
@@ -1108,7 +1238,6 @@ function calculateEMI(){
   <p class="footer-copy">© 2026 Artharohan Ventures · UDYAM-DL-11-0113585 · artharohan.in · Delhi NCR · All rights reserved.</p>
 </footer>
 
-<!-- Sticky WhatsApp button — visible at all times -->
 <a href="https://wa.me/917838355855?text=Hello%20Artharohan!%20I%20need%20business%20loan%20guidance." target="_blank" rel="noopener noreferrer" class="wa-sticky" title="WhatsApp Artharohan" aria-label="WhatsApp Artharohan">💬</a>
 
 
@@ -1116,7 +1245,6 @@ function calculateEMI(){
      JAVASCRIPT
      ============================================================ -->
 <script>
-/* Mobile nav */
 function toggleNav(){
   var mn=document.getElementById('mnav'),hb=document.getElementById('hbg');
   var open=mn.classList.contains('open');
@@ -1124,7 +1252,6 @@ function toggleNav(){
   hb.classList.toggle('open',!open);
 }
 
-/* Loan type tabs */
 function showTab(btn,id){
   document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('active')});
   document.querySelectorAll('.tab-btn').forEach(function(b){b.classList.remove('active')});
@@ -1132,7 +1259,6 @@ function showTab(btn,id){
   btn.classList.add('active');
 }
 
-/* FAQ accordion */
 function toggleFaq(btn){
   var item=btn.parentElement;
   var isOpen=item.classList.contains('open');
@@ -1140,7 +1266,35 @@ function toggleFaq(btn){
   if(!isOpen) item.classList.add('open');
 }
 
-/* Form — routes to WhatsApp */
+/* EMI Calculator — slider based, live update */
+function calculateEMI(){
+  var P = parseFloat(document.getElementById('emiAmount').value);
+  var annualRate = parseFloat(document.getElementById('emiRate').value);
+  var N = parseFloat(document.getElementById('emiTenure').value);
+
+  document.getElementById('amtDisplay').textContent = '₹' + P.toLocaleString('en-IN');
+  document.getElementById('rateDisplay').textContent = annualRate.toFixed(1) + '% p.a.';
+  document.getElementById('tenureDisplay').textContent = N + ' months';
+
+  var R = annualRate / 12 / 100;
+  var emi = (P * R * Math.pow(1+R, N)) / (Math.pow(1+R, N) - 1);
+  var totalPayment = emi * N;
+  var totalInterest = totalPayment - P;
+
+  document.getElementById('emiValue').textContent = '₹' + Math.round(emi).toLocaleString('en-IN');
+  document.getElementById('emiInterest').textContent = '₹' + Math.round(totalInterest).toLocaleString('en-IN');
+  document.getElementById('emiTotal').textContent = '₹' + Math.round(totalPayment).toLocaleString('en-IN');
+
+  var waText = 'Hello Artharohan! I calculated my Business Loan EMI:\n\n'
+    +'Loan Amount: ₹'+P.toLocaleString('en-IN')+'\n'
+    +'Interest Rate: '+annualRate.toFixed(1)+'% p.a.\n'
+    +'Tenure: '+N+' months\n'
+    +'Estimated EMI: ₹'+Math.round(emi).toLocaleString('en-IN')+'\n\n'
+    +'Can you confirm this against real lenders?';
+  document.getElementById('emiWaBtn').href = 'https://wa.me/917838355855?text='+encodeURIComponent(waText);
+}
+window.addEventListener('DOMContentLoaded', calculateEMI);
+
 function submitForm(e){
   e.preventDefault();
   var name=document.getElementById('n').value.trim();
