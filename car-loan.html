@@ -129,9 +129,21 @@ footer{padding:36px 5%;text-align:center;background:var(--navy);border-top:1px s
 .footer-nav a:hover{color:var(--gold)}
 .footer-copy{font-size:0.75rem;color:var(--muted)}
 
+.emi-box{background:var(--white);border-radius:10px;padding:32px;margin-top:24px;box-shadow:0 2px 12px rgba(0,0,0,0.04);display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.emi-result-panel{background:var(--navy);border-radius:8px;padding:24px;color:var(--text-dim)}
+.emi-result-label{font-size:0.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.emi-result-value{font-family:'Playfair Display',serif;font-size:2.2rem;color:var(--gold);font-weight:700}
+.emi-sub-row{display:flex;justify-content:space-between;font-size:0.88rem;margin-top:10px}
+.emi-sub-row span:first-child{color:var(--muted)}
+.rate-table{width:100%;border-collapse:collapse;font-size:0.9rem;margin-top:24px}
+.rate-table th{background:var(--navy);color:var(--white);padding:14px;text-align:left}
+.rate-table td{padding:14px;border-bottom:1px solid #eee}
+.rate-table tr:nth-child(even) td{background:var(--cream)}
+
 @media(max-width:860px){
   .form-grid{grid-template-columns:1fr}
   .glance{grid-template-columns:repeat(2,1fr)}
+  .emi-box{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -150,6 +162,7 @@ footer{padding:36px 5%;text-align:center;background:var(--navy);border-top:1px s
   <p>Whether you're buying a new car or a used one, financing works differently for each. Here's how eligibility, down payment, and loan structure actually work — no agent pressure, no confusion.</p>
   <div class="btn-row">
     <a href="https://wa.me/917838355855?text=Hello%20Artharohan!%20I%20need%20help%20with%20a%20Car%20Loan." target="_blank" rel="noopener noreferrer" class="btn btn-gold">Get Help on WhatsApp →</a>
+    <a href="#emi-calc" class="btn btn-outline">Calculate EMI →</a>
     <a href="#compare" class="btn btn-outline">New vs Used</a>
   </div>
 </section>
@@ -159,6 +172,66 @@ footer{padding:36px 5%;text-align:center;background:var(--navy);border-top:1px s
   <div><div class="val">Up to 7 Yrs</div><div class="lbl">Tenure (New Car)</div></div>
   <div><div class="val">Car Age Matters</div><div class="lbl">Used Car Eligibility</div></div>
   <div><div class="val">CIBIL 700+</div><div class="lbl">Preferred Score</div></div>
+</div>
+
+<div class="wrap wrap--cream" id="emi-calc">
+  <div class="inner">
+    <span class="eyebrow">Plan Before You Apply</span>
+    <h2 class="h2">Car Loan EMI Calculator</h2>
+    <p class="lead">See your estimated monthly EMI before you talk to any lender — reducing balance method, the same math banks actually use.</p>
+    <div class="emi-box">
+      <div>
+        <div class="fg">
+          <label for="onRoadPrice">On-Road Car Price (₹)</label>
+          <input type="number" id="onRoadPrice" value="700000" oninput="calcCarEMI()">
+        </div>
+        <div class="fg">
+          <label for="downPayment">Down Payment (₹)</label>
+          <input type="number" id="downPayment" value="100000" oninput="calcCarEMI()">
+        </div>
+        <div class="fg">
+          <label for="carTypeCalc">Loan For</label>
+          <select id="carTypeCalc" onchange="applyRateDefault()">
+            <option value="new">New Car (typical 9.5–11.5%)</option>
+            <option value="used">Used Car (typical 12–16%)</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label for="intRate">Interest Rate (% per annum)</label>
+          <input type="number" id="intRate" value="10.5" step="0.1" oninput="calcCarEMI()">
+        </div>
+        <div class="fg">
+          <label for="tenure">Tenure (Years)</label>
+          <input type="number" id="tenure" value="5" oninput="calcCarEMI()">
+        </div>
+        <div class="fg">
+          <label for="monthlyIncome">Your Monthly Income (₹) — optional</label>
+          <input type="number" id="monthlyIncome" placeholder="For an affordability check" oninput="calcCarEMI()">
+        </div>
+      </div>
+      <div class="emi-result-panel">
+        <div class="emi-result-label">Loan Amount</div>
+        <div style="font-size:1.1rem;color:var(--white);font-weight:600;margin-bottom:14px;" id="loanAmtDisplay">₹0</div>
+        <div class="emi-result-label">Estimated Monthly EMI</div>
+        <div class="emi-result-value" id="emiResult">₹0</div>
+        <div class="emi-sub-row"><span>Total Interest Payable</span><span id="totalInterest">₹0</span></div>
+        <div class="emi-sub-row"><span>Total Amount Payable</span><span id="totalPayment">₹0</span></div>
+        <p id="emiWarning" style="font-size:0.82rem;margin-top:14px;line-height:1.5;display:none;"></p>
+      </div>
+    </div>
+    <div class="note-box">
+      <p>⚠️ This is an estimate using the reducing balance method. Your real rate depends on the lender, your CIBIL score, and vehicle age/condition — see the rate reality table below.</p>
+    </div>
+    <div style="margin-top:20px;">
+      <button onclick="toggleAmort()" id="amortBtn" class="btn btn-outline" style="cursor:pointer;">Show Year-by-Year Breakdown ▼</button>
+      <div id="amortWrap" style="display:none;margin-top:20px;overflow-x:auto;">
+        <table class="rate-table">
+          <thead><tr><th>Year</th><th>Principal Paid</th><th>Interest Paid</th><th>Balance Remaining</th></tr></thead>
+          <tbody id="amortBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="wrap wrap--white" id="compare">
@@ -196,6 +269,30 @@ footer{padding:36px 5%;text-align:center;background:var(--navy);border-top:1px s
 </div>
 
 <div class="wrap wrap--cream">
+  <div class="inner">
+    <span class="eyebrow">Rate Reality</span>
+    <h2 class="h2">What Interest Rate Should You Actually Expect?</h2>
+    <p class="lead">Not "starting from X%" marketing language — here's the honest range based on what actually moves your rate.</p>
+    <div style="overflow-x:auto;">
+      <table class="rate-table">
+        <thead>
+          <tr><th>CIBIL Score</th><th>New Car Rate (approx.)</th><th>Used Car Rate (approx.)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>750+</td><td>9.5% – 10.5%</td><td>11% – 13%</td></tr>
+          <tr><td>700 – 749</td><td>10.5% – 11.5%</td><td>13% – 15%</td></tr>
+          <tr><td>650 – 699</td><td>11.5% – 13%</td><td>15% – 17%</td></tr>
+          <tr><td>Below 650</td><td>Case-by-case, fewer lenders</td><td>Case-by-case, mostly NBFC</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note-box">
+      <p>These are general market patterns as of 2026, not a quote from any specific lender — your actual rate also depends on income type, existing EMIs, and the specific car's age/valuation for used cars. <strong>Share your CIBIL band with us and we'll tell you honestly what range to expect — including if the timing isn't right yet.</strong></p>
+    </div>
+  </div>
+</div>
+
+<div class="wrap wrap--white">
   <div class="inner">
     <span class="eyebrow">Eligibility</span>
     <h2 class="h2">What Lenders Actually Check</h2>
@@ -235,6 +332,28 @@ footer{padding:36px 5%;text-align:center;background:var(--navy);border-top:1px s
           <li>Bank statements — usually last 6 months</li>
           <li>For used cars: RC copy, previous loan closure (if any), insurance copy</li>
         </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap wrap--cream">
+  <div class="inner">
+    <span class="eyebrow">Honest Before Anything Else</span>
+    <h2 class="h2">When We'll Tell You "Not Yet"</h2>
+    <p class="lead">If any of these apply to you, we'll say so before you waste time applying — even though it means no business for us that day.</p>
+    <div class="compare-grid">
+      <div class="compare-card">
+        <h3>⚠️ CIBIL Below 650</h3>
+        <p>Approval becomes difficult with most banks. We'll tell you this upfront and suggest what to fix first — rather than let you apply and risk a rejection that can hurt your score further.</p>
+      </div>
+      <div class="compare-card">
+        <h3>⚠️ Used Car Near Age Cap</h3>
+        <p>If the car's age plus your preferred tenure crosses most lenders' 8-10 year combined limit, we'll flag it before you fall in love with a car that can't get financed the way you want.</p>
+      </div>
+      <div class="compare-card">
+        <h3>⚠️ EMI Would Strain Your Budget</h3>
+        <p>If the EMI works out to more than 40-45% of your monthly income, we'll say so honestly — even if a lender might approve it anyway.</p>
       </div>
     </div>
   </div>
@@ -401,6 +520,94 @@ function submitClForm(e){
   var msg = "Hello Artharohan! My name is " + name + " (" + phone + "). I need help with a car loan. Car type: " + type + ".";
   window.open("https://wa.me/917838355855?text=" + encodeURIComponent(msg), "_blank");
 }
+
+function calcCarEMI(){
+  var onRoad = parseFloat(document.getElementById('onRoadPrice').value) || 0;
+  var down = parseFloat(document.getElementById('downPayment').value) || 0;
+  var P = Math.max(onRoad - down, 0);
+  document.getElementById('loanAmtDisplay').textContent = '₹' + Math.round(P).toLocaleString('en-IN');
+
+  var annualRate = parseFloat(document.getElementById('intRate').value) || 0;
+  var years = parseFloat(document.getElementById('tenure').value) || 0;
+  var r = annualRate / 12 / 100;
+  var n = Math.round(years * 12);
+  var emi = 0;
+  if(r > 0 && n > 0){
+    emi = P * r * Math.pow(1 + r, n) / (Math.pow(1 + r, n) - 1);
+  } else if(n > 0){
+    emi = P / n;
+  }
+  var totalPayment = emi * n;
+  var totalInterest = totalPayment - P;
+  document.getElementById('emiResult').textContent = '₹' + Math.round(emi).toLocaleString('en-IN');
+  document.getElementById('totalInterest').textContent = '₹' + Math.round(totalInterest).toLocaleString('en-IN');
+  document.getElementById('totalPayment').textContent = '₹' + Math.round(totalPayment).toLocaleString('en-IN');
+
+  var income = parseFloat(document.getElementById('monthlyIncome').value) || 0;
+  var warningEl = document.getElementById('emiWarning');
+  if(income > 0 && emi > 0){
+    var pct = Math.round((emi / income) * 100);
+    warningEl.style.display = 'block';
+    if(pct > 45){
+      warningEl.style.color = '#e8938a';
+      warningEl.textContent = '⚠️ This EMI is ' + pct + '% of your income — most lenders, and we, would flag this as high risk. Consider a longer tenure or larger down payment.';
+    } else if(pct > 35){
+      warningEl.style.color = '#ddc06a';
+      warningEl.textContent = 'This EMI is ' + pct + '% of your income — manageable, but leaves less room for other goals.';
+    } else {
+      warningEl.style.color = '#8fd4a8';
+      warningEl.textContent = '✓ This EMI is ' + pct + '% of your income — comfortably within a healthy range.';
+    }
+  } else {
+    warningEl.style.display = 'none';
+  }
+
+  buildAmortization(P, r, n, emi);
+}
+
+function buildAmortization(P, r, n, emi){
+  var tbody = document.getElementById('amortBody');
+  if(!tbody) return;
+  tbody.innerHTML = '';
+  if(P <= 0 || n <= 0) return;
+  var balance = P;
+  var yearPrincipal = 0, yearInterest = 0;
+  var rows = [];
+  for(var m = 1; m <= n; m++){
+    var interestPortion = balance * r;
+    var principalPortion = emi - interestPortion;
+    balance -= principalPortion;
+    if(balance < 0) balance = 0;
+    yearPrincipal += principalPortion;
+    yearInterest += interestPortion;
+    if(m % 12 === 0 || m === n){
+      rows.push({year: Math.ceil(m / 12), principal: yearPrincipal, interest: yearInterest, balance: balance});
+      yearPrincipal = 0; yearInterest = 0;
+    }
+  }
+  rows.forEach(function(row){
+    var tr = document.createElement('tr');
+    tr.innerHTML = '<td>Year ' + row.year + '</td><td>₹' + Math.round(row.principal).toLocaleString('en-IN') + '</td><td>₹' + Math.round(row.interest).toLocaleString('en-IN') + '</td><td>₹' + Math.round(row.balance).toLocaleString('en-IN') + '</td>';
+    tbody.appendChild(tr);
+  });
+}
+
+function toggleAmort(){
+  var el = document.getElementById('amortWrap');
+  var btn = document.getElementById('amortBtn');
+  var isOpen = el.style.display === 'block';
+  el.style.display = isOpen ? 'none' : 'block';
+  btn.textContent = isOpen ? 'Show Year-by-Year Breakdown ▼' : 'Hide Year-by-Year Breakdown ▲';
+}
+
+function applyRateDefault(){
+  var type = document.getElementById('carTypeCalc').value;
+  var rateInput = document.getElementById('intRate');
+  rateInput.value = (type === 'new') ? 10.5 : 14;
+  calcCarEMI();
+}
+
+window.addEventListener('DOMContentLoaded', calcCarEMI);
 </script>
 
 </body>
