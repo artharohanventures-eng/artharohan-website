@@ -4,16 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Artharohan — Sahi Jaankari. Sahi Faisla.</title>
-<meta name="description" content="Artharohan is a trusted financial education platform. Unbiased information on Loans, Insurance, Mutual Funds, Real Estate and more. No hidden agenda. No commission pressure.">
-<meta name="keywords" content="financial education india, loan jankari, insurance education, mutual funds hindi, artharohan">
+<meta name="description" content="Artharohan is a Delhi NCR financial guidance platform. Honest, jargon-free explanations on Loans, Insurance, and Real Estate — and hands-on help when you're ready to act.">
+<meta name="keywords" content="financial guidance india, loan jankari, insurance education delhi ncr, artharohan, business loan, term life insurance">
 <meta property="og:title" content="Artharohan — Sahi Jaankari. Sahi Faisla.">
-<meta property="og:description" content="Unbiased financial education in Hinglish. Loans, Insurance, Mutual Funds, Real Estate and more.">
+<meta property="og:description" content="Honest financial guidance on Loans, Insurance, and Real Estate — Delhi NCR. Explained clearly first. Hands-on help when you want it.">
 <meta property="og:url" content="https://artharohan.in">
 <link rel="canonical" href="https://artharohan.in">
 
 <!-- ============================================================
      SEO — STRUCTURED DATA (Schema.org)
-     Tells Google exactly what this site is and who it serves
+     Homepage-appropriate schema only. Business Loans FAQ/Service
+     schema now lives correctly on business-loans.html itself —
+     removed from here to fix duplicate/misattributed structured
+     data that was pointing a business-loans schema at the
+     homepage canonical.
      ============================================================ -->
 <script type="application/ld+json">
 {
@@ -25,8 +29,7 @@
       "name": "Artharohan Ventures",
       "url": "https://artharohan.in",
       "logo": "https://artharohan.in/logo.png",
-      "description": "Artharohan is a trusted financial education platform covering Business Loans, Insurance, Mutual Funds, Real Estate and more. Unbiased. Transparent. Practical.",
-     
+      "description": "Artharohan is a Delhi NCR financial guidance platform covering Business Loans, Motor Insurance, Life Insurance, and Real Estate. Honest explanations first — hands-on help when you want it.",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "New Delhi",
@@ -41,9 +44,7 @@
         "availableLanguage": ["Hindi", "English"],
         "areaServed": ["Delhi", "Noida", "Gurgaon", "Faridabad", "Ghaziabad"]
       },
-      "sameAs": [
-        "https://youtube.com/@artharohan"
-      ]
+      "sameAs": ["https://youtube.com/@artharohan"]
     },
     {
       "@type": "WebSite",
@@ -51,105 +52,13 @@
       "url": "https://artharohan.in",
       "name": "Artharohan — Sahi Jaankari. Sahi Faisla.",
       "publisher": { "@id": "https://artharohan.in/#org" }
-    },
-    {
-      "@type": "FinancialService",
-      "@id": "https://artharohan.in/#service",
-      "name": "Business Loan Guidance — Delhi NCR",
-      "description": "Free financial education and guidance on Business Loans, Unsecured Loans, Working Capital Finance, and Credit Limit facilities for self-employed individuals in Delhi NCR.",
-      "provider": { "@id": "https://artharohan.in/#org" },
-      "areaServed": {
-        "@type": "GeoCircle",
-        "geoMidpoint": {
-          "@type": "GeoCoordinates",
-          "latitude": 28.6139,
-          "longitude": 77.2090
-        },
-        "geoRadius": "50000"
-      },
-      "serviceType": "Financial Education",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "INR",
-        "description": "Free financial education and guidance"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://artharohan.in/business-loans#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Can I get a business loan without ITR?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Most banks and NBFCs require at least 1-2 years of ITR for business loan approval. Without ITR, options are limited to some fintech lenders offering bank-statement based loans at higher rates. Filing ITR consistently is the single most important step for improving loan eligibility."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What CIBIL score is needed for a business loan in Delhi NCR?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Most lenders in Delhi NCR prefer a CIBIL score of 700 or above for business loans. NBFCs may consider 650-699 with higher interest rates. Scores below 650 make approval difficult with formal lenders."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do I need collateral for an unsecured business loan?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. Unsecured business loans do not require property, gold, or any collateral. The lender relies on your credit profile, income documents, and business vintage. For amounts above 25-30 Lakh, some lenders may require collateral or a guarantor."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is there any upfront fee for a business loan?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No legitimate lender or agent charges upfront fees before loan sanction. Processing fees are only charged after approval and deducted from disbursement. If anyone asks for cash or UPI transfer before loan approval, that is fraud."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How long does business loan approval take in Delhi?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "NBFCs and fintech lenders can sanction in 3-7 working days with complete documents. Banks typically take 10-20 working days. The most common delay cause is incomplete documentation at the applicant's end."
-          }
-        }
-      ]
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://artharohan.in"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Business Loans Delhi NCR",
-          "item": "https://artharohan.in/business-loans"
-        }
-      ]
     }
   ]
 }
 </script>
 
-<!-- Per-page meta (updated dynamically by JS) -->
-<meta id="meta-title" property="og:title" content="Artharohan — Sahi Jaankari. Sahi Faisla.">
-<meta id="meta-desc" name="description" content="Artharohan is a trusted financial education platform. Unbiased information on Loans, Insurance, Mutual Funds, Real Estate and more. No hidden agenda. No commission pressure.">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-/* ============================================================
-   TOKENS
-   ============================================================ */
 :root {
   --navy:       #0B1628;
   --navy-mid:   #0F1F3D;
@@ -163,1000 +72,232 @@
   --white:      #FFFFFF;
   --nav-h:      68px;
 }
-
-/* ============================================================
-   RESET
-   ============================================================ */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-body {
-  font-family: 'Inter', sans-serif;
-  background: var(--cream);
-  color: var(--navy);
-  font-size: 16px;
-  line-height: 1.6;
-}
+body { font-family: 'Inter', sans-serif; background: var(--cream); color: var(--navy); font-size: 16px; line-height: 1.6; }
 img { max-width: 100%; display: block; }
 a { color: inherit; }
+.mono { font-family: 'JetBrains Mono', monospace; }
 
-/* ============================================================
-   NAV
-   ============================================================ */
-nav {
-  position: fixed;
-  inset: 0 0 auto 0;
-  background: var(--navy);
-  z-index: 200;
-  height: var(--nav-h);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 5%;
-  border-bottom: 1px solid rgba(201,168,68,0.18);
-}
-
-.nav-logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.nav-mark {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  background: var(--navy-mid);
-  border: 1.5px solid var(--gold);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  color: var(--gold);
-  font-weight: 700;
-  flex-shrink: 0;
-  /* No letter-spacing on Devanagari mark */
-}
-
-.nav-brand {
-  font-family: 'Playfair Display', serif;
-  color: var(--gold);
-  font-size: 1.1rem;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-}
-
-/* Desktop links */
-.nav-links {
-      display: flex;
-      align-items: center;
-      gap: 1.1rem;
-      list-style: none;
-      height: 100%;
-    }
-    .nav-links li { display: flex; align-items: center; height: 100%;
-}
-.nav-links li > a {
-  white-space: nowrap;
-}
-    .nav-links li.nav-dropdown { display: flex; }
-    .nav-links li.nav-dropdown .nav-dropdown-menu { display: none; }
-    .nav-links li.nav-dropdown.open .nav-dropdown-menu { display: block; }
-     .nav-dropdown { position: relative; }
-    .nav-dropdown-menu {
-      display: none;
-      position: absolute;
-      top: 100%;
-      right: 0;
-      background: var(--navy-light);
-      min-width: 190px;
-      list-style: none;
-      margin: 0;
-      padding: 8px 0;
-      border-radius: 8px;
-      box-shadow: 0 10px 24px rgba(0,0,0,0.35);
-      z-index: 500;
-    }
-    .nav-dropdown.open .nav-dropdown-menu { display: block; }
-    .nav-dropdown-menu li { height: auto; }
-    .nav-dropdown-menu li a {
-      height: auto;
-      padding: 10px 16px;
-      white-space: nowrap;
-      color: var(--cream);
-    }
-    .nav-dropdown-menu li a:hover { background: rgba(255,255,255,0.06); }
-    .nav-links a {
-      display: flex;
-      align-items: center;
-      height: 100%;
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 0.875rem;
-      font-weight: 500;
-      letter-spacing: 0.3px;
-      transition: color 0.2s;
-      cursor: pointer;
-    }
-    .nav-links a:hover,
-    .nav-links a.active { color: var(--gold); }
-
-    .nav-cta {
-      background: var(--gold);
-      color: var(--navy) !important;
-      padding: 8px 18px;
-      border-radius: 4px;
-      font-weight: 600 !important;
-    }
-    .nav-cta:hover { background: var(--gold-light) !important; }
-/* Hamburger (mobile) */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-  padding: 6px;
-  background: none;
-  border: none;
-}
-
-.hamburger span {
-  display: block;
-  width: 22px;
-  height: 2px;
-  background: var(--gold);
-  border-radius: 2px;
-  transition: all 0.25s;
-}
-
+/* NAV */
+nav { position: fixed; inset: 0 0 auto 0; background: var(--navy); z-index: 200; height: var(--nav-h); display: flex; align-items: center; justify-content: space-between; padding: 0 5%; border-bottom: 1px solid rgba(201,168,68,0.18); }
+.nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; cursor: pointer; }
+.nav-mark { width: 38px; height: 38px; border-radius: 50%; background: var(--navy-mid); border: 1.5px solid var(--gold); display: flex; align-items: center; justify-content: center; font-size: 18px; color: var(--gold); font-weight: 700; flex-shrink: 0; }
+.nav-brand { font-family: 'Playfair Display', serif; color: var(--gold); font-size: 1.1rem; font-weight: 700; letter-spacing: 1.5px; }
+.nav-links { display: flex; align-items: center; gap: 1.1rem; list-style: none; height: 100%; }
+.nav-links li { display: flex; align-items: center; height: 100%; }
+.nav-links li > a { white-space: nowrap; }
+.nav-links li.nav-dropdown { display: flex; }
+.nav-dropdown { position: relative; }
+.nav-dropdown-menu { display: none; position: absolute; top: 100%; right: 0; background: var(--navy-light); min-width: 190px; list-style: none; margin: 0; padding: 8px 0; border-radius: 8px; box-shadow: 0 10px 24px rgba(0,0,0,0.35); z-index: 500; }
+.nav-dropdown.open .nav-dropdown-menu { display: block; }
+.nav-dropdown-menu li { height: auto; }
+.nav-dropdown-menu li a { height: auto; padding: 10px 16px; white-space: nowrap; color: var(--cream); }
+.nav-dropdown-menu li a:hover { background: rgba(255,255,255,0.06); }
+.nav-links a { display: flex; align-items: center; height: 100%; color: var(--muted); text-decoration: none; font-size: 0.875rem; font-weight: 500; letter-spacing: 0.3px; transition: color 0.2s; cursor: pointer; }
+.nav-links a:hover, .nav-links a.active { color: var(--gold); }
+.nav-cta { background: var(--gold); color: var(--navy) !important; padding: 8px 18px; border-radius: 4px; font-weight: 600 !important; }
+.nav-cta:hover { background: var(--gold-light) !important; }
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+.hamburger span { display: block; width: 22px; height: 2px; background: var(--gold); border-radius: 2px; transition: all 0.25s; }
 .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .hamburger.open span:nth-child(2) { opacity: 0; }
 .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-/* Mobile dropdown */
-.mobile-nav {
-  display: none;
-  position: fixed;
-  top: var(--nav-h);
-  left: 0; right: 0;
-  background: var(--navy-mid);
-  border-bottom: 1px solid rgba(201,168,68,0.15);
-  z-index: 199;
-  flex-direction: column;
-  padding: 1rem 5%;
-}
-
+.mobile-nav { display: none; position: fixed; top: var(--nav-h); left: 0; right: 0; background: var(--navy-mid); border-bottom: 1px solid rgba(201,168,68,0.15); z-index: 199; flex-direction: column; padding: 1rem 5%; }
 .mobile-nav.open { display: flex; }
-
-.mobile-nav a {
-  color: var(--muted);
-  text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: 500;
-  padding: 12px 0;
-  border-bottom: 1px solid rgba(201,168,68,0.08);
-  cursor: pointer;
-  transition: color 0.2s;
-}
-
+.mobile-nav a { color: var(--muted); text-decoration: none; font-size: 0.95rem; font-weight: 500; padding: 12px 0; border-bottom: 1px solid rgba(201,168,68,0.08); cursor: pointer; transition: color 0.2s; }
 .mobile-nav a:last-child { border-bottom: none; }
 .mobile-nav a:hover { color: var(--gold); }
 
-/* ============================================================
-   PAGE SYSTEM
-   ============================================================ */
-.page {
-  display: none;
-  padding-top: var(--nav-h);
-  min-height: 100vh;
-}
-
+/* PAGE SYSTEM */
+.page { display: none; padding-top: var(--nav-h); min-height: 100vh; }
 .page.active { display: block; }
 
-/* ============================================================
-   SHARED ATOMS
-   ============================================================ */
+/* SHARED ATOMS */
 .section-wrap { padding: 72px 5%; }
 .section-wrap--dark { background: var(--navy); }
 .section-wrap--white { background: var(--white); }
 .section-wrap--cream { background: var(--cream); }
-
 .inner { max-width: 1100px; margin: 0 auto; }
-
-.eyebrow {
-  font-size: 0.72rem;
-  color: var(--gold);
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  font-weight: 600;
-  margin-bottom: 0.6rem;
-  display: block;
-}
-
-.h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(2.4rem, 4vw, 3.6rem);
-  font-weight: 900;
-  line-height: 1.12;
-  color: var(--navy);
-  margin-bottom: 1rem;
-}
-
-.h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(1.7rem, 2.8vw, 2.6rem);
-  font-weight: 900;
-  line-height: 1.18;
-  color: var(--navy);
-  margin-bottom: 1rem;
-}
-
-.h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--navy);
-  margin-bottom: 0.5rem;
-}
-
+.eyebrow { font-size: 0.72rem; color: var(--gold); letter-spacing: 3px; text-transform: uppercase; font-weight: 600; margin-bottom: 0.6rem; display: block; }
+.h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.4rem, 4vw, 3.6rem); font-weight: 900; line-height: 1.12; color: var(--navy); margin-bottom: 1rem; }
+.h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.7rem, 2.8vw, 2.6rem); font-weight: 900; line-height: 1.18; color: var(--navy); margin-bottom: 1rem; }
+.h3 { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem; }
 .on-dark { color: var(--white); }
 .lead { color: var(--body-text); font-size: 1rem; line-height: 1.75; font-weight: 300; max-width: 560px; }
 .lead.on-dark { color: var(--muted); }
-
-.btn {
-  display: inline-block;
-  padding: 13px 26px;
-  border-radius: 4px;
-  font-size: 0.88rem;
-  font-weight: 600;
-  letter-spacing: 0.4px;
-  text-decoration: none;
-  transition: all 0.2s;
-  cursor: pointer;
-  border: none;
-  font-family: 'Inter', sans-serif;
-}
-
+.btn { display: inline-block; padding: 13px 26px; border-radius: 4px; font-size: 0.88rem; font-weight: 600; letter-spacing: 0.4px; text-decoration: none; transition: all 0.2s; cursor: pointer; border: none; font-family: 'Inter', sans-serif; }
 .btn--gold { background: var(--gold); color: var(--navy); }
 .btn--gold:hover { background: var(--gold-light); transform: translateY(-1px); }
-
-.btn--outline {
-  background: transparent;
-  border: 1.5px solid rgba(201,168,68,0.4);
-  color: var(--gold-light);
-}
+.btn--outline { background: transparent; border: 1.5px solid rgba(201,168,68,0.4); color: var(--gold-light); }
 .btn--outline:hover { border-color: var(--gold); color: var(--gold); }
+.divider { width: 36px; height: 1.5px; background: var(--gold); opacity: 0.5; margin: 1.25rem 0; }
 
-.divider {
-  width: 36px;
-  height: 1.5px;
-  background: var(--gold);
-  opacity: 0.5;
-  margin: 1.25rem 0;
-}
-
-/* ============================================================
-   DISCLAIMER + FOOTER (shared across all pages)
-   ============================================================ */
-.disclaimer-bar {
-  background: var(--navy-mid);
-  border-top: 1px solid rgba(201,168,68,0.08);
-  padding: 20px 5%;
-  text-align: center;
-}
-
-.disclaimer-bar p {
-  color: #3A4A62;
-  font-size: 0.72rem;
-  line-height: 1.65;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-footer {
-  background: var(--navy);
-  border-top: 1px solid rgba(201,168,68,0.12);
-  padding: 36px 5%;
-  text-align: center;
-}
-
-.footer-brand {
-  font-family: 'Playfair Display', serif;
-  color: var(--gold);
-  font-size: 1.1rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  margin-bottom: 6px;
-  /* No letter-spacing on the Devanagari portion — handled inline */
-}
-
-.footer-tagline {
-  color: var(--muted);
-  font-size: 0.78rem;
-  letter-spacing: 1px;
-  margin-bottom: 18px;
-}
-
-.footer-nav {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  margin-bottom: 16px;
-  list-style: none;
-}
-
-.footer-nav a {
-  color: #3A4A62;
-  text-decoration: none;
-  font-size: 0.78rem;
-  cursor: pointer;
-  transition: color 0.2s;
-}
-
+/* DISCLAIMER + FOOTER */
+.disclaimer-bar { background: var(--navy-mid); border-top: 1px solid rgba(201,168,68,0.08); padding: 20px 5%; text-align: center; }
+.disclaimer-bar p { color: #3A4A62; font-size: 0.72rem; line-height: 1.65; max-width: 900px; margin: 0 auto; }
+footer { background: var(--navy); border-top: 1px solid rgba(201,168,68,0.12); padding: 36px 5%; text-align: center; }
+.footer-brand { font-family: 'Playfair Display', serif; color: var(--gold); font-size: 1.1rem; font-weight: 700; letter-spacing: 2px; margin-bottom: 6px; }
+.footer-tagline { color: var(--muted); font-size: 0.78rem; letter-spacing: 1px; margin-bottom: 18px; }
+.footer-nav { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 16px; list-style: none; }
+.footer-nav a { color: #3A4A62; text-decoration: none; font-size: 0.78rem; cursor: pointer; transition: color 0.2s; }
 .footer-nav a:hover { color: var(--gold); }
-
-.footer-copy {
-  color: #2A3A52;
-  font-size: 0.72rem;
-}
+.footer-copy { color: #2A3A52; font-size: 0.72rem; }
 
 /* ============================================================
-   HOME — HERO
+   HOME — HERO — ascent motif (signature element, grounded in
+   the brand name "Artharohan" = financial ascent)
    ============================================================ */
-.hero {
-  background: var(--navy);
-  min-height: calc(100vh - var(--nav-h));
-  display: flex;
-  align-items: center;
-  padding: 72px 5%;
-  position: relative;
-  overflow: hidden;
-}
+.hero { background: var(--navy); padding: 64px 5% 0; position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; top: -120px; right: -120px; width: 520px; height: 520px; border-radius: 50%; background: radial-gradient(circle, rgba(201,168,68,0.055) 0%, transparent 70%); pointer-events: none; }
+.hero-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
+.hero-hindi { font-size: 0.78rem; color: var(--gold); font-weight: 600; margin-bottom: 1rem; }
+.hero-title { font-family: 'Playfair Display', serif; font-size: clamp(2.4rem, 4.6vw, 4rem); color: var(--white); line-height: 1.1; font-weight: 900; margin-bottom: 1.3rem; max-width: 780px; }
+.hero-title em { color: var(--gold); font-style: normal; }
+.hero-sub { color: var(--muted); font-size: 1.02rem; line-height: 1.75; margin-bottom: 2rem; font-weight: 300; max-width: 620px; }
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 40px; }
+.ascent-panel { width: 100%; }
+.ascent-panel svg { width: 100%; height: auto; }
+.ascent-labels { display: grid; grid-template-columns: repeat(4,1fr); gap: 8px; text-align: center; margin-top: 4px; padding-bottom: 44px; }
+.ascent-labels a { display: block; text-decoration: none; padding: 10px 6px; border-radius: 6px; transition: background 0.2s; }
+.ascent-labels a:hover { background: rgba(201,168,68,0.08); }
+.ascent-labels .lbl-name { color: var(--gold-light); font-size: 0.8rem; font-weight: 600; margin-bottom: 2px; }
+.ascent-labels .lbl-desc { color: var(--muted); font-size: 0.68rem; font-weight: 300; }
+.ascent-caption { text-align: center; margin: -6px 0 22px; }
+.ascent-caption .ac-word { font-family: 'Playfair Display', serif; color: var(--gold-light); font-size: 0.95rem; letter-spacing: 0.5px; }
+.ascent-caption .ac-sep { color: rgba(201,168,68,0.35); margin: 0 14px; font-size: 0.8rem; }
+.ascent-caption .ac-mean { color: var(--muted); font-size: 0.7rem; letter-spacing: 1.5px; text-transform: uppercase; display: block; margin-top: 3px; }
 
-.hero::before {
-  content: '';
-  position: absolute;
-  top: -120px; right: -120px;
-  width: 520px; height: 520px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(201,168,68,0.055) 0%, transparent 70%);
-  pointer-events: none;
-}
-
-.hero::after {
-  content: '';
-  position: absolute;
-  bottom: -160px; left: -120px;
-  width: 420px; height: 420px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(201,168,68,0.035) 0%, transparent 70%);
-  pointer-events: none;
-}
-
-.hero-grid {
-  max-width: 1100px;
-  margin: 0 auto;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 72px;
-  align-items: center;
-}
-
-.hero-hindi {
-  font-size: 0.78rem;
-  color: var(--gold);
-  font-weight: 600;
-  margin-bottom: 1rem;
-  /* No letter-spacing on Devanagari — spacing disrupts matras */
-}
-
-.hero-title {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(2.6rem, 4.2vw, 4rem);
-  color: var(--white);
-  line-height: 1.1;
-  font-weight: 900;
-  margin-bottom: 1.4rem;
-}
-
-.hero-title em {
-  color: var(--gold);
-  font-style: normal;
-  display: block;
-}
-
-.hero-sub {
-  color: var(--muted);
-  font-size: 1rem;
-  line-height: 1.75;
-  margin-bottom: 2.4rem;
-  font-weight: 300;
-  max-width: 480px;
-}
-
-.hero-actions {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.hero-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 0.9rem;
-}
-
-.hero-card {
-  background: var(--navy-mid);
-  border: 1px solid rgba(201,168,68,0.13);
-  border-radius: 8px;
-  padding: 18px 22px;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  transition: border-color 0.2s;
-}
-
-.hero-card:hover { border-color: rgba(201,168,68,0.38); }
-
-.hero-card-icon {
-  width: 42px; height: 42px;
-  background: rgba(201,168,68,0.09);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.25rem;
-  flex-shrink: 0;
-}
-
-.hero-card-title {
-  color: var(--gold-light);
-  font-size: 0.88rem;
-  font-weight: 600;
-  margin-bottom: 2px;
-}
-
-.hero-card-desc {
-  color: var(--muted);
-  font-size: 0.76rem;
-  font-weight: 300;
-}
-
-/* ============================================================
-   HOME — PILLAR BAR
-   ============================================================ */
-.pillar-bar {
-  background: var(--navy-mid);
-  border-top: 1px solid rgba(201,168,68,0.09);
-  border-bottom: 1px solid rgba(201,168,68,0.09);
-  padding: 18px 5%;
-}
-
-.pillar-bar-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 1.2rem;
-  align-items: center;
-}
-
+/* PILLAR BAR */
+.pillar-bar { background: var(--navy-mid); border-top: 1px solid rgba(201,168,68,0.09); border-bottom: 1px solid rgba(201,168,68,0.09); padding: 18px 5%; }
+.pillar-bar-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 1.2rem; align-items: center; }
 .pillar-item { text-align: center; }
+.pillar-item strong { display: block; font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--gold); font-weight: 700; }
+.pillar-item span { font-size: 0.7rem; color: var(--muted); letter-spacing: 1.5px; text-transform: uppercase; }
 
-.pillar-item strong {
-  display: block;
-  font-family: 'Playfair Display', serif;
-  font-size: 1.4rem;
-  color: var(--gold);
-  font-weight: 700;
-}
+/* TRUST SECTION — expanded, honest, not bare checkmarks */
+.trust-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 1.25rem; margin-top: 2.4rem; }
+.trust-card { background: var(--cream); border-radius: 10px; padding: 24px; border-top: 3px solid var(--gold); }
+.trust-card h4 { color: var(--navy); font-size: 0.92rem; font-weight: 700; margin-bottom: 0.5rem; }
+.trust-card p { color: var(--body-text); font-size: 0.84rem; line-height: 1.6; font-weight: 300; }
 
-.pillar-item span {
-  font-size: 0.7rem;
-  color: var(--muted);
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-}
+/* EXPLORE / WHAT WE COVER — real links, honest coming-soon */
+.explore-group { margin-top: 2.6rem; }
+.explore-group-title { color: var(--gold-light); font-size: 0.78rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid rgba(201,168,68,0.15); }
+.explore-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.1rem; margin-bottom: 2.4rem; }
+.explore-card { background: var(--navy-mid); border: 1px solid rgba(201,168,68,0.13); border-radius: 10px; padding: 22px; text-decoration: none; display: block; transition: all 0.22s; position: relative; }
+.explore-card:hover { border-color: rgba(201,168,68,0.4); transform: translateY(-2px); background: var(--navy-light); }
+.explore-card .live-tag { position: absolute; top: 16px; right: 16px; font-size: 0.62rem; font-weight: 700; letter-spacing: 1px; color: #6FCF97; background: rgba(111,207,151,0.1); border: 1px solid rgba(111,207,151,0.3); padding: 2px 8px; border-radius: 12px; }
+.explore-icon { font-size: 1.7rem; margin-bottom: 0.8rem; }
+.explore-card h3 { color: var(--gold-light); font-size: 0.95rem; font-family: 'Playfair Display', serif; font-weight: 700; margin-bottom: 0.4rem; padding-right: 60px; }
+.explore-card p { color: var(--muted); font-size: 0.8rem; line-height: 1.6; font-weight: 300; padding-right: 12px; }
+.explore-group:last-child { margin-bottom: 40px; }
+.explore-card--soon { opacity: 0.65; cursor: default; }
+.explore-card--soon:hover { transform: none; border-color: rgba(201,168,68,0.13); background: var(--navy-mid); }
+.explore-card--soon .live-tag { color: var(--muted); background: rgba(255,255,255,0.04); border-color: rgba(201,168,68,0.15); }
 
-/* ============================================================
-   HOME — WHAT WE COVER STRIP
-   ============================================================ */
-.cover-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.25rem;
-  margin-top: 2.8rem;
-}
-
-.cover-card {
-  background: var(--navy-mid);
-  border: 1px solid rgba(201,168,68,0.11);
-  border-radius: 10px;
-  padding: 26px;
-  transition: all 0.22s;
-}
-
-.cover-card:hover {
-  border-color: rgba(201,168,68,0.38);
-  transform: translateY(-2px);
-  background: var(--navy-light);
-}
-
-.cover-icon { font-size: 1.9rem; margin-bottom: 0.9rem; }
-
-.cover-card .h3 { color: var(--gold-light); font-size: 0.95rem; }
-
-.cover-card p {
-  color: var(--muted);
-  font-size: 0.82rem;
-  line-height: 1.65;
-  font-weight: 300;
-}
-
-/* ============================================================
-   HOME — YOUTUBE SUBSCRIBE
-   ============================================================ */
-.yt-section {
-  text-align: center;
-}
-
-.yt-box {
-  margin-top: 2.8rem;
-  background: var(--navy);
-  border-radius: 12px;
-  padding: 56px 40px;
-  border: 1px solid rgba(201,168,68,0.15);
-  position: relative;
-  overflow: hidden;
-}
-
-.yt-box::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: radial-gradient(ellipse at center, rgba(201,168,68,0.04) 0%, transparent 70%);
-  pointer-events: none;
-}
-
-.yt-mark {
-  width: 72px; height: 72px;
-  background: #FF0000;
-  border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  margin: 0 auto 1.5rem;
-}
-
+/* YOUTUBE */
+.yt-section { text-align: center; }
+.yt-box { margin-top: 2.8rem; background: var(--navy); border-radius: 12px; padding: 56px 40px; border: 1px solid rgba(201,168,68,0.15); position: relative; overflow: hidden; }
+.yt-mark { width: 72px; height: 72px; background: #FF0000; border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 1.5rem; }
 .yt-box .h2 { color: var(--white); margin-bottom: 0.75rem; }
+.yt-box p { color: var(--muted); font-size: 0.95rem; line-height: 1.7; font-weight: 300; max-width: 480px; margin: 0 auto 1rem; }
+.yt-coming { display: inline-block; background: rgba(201,168,68,0.1); color: var(--gold); font-size: 0.72rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; padding: 5px 14px; border-radius: 20px; margin-bottom: 2rem; border: 1px solid rgba(201,168,68,0.2); }
+.yt-topics { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; margin: 1.5rem 0 2rem; }
+.yt-topic { background: var(--navy-mid); color: var(--muted); font-size: 0.76rem; padding: 5px 14px; border-radius: 20px; border: 1px solid rgba(201,168,68,0.12); }
 
-.yt-box p {
-  color: var(--muted);
-  font-size: 0.95rem;
-  line-height: 1.7;
-  font-weight: 300;
-  max-width: 480px;
-  margin: 0 auto 1rem;
-}
+/* MISSION */
+.mission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+.mission-points { margin-top: 2rem; display: flex; flex-direction: column; gap: 1.1rem; }
+.mission-point { display: flex; gap: 14px; align-items: flex-start; }
+.m-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--gold); margin-top: 7px; flex-shrink: 0; }
+.mission-point p { color: var(--body-text); font-size: 0.92rem; line-height: 1.65; font-weight: 300; }
+.quote-box { background: var(--navy); border-radius: 12px; padding: 36px; border: 1px solid rgba(201,168,68,0.13); }
+.quote-text { font-family: 'Playfair Display', serif; font-size: 1.35rem; color: var(--gold-light); line-height: 1.5; font-style: italic; margin-bottom: 0; }
+.quote-attr { font-size: 0.72rem; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; margin-top: 0; }
 
-.yt-coming {
-  display: inline-block;
-  background: rgba(201,168,68,0.1);
-  color: var(--gold);
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  padding: 5px 14px;
-  border-radius: 20px;
-  margin-bottom: 2rem;
-  border: 1px solid rgba(201,168,68,0.2);
-}
-
-.yt-topics {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-  justify-content: center;
-  margin: 1.5rem 0 2rem;
-}
-
-.yt-topic {
-  background: var(--navy-mid);
-  color: var(--muted);
-  font-size: 0.76rem;
-  padding: 5px 14px;
-  border-radius: 20px;
-  border: 1px solid rgba(201,168,68,0.12);
-}
-
-/* ============================================================
-   HOME — MISSION
-   ============================================================ */
-.mission-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 72px;
-  align-items: center;
-}
-
-.mission-points {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.1rem;
-}
-
-.mission-point {
-  display: flex;
-  gap: 14px;
-  align-items: flex-start;
-}
-
-.m-dot {
-  width: 7px; height: 7px;
-  border-radius: 50%;
-  background: var(--gold);
-  margin-top: 7px;
-  flex-shrink: 0;
-}
-
-.mission-point p {
-  color: var(--body-text);
-  font-size: 0.92rem;
-  line-height: 1.65;
-  font-weight: 300;
-}
-
-.quote-box {
-  background: var(--navy);
-  border-radius: 12px;
-  padding: 36px;
-  border: 1px solid rgba(201,168,68,0.13);
-}
-
-.quote-text {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.35rem;
-  color: var(--gold-light);
-  line-height: 1.5;
-  font-style: italic;
-  margin-bottom: 0;
-}
-
-.quote-attr {
-  font-size: 0.72rem;
-  color: var(--muted);
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-top: 0;
-}
-
-/* ============================================================
-   HOME — CONTACT CTA
-   ============================================================ */
-.cta-section {
-  text-align: center;
-}
-
+/* CTA */
+.cta-section { text-align: center; }
 .cta-inner { max-width: 680px; margin: 0 auto; }
-
-.cta-channels {
-  display: flex;
-  gap: 1.2rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 2.4rem;
-}
-
-.cta-card {
-  background: var(--navy-mid);
-  border: 1px solid rgba(201,168,68,0.18);
-  border-radius: 10px;
-  padding: 22px 28px;
-  text-decoration: none;
-  transition: all 0.2s;
-  min-width: 168px;
-  text-align: center;
-}
-
+.cta-channels { display: flex; gap: 1.2rem; justify-content: center; flex-wrap: wrap; margin-top: 2.4rem; }
+.cta-card { background: var(--navy-mid); border: 1px solid rgba(201,168,68,0.18); border-radius: 10px; padding: 22px 28px; text-decoration: none; transition: all 0.2s; min-width: 168px; text-align: center; }
 .cta-card:hover { border-color: var(--gold); transform: translateY(-2px); }
 .cta-card-icon { font-size: 1.7rem; margin-bottom: 7px; }
 .cta-card h4 { color: var(--gold-light); font-size: 0.82rem; font-weight: 600; margin-bottom: 3px; }
 .cta-card p { color: var(--muted); font-size: 0.74rem; font-weight: 300; }
 
-/* ============================================================
-   ABOUT PAGE
-   ============================================================ */
-.about-hero {
-  background: var(--navy);
-  padding: 72px 5%;
-}
+/* ABOUT PAGE */
+.about-hero { background: var(--navy); padding: 72px 5%; }
+.about-hero-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.values-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2.8rem; }
+.value-card { background: var(--white); border-radius: 8px; padding: 22px; border-left: 3px solid var(--gold); }
+.value-card h4 { color: var(--navy); font-size: 0.88rem; font-weight: 600; margin-bottom: 5px; }
+.value-card p { color: var(--body-text); font-size: 0.8rem; line-height: 1.55; font-weight: 300; }
 
-.about-hero-grid {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-}
-
-.values-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  margin-top: 2.8rem;
-}
-
-.value-card {
-  background: var(--white);
-  border-radius: 8px;
-  padding: 22px;
-  border-left: 3px solid var(--gold);
-}
-
-.value-card h4 {
-  color: var(--navy);
-  font-size: 0.88rem;
-  font-weight: 600;
-  margin-bottom: 5px;
-}
-
-.value-card p {
-  color: var(--body-text);
-  font-size: 0.8rem;
-  line-height: 1.55;
-  font-weight: 300;
-}
-
-/* ============================================================
-   SERVICES PAGE
-   ============================================================ */
-.services-hero {
-  background: var(--navy);
-  padding: 72px 5%;
-}
-
-.services-detail-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.75rem;
-  margin-top: 2.8rem;
-}
-
-.svc-card {
-  background: var(--white);
-  border-radius: 10px;
-  padding: 28px;
-  border-top: 3px solid var(--gold);
-  box-shadow: 0 4px 18px rgba(11,22,40,0.05);
-  transition: transform 0.2s;
-}
-
+/* SERVICES PAGE */
+.services-hero { background: var(--navy); padding: 72px 5%; }
+.services-detail-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.75rem; margin-top: 2.8rem; }
+.svc-card { background: var(--white); border-radius: 10px; padding: 28px; border-top: 3px solid var(--gold); box-shadow: 0 4px 18px rgba(11,22,40,0.05); transition: transform 0.2s; display: block; text-decoration: none; position: relative; }
 .svc-card:hover { transform: translateY(-3px); }
+.svc-card .live-badge { position: absolute; top: 20px; right: 20px; font-size: 0.62rem; font-weight: 700; letter-spacing: 1px; color: #2f9e5c; background: rgba(47,158,92,0.08); border: 1px solid rgba(47,158,92,0.25); padding: 2px 8px; border-radius: 12px; }
 .svc-icon { font-size: 2rem; margin-bottom: 0.9rem; }
 .svc-card .h3 { font-size: 1.05rem; }
-
-.svc-card p {
-  color: var(--body-text);
-  font-size: 0.85rem;
-  line-height: 1.7;
-  font-weight: 300;
-}
-
+.svc-card p { color: var(--body-text); font-size: 0.85rem; line-height: 1.7; font-weight: 300; }
 .tag-row { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 1rem; }
+.tag { background: rgba(201,168,68,0.09); color: var(--gold-dim); font-size: 0.7rem; padding: 3px 10px; border-radius: 20px; font-weight: 500; letter-spacing: 0.3px; }
 
-.tag {
-  background: rgba(201,168,68,0.09);
-  color: var(--gold-dim);
-  font-size: 0.7rem;
-  padding: 3px 10px;
-  border-radius: 20px;
-  font-weight: 500;
-  letter-spacing: 0.3px;
-}
-
-/* ============================================================
-   CONTACT PAGE
-   ============================================================ */
-.contact-hero {
-  background: var(--navy);
-  padding: 72px 5%;
-}
-
-.contact-cards-row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.25rem;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.contact-info-card {
-  background: var(--white);
-  border-radius: 10px;
-  padding: 26px;
-  text-align: center;
-  box-shadow: 0 4px 18px rgba(11,22,40,0.05);
-  text-decoration: none;
-  display: block;
-  transition: all 0.2s;
-}
-
+/* CONTACT PAGE */
+.contact-hero { background: var(--navy); padding: 72px 5%; }
+.contact-cards-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; max-width: 900px; margin: 0 auto; }
+.contact-info-card { background: var(--white); border-radius: 10px; padding: 26px; text-align: center; box-shadow: 0 4px 18px rgba(11,22,40,0.05); text-decoration: none; display: block; transition: all 0.2s; }
 .contact-info-card:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(11,22,40,0.1); }
 .ci-icon { font-size: 1.9rem; margin-bottom: 10px; }
 .contact-info-card h4 { color: var(--navy); font-size: 0.8rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 4px; }
 .contact-info-card p { color: var(--body-text); font-size: 0.88rem; }
-
-/* Contact form */
-.form-wrap {
-  max-width: 580px;
-  margin: 0 auto;
-  background: var(--white);
-  border-radius: 12px;
-  padding: 44px;
-  box-shadow: 0 8px 36px rgba(11,22,40,0.07);
-}
-
+.form-wrap { max-width: 580px; margin: 0 auto; background: var(--white); border-radius: 12px; padding: 44px; box-shadow: 0 8px 36px rgba(11,22,40,0.07); }
 .form-wrap .h2 { font-size: 1.5rem; margin-bottom: 0.5rem; }
 .form-wrap .lead { font-size: 0.88rem; margin-bottom: 1.8rem; max-width: 100%; }
-
 .f-group { margin-bottom: 1.25rem; }
-
-.f-group label {
-  display: block;
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: var(--navy);
-  margin-bottom: 5px;
-  letter-spacing: 0.4px;
-}
-
-.f-group input,
-.f-group select,
-.f-group textarea {
-  width: 100%;
-  padding: 11px 14px;
-  border: 1.5px solid #DDE6F0;
-  border-radius: 6px;
-  font-size: 0.88rem;
-  font-family: 'Inter', sans-serif;
-  color: var(--navy);
-  background: var(--cream);
-  transition: border-color 0.2s;
-  outline: none;
-  appearance: none;
-  -webkit-appearance: none;
-}
-
-.f-group input:focus,
-.f-group select:focus,
-.f-group textarea:focus {
-  border-color: var(--gold);
-  background: var(--white);
-}
-
+.f-group label { display: block; font-size: 0.78rem; font-weight: 600; color: var(--navy); margin-bottom: 5px; letter-spacing: 0.4px; }
+.f-group input, .f-group select, .f-group textarea { width: 100%; padding: 11px 14px; border: 1.5px solid #DDE6F0; border-radius: 6px; font-size: 0.88rem; font-family: 'Inter', sans-serif; color: var(--navy); background: var(--cream); transition: border-color 0.2s; outline: none; appearance: none; -webkit-appearance: none; }
+.f-group input:focus, .f-group select:focus, .f-group textarea:focus { border-color: var(--gold); background: var(--white); }
 .f-group textarea { resize: vertical; min-height: 96px; }
-
-.f-submit {
-  width: 100%;
-  background: var(--gold);
-  color: var(--navy);
-  padding: 13px;
-  border: none;
-  border-radius: 6px;
-  font-size: 0.92rem;
-  font-weight: 700;
-  cursor: pointer;
-  font-family: 'Inter', sans-serif;
-  transition: all 0.2s;
-  letter-spacing: 0.3px;
-  margin-top: 0.5rem;
-}
-
+.f-submit { width: 100%; background: var(--gold); color: var(--navy); padding: 13px; border: none; border-radius: 6px; font-size: 0.92rem; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; transition: all 0.2s; letter-spacing: 0.3px; margin-top: 0.5rem; }
 .f-submit:hover { background: var(--gold-light); transform: translateY(-1px); }
+.form-note { font-size: 0.72rem; color: var(--muted); text-align: center; margin-top: 1rem; line-height: 1.5; }
 
-.form-note {
-  font-size: 0.72rem;
-  color: var(--muted);
-  text-align: center;
-  margin-top: 1rem;
-  line-height: 1.5;
-}
-
-/* ============================================================
-   WHATSAPP FLOAT
-   ============================================================ */
-.wa-float {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  width: 54px;
-  height: 54px;
-  background: #25D366;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  box-shadow: 0 4px 18px rgba(37,211,102,0.38);
-  z-index: 300;
-  transition: transform 0.2s;
-  font-size: 1.5rem;
-  line-height: 1;
-}
-
+/* WHATSAPP FLOAT */
+.wa-float { position: fixed; bottom: 24px; right: 24px; width: 54px; height: 54px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 4px 18px rgba(37,211,102,0.38); z-index: 300; transition: transform 0.2s; font-size: 1.5rem; line-height: 1; }
+.explore-card--soon:last-child, .explore-grid > *:last-child { scroll-margin-bottom: 90px; }
+@media (max-width: 480px) { .explore-grid { padding-right: 4px; } .explore-card { padding-bottom: 26px; } }
 .wa-float:hover { transform: scale(1.1); }
 
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .nav-links { display: none; }
   .hamburger { display: flex; }
-
-  .hero-grid { grid-template-columns: 1fr; gap: 0; }
-  .hero-cards { display: none; }
-
   .mission-grid { grid-template-columns: 1fr; gap: 40px; }
   .about-hero-grid { grid-template-columns: 1fr; gap: 40px; }
   .values-grid { grid-template-columns: 1fr; }
-
   .section-wrap { padding: 52px 5%; }
   .form-wrap { padding: 28px 20px; }
-
-  .cover-grid,
   .services-detail-grid { grid-template-columns: 1fr; }
-
   .cta-channels { gap: 1rem; }
   .cta-card { min-width: 140px; padding: 18px 16px; }
-     /* Nav dropdowns */
-    .nav-dropdown { position: relative; }
-    .nav-dropdown-menu {
-      display: none;
-      position: absolute;
-      top: 100%;
-      right: 0;
-      background: var(--navy-light);
-      min-width: 190px;
-      list-style: none;
-      margin: 0;
-      padding: 8px 0;
-      border-radius: 8px;
-      box-shadow: 0 10px 24px rgba(0,0,0,0.35);
-      z-index: 500;
-    }
-    .nav-dropdown.open .nav-dropdown-menu { display: block; }
-    .nav-dropdown-menu li { height: auto; }
-    .nav-dropdown-menu li a {
-      height: auto;
-      padding: 10px 16px;
-      white-space: nowrap;
-      color: var(--cream);
-    }
-    .nav-dropdown-menu li a:hover { background: rgba(255,255,255,0.06); }
-     }
+  .ascent-labels { grid-template-columns: repeat(2,1fr); }
+}
 </style>
 </head>
 <body>
 
-<!-- ============================================================
-     NAV
-     ============================================================ -->
-
-     <div id="site-nav"></div>
+<!-- NAV -->
+<div id="site-nav"></div>
 <script>
   var SITE_NAV_CURRENT = "home";
   var SITE_NAV_IS_HOME = true;
 </script>
 <script src="nav.js"></script>
+
 <!-- ============================================================
      HOME PAGE
      ============================================================ -->
@@ -1164,47 +305,67 @@ footer {
 
   <!-- Hero -->
   <section class="hero">
-    <div class="hero-grid">
-      <div>
-        <p class="hero-hindi">अर्थारोहण — Your Financial Ascent</p>
-        <h1 class="hero-title">
-          Your Financial Future,
-          <em>Clarified.</em>
-        </h1>
-        <p class="hero-sub">Unbiased financial education on Loans, Insurance, Mutual Funds, Real Estate and more. No hidden agenda. No commission pressure. Just clear, honest guidance — in the language you actually speak.</p>
-        <div class="hero-actions">
-          <a href="https://wa.me/917838355855" target="_blank" rel="noopener noreferrer" class="btn btn--gold">Talk to an Expert — Free →</a>
-<a href="https://youtube.com/@artharohan" target="_blank" rel="noopener noreferrer" class="btn btn--outline">Watch Our YouTube →</a>
-        </div>
+    <div class="hero-inner">
+      <p class="hero-hindi">अर्थारोहण — Your Financial Ascent</p>
+      <h1 class="hero-title">Honest guidance first. <em>Hands-on help when you're ready.</em></h1>
+      <p class="hero-sub">We explain Loans, Insurance, and Real Estate clearly — no jargon, no pressure. And when you want to actually move forward, we're the same people who'll walk you through it, transparently, with every fee and term explained upfront.</p>
+      <div class="hero-actions">
+        <a href="https://wa.me/917838355855" target="_blank" rel="noopener noreferrer" class="btn btn--gold">Talk to Us — Free →</a>
+        <a href="https://youtube.com/@artharohan" target="_blank" rel="noopener noreferrer" class="btn btn--outline">Watch Our YouTube →</a>
       </div>
-      <div class="hero-cards">
-        <div class="hero-card">
-          <div class="hero-card-icon">🏦</div>
-          <div>
-            <p class="hero-card-title">Loans — Explained Clearly</p>
-            <p class="hero-card-desc">Business, Personal, Home, Mudra — process, documents, eligibility</p>
-          </div>
+
+      <!-- ASCENT — signature element, grounded in the brand name.
+           A real growth-chart graphic, not a bare line: gradient
+           fill, grid, glow at the peak. -->
+      <div class="ascent-panel">
+        <svg viewBox="0 0 900 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="dawnGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#E8D5A3" stop-opacity="0.9"/>
+              <stop offset="55%" stop-color="#C9A844" stop-opacity="0.25"/>
+              <stop offset="100%" stop-color="#C9A844" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="peakFar" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#12213E"/>
+              <stop offset="100%" stop-color="#0F1F3D"/>
+            </linearGradient>
+            <linearGradient id="peakNear" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#1A2F52"/>
+              <stop offset="100%" stop-color="#0B1628"/>
+            </linearGradient>
+          </defs>
+
+          <circle cx="705" cy="70" r="120" fill="url(#dawnGlow)"/>
+
+          <path d="M 0 200 L 110 130 L 220 175 L 330 100 L 450 165 L 560 90 L 680 150 L 780 60 L 900 140 L 900 260 L 0 260 Z" fill="url(#peakFar)"/>
+
+          <path d="M 0 260 L 0 230 L 130 175 L 260 215 L 400 130 L 560 195 L 705 70 L 850 175 L 900 200 L 900 260 Z" fill="url(#peakNear)"/>
+
+          <path d="M 55 245 C 140 235, 150 195, 220 205 C 300 217, 320 175, 400 160 C 480 145, 520 190, 590 165 C 650 143, 660 105, 705 70"
+                stroke="#C9A844" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M 55 245 C 140 235, 150 195, 220 205 C 300 217, 320 175, 400 160 C 480 145, 520 190, 590 165 C 650 143, 660 105, 705 70"
+                stroke="#C9A844" stroke-width="3" fill="none" stroke-linecap="round" stroke-dasharray="1 14" opacity="0.9"/>
+
+          <circle cx="55" cy="245" r="6" fill="#0B1628" stroke="#C9A844" stroke-width="2.5"/>
+          <circle cx="220" cy="205" r="6" fill="#0B1628" stroke="#C9A844" stroke-width="2.5"/>
+          <circle cx="400" cy="160" r="6" fill="#0B1628" stroke="#C9A844" stroke-width="2.5"/>
+          <circle cx="590" cy="165" r="6" fill="#0B1628" stroke="#C9A844" stroke-width="2.5"/>
+
+          <circle cx="705" cy="70" r="7" fill="#E8D5A3"/>
+          <line x1="705" y1="70" x2="705" y2="42" stroke="#E8D5A3" stroke-width="2"/>
+          <path d="M 705 42 L 730 50 L 705 58 Z" fill="#C9A844"/>
+        </svg>
+
+        <div class="ascent-caption">
+          <span class="ac-word">अर्थ</span><span class="ac-sep">·</span><span class="ac-word">आरोहण</span>
+          <span class="ac-mean">Artha, the Pursuit of Prosperity — Arohan, the Climb Toward It</span>
         </div>
-        <div class="hero-card">
-          <div class="hero-card-icon">🛡️</div>
-          <div>
-            <p class="hero-card-title">Insurance — Without the Jargon</p>
-            <p class="hero-card-desc">Life, Health, General — what to buy, what to avoid, how to claim</p>
-          </div>
-        </div>
-        <div class="hero-card">
-          <div class="hero-card-icon">📈</div>
-          <div>
-            <p class="hero-card-title">Investments — Fact Based</p>
-            <p class="hero-card-desc">Mutual Funds, FDs, Bonds — risks, returns, reality</p>
-          </div>
-        </div>
-        <div class="hero-card">
-          <div class="hero-card-icon">🏠</div>
-          <div>
-            <p class="hero-card-title">Real Estate — Buyer's Lens</p>
-            <p class="hero-card-desc">RERA, stamp duty, builder checks — what the brochure skips</p>
-          </div>
+
+        <div class="ascent-labels">
+          <a href="business-loans.html"><div class="lbl-name">🏦 Loans</div><div class="lbl-desc">Business, Car, Personal</div></a>
+          <a href="two-wheeler-third-party-insurance.html"><div class="lbl-name">🛡️ Insurance</div><div class="lbl-desc">Motor, Life</div></a>
+          <a onclick="showPage('services')"><div class="lbl-name">📈 Investments</div><div class="lbl-desc">Coming soon</div></a>
+          <a onclick="showPage('services')"><div class="lbl-name">🏠 Real Estate</div><div class="lbl-desc">Coming soon</div></a>
         </div>
       </div>
     </div>
@@ -1213,91 +374,116 @@ footer {
   <!-- Pillar bar -->
   <div class="pillar-bar">
     <div class="pillar-bar-inner">
-      <div class="pillar-item">
-        <strong>Zero Bias</strong>
-        <span>Education Only</span>
-      </div>
-      <div class="pillar-item">
-        <strong>9 Topics</strong>
-        <span>Covered In Depth</span>
-      </div>
-      <div class="pillar-item">
-        <strong>Hinglish</strong>
-        <span>Real Language</span>
-      </div>
-      <div class="pillar-item">
-        <strong>No Agenda</strong>
-        <span>No Product Push</span>
-      </div>
+      <div class="pillar-item"><strong>Delhi NCR</strong><span>Based &amp; Local</span></div>
+      <div class="pillar-item"><strong>Hinglish</strong><span>Real Language</span></div>
+      <div class="pillar-item"><strong>0%</strong><span>Hidden Fees</span></div>
+      <div class="pillar-item"><strong>Honest</strong><span>Even If "Not Yet"</span></div>
     </div>
   </div>
 
-     <!-- Why Trust Artharohan -->
+  <!-- Why Trust Artharohan — expanded, real -->
   <div class="section-wrap section-wrap--white">
-    <div class="inner" style="text-align:center;">
+    <div class="inner">
       <span class="eyebrow">Why Trust Artharohan</span>
-      <h2 class="h2">Built on Principles, Not Promises</h2>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem;max-width:820px;margin:2rem auto 0;text-align:left;">
-        <div style="display:flex;align-items:flex-start;gap:0.6rem;">
-          <span style="color:var(--gold);font-weight:700;">✔</span>
-          <span>No hidden commission pressure</span>
+      <h2 class="h2">How We Actually Operate</h2>
+      <p class="lead">Not vague promises — the specific things we do differently.</p>
+      <div class="trust-grid">
+        <div class="trust-card">
+          <h4>We tell you "not yet" when true</h4>
+          <p>If your profile isn't ready for a loan or your CIBIL needs work first, we say so — even though it means no business for us that day.</p>
         </div>
-        <div style="display:flex;align-items:flex-start;gap:0.6rem;">
-          <span style="color:var(--gold);font-weight:700;">✔</span>
-          <span>No fake guarantees</span>
+        <div class="trust-card">
+          <h4>Every fee, shown upfront</h4>
+          <p>When guidance turns into hands-on help with a loan or policy, any charges are discussed before you commit — never buried in fine print.</p>
         </div>
-        <div style="display:flex;align-items:flex-start;gap:0.6rem;">
-          <span style="color:var(--gold);font-weight:700;">✔</span>
-          <span>Educational-first approach</span>
+        <div class="trust-card">
+          <h4>No product-pushing</h4>
+          <p>We don't get paid more for recommending one lender over another. The suggestion fits your situation, not our commission.</p>
         </div>
-        <div style="display:flex;align-items:flex-start;gap:0.6rem;">
-          <span style="color:var(--gold);font-weight:700;">✔</span>
-          <span>Practical, real-world guidance</span>
-        </div>
-        <div style="display:flex;align-items:flex-start;gap:0.6rem;">
-          <span style="color:var(--gold);font-weight:700;">✔</span>
-          <span>Transparent process, every step</span>
+        <div class="trust-card">
+          <h4>One person, one conversation</h4>
+          <p>You're not routed through a call center. The person who explains your options is the same person who helps you act on them.</p>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- What we cover -->
+  <!-- Explore — real links, honest coming-soon -->
   <div class="section-wrap section-wrap--dark">
     <div class="inner">
-      <span class="eyebrow">What We Cover</span>
-      <h2 class="h2 on-dark">Every Financial Product<br>You'll Ever Need to Understand</h2>
-      <p class="lead on-dark">From getting your first loan to understanding your insurance policy — Artharohan covers the full picture, without pushing any single product or provider.</p>
-      <div class="cover-grid">
-        <div class="cover-card">
-          <div class="cover-icon">🏦</div>
-          <h3 class="h3">Loans</h3>
-          <p>Business, Personal, Home, Mudra — eligibility, documents, process, and what banks actually check before saying yes or no.</p>
+      <span class="eyebrow">Explore Our Guidance</span>
+      <h2 class="h2 on-dark">What's Actually Live Right Now</h2>
+      <p class="lead on-dark">Every page below is real — built, live, and ready to help. Nothing here is a placeholder.</p>
+
+      <div class="explore-group">
+        <div class="explore-group-title">Loans</div>
+        <div class="explore-grid">
+          <a href="business-loans.html" class="explore-card">
+            <span class="live-tag">LIVE</span>
+            <div class="explore-icon">🏦</div>
+            <h3>Business Loans</h3>
+            <p>Unsecured, Working Capital, Credit Limit, Mudra — Delhi NCR self-employed.</p>
+          </a>
+          <a href="car-loan.html" class="explore-card">
+            <span class="live-tag">LIVE</span>
+            <div class="explore-icon">🚗</div>
+            <h3>Car Loan</h3>
+            <p>New and used car finance — eligibility, rates, and honest guidance.</p>
+          </a>
         </div>
-        <div class="cover-card">
-          <div class="cover-icon">🛡️</div>
-          <h3 class="h3">Insurance</h3>
-          <p>Life, Health, General — what to buy, what to skip, how to read the fine print, and how to file claims without getting stuck.</p>
+      </div>
+
+      <div class="explore-group">
+        <div class="explore-group-title">Motor &amp; Life Insurance</div>
+        <div class="explore-grid">
+          <a href="two-wheeler-third-party-insurance.html" class="explore-card">
+            <span class="live-tag">LIVE</span>
+            <div class="explore-icon">🛵</div>
+            <h3>2W Insurance</h3>
+            <p>Third-party bike insurance — current IRDAI rates explained.</p>
+          </a>
+          <a href="four-wheeler-third-party-insurance.html" class="explore-card">
+            <span class="live-tag">LIVE</span>
+            <div class="explore-icon">🚙</div>
+            <h3>4W Insurance</h3>
+            <p>Third-party car insurance — mandatory cover, no jargon.</p>
+          </a>
+          <a href="commercial-vehicle-insurance.html" class="explore-card">
+            <span class="live-tag">LIVE</span>
+            <div class="explore-icon">🚛</div>
+            <h3>Commercial Vehicle</h3>
+            <p>GCV &amp; PCV insurance for trucks, taxis, and fleets.</p>
+          </a>
+          <a href="term-life-insurance.html" class="explore-card">
+            <span class="live-tag">LIVE</span>
+            <div class="explore-icon">🛡️</div>
+            <h3>Term Life Insurance</h3>
+            <p>Real cover amounts, honest premium estimates.</p>
+          </a>
         </div>
-        <div class="cover-card">
-          <div class="cover-icon">📊</div>
-          <h3 class="h3">Mutual Funds</h3>
-          <p>SIP, debt, equity — without the sales pitch. What NAV means, what expense ratio costs you, and how to actually read a fund fact sheet.</p>
-        </div>
-        <div class="cover-card">
-          <div class="cover-icon">💰</div>
-          <h3 class="h3">Fixed Deposits &amp; Bonds</h3>
-          <p>FD rates, TDS, premature withdrawal, government vs corporate bonds — the safest products explained safely.</p>
-        </div>
-        <div class="cover-card">
-          <div class="cover-icon">🏠</div>
-          <h3 class="h3">Real Estate</h3>
-          <p>RERA verification, stamp duty, builder track record, home loan structuring — what the brochure skips and the broker won't tell you.</p>
-        </div>
-        <div class="cover-card">
-          <div class="cover-icon">💳</div>
-          <h3 class="h3">Credit Cards &amp; Credit Score</h3>
-          <p>CIBIL score building, credit card traps, and how to use credit to your advantage without ever paying interest.</p>
+      </div>
+
+      <div class="explore-group">
+        <div class="explore-group-title">Coming Soon</div>
+        <div class="explore-grid">
+          <div class="explore-card explore-card--soon">
+            <span class="live-tag">SOON</span>
+            <div class="explore-icon">🏠</div>
+            <h3>Real Estate</h3>
+            <p>1/2/3 BHK guidance across West Delhi — in progress.</p>
+          </div>
+          <div class="explore-card explore-card--soon">
+            <span class="live-tag">SOON</span>
+            <div class="explore-icon">📊</div>
+            <h3>Mutual Funds</h3>
+            <p>SIP and fund basics — not live yet, honestly.</p>
+          </div>
+          <div class="explore-card explore-card--soon">
+            <span class="live-tag">SOON</span>
+            <div class="explore-icon">💳</div>
+            <h3>Credit Cards &amp; Score</h3>
+            <p>CIBIL building and credit card guidance — planned.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -1318,7 +504,6 @@ footer {
           <span class="yt-topic">Khabardar — Financial Fraud Series</span>
           <span class="yt-topic">Loan Explainers</span>
           <span class="yt-topic">Insurance Deep Dives</span>
-          <span class="yt-topic">Mutual Fund Basics</span>
           <span class="yt-topic">Real Estate Reality</span>
         </div>
         <a href="https://youtube.com/@artharohan" target="_blank" rel="noopener noreferrer" class="btn btn--gold">Subscribe on YouTube →</a>
@@ -1332,36 +517,26 @@ footer {
       <div class="mission-grid">
         <div>
           <span class="eyebrow">Our Mission</span>
-          <h2 class="h2">Financial Literacy Is a Right, Not a Privilege</h2>
+          <h2 class="h2">Artha Is Not a Lesser Goal</h2>
+          <p class="lead" style="margin-bottom:1.2rem;">In classical Indian thought, a well-lived life rests on four pursuits — Dharma, Artha, Kama, Moksha. <strong style="color:var(--navy);">Artha</strong> — prosperity, livelihood, the means to live well — sits among them with dignity, not beneath them. Understanding it is not indulgence. It is one of life's legitimate goals.</p>
           <div class="mission-points">
-            <div class="mission-point">
-              <div class="m-dot"></div>
-              <p>We do not promote any specific financial product, bank, or NBFC. Our only interest is your informed decision.</p>
-            </div>
-            <div class="mission-point">
-              <div class="m-dot"></div>
-              <p>Every topic is explained with facts, logic, and real-world examples — never with marketing language.</p>
-            </div>
-            <div class="mission-point">
-              <div class="m-dot"></div>
-              <p>We believe every Indian deserves to understand where their money goes, and why.</p>
-            </div>
-            <div class="mission-point">
-              <div class="m-dot"></div>
-              <p>Artharohan is built for the person who was never taught this in school and was too afraid to ask.</p>
-            </div>
+            <div class="mission-point"><div class="m-dot"></div><p>We explain honestly first — whether or not it leads to a transaction. Understanding always comes before any conversation about products.</p></div>
+            <div class="mission-point"><div class="m-dot"></div><p>Every topic is explained with facts, logic, and real-world examples — never with marketing language.</p></div>
+            <div class="mission-point"><div class="m-dot"></div><p>We believe every Indian deserves to understand where their money goes, and why — the same understanding once reserved for those with the right teachers.</p></div>
+            <div class="mission-point"><div class="m-dot"></div><p>Artharohan is built for the person who was never taught this in school and was too afraid to ask.</p></div>
           </div>
         </div>
         <div class="quote-box">
           <p class="quote-text">"Paisa samajhna aapka adhikaar hai."</p>
           <div class="divider"></div>
-          <p style="color:var(--muted);font-size:0.88rem;line-height:1.7;font-weight:300;">Understanding money is your right. Artharohan exists to make sure no one is left behind simply because they didn't know who to ask.</p>
+          <p style="color:var(--muted);font-size:0.88rem;line-height:1.7;font-weight:300;">Understanding money is your right. Not a modern slogan — a continuation of something older: Artha, the pursuit of prosperity, has always been one of life's four legitimate goals. Arohan is simply the climb toward understanding it.</p>
           <div class="divider"></div>
-          <p class="quote-attr">— Artharohan Mission</p>
+          <p class="quote-attr">— अर्थ · आरोहण — Artharohan</p>
         </div>
       </div>
     </div>
   </div>
+
 
   <!-- CTA -->
   <div class="section-wrap section-wrap--dark cta-section">
@@ -1371,26 +546,20 @@ footer {
       <p class="lead on-dark" style="margin:0.75rem auto 0;max-width:480px;">For loan enquiries, insurance questions, or general financial guidance — reach out directly.</p>
       <div class="cta-channels">
         <a href="https://wa.me/917838355855" target="_blank" rel="noopener noreferrer" class="cta-card">
-          <div class="cta-card-icon">💬</div>
-          <h4>WhatsApp</h4>
-          <p>+91 78383 55855</p>
+          <div class="cta-card-icon">💬</div><h4>WhatsApp</h4><p>+91 78383 55855</p>
         </a>
         <a href="https://youtube.com/@artharohan" target="_blank" rel="noopener noreferrer" class="cta-card">
-          <div class="cta-card-icon">▶️</div>
-          <h4>YouTube</h4>
-          <p>@artharohan</p>
+          <div class="cta-card-icon">▶️</div><h4>YouTube</h4><p>@artharohan</p>
         </a>
         <a href="mailto:artharohanventures@gmail.com" class="cta-card">
-          <div class="cta-card-icon">📧</div>
-          <h4>Email</h4>
-          <p>artharohanventures@gmail.com</p>
+          <div class="cta-card-icon">📧</div><h4>Email</h4><p>artharohanventures@gmail.com</p>
         </a>
       </div>
     </div>
   </div>
 
   <div class="disclaimer-bar">
-    <p>Disclaimer: All content on this website is for educational and informational purposes only. Artharohan does not provide investment, legal, or tax advice, and does not recommend specific financial products. Please conduct your own research and consult a qualified financial advisor before making any financial decision. Loan approvals, insurance terms, and investment returns are subject to each institution's policies and applicable market conditions. Artharohan Ventures · UDYAM-DL-11-0113585</p>
+    <p>Disclaimer: Artharohan Ventures (UDYAM-DL-11-0113585) provides financial guidance and, where relevant, hands-on assistance with loans, insurance, and property. We are not a bank, NBFC, or insurer — approvals, rates, and terms are determined by the respective institution. Please conduct your own research and consult a qualified advisor before making any financial decision.</p>
   </div>
 
   <footer>
@@ -1400,6 +569,7 @@ footer {
       <li><a onclick="showPage('home')">Home</a></li>
       <li><a onclick="showPage('about')">About</a></li>
       <li><a onclick="showPage('services')">Services</a></li>
+      <li><a href="business-loans.html">Business Loans</a></li>
       <li><a onclick="showPage('contact')">Contact</a></li>
       <li><a href="https://youtube.com/@artharohan" target="_blank" rel="noopener noreferrer">YouTube</a></li>
     </ul>
@@ -1413,14 +583,13 @@ footer {
      ABOUT PAGE
      ============================================================ -->
 <div id="about" class="page">
-
   <div class="about-hero">
     <div class="about-hero-grid">
       <div>
         <span class="eyebrow">About Artharohan</span>
         <h1 class="h1 on-dark">Built to Bridge<br>the Financial<br>Knowledge Gap</h1>
         <p class="lead on-dark" style="margin-top:1rem;">Artharohan was built on one belief: that every Indian — regardless of education, income, or background — deserves access to clear, honest, and actionable financial information.</p>
-        <p class="lead on-dark" style="margin-top:1rem;">We are not a bank. Not a broker. Not an agent. We are a financial education platform — and our only incentive is your understanding.</p>
+        <p class="lead on-dark" style="margin-top:1rem;">We explain first, honestly, whether or not it leads anywhere. And when you're ready for hands-on help with a loan, insurance, or property decision — we're the same people, with the same transparency, every fee shown upfront.</p>
         <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
           <a href="https://youtube.com/@artharohan" target="_blank" rel="noopener noreferrer" class="btn btn--gold">Subscribe on YouTube</a>
           <a onclick="showPage('contact')" class="btn btn--outline">Get In Touch</a>
@@ -1441,36 +610,18 @@ footer {
       <span class="eyebrow">Our Values</span>
       <h2 class="h2">What Artharohan Stands For</h2>
       <div class="values-grid">
-        <div class="value-card">
-          <h4>Zero Bias</h4>
-          <p>We do not promote any specific bank, NBFC, insurer, or fund house. Every explanation is education — never sales.</p>
-        </div>
-        <div class="value-card">
-          <h4>No Hidden Agenda</h4>
-          <p>Our content is driven by our mission. We are transparent about who we are, what we do, and what we don't do.</p>
-        </div>
-        <div class="value-card">
-          <h4>Practical First</h4>
-          <p>Theory without application is useless. Every topic we cover comes with real-world context and actionable next steps.</p>
-        </div>
-        <div class="value-card">
-          <h4>Accessible Always</h4>
-          <p>Financial education should be in a language people actually speak. That's why our content is in Hinglish, on YouTube.</p>
-        </div>
-        <div class="value-card">
-          <h4>Honest About Risk</h4>
-          <p>We will always tell you what can go wrong — not just what looks good on paper. Informed means fully informed.</p>
-        </div>
-        <div class="value-card">
-          <h4>Long-Term Thinking</h4>
-          <p>We are building a lasting resource for financial literacy in India. Every piece of content is built to stay relevant.</p>
-        </div>
+        <div class="value-card"><h4>Honest, Even When It Costs Us</h4><p>If your profile isn't ready, or the answer is "not yet," we say so — even when it means no business today.</p></div>
+        <div class="value-card"><h4>No Hidden Agenda</h4><p>We are transparent about who we are, what we do, and how any fees work — before you ever commit.</p></div>
+        <div class="value-card"><h4>Practical First</h4><p>Theory without application is useless. Every topic we cover comes with real-world context and actionable next steps.</p></div>
+        <div class="value-card"><h4>Accessible Always</h4><p>Financial guidance should be in a language people actually speak. That's why our content is in Hinglish.</p></div>
+        <div class="value-card"><h4>Honest About Risk</h4><p>We will always tell you what can go wrong — not just what looks good on paper. Informed means fully informed.</p></div>
+        <div class="value-card"><h4>Long-Term Thinking</h4><p>We are building a lasting resource for financial guidance in Delhi NCR. Every page is built to stay useful.</p></div>
       </div>
     </div>
   </div>
 
   <div class="disclaimer-bar">
-    <p>Disclaimer: Artharohan is a financial education platform registered under UDYAM-DL-11-0113585. All content is for informational purposes only and does not constitute investment, legal, or tax advice.</p>
+    <p>Disclaimer: Artharohan is a financial guidance platform registered under UDYAM-DL-11-0113585. Content is educational; where hands-on assistance is provided, approvals and terms rest with the respective institution.</p>
   </div>
 
   <footer>
@@ -1484,7 +635,6 @@ footer {
     </ul>
     <p class="footer-copy">© 2026 Artharohan Ventures · UDYAM-DL-11-0113585 · artharohan.in</p>
   </footer>
-
 </div><!-- /about -->
 
 
@@ -1492,7 +642,6 @@ footer {
      SERVICES PAGE
      ============================================================ -->
 <div id="services" class="page">
-
   <div class="services-hero">
     <div class="inner">
       <span class="eyebrow">Our Coverage</span>
@@ -1505,103 +654,72 @@ footer {
     <div class="inner">
       <div class="services-detail-grid">
 
-        <div class="svc-card">
+        <a href="business-loans.html" class="svc-card">
+          <span class="live-badge">LIVE</span>
           <div class="svc-icon">🏦</div>
           <h3 class="h3">Business Loans</h3>
-          <p>From Mudra Loan to MSME credit — eligibility criteria, required documents, processing timelines, and what actually increases your approval chances.</p>
-          <div class="tag-row">
-            <span class="tag">Mudra Loan</span>
-            <span class="tag">MSME Credit</span>
-            <span class="tag">Working Capital</span>
-          </div>
-        </div>
+          <p>From Mudra Loan to unsecured credit — eligibility, documents, processing timelines, and what actually increases your approval chances.</p>
+          <div class="tag-row"><span class="tag">Mudra Loan</span><span class="tag">Unsecured</span><span class="tag">Working Capital</span></div>
+        </a>
 
-        <div class="svc-card">
-          <div class="svc-icon">🏠</div>
-          <h3 class="h3">Home Loans</h3>
-          <p>Interest rates, tenure decisions, prepayment strategies, PMAY subsidy eligibility, and how to avoid being overcharged by your bank or builder.</p>
-          <div class="tag-row">
-            <span class="tag">PMAY</span>
-            <span class="tag">Interest Rates</span>
-            <span class="tag">Prepayment</span>
-          </div>
-        </div>
+        <a href="car-loan.html" class="svc-card">
+          <span class="live-badge">LIVE</span>
+          <div class="svc-icon">🚗</div>
+          <h3 class="h3">Car Loan</h3>
+          <p>New and used car finance — interest rate factors, down payment, tenure, and how to buy right without agent pressure.</p>
+          <div class="tag-row"><span class="tag">New Car</span><span class="tag">Used Car</span><span class="tag">Eligibility</span></div>
+        </a>
 
-        <div class="svc-card">
+        <div class="svc-card" style="cursor:default;">
           <div class="svc-icon">💼</div>
           <h3 class="h3">Personal Loans</h3>
-          <p>When to take one, when not to. Interest rate comparison, processing fee traps, and how your CIBIL score affects the terms you are offered.</p>
-          <div class="tag-row">
-            <span class="tag">CIBIL Score</span>
-            <span class="tag">EMI Planning</span>
-            <span class="tag">Processing Fees</span>
-          </div>
+          <p>When to take one, when not to. Interest rate comparison, processing fee traps, and how your CIBIL score affects the terms offered.</p>
+          <div class="tag-row"><span class="tag">Coming Soon</span></div>
         </div>
 
-        <div class="svc-card">
+        <a href="term-life-insurance.html" class="svc-card">
+          <span class="live-badge">LIVE</span>
           <div class="svc-icon">🛡️</div>
-          <h3 class="h3">Life Insurance</h3>
-          <p>Term vs endowment vs ULIP — the real difference, the right cover amount, and why most people are either underinsured or paying too much.</p>
-          <div class="tag-row">
-            <span class="tag">Term Plan</span>
-            <span class="tag">ULIP</span>
-            <span class="tag">Cover Amount</span>
-          </div>
-        </div>
+          <h3 class="h3">Term Life Insurance</h3>
+          <p>Real cover amounts, honest premium estimates, and why most people are either underinsured or paying too much.</p>
+          <div class="tag-row"><span class="tag">Term Plan</span><span class="tag">Cover Amount</span></div>
+        </a>
 
-        <div class="svc-card">
-          <div class="svc-icon">🏥</div>
-          <h3 class="h3">Health Insurance</h3>
-          <p>Individual vs family floater, pre-existing disease waiting periods, cashless network hospitals, and how to actually use your policy when you need it.</p>
-          <div class="tag-row">
-            <span class="tag">Family Floater</span>
-            <span class="tag">Cashless Claim</span>
-            <span class="tag">Pre-existing</span>
-          </div>
-        </div>
+        <a href="two-wheeler-third-party-insurance.html" class="svc-card">
+          <span class="live-badge">LIVE</span>
+          <div class="svc-icon">🛵</div>
+          <h3 class="h3">2W &amp; 4W Insurance</h3>
+          <p>Mandatory third-party cover for bikes and cars — current IRDAI rates explained without jargon.</p>
+          <div class="tag-row"><span class="tag">IRDAI Rates</span><span class="tag">Mandatory Cover</span></div>
+        </a>
 
-        <div class="svc-card">
+        <a href="commercial-vehicle-insurance.html" class="svc-card">
+          <span class="live-badge">LIVE</span>
+          <div class="svc-icon">🚛</div>
+          <h3 class="h3">Commercial Vehicle Insurance</h3>
+          <p>GCV and PCV cover explained — how premiums are calculated, and how to buy or renew without overpaying.</p>
+          <div class="tag-row"><span class="tag">GCV</span><span class="tag">PCV</span></div>
+        </a>
+
+        <div class="svc-card" style="cursor:default;">
           <div class="svc-icon">📊</div>
           <h3 class="h3">Mutual Funds</h3>
-          <p>SIP, fund selection without being sold to, expense ratio impact over time, and how to review your portfolio without panicking at market volatility.</p>
-          <div class="tag-row">
-            <span class="tag">SIP</span>
-            <span class="tag">Expense Ratio</span>
-            <span class="tag">Fund Selection</span>
-          </div>
+          <p>SIP, fund selection without being sold to, expense ratio impact over time, and how to review your portfolio.</p>
+          <div class="tag-row"><span class="tag">Coming Soon</span></div>
         </div>
 
-        <div class="svc-card">
-          <div class="svc-icon">💰</div>
-          <h3 class="h3">Fixed Deposits &amp; Bonds</h3>
-          <p>FD rate comparison, TDS on interest, senior citizen benefits, and the difference between government and corporate bonds — and when each makes sense.</p>
-          <div class="tag-row">
-            <span class="tag">FD Rates</span>
-            <span class="tag">Government Bonds</span>
-            <span class="tag">TDS</span>
-          </div>
-        </div>
-
-        <div class="svc-card">
+        <div class="svc-card" style="cursor:default;">
           <div class="svc-icon">🏘️</div>
           <h3 class="h3">Real Estate</h3>
-          <p>RERA verification, builder track record checks, stamp duty and registration costs, and what makes a property a sound long-term purchase.</p>
-          <div class="tag-row">
-            <span class="tag">RERA</span>
-            <span class="tag">Stamp Duty</span>
-            <span class="tag">Builder Check</span>
-          </div>
+          <p>1/2/3 BHK guidance across West Delhi — RERA verification, coverage areas, and honest starting prices.</p>
+          <div class="tag-row"><span class="tag">In Progress</span></div>
         </div>
 
-        <div class="svc-card">
+        <div class="svc-card" style="cursor:default;">
           <div class="svc-icon">💳</div>
           <h3 class="h3">Credit Cards &amp; Credit Score</h3>
-          <p>How CIBIL score is calculated, how to build it from zero, credit card traps to avoid, and how to use credit cards to your advantage.</p>
-          <div class="tag-row">
-            <span class="tag">CIBIL</span>
-            <span class="tag">Credit Limit</span>
-            <span class="tag">Reward Points</span>
-          </div>
+          <p>How CIBIL score is calculated, how to build it from zero, and how to use credit cards to your advantage.</p>
+          <div class="tag-row"><span class="tag">Coming Soon</span></div>
         </div>
 
       </div>
@@ -1609,7 +727,7 @@ footer {
   </div>
 
   <div class="disclaimer-bar">
-    <p>Disclaimer: All information is for educational purposes only. Artharohan does not sell, distribute, or recommend specific financial products. Consult a qualified financial advisor before making any financial decision.</p>
+    <p>Disclaimer: All information is for educational purposes. Where Artharohan provides hands-on assistance, approvals and terms rest with the respective bank, NBFC, or insurer. Consult a qualified advisor before making any financial decision.</p>
   </div>
 
   <footer>
@@ -1623,7 +741,6 @@ footer {
     </ul>
     <p class="footer-copy">© 2026 Artharohan Ventures · UDYAM-DL-11-0113585 · artharohan.in</p>
   </footer>
-
 </div><!-- /services -->
 
 
@@ -1631,7 +748,6 @@ footer {
      CONTACT PAGE
      ============================================================ -->
 <div id="contact" class="page">
-
   <div class="contact-hero">
     <div class="inner">
       <span class="eyebrow">Get In Touch</span>
@@ -1644,19 +760,13 @@ footer {
     <div class="inner">
       <div class="contact-cards-row" style="margin-bottom:3rem;">
         <a href="https://wa.me/917838355855" target="_blank" rel="noopener noreferrer" class="contact-info-card">
-          <div class="ci-icon">💬</div>
-          <h4>WhatsApp</h4>
-          <p>+91 78383 55855</p>
+          <div class="ci-icon">💬</div><h4>WhatsApp</h4><p>+91 78383 55855</p>
         </a>
         <a href="https://youtube.com/@artharohan" target="_blank" rel="noopener noreferrer" class="contact-info-card">
-          <div class="ci-icon">▶️</div>
-          <h4>YouTube</h4>
-          <p>@artharohan</p>
+          <div class="ci-icon">▶️</div><h4>YouTube</h4><p>@artharohan</p>
         </a>
         <a href="mailto:artharohanventures@gmail.com" class="contact-info-card">
-          <div class="ci-icon">📧</div>
-          <h4>Email</h4>
-          <p>artharohanventures@gmail.com</p>
+          <div class="ci-icon">📧</div><h4>Email</h4><p>artharohanventures@gmail.com</p>
         </a>
       </div>
 
@@ -1677,13 +787,9 @@ footer {
             <select id="ftopic" name="ftopic" required>
               <option value="">Select a topic</option>
               <option value="Business Loan">Business Loan</option>
-              <option value="Home Loan">Home Loan</option>
-              <option value="Personal Loan">Personal Loan</option>
+              <option value="Car Loan">Car Loan</option>
               <option value="Insurance">Insurance</option>
-              <option value="Mutual Funds">Mutual Funds</option>
-              <option value="Fixed Deposits / Bonds">Fixed Deposits / Bonds</option>
               <option value="Real Estate">Real Estate</option>
-              <option value="Credit Score / Credit Card">Credit Score / Credit Card</option>
               <option value="Other">Other</option>
             </select>
           </div>
@@ -1699,7 +805,7 @@ footer {
   </div>
 
   <div class="disclaimer-bar">
-    <p>Disclaimer: Reaching out via this form connects you to Artharohan for educational discussion only. We do not provide formal financial advice or legally binding recommendations. All responses are general in nature — always consult a qualified financial advisor for decisions specific to your situation.</p>
+    <p>Disclaimer: Reaching out via this form connects you to Artharohan for guidance. We do not provide formal financial advice or legally binding recommendations. Always consult a qualified advisor for decisions specific to your situation.</p>
   </div>
 
   <footer>
@@ -1713,7 +819,6 @@ footer {
     </ul>
     <p class="footer-copy">© 2026 Artharohan Ventures · UDYAM-DL-11-0113585 · artharohan.in</p>
   </footer>
-
 </div><!-- /contact -->
 
 
@@ -1722,492 +827,21 @@ footer {
 
 
 <!-- ============================================================
-     BUSINESS LOANS PAGE (Page 5)
-     SEO Target: self-employed business loans Delhi NCR
-     ============================================================ -->
-<div id="" class="page">
-
-  <!-- Hero -->
-  <div class="bl-hero">
-    <div class="bl-hero-grid">
-      <div>
-        <div class="bl-badge">📍 Delhi NCR · Self-Employed</div>
-        <h1 style="font-family:'Playfair Display',serif;font-size:clamp(2rem,3.8vw,3.4rem);font-weight:900;color:var(--white);line-height:1.12;margin-bottom:1rem;">Business Loans for<br><span style="color:var(--gold);">Self-Employed Professionals</span><br>in Delhi NCR</h1>
-        <p style="color:var(--muted);font-size:1rem;line-height:1.75;font-weight:300;max-width:500px;margin-bottom:0;">Unsecured Business Loans · Working Capital · Credit Limit · Overdraft — explained clearly, without jargon, without pressure.</p>
-        <ul class="bl-hero-list">
-          <li>Business Loans up to ₹50 Lakh — unsecured, no collateral required</li>
-          <li>Working Capital loans for traders, retailers, and service businesses</li>
-          <li>Credit Limit and Overdraft facilities for self-employed professionals</li>
-          <li>Loans for proprietors, partnership firms, and self-employed individuals</li>
-          <li>Delhi NCR: Delhi, Noida, Gurgaon, Faridabad, Ghaziabad coverage</li>
-        </ul>
-        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
-          <a href="https://wa.me/917838355855?text=Hello%20Artharohan!%20I%20need%20help%20with%20a%20Business%20Loan." target="_blank" rel="noopener noreferrer" class="btn btn--gold">Check Your Eligibility →</a>
-          <a onclick="document.getElementById('bl-enquiry-form').scrollIntoView({behavior:'smooth'})" class="btn btn--outline" style="cursor:pointer;">Send Enquiry</a>
-        </div>
-      </div>
-      <div class="bl-quick-card">
-        <h3>At a Glance</h3>
-        <div class="bl-stat-row">
-          <div class="bl-stat">
-            <span class="bl-stat-label">Loan Amount</span>
-            <span class="bl-stat-val">₹1L – ₹50L</span>
-          </div>
-          <div class="bl-stat">
-            <span class="bl-stat-label">Type</span>
-            <span class="bl-stat-val">Unsecured</span>
-          </div>
-          <div class="bl-stat">
-            <span class="bl-stat-label">Collateral</span>
-            <span class="bl-stat-val">Not Required</span>
-          </div>
-          <div class="bl-stat">
-            <span class="bl-stat-label">Tenure</span>
-            <span class="bl-stat-val">12 – 48 Months</span>
-          </div>
-          <div class="bl-stat">
-            <span class="bl-stat-label">Eligibility</span>
-            <span class="bl-stat-val">Self-Employed</span>
-          </div>
-          <div class="bl-stat">
-            <span class="bl-stat-label">Location</span>
-            <span class="bl-stat-val">Delhi NCR</span>
-          </div>
-          <div class="bl-stat">
-            <span class="bl-stat-label">Processing</span>
-            <span class="bl-stat-val">7–15 Working Days</span>
-          </div>
-        </div>
-        <a href="https://wa.me/917838355855?text=Hello%20Artharohan!%20I%20need%20help%20with%20a%20Business%20Loan." target="_blank" rel="noopener noreferrer" class="btn btn--gold" style="width:100%;text-align:center;display:block;">WhatsApp Us Now →</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Loan type tabs + panels -->
-  <div class="section-wrap section-wrap--cream">
-    <div class="inner">
-      <span class="eyebrow">Loan Types</span>
-      <h2 class="h2">Which Loan Do You Need?</h2>
-      <p class="lead">Every self-employed business has different needs. Understanding which loan fits your situation is the first step — and the most important one.</p>
-
-      <div class="loan-tabs">
-        <button class="loan-tab active" onclick="showTab('unsecured')">Unsecured Business Loan</button>
-        <button class="loan-tab" onclick="showTab('working-capital')">Working Capital</button>
-        <button class="loan-tab" onclick="showTab('credit-limit')">Credit Limit / OD</button>
-        <button class="loan-tab" onclick="showTab('mudra')">Mudra Loan</button>
-      </div>
-
-      <div class="loan-panels">
-
-        <!-- Unsecured Business Loan -->
-        <div id="tab-unsecured" class="loan-panel active">
-          <div class="loan-panel-grid">
-            <div class="loan-info-card">
-              <h4>What is it?</h4>
-              <p>An unsecured business loan gives you a lump sum amount for business purposes — expansion, equipment, inventory, or cash flow — without pledging any property or asset as security. The lender evaluates your business income, ITR, and credit score instead of collateral.</p>
-            </div>
-            <div class="loan-info-card">
-              <h4>Who is it for?</h4>
-              <ul>
-                <li>Shop owners and retailers in Delhi NCR</li>
-                <li>Traders and wholesalers</li>
-                <li>Doctors, CA, architects, consultants</li>
-                <li>Contractors and service businesses</li>
-                <li>Proprietors and partnership firms</li>
-              </ul>
-            </div>
-            <div class="loan-info-card">
-              <h4>Eligibility</h4>
-              <ul>
-                <li>Age: 21–65 years</li>
-                <li>Minimum 2–3 years in business</li>
-                <li>ITR filed for at least 2 years</li>
-                <li>CIBIL score 700+ preferred</li>
-                <li>Minimum annual turnover as per lender</li>
-              </ul>
-            </div>
-            <div class="loan-info-card">
-              <h4>Documents Required</h4>
-              <ul>
-                <li>PAN Card and Aadhaar Card</li>
-                <li>Last 2 years ITR with computation</li>
-                <li>6–12 months bank statements</li>
-                <li>Business proof (GST, trade licence)</li>
-                <li>Shop/office address proof</li>
-              </ul>
-            </div>
-          </div>
-          <div style="background:rgba(201,168,68,0.07);border:1px solid rgba(201,168,68,0.15);border-radius:8px;padding:18px 22px;">
-            <p style="color:var(--body-text);font-size:0.84rem;line-height:1.65;font-weight:300;"><strong style="color:var(--navy);">Important:</strong> Interest rates and loan amounts vary by lender, your credit profile, and business vintage. The numbers above are general ranges. Artharohan helps you understand your options — we do not guarantee specific rates or approvals.</p>
-          </div>
-        </div>
-
-        <!-- Working Capital -->
-        <div id="tab-working-capital" class="loan-panel">
-          <div class="loan-panel-grid">
-            <div class="loan-info-card">
-              <h4>What is it?</h4>
-              <p>Working capital finance is specifically designed to fund the day-to-day operations of your business — purchasing raw material, managing inventory, paying staff, or bridging payment gaps between billing and collection. It is short-term in nature and typically revolving.</p>
-            </div>
-            <div class="loan-info-card">
-              <h4>Who is it for?</h4>
-              <ul>
-                <li>Traders and distributors with seasonal demand</li>
-                <li>Manufacturers needing raw material funding</li>
-                <li>Retailers managing festive season inventory</li>
-                <li>Service businesses with long payment cycles</li>
-                <li>Any business with a gap between income and expense</li>
-              </ul>
-            </div>
-            <div class="loan-info-card">
-              <h4>Types Available</h4>
-              <ul>
-                <li>Cash Credit (CC) — revolving credit from bank</li>
-                <li>Working Capital Term Loan — fixed EMI structure</li>
-                <li>Invoice Discounting — advance against invoices</li>
-                <li>Unsecured Working Capital — no collateral needed</li>
-                <li>Supply Chain Finance — for vendor/dealer networks</li>
-              </ul>
-            </div>
-            <div class="loan-info-card">
-              <h4>Key Things to Know</h4>
-              <ul>
-                <li>Cash Credit is the most common form for traders</li>
-                <li>Interest charged only on amount used in CC</li>
-                <li>Working capital is not for asset purchase</li>
-                <li>Bank statements showing regular business cash flow are critical</li>
-                <li>GST returns help establish business credibility</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Credit Limit / OD -->
-        <div id="tab-credit-limit" class="loan-panel">
-          <div class="loan-panel-grid">
-            <div class="loan-info-card">
-              <h4>What is it?</h4>
-              <p>A Credit Limit or Overdraft (OD) facility allows you to withdraw money beyond your bank account balance up to a pre-approved limit. It is a flexible financing tool — you use what you need, when you need it, and pay interest only on the amount used and the days used.</p>
-            </div>
-            <div class="loan-info-card">
-              <h4>Credit Limit vs OD — The Difference</h4>
-              <ul>
-                <li>OD is linked to your current account with a bank</li>
-                <li>Credit Limit is a standalone revolving line</li>
-                <li>Both let you borrow, repay, and borrow again</li>
-                <li>OD typically requires property as security</li>
-                <li>Unsecured credit limits are available for good CIBIL profiles</li>
-              </ul>
-            </div>
-            <div class="loan-info-card">
-              <h4>Who benefits most?</h4>
-              <ul>
-                <li>Businesses with unpredictable cash flow timing</li>
-                <li>Self-employed with irregular income patterns</li>
-                <li>Traders who need short-term liquidity repeatedly</li>
-                <li>Professionals who need emergency funds for business</li>
-                <li>Anyone who wants a credit cushion without a term loan</li>
-              </ul>
-            </div>
-            <div class="loan-info-card">
-              <h4>Common Mistakes to Avoid</h4>
-              <ul>
-                <li>Using OD for personal expenses — reduces business credibility</li>
-                <li>Not repaying regularly — hurts CIBIL and renewal chances</li>
-                <li>Taking larger limit than needed — unnecessary interest cost</li>
-                <li>Confusing OD interest with term loan EMI — very different</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Mudra Loan -->
-        <div id="tab-mudra" class="loan-panel">
-          <div class="loan-panel-grid">
-            <div class="loan-info-card">
-              <h4>What is Mudra Loan?</h4>
-              <p>Pradhan Mantri Mudra Yojana (PMMY) is a Government of India scheme providing loans up to ₹20 Lakh to non-corporate, non-farm small and micro enterprises. It is provided through banks, NBFCs, and MFIs. No collateral required under ₹10 Lakh.</p>
-            </div>
-            <div class="loan-info-card">
-              <h4>Three Categories</h4>
-              <ul>
-                <li><strong>Shishu:</strong> Up to ₹50,000 — for startups and new businesses</li>
-                <li><strong>Kishor:</strong> ₹50,001 to ₹5 Lakh — for established small businesses</li>
-                <li><strong>Tarun:</strong> ₹5 Lakh to ₹20 Lakh — for growing businesses</li>
-                <li>New category: Tarun Plus — up to ₹20 Lakh for Tarun repayers</li>
-              </ul>
-            </div>
-            <div class="loan-info-card">
-              <h4>Who Can Apply?</h4>
-              <ul>
-                <li>Small shopkeepers, vegetable vendors, artisans</li>
-                <li>Service sector — salons, tailors, repair shops</li>
-                <li>Small manufacturers, food processing units</li>
-                <li>Traders in agriculture-allied activities</li>
-                <li>Self-employed professionals with small businesses</li>
-              </ul>
-            </div>
-            <div class="loan-info-card">
-              <h4>Reality Check — What Banks Actually See</h4>
-              <ul>
-                <li>Mudra does not guarantee loan approval — bank still evaluates you</li>
-                <li>Low CIBIL scores still result in rejection</li>
-                <li>Business proof and bank statements are required</li>
-                <li>No agent or consultant fee is required for Mudra — it is free to apply</li>
-                <li>Apply directly at your bank or via Jan Samarth Portal</li>
-              </ul>
-            </div>
-          </div>
-          <div style="background:rgba(201,168,68,0.07);border:1px solid rgba(201,168,68,0.15);border-radius:8px;padding:18px 22px;margin-top:0.5rem;">
-            <p style="color:var(--body-text);font-size:0.84rem;line-height:1.65;font-weight:300;"><strong style="color:var(--navy);">Khabardar:</strong> No legitimate Mudra Loan agent charges upfront fees. If anyone asks for processing fees before loan approval — that is fraud. Walk away and report it to your bank.</p>
-          </div>
-        </div>
-
-      </div><!-- /loan-panels -->
-    </div>
-  </div>
-
-  <!-- Process steps -->
-  <div class="section-wrap section-wrap--white">
-    <div class="inner">
-      <span class="eyebrow">The Process</span>
-      <h2 class="h2">How Business Loan Application Actually Works</h2>
-      <p class="lead">Most rejections happen because people apply without understanding the process. Here is the complete picture — step by step.</p>
-
-      <div class="process-steps">
-        <div class="process-step">
-          <div class="step-num">01</div>
-          <div class="step-line"></div>
-          <div class="step-content">
-            <h4>Understand Your Need</h4>
-            <p>Before approaching any lender, be clear on three things: how much you need, what you need it for, and how long you need it for. Lenders ask these questions. Having clear answers improves approval chances and helps you pick the right loan type.</p>
-          </div>
-        </div>
-        <div class="process-step">
-          <div class="step-num">02</div>
-          <div class="step-line"></div>
-          <div class="step-content">
-            <h4>Check Your CIBIL Score</h4>
-            <p>Your CIBIL score is the first thing every lender checks. Scores below 700 significantly reduce your chances. Check your score for free on the CIBIL website or via your bank's app before applying anywhere. If it's low — understand why before applying, not after rejection.</p>
-          </div>
-        </div>
-        <div class="process-step">
-          <div class="step-num">03</div>
-          <div class="step-line"></div>
-          <div class="step-content">
-            <h4>Prepare Your Documents</h4>
-            <p>Most applications fail at this stage — not because of eligibility, but because documents are incomplete or inconsistent. Your ITR, bank statements, and GST returns should tell the same story about your business income. Discrepancies between these documents are the most common reason for rejection.</p>
-          </div>
-        </div>
-        <div class="process-step">
-          <div class="step-num">04</div>
-          <div class="step-line"></div>
-          <div class="step-content">
-            <h4>Choose the Right Lender</h4>
-            <p>Banks offer lower interest rates but stricter eligibility. NBFCs are faster and more flexible but charge higher rates. Fintech lenders are fastest but most expensive. The right choice depends on your urgency, CIBIL score, and loan amount. Comparing at least 3 lenders before deciding is the minimum standard.</p>
-          </div>
-        </div>
-        <div class="process-step">
-          <div class="step-num">05</div>
-          <div class="step-line"></div>
-          <div class="step-content">
-            <h4>Apply and Track</h4>
-            <p>Once submitted, follow up every 3–4 working days. Know your application reference number. If the lender asks for additional documents, respond within 24 hours — delays at your end can result in the application being cancelled. Track processing timelines and escalate if they exceed the promised timeline.</p>
-          </div>
-        </div>
-        <div class="process-step">
-          <div class="step-num">06</div>
-          <div class="step-line"></div>
-          <div class="step-content">
-            <h4>Read Before You Sign</h4>
-            <p>Read the sanction letter completely. Check the interest rate (flat vs reducing), processing fee, prepayment penalty, and foreclosure charges. The difference between a flat rate and reducing rate loan on the same amount can mean paying significantly more interest over the tenure. Never sign under pressure.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- FAQ -->
-  <div class="section-wrap section-wrap--cream">
-    <div class="inner">
-      <span class="eyebrow">Frequently Asked Questions</span>
-      <h2 class="h2">Business Loan Questions — Answered Honestly</h2>
-      <p class="lead">Questions that self-employed individuals in Delhi NCR ask most often — with straight answers, no sales pitch.</p>
-
-      <div class="faq-list">
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
-            Can I get a business loan without ITR?
-            <span class="faq-arrow">▼</span>
-          </button>
-          <div class="faq-a">Most banks and NBFCs require at least 1–2 years of ITR for business loan approval. Without ITR, your options are very limited — some fintech lenders offer loans based on bank statement analysis or GST turnover, but these typically come with much higher interest rates and smaller amounts. Filing ITR consistently is the single most important thing a self-employed person can do to improve loan eligibility.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
-            What CIBIL score do I need for a business loan in Delhi NCR?
-            <span class="faq-arrow">▼</span>
-          </button>
-          <div class="faq-a">Most lenders in Delhi NCR prefer a CIBIL score of 700 or above for business loans. NBFCs may consider scores of 650–699 with higher interest rates. Scores below 650 make approval very difficult with formal lenders. It is strongly advisable to check and improve your CIBIL score before applying rather than accumulating rejections, which further damage the score.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
-            Do I need to give any property or collateral for an unsecured business loan?
-            <span class="faq-arrow">▼</span>
-          </button>
-          <div class="faq-a">No. Unsecured business loans do not require property, gold, or any other collateral. The lender relies entirely on your credit profile, income documents, business vintage, and repayment capacity. However, for loan amounts above ₹25–30 Lakh, some lenders may still ask for collateral or a guarantor depending on your credit profile.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
-            How long does it take to get a business loan sanctioned in Delhi?
-            <span class="faq-arrow">▼</span>
-          </button>
-          <div class="faq-a">Timelines vary significantly by lender. NBFCs and fintech lenders can sanction in 3–7 working days with complete documents. Banks typically take 10–20 working days due to more rigorous processing. Government scheme loans like Mudra can take longer due to bank processing queues. The most common cause of delay is incomplete or inconsistent documentation at the applicant's end.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
-            Is there any upfront fee to apply for a business loan?
-            <span class="faq-arrow">▼</span>
-          </button>
-          <div class="faq-a">No legitimate lender or DSA (Direct Selling Agent) charges any upfront fee before loan sanction. A processing fee is only charged after sanction and is typically deducted from the disbursed amount — not collected separately before disbursement. If anyone asks you for cash payment, UPI transfer, or advance fee before the loan is approved — that is a fraud. Stop all engagement and report it.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
-            Can a proprietorship or partnership firm get a business loan?
-            <span class="faq-arrow">▼</span>
-          </button>
-          <div class="faq-a">Yes. Both proprietorship firms and partnership firms are eligible for business loans. Proprietorships typically submit the owner's personal documents along with business proof. Partnership firms need to provide a partnership deed in addition to the standard documents. Private Limited Companies have a separate application process and eligibility criteria.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
-            What is the difference between a business loan and working capital loan?
-            <span class="faq-arrow">▼</span>
-          </button>
-          <div class="faq-a">A business loan is typically a term loan — you receive a lump sum and repay in fixed EMIs over a defined period. A working capital loan is designed to fund ongoing business operations and may be structured as a revolving credit line (Cash Credit or Overdraft). Working capital facilities are more flexible but require active management. The right choice depends on whether your need is one-time (term loan) or ongoing and recurring (working capital).</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Embedded Enquiry Form -->
-  <div class="bl-form-section" id="bl-enquiry-form">
-    <div class="bl-form-inner">
-      <div class="bl-form-left">
-        <span class="eyebrow">Free Enquiry</span>
-        <h2 class="h2 on-dark">Tell Us Your<br>Requirement.<br>We'll Guide You.</h2>
-        <p class="lead on-dark">No commitment. No pressure. Just honest guidance on which loan suits your situation — and what your next step should be.</p>
-        <div class="bl-form-promises">
-          <div class="bl-promise">
-            <div class="bl-promise-dot"></div>
-            <p>We assess your profile and suggest the most suitable loan type for your business situation.</p>
-          </div>
-          <div class="bl-promise">
-            <div class="bl-promise-dot"></div>
-            <p>We explain what documents you need and how to present them for the best outcome.</p>
-          </div>
-          <div class="bl-promise">
-            <div class="bl-promise-dot"></div>
-            <p>No upfront fee. No spam. One conversation — focused entirely on your requirement.</p>
-          </div>
-          <div class="bl-promise">
-            <div class="bl-promise-dot"></div>
-            <p>Serving Delhi, Noida, Gurgaon, Faridabad, and Ghaziabad.</p>
-          </div>
-        </div>
-      </div>
-      <div class="bl-form-box">
-        <p style="color:var(--gold-light);font-size:0.95rem;font-weight:700;margin-bottom:1.5rem;">Business Loan Enquiry</p>
-        <form id="blForm" onsubmit="handleBLForm(event)" novalidate>
-          <div class="f-group">
-            <label for="blname">Your Name</label>
-            <input type="text" id="blname" name="blname" placeholder="Full name" required autocomplete="name">
-          </div>
-          <div class="f-group">
-            <label for="blphone">Phone Number</label>
-            <input type="tel" id="blphone" name="blphone" placeholder="+91 XXXXX XXXXX" required autocomplete="tel">
-          </div>
-          <div class="f-group">
-            <label for="bltype">Loan Type Needed</label>
-            <select id="bltype" name="bltype" required>
-              <option value="">Select loan type</option>
-              <option value="Unsecured Business Loan">Unsecured Business Loan</option>
-              <option value="Working Capital">Working Capital</option>
-              <option value="Credit Limit / Overdraft">Credit Limit / Overdraft</option>
-              <option value="Mudra Loan">Mudra Loan</option>
-              <option value="Not Sure — Need Guidance">Not Sure — Need Guidance</option>
-            </select>
-          </div>
-          <div class="f-group">
-            <label for="blamount">Approximate Loan Amount Needed</label>
-            <select id="blamount" name="blamount" required>
-              <option value="">Select range</option>
-              <option value="Up to ₹5 Lakh">Up to ₹5 Lakh</option>
-              <option value="₹5L – ₹10L">₹5L – ₹10L</option>
-              <option value="₹10L – ₹25L">₹10L – ₹25L</option>
-              <option value="₹25L – ₹50L">₹25L – ₹50L</option>
-              <option value="Above ₹50L">Above ₹50L</option>
-            </select>
-          </div>
-          <div class="f-group">
-            <label for="blcity">City</label>
-            <select id="blcity" name="blcity" required>
-              <option value="">Select city</option>
-              <option value="Delhi">Delhi</option>
-              <option value="Noida">Noida</option>
-              <option value="Gurgaon">Gurgaon</option>
-              <option value="Faridabad">Faridabad</option>
-              <option value="Ghaziabad">Ghaziabad</option>
-              <option value="Other NCR">Other NCR</option>
-            </select>
-          </div>
-          <div class="f-group">
-            <label for="blmsg">Anything specific you want us to know? (optional)</label>
-            <textarea id="blmsg" name="blmsg" placeholder="E.g. business type, years in business, any previous rejection..."></textarea>
-          </div>
-          <button type="submit" class="f-submit">Get Free Guidance on WhatsApp →</button>
-          <p class="form-note" style="color:var(--muted);">Your enquiry goes directly to Artharohan via WhatsApp. No brokerage. No upfront fee. Education and guidance only.</p>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <div class="disclaimer-bar">
-    <p>Disclaimer: All information on this page is for educational purposes only. Artharohan is a financial education platform and does not guarantee loan approvals, specific interest rates, or disbursement timelines. Loan eligibility, rates, and terms are determined solely by the respective lending institution. Please do not pay any upfront fees to any agent claiming to arrange loans on your behalf. Artharohan Ventures · UDYAM-DL-11-0113585 · Delhi NCR</p>
-  </div>
-
-  <footer>
-    <div class="footer-brand">अर्थारोहण &nbsp;·&nbsp; ARTHAROHAN</div>
-    <div class="footer-tagline">Sahi Jaankari. Sahi Faisla.</div>
-    <ul class="footer-nav">
-      <li><a onclick="showPage('home')">Home</a></li>
-      <li><a onclick="showPage('about')">About</a></li>
-      <li><a onclick="showPage('services')">Services</a></li>
-      <li><a href="business-loans.html">Business Loans</a></li>
-      <li><a onclick="showPage('contact')">Contact</a></li>
-    </ul>
-    <p class="footer-copy">© 2026 Artharohan Ventures · UDYAM-DL-11-0113585 · artharohan.in · Delhi NCR</p>
-  </footer>
-
-</div><!-- /business-loans -->
-
-
-<!-- ============================================================
      JAVASCRIPT
      ============================================================ -->
 <script>
-/* Page switching */
-     function toggleNavDropdown(id) {
-      document.querySelectorAll('.nav-dropdown.open').forEach(function(el){ if (el.id !== id) el.classList.remove('open'); });
-      document.getElementById(id).classList.toggle('open');
-    }
-    document.addEventListener('click', function(e){
-      if (!e.target.closest('.nav-dropdown')) {
-        document.querySelectorAll('.nav-dropdown.open').forEach(function(el){ el.classList.remove('open'); });
-      }
-    });
+function toggleNavDropdown(id) {
+  document.querySelectorAll('.nav-dropdown.open').forEach(function(el){ if (el.id !== id) el.classList.remove('open'); });
+  document.getElementById(id).classList.toggle('open');
+}
+document.addEventListener('click', function(e){
+  if (!e.target.closest('.nav-dropdown')) {
+    document.querySelectorAll('.nav-dropdown.open').forEach(function(el){ el.classList.remove('open'); });
+  }
+});
+
 function showPage(id) {
-  document.querySelectorAll('.page').forEach(function(p) {
-    p.classList.remove('active');
-  });
+  document.querySelectorAll('.page').forEach(function(p) { p.classList.remove('active'); });
   document.getElementById(id).classList.add('active');
   window.scrollTo({ top: 0, behavior: 'instant' });
   updateNavActive(id);
@@ -2215,63 +849,13 @@ function showPage(id) {
 }
 
 function updateNavActive(id) {
-  var ids = ['home', 'about', 'services', 'business-loans', 'contact'];
+  var ids = ['home', 'about', 'services', 'contact'];
   ids.forEach(function(pid) {
     var el = document.getElementById('nl-' + pid);
     if (el) el.classList.toggle('active', pid === id);
   });
 }
 
-/* Loan type tabs */
-function showTab(tabId) {
-  document.querySelectorAll('.loan-panel').forEach(function(p) {
-    p.classList.remove('active');
-  });
-  document.querySelectorAll('.loan-tab').forEach(function(t) {
-    t.classList.remove('active');
-  });
-  document.getElementById('tab-' + tabId).classList.add('active');
-  event.target.classList.add('active');
-}
-
-/* FAQ accordion */
-function toggleFaq(btn) {
-  var item = btn.parentElement;
-  var isOpen = item.classList.contains('open');
-  document.querySelectorAll('.faq-item').forEach(function(i) {
-    i.classList.remove('open');
-  });
-  if (!isOpen) item.classList.add('open');
-}
-
-/* Business Loans form */
-function handleBLForm(e) {
-  e.preventDefault();
-  var name   = document.getElementById('blname').value.trim();
-  var phone  = document.getElementById('blphone').value.trim();
-  var type   = document.getElementById('bltype').value;
-  var amount = document.getElementById('blamount').value;
-  var city   = document.getElementById('blcity').value;
-  var msg    = document.getElementById('blmsg').value.trim();
-
-  if (!name || !phone || !type || !amount || !city) {
-    alert('Please fill in all required fields.');
-    return;
-  }
-
-  var text = 'Hello Artharohan! Business Loan Enquiry\n\n'
-    + 'Name: ' + name + '\n'
-    + 'Phone: ' + phone + '\n'
-    + 'Loan Type: ' + type + '\n'
-    + 'Amount Needed: ' + amount + '\n'
-    + 'City: ' + city + '\n'
-    + (msg ? '\nAdditional Info: ' + msg : '');
-
-  var waUrl = 'https://wa.me/917838355855?text=' + encodeURIComponent(text);
-  window.open(waUrl, '_blank', 'noopener,noreferrer');
-}
-
-/* Mobile nav */
 function toggleMobileNav() {
   var mn = document.getElementById('mobileNav');
   var hbg = document.getElementById('hbg');
@@ -2286,393 +870,7 @@ function closeMobileNav() {
   if (mn) mn.classList.remove('open');
   if (hb) hb.classList.remove('open');
 }
-     </script>
-<style>
 
-/* ============================================================
-   BUSINESS LOANS PAGE STYLES
-   ============================================================ */
-.bl-hero {
-  background: var(--navy);
-  padding: 72px 5%;
-}
-
-.bl-hero-grid {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 64px;
-  align-items: start;
-}
-
-.bl-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(201,168,68,0.12);
-  border: 1px solid rgba(201,168,68,0.25);
-  border-radius: 20px;
-  padding: 5px 14px;
-  font-size: 0.72rem;
-  color: var(--gold);
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  margin-bottom: 1.25rem;
-}
-
-.bl-hero-list {
-  list-style: none;
-  margin: 1.5rem 0 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.7rem;
-}
-
-.bl-hero-list li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--muted);
-  font-size: 0.88rem;
-  font-weight: 300;
-}
-
-.bl-hero-list li::before {
-  content: '✓';
-  color: var(--gold);
-  font-weight: 700;
-  font-size: 0.85rem;
-  flex-shrink: 0;
-}
-
-.bl-quick-card {
-  background: var(--navy-mid);
-  border: 1px solid rgba(201,168,68,0.2);
-  border-radius: 12px;
-  padding: 28px;
-  position: sticky;
-  top: calc(var(--nav-h) + 16px);
-}
-
-.bl-quick-card h3 {
-  color: var(--gold-light);
-  font-size: 0.95rem;
-  font-weight: 700;
-  margin-bottom: 1.25rem;
-  padding-bottom: 0.75rem;
-  border-bottom: 1px solid rgba(201,168,68,0.12);
-}
-
-.bl-stat-row {
-  display: flex;
-  flex-direction: column;
-  gap: 0.9rem;
-  margin-bottom: 1.5rem;
-}
-
-.bl-stat {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.bl-stat-label {
-  color: var(--muted);
-  font-size: 0.78rem;
-  font-weight: 400;
-}
-
-.bl-stat-val {
-  color: var(--gold);
-  font-size: 0.88rem;
-  font-weight: 700;
-}
-
-/* Loan type tabs */
-.loan-tabs {
-  display: flex;
-  gap: 0.6rem;
-  flex-wrap: wrap;
-  margin-bottom: 2.4rem;
-  margin-top: 2.8rem;
-}
-
-.loan-tab {
-  padding: 8px 18px;
-  border-radius: 22px;
-  border: 1.5px solid rgba(201,168,68,0.2);
-  background: transparent;
-  color: var(--muted);
-  font-size: 0.8rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s;
-  font-family: 'Inter', sans-serif;
-}
-
-.loan-tab:hover,
-.loan-tab.active {
-  background: var(--gold);
-  color: var(--navy);
-  border-color: var(--gold);
-  font-weight: 600;
-}
-
-/* Loan content panels */
-.loan-panels { position: relative; }
-
-.loan-panel {
-  display: none;
-}
-
-.loan-panel.active {
-  display: block;
-}
-
-.loan-panel-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.loan-info-card {
-  background: var(--white);
-  border-radius: 10px;
-  padding: 24px;
-  border-top: 3px solid var(--gold);
-  box-shadow: 0 3px 14px rgba(11,22,40,0.06);
-}
-
-.loan-info-card h4 {
-  color: var(--navy);
-  font-size: 0.85rem;
-  font-weight: 700;
-  margin-bottom: 0.6rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.loan-info-card p,
-.loan-info-card li {
-  color: var(--body-text);
-  font-size: 0.84rem;
-  line-height: 1.65;
-  font-weight: 300;
-}
-
-.loan-info-card ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-}
-
-.loan-info-card ul li::before {
-  content: '→ ';
-  color: var(--gold);
-  font-weight: 600;
-}
-
-/* Process steps */
-.process-steps {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  margin: 2.8rem 0;
-  position: relative;
-}
-
-.process-step {
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
-  padding-bottom: 2rem;
-  position: relative;
-}
-
-.process-step:last-child { padding-bottom: 0; }
-
-.step-line {
-  position: absolute;
-  left: 20px;
-  top: 44px;
-  bottom: 0;
-  width: 1px;
-  background: rgba(201,168,68,0.2);
-}
-
-.process-step:last-child .step-line { display: none; }
-
-.step-num {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: var(--navy);
-  border: 1.5px solid var(--gold);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--gold);
-  font-size: 0.8rem;
-  font-weight: 700;
-  flex-shrink: 0;
-  position: relative;
-  z-index: 1;
-}
-
-.step-content h4 {
-  color: var(--navy);
-  font-size: 0.92rem;
-  font-weight: 700;
-  margin-bottom: 0.3rem;
-}
-
-.step-content p {
-  color: var(--body-text);
-  font-size: 0.84rem;
-  line-height: 1.6;
-  font-weight: 300;
-}
-
-/* FAQ */
-.faq-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  margin-top: 2.4rem;
-}
-
-.faq-item {
-  border-bottom: 1px solid rgba(201,168,68,0.12);
-}
-
-.faq-q {
-  width: 100%;
-  background: none;
-  border: none;
-  padding: 1.1rem 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-  text-align: left;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--navy);
-  gap: 1rem;
-}
-
-.faq-q:hover { color: var(--gold-dim); }
-
-.faq-arrow {
-  color: var(--gold);
-  font-size: 1rem;
-  transition: transform 0.2s;
-  flex-shrink: 0;
-}
-
-.faq-item.open .faq-arrow { transform: rotate(180deg); }
-
-.faq-a {
-  display: none;
-  padding: 0 0 1.1rem;
-  color: var(--body-text);
-  font-size: 0.86rem;
-  line-height: 1.7;
-  font-weight: 300;
-}
-
-.faq-item.open .faq-a { display: block; }
-
-/* Embedded enquiry form */
-.bl-form-section {
-  background: var(--navy);
-  padding: 72px 5%;
-}
-
-.bl-form-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 72px;
-  align-items: start;
-}
-
-.bl-form-left h2 { color: var(--white); }
-.bl-form-left .lead { color: var(--muted); margin-top: 0.75rem; }
-
-.bl-form-promises {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.9rem;
-}
-
-.bl-promise {
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
-}
-
-.bl-promise-dot {
-  width: 6px; height: 6px;
-  border-radius: 50%;
-  background: var(--gold);
-  margin-top: 7px;
-  flex-shrink: 0;
-}
-
-.bl-promise p {
-  color: var(--muted);
-  font-size: 0.85rem;
-  line-height: 1.6;
-  font-weight: 300;
-}
-
-.bl-form-box {
-  background: var(--navy-mid);
-  border: 1px solid rgba(201,168,68,0.18);
-  border-radius: 12px;
-  padding: 36px;
-}
-
-.bl-form-box .f-group label { color: var(--gold-light); }
-
-.bl-form-box .f-group input,
-.bl-form-box .f-group select,
-.bl-form-box .f-group textarea {
-  background: var(--navy);
-  border-color: rgba(201,168,68,0.2);
-  color: var(--white);
-}
-
-.bl-form-box .f-group input::placeholder,
-.bl-form-box .f-group textarea::placeholder {
-  color: var(--muted);
-}
-
-.bl-form-box .f-group input:focus,
-.bl-form-box .f-group select:focus,
-.bl-form-box .f-group textarea:focus {
-  border-color: var(--gold);
-  background: var(--navy-light);
-}
-
-.bl-form-box select option { background: var(--navy); color: var(--white); }
-
-@media (max-width: 768px) {
-  .bl-hero-grid { grid-template-columns: 1fr; gap: 0; }
-  .bl-quick-card { display: none; }
-  .loan-panel-grid { grid-template-columns: 1fr; }
-  .bl-form-inner { grid-template-columns: 1fr; gap: 40px; }
-}
-
-/* Contact form — opens WhatsApp with pre-filled message */
 function handleForm(e) {
   e.preventDefault();
   var name    = document.getElementById('fname').value.trim();
