@@ -135,6 +135,10 @@ footer{padding:36px 5%;text-align:center;background:var(--navy);border-top:1px s
 .emi-result-value{font-family:'Playfair Display',serif;font-size:2.2rem;color:var(--gold);font-weight:700}
 .emi-sub-row{display:flex;justify-content:space-between;font-size:0.88rem;margin-top:10px}
 .emi-sub-row span:first-child{color:var(--muted)}
+.subnav{position:sticky;top:var(--nav-h);background:var(--white);border-bottom:1px solid rgba(11,22,40,0.08);z-index:150;overflow-x:auto;white-space:nowrap}
+.subnav-inner{display:flex;max-width:1100px;margin:0 auto;padding:0 5%}
+.subnav a{padding:16px 18px;font-size:0.85rem;font-weight:600;color:var(--navy);white-space:nowrap;border-bottom:2px solid transparent;flex-shrink:0}
+.subnav a:hover{color:var(--gold);border-bottom-color:var(--gold)}
 .rate-table{width:100%;border-collapse:collapse;font-size:0.9rem;margin-top:24px}
 .rate-table th{background:var(--navy);color:var(--white);padding:14px;text-align:left}
 .rate-table td{padding:14px;border-bottom:1px solid #eee}
@@ -144,6 +148,8 @@ footer{padding:36px 5%;text-align:center;background:var(--navy);border-top:1px s
   .form-grid{grid-template-columns:1fr}
   .glance{grid-template-columns:repeat(2,1fr)}
   .emi-box{grid-template-columns:1fr}
+  .subnav-inner{padding:0 4%}
+  .subnav a{padding:14px 14px;font-size:0.8rem}
 }
 </style>
 </head>
@@ -155,6 +161,18 @@ footer{padding:36px 5%;text-align:center;background:var(--navy);border-top:1px s
   var SITE_NAV_IS_HOME = false;
 </script>
 <script src="nav.js"></script>
+
+<nav class="subnav">
+  <div class="subnav-inner">
+    <a href="#emi-calc">EMI Calculator</a>
+    <a href="#compare">New vs Used</a>
+    <a href="#rate-reality">Rate Reality</a>
+    <a href="#eligibility">Eligibility</a>
+    <a href="#not-yet">Why We Say "Not Yet"</a>
+    <a href="#process">How It Works</a>
+    <a href="#faq">FAQ</a>
+  </div>
+</nav>
 
 <section class="hero">
   <div class="hero-tag">🚗 Delhi NCR · New & Used Cars</div>
@@ -268,7 +286,7 @@ footer{padding:36px 5%;text-align:center;background:var(--navy);border-top:1px s
   </div>
 </div>
 
-<div class="wrap wrap--cream">
+<div class="wrap wrap--cream" id="rate-reality">
   <div class="inner">
     <span class="eyebrow">Rate Reality</span>
     <h2 class="h2">What Interest Rate Should You Actually Expect?</h2>
@@ -292,7 +310,7 @@ footer{padding:36px 5%;text-align:center;background:var(--navy);border-top:1px s
   </div>
 </div>
 
-<div class="wrap wrap--white">
+<div class="wrap wrap--white" id="eligibility">
   <div class="inner">
     <span class="eyebrow">Eligibility</span>
     <h2 class="h2">What Lenders Actually Check</h2>
@@ -337,7 +355,7 @@ footer{padding:36px 5%;text-align:center;background:var(--navy);border-top:1px s
   </div>
 </div>
 
-<div class="wrap wrap--cream">
+<div class="wrap wrap--cream" id="not-yet">
   <div class="inner">
     <span class="eyebrow">Honest Before Anything Else</span>
     <h2 class="h2">When We'll Tell You "Not Yet"</h2>
@@ -359,7 +377,7 @@ footer{padding:36px 5%;text-align:center;background:var(--navy);border-top:1px s
   </div>
 </div>
 
-<div class="wrap wrap--white">
+<div class="wrap wrap--white" id="process">
   <div class="inner">
     <span class="eyebrow">The Process</span>
     <h2 class="h2">How Car Loan Approval Actually Works</h2>
@@ -388,7 +406,7 @@ footer{padding:36px 5%;text-align:center;background:var(--navy);border-top:1px s
   </div>
 </div>
 
-<div class="wrap wrap--cream">
+<div class="wrap wrap--cream" id="faq">
   <div class="inner">
     <span class="eyebrow">Frequently Asked Questions</span>
     <h2 class="h2">Car Loan Questions — Answered Honestly</h2>
