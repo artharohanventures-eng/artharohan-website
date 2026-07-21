@@ -161,19 +161,20 @@ footer { background: var(--navy); border-top: 1px solid rgba(201,168,68,0.12); p
 .ascent-labels { display: grid; grid-template-columns: repeat(4,1fr); gap: 8px; text-align: center; margin-top: 4px; padding-bottom: 44px; }
 .ascent-labels a { display: block; text-decoration: none; padding: 10px 6px; border-radius: 6px; transition: background 0.2s; }
 .ascent-labels a:hover { background: rgba(201,168,68,0.08); }
-.ascent-labels .lbl-name { color: var(--gold-light); font-size: 0.8rem; font-weight: 600; margin-bottom: 2px; }
-.ascent-labels .lbl-desc { color: var(--muted); font-size: 0.68rem; font-weight: 300; }
+.ascent-labels .lbl-name { color: var(--gold-light); font-size: 0.95rem; font-weight: 600; margin-bottom: 3px; }
+.ascent-labels .lbl-desc { color: var(--muted); font-size: 0.8rem; font-weight: 300; }
 .ascent-caption { text-align: center; margin: -6px 0 22px; }
 .ascent-caption .ac-word { font-family: 'Playfair Display', serif; color: var(--gold-light); font-size: 0.95rem; letter-spacing: 0.5px; }
 .ascent-caption .ac-sep { color: rgba(201,168,68,0.35); margin: 0 14px; font-size: 0.8rem; }
 .ascent-caption .ac-mean { color: var(--muted); font-size: 0.7rem; letter-spacing: 1.5px; text-transform: uppercase; display: block; margin-top: 3px; }
 
 /* PILLAR BAR */
-.pillar-bar { background: var(--navy-mid); border-top: 1px solid rgba(201,168,68,0.09); border-bottom: 1px solid rgba(201,168,68,0.09); padding: 18px 5%; }
-.pillar-bar-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 1.2rem; align-items: center; }
-.pillar-item { text-align: center; }
-.pillar-item strong { display: block; font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--gold); font-weight: 700; }
-.pillar-item span { font-size: 0.7rem; color: var(--muted); letter-spacing: 1.5px; text-transform: uppercase; }
+.pillar-bar { background: var(--navy); padding: 20px 5% 32px; }
+.pillar-bar-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; }
+.pillar-item { background: rgba(201,168,68,0.08); border: 1px solid rgba(201,168,68,0.25); border-radius: 20px; padding: 8px 16px; display: flex; align-items: center; gap: 6px; }
+.pillar-item strong { font-family: inherit; font-size: 0.82rem; color: var(--gold-light); font-weight: 600; }
+.pillar-item span { font-size: 0.72rem; color: var(--muted); }
+.pillar-item span::before { content: "— "; }
 
 /* TRUST SECTION — expanded, honest, not bare checkmarks */
 .trust-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 1.25rem; margin-top: 2.4rem; }
@@ -376,7 +377,7 @@ footer { background: var(--navy); border-top: 1px solid rgba(201,168,68,0.12); p
     <div class="pillar-bar-inner">
       <div class="pillar-item"><strong>Delhi NCR</strong><span>Based &amp; Local</span></div>
       <div class="pillar-item"><strong>Hinglish</strong><span>Real Language</span></div>
-      <div class="pillar-item"><strong>0%</strong><span>Hidden Fees</span></div>
+      <div class="pillar-item"><strong>Zero</strong><span>Hidden Fees</span></div>
       <div class="pillar-item"><strong>Honest</strong><span>Even If "Not Yet"</span></div>
     </div>
   </div>
@@ -435,6 +436,12 @@ footer { background: var(--navy); border-top: 1px solid rgba(201,168,68,0.12); p
             <div class="explore-icon">💰</div>
             <h3>Personal Loan</h3>
             <p>Real rates, real eligibility — and cheaper options worth checking first.</p>
+          </a>
+          <a href="home-loan.html" class="explore-card">
+            <span class="live-tag">LIVE</span>
+            <div class="explore-icon">🏠</div>
+            <h3>Home Loan</h3>
+            <p>New purchase or balance transfer — what to verify before you commit.</p>
           </a>
         </div>
       </div>
@@ -684,6 +691,14 @@ footer { background: var(--navy); border-top: 1px solid rgba(201,168,68,0.12); p
           <div class="tag-row"><span class="tag">Unsecured</span><span class="tag">CIBIL-Based Rates</span><span class="tag">Debt-Trap Aware</span></div>
         </a>
 
+        <a href="home-loan.html" class="svc-card">
+          <span class="live-badge">LIVE</span>
+          <div class="svc-icon">🏠</div>
+          <h3 class="h3">Home Loans</h3>
+          <p>New purchase or balance transfer — the lowest-rate loan on this site, with what to verify about the property before you commit.</p>
+          <div class="tag-row"><span class="tag">Up to 30 Yrs</span><span class="tag">Balance Transfer</span><span class="tag">RERA Check</span></div>
+        </a>
+
         <a href="term-life-insurance.html" class="svc-card">
           <span class="live-badge">LIVE</span>
           <div class="svc-icon">🛡️</div>
@@ -796,6 +811,7 @@ footer { background: var(--navy); border-top: 1px solid rgba(201,168,68,0.12); p
               <option value="Business Loan">Business Loan</option>
               <option value="Car Loan">Car Loan</option>
               <option value="Personal Loan">Personal Loan</option>
+              <option value="Home Loan">Home Loan</option>
               <option value="Insurance">Insurance</option>
               <option value="Real Estate">Real Estate</option>
               <option value="Other">Other</option>
