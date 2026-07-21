@@ -52,6 +52,7 @@
     "business-loans": "loans",
      "car-loan": "loans",
     "personal-loan": "loans",
+    "home-loan": "loans",
     "real-estate": "loans",
     "two-wheeler": "motor",
     "four-wheeler": "motor",
@@ -97,6 +98,7 @@
             '<li><a href="business-loans.html"' + cls("business-loans") + '>Business Loans</a></li>' +
      '<li><a href="car-loan.html"' + cls("car-loan") + '>Car Loan</a></li>' +
             '<li><a href="personal-loan.html"' + cls("personal-loan") + '>Personal Loan</a></li>' +
+            '<li><a href="home-loan.html"' + cls("home-loan") + '>Home Loan</a></li>' +
           '</ul>' +
         '</li>' +
         '<li class="nav-dropdown" id="insDropdown">' +
@@ -140,6 +142,7 @@
       '<a href="business-loans.html" onclick="closeMobileNav()" ' + goldStyle + '>Business Loans</a>' +
      '<a href="car-loan.html" onclick="closeMobileNav()" ' + goldStyle + '>Car Loan</a>' +
       '<a href="personal-loan.html" onclick="closeMobileNav()" ' + goldStyle + '>Personal Loan</a>' +
+      '<a href="home-loan.html" onclick="closeMobileNav()" ' + goldStyle + '>Home Loan</a>' +
       '<a href="two-wheeler-third-party-insurance.html" onclick="closeMobileNav()" ' + goldStyle + '>2W Insurance</a>' +
       '<a href="four-wheeler-third-party-insurance.html" onclick="closeMobileNav()" ' + goldStyle + '>4W Insurance</a>' +
      '<a href="commercial-vehicle-insurance.html" onclick="closeMobileNav()" ' + goldStyle + '>Commercial Vehicle</a>' +
