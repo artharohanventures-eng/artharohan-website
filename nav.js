@@ -55,9 +55,11 @@
     "home-loan": "loans",
     "loan-against-property": "loans",
     "real-estate": "loans",
-    "two-wheeler": "motor",
-    "four-wheeler": "motor",
-     "commercial-vehicle": "motor",
+    "two-wheeler": "insurance",
+    "four-wheeler": "insurance",
+     "commercial-vehicle": "insurance",
+    "travel-insurance": "insurance",
+    "insurance-hub": "insurance",
     "term-plan": "life"
   };
   var activeGroup = groupOf[current] || "";
@@ -104,15 +106,16 @@
           '</ul>' +
         '</li>' +
         '<li class="nav-dropdown" id="insDropdown">' +
-          '<a onclick="toggleNavDropdown(\'insDropdown\')"' + dropCls("motor") + '>Motor \u25be</a>' +
+          '<a onclick="toggleNavDropdown(\'insDropdown\')"' + dropCls("insurance") + '>General Insurance \u25be</a>' +
           '<ul class="nav-dropdown-menu">' +
+            '<li><a href="insurance.html"' + cls("insurance-hub") + '>All Insurance ↗</a></li>' +
             '<li><a href="two-wheeler-third-party-insurance.html"' + cls("two-wheeler") + '>2W Insurance</a></li>' +
             '<li><a href="four-wheeler-third-party-insurance.html"' + cls("four-wheeler") + '>4W Insurance</a></li>' +
      '<li><a href="commercial-vehicle-insurance.html"' + cls("commercial-vehicle") + '>Commercial Vehicle</a></li>' +
           '</ul>' +
         '</li>' +
         '<li class="nav-dropdown" id="lifeDropdown">' +
-          '<a onclick="toggleNavDropdown(\'lifeDropdown\')"' + dropCls("life") + '>Life \u25be</a>' +
+          '<a onclick="toggleNavDropdown(\'lifeDropdown\')"' + dropCls("life") + '>Life Insurance \u25be</a>' +
           '<ul class="nav-dropdown-menu">' +
             '<li><a href="term-life-insurance.html"' + cls("term-plan") + '>Term Plan</a></li>' +
           '</ul>' +
@@ -146,6 +149,7 @@
       '<a href="personal-loan.html" onclick="closeMobileNav()" ' + goldStyle + '>Personal Loan</a>' +
       '<a href="home-loan.html" onclick="closeMobileNav()" ' + goldStyle + '>Home Loan</a>' +
       '<a href="loan-against-property.html" onclick="closeMobileNav()" ' + goldStyle + '>Loan Against Property</a>' +
+      '<a href="insurance.html" onclick="closeMobileNav()" ' + goldStyle + '>All Insurance</a>' +
       '<a href="two-wheeler-third-party-insurance.html" onclick="closeMobileNav()" ' + goldStyle + '>2W Insurance</a>' +
       '<a href="four-wheeler-third-party-insurance.html" onclick="closeMobileNav()" ' + goldStyle + '>4W Insurance</a>' +
      '<a href="commercial-vehicle-insurance.html" onclick="closeMobileNav()" ' + goldStyle + '>Commercial Vehicle</a>' +
