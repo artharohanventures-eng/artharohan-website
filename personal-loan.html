@@ -10,7 +10,7 @@
 <meta property="og:description" content="Personal loan eligibility, rates, and EMI — explained honestly, including when it isn't the right choice.">
 <meta property="og:url" content="https://artharohan.in/personal-loan">
 <link rel="canonical" href="https://artharohan.in/personal-loan">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
   --navy:#0B1628; --navy-mid:#12203a; --navy-light:#1a2b4a;
@@ -76,8 +76,9 @@ nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);display:flex;align-i
 .trust-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px}
 .trust-chip{background:rgba(201,168,68,0.08);border:1px solid rgba(201,168,68,0.25);color:var(--gold-light);font-size:0.82rem;font-weight:600;padding:8px 14px;border-radius:20px}
 
-.glance{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:rgba(201,168,68,0.15);margin:0;border-top:1px solid rgba(201,168,68,0.15)}
-.glance div{background:var(--navy-mid);padding:22px 16px;text-align:center}
+.glance{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:2px solid rgba(201,168,68,0.3)}
+.glance div{background:var(--navy-mid);padding:22px 16px;text-align:center;border-right:1px solid rgba(201,168,68,0.3)}
+.glance div:last-child{border-right:none}
 .glance .val{color:var(--gold);font-weight:700;font-size:1.05rem}
 .glance .lbl{color:var(--muted);font-size:0.78rem;margin-top:4px}
 
@@ -137,21 +138,53 @@ footer{padding:36px 5%;text-align:center;background:var(--navy);border-top:1px s
 .footer-nav a:hover{color:var(--gold)}
 .footer-copy{font-size:0.75rem;color:var(--muted)}
 
-.emi-box{background:var(--white);border-radius:10px;padding:32px;margin-top:24px;box-shadow:0 2px 12px rgba(0,0,0,0.04);display:grid;grid-template-columns:1fr 1fr;gap:32px}
-.emi-result-panel{background:var(--navy);border-radius:8px;padding:24px;color:var(--text-dim)}
-.emi-result-label{font-size:0.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
-.emi-result-value{font-family:'Playfair Display',serif;font-size:2.2rem;color:var(--gold);font-weight:700}
-.emi-sub-row{display:flex;justify-content:space-between;font-size:0.88rem;margin-top:10px}
-.emi-sub-row span:first-child{color:var(--muted)}
+.emi-section{background:var(--navy-mid);padding:56px 5%}
+.emi-grid{max-width:720px;margin:0 auto;text-align:center}
+.emi-grid .eyebrow{color:var(--gold-light)}
+.emi-grid .h2{color:var(--white)}
+.emi-trust-row{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-top:20px}
+.emi-trust-item{display:flex;gap:8px;align-items:center;font-size:0.85rem;color:var(--text-dim);text-align:left}
+.emi-trust-item .dot{width:7px;height:7px;border-radius:50%;background:var(--gold);flex-shrink:0}
+.emi-card-wrap{max-width:1100px;margin:36px auto 0}
+.emi-card{background:var(--white);border-radius:14px;padding:40px;box-shadow:0 20px 50px -15px rgba(0,0,0,0.35)}
+.emi-field-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 32px}
+.emi-field{margin-bottom:1.5rem}
+.emi-field-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:0.5rem}
+.emi-field label{font-size:0.8rem;font-weight:600;color:var(--body)}
+.emi-field-val{font-family:'JetBrains Mono',monospace;font-size:0.92rem;font-weight:700;color:var(--navy)}
+input[type="range"]{width:100%;height:4px;border-radius:2px;background:#e5ddc8;appearance:none;-webkit-appearance:none;outline:none}
+input[type="range"]::-webkit-slider-thumb{appearance:none;-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:var(--gold);cursor:pointer;border:3px solid var(--white);box-shadow:0 2px 8px rgba(0,0,0,0.25)}
+input[type="range"]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:var(--gold);cursor:pointer;border:3px solid var(--white)}
+.emi-result{background:var(--navy);border-radius:10px;padding:22px 24px;margin-top:1.6rem;text-align:center}
+.emi-result-label{color:var(--muted);font-size:0.75rem;margin-bottom:4px}
+.emi-result-value{font-family:'JetBrains Mono',monospace;color:var(--gold-light);font-size:2rem;font-weight:700;margin-bottom:12px}
+.emi-sub-row{display:flex;justify-content:space-around;flex-wrap:wrap;gap:10px;border-top:1px solid rgba(201,168,68,0.15);padding-top:12px}
+.emi-sub-row div{text-align:center}
+.emi-sub-row span{display:block;color:var(--muted);font-size:0.68rem}
+.emi-sub-row b{color:var(--white);font-family:'JetBrains Mono',monospace;font-size:0.82rem;font-weight:600}
+.emi-warning-text{font-size:0.78rem;margin-top:12px;line-height:1.5}
+.emi-card .btn-wa{width:100%;text-align:center;display:block;margin-top:1.4rem;padding:13px;background:#25D366;color:#fff;border-radius:6px;font-weight:700;text-decoration:none;font-size:0.92rem}
+.emi-card .btn-wa:hover{background:#20bd5a}
+.emi-note{font-size:0.72rem;color:var(--muted);margin-top:0.8rem;text-align:center}
+.emi-optional{border-top:1px dashed rgba(11,22,40,0.15);margin-top:1.3rem;padding-top:1.2rem}
+.emi-optional-label{font-size:0.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:10px}
+.emi-optional-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+.emi-optional input{width:100%;padding:9px;border:1px solid #ddd;border-radius:6px;font-size:0.85rem}
 .rate-table{width:100%;border-collapse:collapse;font-size:0.9rem;margin-top:24px}
 .rate-table th{background:var(--navy);color:var(--white);padding:14px;text-align:left}
 .rate-table td{padding:14px;border-bottom:1px solid #eee}
 .rate-table tr:nth-child(even) td{background:var(--cream)}
 
+@media(max-width:900px){
+  .emi-field-grid{grid-template-columns:1fr}
+  .emi-optional-row{grid-template-columns:1fr}
+}
 @media(max-width:860px){
   .form-grid{grid-template-columns:1fr}
   .glance{grid-template-columns:repeat(2,1fr)}
-  .emi-box{grid-template-columns:1fr}
+  .glance div{border-right:1px solid rgba(201,168,68,0.3);border-bottom:1px solid rgba(201,168,68,0.3)}
+  .glance div:nth-child(2n){border-right:none}
+  .glance div:nth-child(n+3){border-bottom:none}
   .subnav-inner{padding:0 4%}
   .subnav a{padding:14px 14px;font-size:0.8rem}
 }
@@ -201,56 +234,76 @@ footer{padding:36px 5%;text-align:center;background:var(--navy);border-top:1px s
   <div><div class="val">CIBIL 700+</div><div class="lbl">Preferred Score</div></div>
 </div>
 
-<div class="wrap wrap--cream" id="emi-calc">
-  <div class="inner">
-    <span class="eyebrow">Plan Before You Apply</span>
-    <h2 class="h2">Personal Loan EMI Calculator</h2>
-    <p class="lead">See your estimated monthly EMI before you talk to any lender — reducing balance method, the same math banks actually use.</p>
-    <div class="emi-box">
-      <div>
-        <div class="fg">
-          <label for="loanAmt">Loan Amount (₹)</label>
-          <input type="number" id="loanAmt" value="300000" oninput="calcPlEMI()">
+<section class="emi-section" id="emi-calc">
+  <div class="emi-grid">
+      <span class="eyebrow">Plan Before You Apply</span>
+      <h2 class="h2">Personal Loan EMI Calculator</h2>
+      <p class="lead" style="color:var(--muted);margin-left:auto;margin-right:auto;">Slide to your loan amount, rate, and tenure — get an honest estimate instantly. Then send it to us directly if you want it confirmed against real lenders.</p>
+      <div class="emi-trust-row">
+        <div class="emi-trust-item"><div class="dot"></div><span>Reducing balance method, not a flat-rate trick</span></div>
+        <div class="emi-trust-item"><div class="dot"></div><span>No sign-up required</span></div>
+        <div class="emi-trust-item"><div class="dot"></div><span>Includes an income affordability check</span></div>
+      </div>
+  </div>
+  <div class="emi-card-wrap">
+    <div class="emi-card">
+      <div class="emi-field-grid">
+        <div class="emi-field" style="grid-column:1/-1;">
+          <div class="emi-field-top">
+            <label>Loan Amount</label>
+            <span class="emi-field-val" id="loanAmtDisplay">₹3,00,000</span>
+          </div>
+          <input type="range" id="loanAmt" min="50000" max="2500000" step="25000" value="300000" oninput="calcPlEMI()">
         </div>
-        <div class="fg">
-          <label for="intRate">Interest Rate (% per annum)</label>
-          <input type="number" id="intRate" value="14" step="0.1" oninput="calcPlEMI()">
+        <div class="emi-field">
+          <div class="emi-field-top">
+            <label>Interest Rate</label>
+            <span class="emi-field-val" id="intRateDisplay">14.0% p.a.</span>
+          </div>
+          <input type="range" id="intRate" min="10" max="26" step="0.1" value="14" oninput="calcPlEMI()">
         </div>
-        <div class="fg">
-          <label for="tenure">Tenure (Years)</label>
-          <input type="number" id="tenure" value="3" oninput="calcPlEMI()">
-        </div>
-        <div class="fg">
-          <label for="monthlyIncome">Your Monthly Income (₹) — optional</label>
-          <input type="number" id="monthlyIncome" placeholder="For an affordability check" oninput="calcPlEMI()">
-        </div>
-        <div class="fg">
-          <label for="existingEmi">Existing Monthly EMIs (₹) — optional</label>
-          <input type="number" id="existingEmi" placeholder="Include any running loans/cards" oninput="calcPlEMI()">
+        <div class="emi-field">
+          <div class="emi-field-top">
+            <label>Tenure</label>
+            <span class="emi-field-val" id="tenureDisplay">3 years</span>
+          </div>
+          <input type="range" id="tenure" min="1" max="5" step="1" value="3" oninput="calcPlEMI()">
         </div>
       </div>
-      <div class="emi-result-panel">
+
+      <div class="emi-result">
         <div class="emi-result-label">Estimated Monthly EMI</div>
         <div class="emi-result-value" id="emiResult">₹0</div>
-        <div class="emi-sub-row"><span>Total Interest Payable</span><span id="totalInterest">₹0</span></div>
-        <div class="emi-sub-row"><span>Total Amount Payable</span><span id="totalPayment">₹0</span></div>
-        <p id="emiWarning" style="font-size:0.82rem;margin-top:14px;line-height:1.5;display:none;"></p>
+        <div class="emi-sub-row">
+          <div><span>Total Interest</span><b id="totalInterest">₹0</b></div>
+          <div><span>Total Payment</span><b id="totalPayment">₹0</b></div>
+          <div><span>Processing Fee</span><b id="processingFee">₹0</b></div>
+        </div>
+        <p id="emiWarning" class="emi-warning-text" style="display:none;"></p>
       </div>
-    </div>
-    <div class="note-box">
-      <p>⚠️ This is an estimate using the reducing balance method. Your real rate depends on the lender, your CIBIL score, and income profile — see the rate reality table below. Processing fee (typically 1-3% + GST) is separate and reduces the amount you actually receive.</p>
-    </div>
-    <div style="margin-top:20px;">
-      <button onclick="toggleAmort()" id="amortBtn" class="btn btn-outline" style="cursor:pointer;">Show Year-by-Year Breakdown ▼</button>
-      <div id="amortWrap" style="display:none;margin-top:20px;overflow-x:auto;">
-        <table class="rate-table">
-          <thead><tr><th>Year</th><th>Principal Paid</th><th>Interest Paid</th><th>Balance Remaining</th></tr></thead>
-          <tbody id="amortBody"></tbody>
-        </table>
+
+      <div class="emi-optional">
+        <div class="emi-optional-label">Optional — Affordability Check</div>
+        <div class="emi-optional-row">
+          <input type="number" id="monthlyIncome" placeholder="Monthly income (₹)" oninput="calcPlEMI()">
+          <input type="number" id="existingEmi" placeholder="Existing EMIs (₹)" oninput="calcPlEMI()">
+        </div>
       </div>
+
+      <a href="#" id="emiWaLink" target="_blank" rel="noopener noreferrer" class="btn btn-wa">💬 Get This Checked on WhatsApp →</a>
+      <p class="emi-note">This is an estimate using the reducing balance method. Your real rate depends on the lender, your CIBIL score, and income profile.</p>
     </div>
   </div>
-</div>
+  <div style="max-width:1100px;margin:32px auto 0;">
+    <button onclick="toggleAmort()" id="amortBtn" class="btn btn-outline" style="cursor:pointer;">Show Year-by-Year Breakdown ▼</button>
+    <div id="amortWrap" style="display:none;margin-top:20px;overflow-x:auto;background:var(--white);border-radius:10px;padding:8px;">
+      <table class="rate-table">
+        <thead><tr><th>Year</th><th>Principal Paid</th><th>Interest Paid</th><th>Balance Remaining</th></tr></thead>
+        <tbody id="amortBody"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
 
 <div class="wrap wrap--white" id="alternatives">
   <div class="inner">
@@ -546,6 +599,9 @@ function calcPlEMI(){
   var P = parseFloat(document.getElementById('loanAmt').value) || 0;
   var annualRate = parseFloat(document.getElementById('intRate').value) || 0;
   var years = parseFloat(document.getElementById('tenure').value) || 0;
+  document.getElementById('loanAmtDisplay').textContent = '₹' + Math.round(P).toLocaleString('en-IN');
+  document.getElementById('intRateDisplay').textContent = annualRate.toFixed(1) + '% p.a.';
+  document.getElementById('tenureDisplay').textContent = years + (years == 1 ? ' year' : ' years');
   var r = annualRate / 12 / 100;
   var n = Math.round(years * 12);
   var emi = 0;
@@ -559,6 +615,7 @@ function calcPlEMI(){
   document.getElementById('emiResult').textContent = '₹' + Math.round(emi).toLocaleString('en-IN');
   document.getElementById('totalInterest').textContent = '₹' + Math.round(totalInterest).toLocaleString('en-IN');
   document.getElementById('totalPayment').textContent = '₹' + Math.round(totalPayment).toLocaleString('en-IN');
+  document.getElementById('processingFee').textContent = '₹' + Math.round(P * 0.01).toLocaleString('en-IN') + '-' + Math.round(P * 0.03).toLocaleString('en-IN');
 
   var income = parseFloat(document.getElementById('monthlyIncome').value) || 0;
   var existingEmi = parseFloat(document.getElementById('existingEmi').value) || 0;
@@ -582,6 +639,9 @@ function calcPlEMI(){
   }
 
   buildAmortization(P, r, n, emi);
+
+  var waMsg = "Hello Artharohan! I used the Personal Loan EMI calculator — Loan Amount ₹" + Math.round(P).toLocaleString('en-IN') + ", estimated EMI ₹" + Math.round(emi).toLocaleString('en-IN') + " over " + years + " years. Can you check this against real lender rates?";
+  document.getElementById('emiWaLink').href = "https://wa.me/917838355855?text=" + encodeURIComponent(waMsg);
 }
 
 function buildAmortization(P, r, n, emi){
