@@ -11,14 +11,6 @@
 <meta property="og:url" content="https://artharohan.in">
 <link rel="canonical" href="https://artharohan.in">
 
-<!-- ============================================================
-     SEO — STRUCTURED DATA (Schema.org)
-     Homepage-appropriate schema only. Business Loans FAQ/Service
-     schema now lives correctly on business-loans.html itself —
-     removed from here to fix duplicate/misattributed structured
-     data that was pointing a business-loans schema at the
-     homepage canonical.
-     ============================================================ -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -74,7 +66,7 @@
 }
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-body { font-family: 'Inter', sans-serif; background: var(--cream); color: var(--navy); font-size: 16px; line-height: 1.6; }
+body { font-family: 'Inter', sans-serif; background: var(--cream); color: var(--navy); font-size: 16px; line-height: 1.6; padding-top: var(--nav-h); }
 img { max-width: 100%; display: block; }
 a { color: inherit; }
 .mono { font-family: 'JetBrains Mono', monospace; }
@@ -94,7 +86,7 @@ nav { position: fixed; inset: 0 0 auto 0; background: var(--navy); z-index: 200;
 .nav-dropdown-menu li { height: auto; }
 .nav-dropdown-menu li a { height: auto; padding: 10px 16px; white-space: nowrap; color: var(--cream); }
 .nav-dropdown-menu li a:hover { background: rgba(255,255,255,0.06); }
-.nav-links a { display: flex; align-items: center; height: 100%; color: var(--muted); text-decoration: none; font-size: 0.875rem; font-weight: 500; letter-spacing: 0.3px; transition: color 0.2s; cursor: pointer; }
+.nav-links a { display: flex; align-items: center; height: 100%; color: var(--muted); text-decoration: none; font-size: 0.95rem; font-weight: 500; letter-spacing: 0.3px; transition: color 0.2s; cursor: pointer; }
 .nav-links a:hover, .nav-links a.active { color: var(--gold); }
 .nav-cta { background: var(--gold); color: var(--navy) !important; padding: 8px 18px; border-radius: 4px; font-weight: 600 !important; }
 .nav-cta:hover { background: var(--gold-light) !important; }
@@ -110,8 +102,7 @@ nav { position: fixed; inset: 0 0 auto 0; background: var(--navy); z-index: 200;
 .mobile-nav a:hover { color: var(--gold); }
 
 /* PAGE SYSTEM */
-.page { display: none; padding-top: var(--nav-h); min-height: 100vh; }
-.page.active { display: block; }
+/* Home page wrapper */
 
 /* SHARED ATOMS */
 .section-wrap { padding: 72px 5%; }
@@ -124,7 +115,7 @@ nav { position: fixed; inset: 0 0 auto 0; background: var(--navy); z-index: 200;
 .h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.7rem, 2.8vw, 2.6rem); font-weight: 900; line-height: 1.18; color: var(--navy); margin-bottom: 1rem; }
 .h3 { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem; }
 .on-dark { color: var(--white); }
-.lead { color: var(--body-text); font-size: 1rem; line-height: 1.75; font-weight: 300; max-width: 560px; }
+.lead { color: var(--body-text); font-size: 1.05rem; line-height: 1.75; font-weight: 300; max-width: 580px; }
 .lead.on-dark { color: var(--muted); }
 .btn { display: inline-block; padding: 13px 26px; border-radius: 4px; font-size: 0.88rem; font-weight: 600; letter-spacing: 0.4px; text-decoration: none; transition: all 0.2s; cursor: pointer; border: none; font-family: 'Inter', sans-serif; }
 .btn--gold { background: var(--gold); color: var(--navy); }
@@ -154,15 +145,15 @@ footer { background: var(--navy); border-top: 1px solid rgba(201,168,68,0.12); p
 .hero-hindi { font-size: 0.78rem; color: var(--gold); font-weight: 600; margin-bottom: 1rem; }
 .hero-title { font-family: 'Playfair Display', serif; font-size: clamp(2.4rem, 4.6vw, 4rem); color: var(--white); line-height: 1.1; font-weight: 900; margin-bottom: 1.3rem; max-width: 780px; }
 .hero-title em { color: var(--gold); font-style: normal; }
-.hero-sub { color: var(--muted); font-size: 1.02rem; line-height: 1.75; margin-bottom: 2rem; font-weight: 300; max-width: 620px; }
+.hero-sub { color: var(--muted); font-size: 1.08rem; line-height: 1.75; margin-bottom: 2rem; font-weight: 300; max-width: 640px; }
 .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 40px; }
 .ascent-panel { width: 100%; }
 .ascent-panel svg { width: 100%; height: auto; }
 .ascent-labels { display: grid; grid-template-columns: repeat(4,1fr); gap: 8px; text-align: center; margin-top: 4px; padding-bottom: 44px; }
 .ascent-labels a { display: block; text-decoration: none; padding: 10px 6px; border-radius: 6px; transition: background 0.2s; }
 .ascent-labels a:hover { background: rgba(201,168,68,0.08); }
-.ascent-labels .lbl-name { color: var(--gold-light); font-size: 0.95rem; font-weight: 600; margin-bottom: 3px; }
-.ascent-labels .lbl-desc { color: var(--muted); font-size: 0.8rem; font-weight: 300; }
+.ascent-labels .lbl-name { color: var(--gold-light); font-size: 1.05rem; font-weight: 600; margin-bottom: 3px; }
+.ascent-labels .lbl-desc { color: var(--muted); font-size: 0.88rem; font-weight: 300; }
 .ascent-caption { text-align: center; margin: -6px 0 22px; }
 .ascent-caption .ac-word { font-family: 'Playfair Display', serif; color: var(--gold-light); font-size: 0.95rem; letter-spacing: 0.5px; }
 .ascent-caption .ac-sep { color: rgba(201,168,68,0.35); margin: 0 14px; font-size: 0.8rem; }
@@ -172,15 +163,22 @@ footer { background: var(--navy); border-top: 1px solid rgba(201,168,68,0.12); p
 .pillar-bar { background: var(--navy); padding: 20px 5% 32px; }
 .pillar-bar-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; }
 .pillar-item { background: rgba(201,168,68,0.08); border: 1px solid rgba(201,168,68,0.25); border-radius: 20px; padding: 8px 16px; display: flex; align-items: center; gap: 6px; }
-.pillar-item strong { font-family: inherit; font-size: 0.82rem; color: var(--gold-light); font-weight: 600; }
-.pillar-item span { font-size: 0.72rem; color: var(--muted); }
+.pillar-item strong { font-family: inherit; font-size: 0.9rem; color: var(--gold-light); font-weight: 600; }
+.pillar-item span { font-size: 0.8rem; color: var(--muted); }
 .pillar-item span::before { content: "— "; }
 
 /* TRUST SECTION — expanded, honest, not bare checkmarks */
 .trust-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 1.25rem; margin-top: 2.4rem; }
 .trust-card { background: var(--cream); border-radius: 10px; padding: 24px; border-top: 3px solid var(--gold); }
-.trust-card h4 { color: var(--navy); font-size: 0.92rem; font-weight: 700; margin-bottom: 0.5rem; }
-.trust-card p { color: var(--body-text); font-size: 0.84rem; line-height: 1.6; font-weight: 300; }
+.trust-card h4 { color: var(--navy); font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
+.trust-card p { color: var(--body-text); font-size: 0.92rem; line-height: 1.65; font-weight: 300; }
+
+/* HOW IT WORKS */
+.hiw-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; margin-top: 2.4rem; }
+.hiw-step { text-align: left; }
+.hiw-num { width: 40px; height: 40px; border-radius: 50%; border: 1.5px solid var(--gold); color: var(--gold); font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.1rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
+.hiw-step h4 { color: var(--navy); font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
+.hiw-step p { color: var(--body-text); font-size: 0.9rem; line-height: 1.6; font-weight: 300; }
 
 /* EXPLORE / WHAT WE COVER — real links, honest coming-soon */
 .explore-group { margin-top: 2.6rem; }
@@ -189,13 +187,15 @@ footer { background: var(--navy); border-top: 1px solid rgba(201,168,68,0.12); p
 .explore-card { background: var(--navy-mid); border: 1px solid rgba(201,168,68,0.13); border-radius: 10px; padding: 22px; text-decoration: none; display: block; transition: all 0.22s; position: relative; }
 .explore-card:hover { border-color: rgba(201,168,68,0.4); transform: translateY(-2px); background: var(--navy-light); }
 .explore-card .live-tag { position: absolute; top: 16px; right: 16px; font-size: 0.62rem; font-weight: 700; letter-spacing: 1px; color: #6FCF97; background: rgba(111,207,151,0.1); border: 1px solid rgba(111,207,151,0.3); padding: 2px 8px; border-radius: 12px; }
-.explore-icon { font-size: 1.7rem; margin-bottom: 0.8rem; }
-.explore-card h3 { color: var(--gold-light); font-size: 0.95rem; font-family: 'Playfair Display', serif; font-weight: 700; margin-bottom: 0.4rem; padding-right: 60px; }
-.explore-card p { color: var(--muted); font-size: 0.8rem; line-height: 1.6; font-weight: 300; padding-right: 12px; }
+.explore-icon { margin-bottom: 0.8rem; }
+.explore-icon svg { width: 30px; height: 30px; color: var(--gold-light); }
+.explore-card h3 { color: var(--gold-light); font-size: 1.05rem; font-family: 'Playfair Display', serif; font-weight: 700; margin-bottom: 0.4rem; padding-right: 60px; }
+.explore-card p { color: var(--muted); font-size: 0.88rem; line-height: 1.65; font-weight: 300; padding-right: 12px; }
 .explore-group:last-child { margin-bottom: 40px; }
 .explore-card--soon { opacity: 0.65; cursor: default; }
 .explore-card--soon:hover { transform: none; border-color: rgba(201,168,68,0.13); background: var(--navy-mid); }
 .explore-card--soon .live-tag { color: var(--muted); background: rgba(255,255,255,0.04); border-color: rgba(201,168,68,0.15); }
+.explore-grid.explore-grid--odd-fix > *:last-child:nth-child(odd) { grid-column: 1 / -1; }
 
 /* YOUTUBE */
 .yt-section { text-align: center; }
@@ -223,7 +223,8 @@ footer { background: var(--navy); border-top: 1px solid rgba(201,168,68,0.12); p
 .cta-channels { display: flex; gap: 1.2rem; justify-content: center; flex-wrap: wrap; margin-top: 2.4rem; }
 .cta-card { background: var(--navy-mid); border: 1px solid rgba(201,168,68,0.18); border-radius: 10px; padding: 22px 28px; text-decoration: none; transition: all 0.2s; min-width: 168px; text-align: center; }
 .cta-card:hover { border-color: var(--gold); transform: translateY(-2px); }
-.cta-card-icon { font-size: 1.7rem; margin-bottom: 7px; }
+.cta-card-icon { margin-bottom: 7px; }
+.cta-card-icon svg { width: 28px; height: 28px; color: var(--gold-light); }
 .cta-card h4 { color: var(--gold-light); font-size: 0.82rem; font-weight: 600; margin-bottom: 3px; }
 .cta-card p { color: var(--muted); font-size: 0.74rem; font-weight: 300; }
 
@@ -232,18 +233,20 @@ footer { background: var(--navy); border-top: 1px solid rgba(201,168,68,0.12); p
 .about-hero-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
 .values-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2.8rem; }
 .value-card { background: var(--white); border-radius: 8px; padding: 22px; border-left: 3px solid var(--gold); }
-.value-card h4 { color: var(--navy); font-size: 0.88rem; font-weight: 600; margin-bottom: 5px; }
-.value-card p { color: var(--body-text); font-size: 0.8rem; line-height: 1.55; font-weight: 300; }
+.value-card h4 { color: var(--navy); font-size: 0.98rem; font-weight: 600; margin-bottom: 5px; }
+.value-card p { color: var(--body-text); font-size: 0.9rem; line-height: 1.65; font-weight: 300; }
 
 /* SERVICES PAGE */
 .services-hero { background: var(--navy); padding: 72px 5%; }
 .services-detail-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.75rem; margin-top: 2.8rem; }
+.services-detail-grid > *:last-child:nth-child(3n+1) { grid-column: 1 / -1; }
 .svc-card { background: var(--white); border-radius: 10px; padding: 28px; border-top: 3px solid var(--gold); box-shadow: 0 4px 18px rgba(11,22,40,0.05); transition: transform 0.2s; display: block; text-decoration: none; position: relative; }
 .svc-card:hover { transform: translateY(-3px); }
 .svc-card .live-badge { position: absolute; top: 20px; right: 20px; font-size: 0.62rem; font-weight: 700; letter-spacing: 1px; color: #2f9e5c; background: rgba(47,158,92,0.08); border: 1px solid rgba(47,158,92,0.25); padding: 2px 8px; border-radius: 12px; }
-.svc-icon { font-size: 2rem; margin-bottom: 0.9rem; }
+.svc-icon { margin-bottom: 0.9rem; }
+.svc-icon svg { width: 34px; height: 34px; color: var(--gold); }
 .svc-card .h3 { font-size: 1.05rem; }
-.svc-card p { color: var(--body-text); font-size: 0.85rem; line-height: 1.7; font-weight: 300; }
+.svc-card p { color: var(--body-text); font-size: 0.92rem; line-height: 1.75; font-weight: 300; }
 .tag-row { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 1rem; }
 .tag { background: rgba(201,168,68,0.09); color: var(--gold-dim); font-size: 0.7rem; padding: 3px 10px; border-radius: 20px; font-weight: 500; letter-spacing: 0.3px; }
 
@@ -252,7 +255,8 @@ footer { background: var(--navy); border-top: 1px solid rgba(201,168,68,0.12); p
 .contact-cards-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; max-width: 900px; margin: 0 auto; }
 .contact-info-card { background: var(--white); border-radius: 10px; padding: 26px; text-align: center; box-shadow: 0 4px 18px rgba(11,22,40,0.05); text-decoration: none; display: block; transition: all 0.2s; }
 .contact-info-card:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(11,22,40,0.1); }
-.ci-icon { font-size: 1.9rem; margin-bottom: 10px; }
+.ci-icon { margin-bottom: 10px; }
+.ci-icon svg { width: 30px; height: 30px; color: var(--navy); }
 .contact-info-card h4 { color: var(--navy); font-size: 0.8rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 4px; }
 .contact-info-card p { color: var(--body-text); font-size: 0.88rem; }
 .form-wrap { max-width: 580px; margin: 0 auto; background: var(--white); border-radius: 12px; padding: 44px; box-shadow: 0 8px 36px rgba(11,22,40,0.07); }
@@ -291,29 +295,48 @@ footer { background: var(--navy); border-top: 1px solid rgba(201,168,68,0.12); p
 </head>
 <body>
 
+<svg style="display:none" aria-hidden="true">
+  <defs>
+    <symbol id="icon-bank" viewBox="0 0 24 24"><path d="M12 3L3 9h18L12 3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M4 9v10M9 9v10M15 9v10M20 9v10M2.5 21h19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="icon-car" viewBox="0 0 24 24"><path d="M5 17V13h14v4M5 17a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0zM16 17a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0zM5 13l1.5-4.5A2 2 0 0 1 8.4 7h7.2a2 2 0 0 1 1.9 1.5L19 13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-wallet" viewBox="0 0 24 24"><path d="M3 7h15a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M3 7l2.2-3h9l2.2 3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M16 13h3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="icon-home" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7M6 10v10h12V10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 20v-6h4v6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-property" viewBox="0 0 24 24"><path d="M5 21V9l5-4 5 4v12M15 21v-8h4v8M2.5 21h19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.3 12h1M8.3 15h1M8.3 18h1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="icon-bike" viewBox="0 0 24 24"><path d="M5.2 18a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zM18.8 18a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M5.2 15.5 9 9h4l3.5 4.5M9 9 7.2 6H5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.5 13.2 13.3 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="icon-truck" viewBox="0 0 24 24"><path d="M2 8h11v9H2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M13 11h4l3.5 3.2V17H13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M6 20.3a1.6 1.6 0 1 0 0-3.2 1.6 1.6 0 0 0 0 3.2zM17.3 20.3a1.6 1.6 0 1 0 0-3.2 1.6 1.6 0 0 0 0 3.2z" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+    <symbol id="icon-plane" viewBox="0 0 24 24"><path d="M21 3L2 10l7 3 3 7 3-6.5 6-10.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+    <symbol id="icon-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 5-3.3 7.6-7 9-3.7-1.4-7-4-7-9V6l7-3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-chart" viewBox="0 0 24 24"><path d="M4 19h16M7 19V11M12 19V7M17 19v-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="icon-card" viewBox="0 0 24 24"><rect x="2.2" y="6" width="19.6" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M2.2 10.2h19.6" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 15h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="icon-chat" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8.2 9.8c0 3.6 3 6.6 6.6 6.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="icon-play" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 8.5l6 3.5-6 3.5z" fill="currentColor"/></symbol>
+    <symbol id="icon-mail" viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M2.5 7.5l9.5 6.5 9.5-6.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
 <!-- NAV -->
 <div id="site-nav"></div>
 <script>
   var SITE_NAV_CURRENT = "home";
-  var SITE_NAV_IS_HOME = true;
+  
 </script>
 <script src="nav.js"></script>
 
 <!-- ============================================================
      HOME PAGE
      ============================================================ -->
-<div id="home" class="page active">
+<div id="home">
 
   <!-- Hero -->
   <section class="hero">
     <div class="hero-inner">
       <p class="hero-hindi">अर्थारोहण — Your Financial Ascent</p>
       <h1 class="hero-title">Honest guidance first. <em>Hands-on help when you're ready.</em></h1>
-      <p class="hero-sub">We explain Loans, Insurance, and Real Estate clearly — no jargon, no pressure. And when you want to actually move forward, we're the same people who'll walk you through it, transparently, with every fee and term explained upfront.</p>
+      <p class="hero-sub">We explain Loans and Insurance clearly, then help you act — every fee and term shown upfront.</p>
       <div class="hero-actions">
-        <a href="https://wa.me/917838355855" target="_blank" rel="noopener noreferrer" class="btn btn--gold">Talk to Us — Free →</a>
-        <a href="https://youtube.com/@artharohan" target="_blank" rel="noopener noreferrer" class="btn btn--outline">Watch Our YouTube →</a>
+        <a href="https://wa.me/917838355855" target="_blank" rel="noopener noreferrer" class="btn btn--gold">Talk to Us on WhatsApp — Free →</a>
       </div>
+      <p style="margin-top:-24px;margin-bottom:40px;"><a href="https://youtube.com/@artharohan" target="_blank" rel="noopener noreferrer" style="color:var(--muted);font-size:0.85rem;text-decoration:underline;text-underline-offset:3px;">Prefer to watch first? See our YouTube →</a></p>
 
       <!-- ASCENT — signature element, grounded in the brand name.
            A real growth-chart graphic, not a bare line: gradient
@@ -359,14 +382,14 @@ footer { background: var(--navy); border-top: 1px solid rgba(201,168,68,0.12); p
 
         <div class="ascent-caption">
           <span class="ac-word">अर्थ</span><span class="ac-sep">·</span><span class="ac-word">आरोहण</span>
-          <span class="ac-mean">Artha, the Pursuit of Prosperity — Arohan, the Climb Toward It</span>
+          <span class="ac-mean">Your Financial Ascent</span>
         </div>
 
         <div class="ascent-labels">
-          <a href="business-loans.html"><div class="lbl-name">🏦 Loans</div><div class="lbl-desc">Business, Car, Personal</div></a>
-          <a href="two-wheeler-third-party-insurance.html"><div class="lbl-name">🛡️ Insurance</div><div class="lbl-desc">Motor, Life</div></a>
-          <a onclick="showPage('services')"><div class="lbl-name">📈 Investments</div><div class="lbl-desc">Coming soon</div></a>
-          <a onclick="showPage('services')"><div class="lbl-name">🏠 Real Estate</div><div class="lbl-desc">Coming soon</div></a>
+          <a href="business-loans.html"><div class="lbl-name"><svg width="18" height="18" style="vertical-align:-3px;margin-right:5px;color:var(--gold-light);"><use href="#icon-bank"/></svg>Loans</div><div class="lbl-desc">Business, Car, Personal</div></a>
+          <a href="two-wheeler-third-party-insurance.html"><div class="lbl-name"><svg width="18" height="18" style="vertical-align:-3px;margin-right:5px;color:var(--gold-light);"><use href="#icon-shield"/></svg>Insurance</div><div class="lbl-desc">Motor, Travel, Life</div></a>
+          <a href="services.html"><div class="lbl-name"><svg width="18" height="18" style="vertical-align:-3px;margin-right:5px;color:var(--gold-light);"><use href="#icon-property"/></svg>Real Estate</div><div class="lbl-desc">Coming soon</div></a>
+          <a href="services.html"><div class="lbl-name"><svg width="18" height="18" style="vertical-align:-3px;margin-right:5px;color:var(--gold-light);"><use href="#icon-chart"/></svg>Investments</div><div class="lbl-desc">Coming soon</div></a>
         </div>
       </div>
     </div>
@@ -409,6 +432,31 @@ footer { background: var(--navy); border-top: 1px solid rgba(201,168,68,0.12); p
     </div>
   </div>
 
+  <!-- How It Works -->
+  <div class="section-wrap section-wrap--cream">
+    <div class="inner">
+      <span class="eyebrow">How It Works</span>
+      <h2 class="h2">Three Steps, No Branch Visit</h2>
+      <div class="hiw-grid">
+        <div class="hiw-step">
+          <div class="hiw-num">1</div>
+          <h4>Share Your Situation</h4>
+          <p>Tell us on WhatsApp what you need — a loan, insurance, or just questions. No forms, no office visit.</p>
+        </div>
+        <div class="hiw-step">
+          <div class="hiw-num">2</div>
+          <h4>We Guide You Honestly</h4>
+          <p>We explain the real options for your specific situation — including telling you "not yet" when that's the truth.</p>
+        </div>
+        <div class="hiw-step">
+          <div class="hiw-num">3</div>
+          <h4>You Decide, We Help Execute</h4>
+          <p>When you're ready, we walk you through the paperwork and process — every fee shown upfront, no surprises.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Explore — real links, honest coming-soon -->
   <div class="section-wrap section-wrap--dark">
     <div class="inner">
@@ -418,34 +466,34 @@ footer { background: var(--navy); border-top: 1px solid rgba(201,168,68,0.12); p
 
       <div class="explore-group">
         <div class="explore-group-title">Loans</div>
-        <div class="explore-grid">
+        <div class="explore-grid explore-grid--odd-fix">
           <a href="business-loans.html" class="explore-card">
             <span class="live-tag">LIVE</span>
-            <div class="explore-icon">🏦</div>
+            <div class="explore-icon"><svg><use href="#icon-bank"/></svg></div>
             <h3>Business Loans</h3>
             <p>Unsecured, Working Capital, Credit Limit, Mudra — Delhi NCR self-employed.</p>
           </a>
           <a href="car-loan.html" class="explore-card">
             <span class="live-tag">LIVE</span>
-            <div class="explore-icon">🚗</div>
+            <div class="explore-icon"><svg><use href="#icon-car"/></svg></div>
             <h3>Car Loan</h3>
             <p>New and used car finance — eligibility, rates, and honest guidance.</p>
           </a>
           <a href="personal-loan.html" class="explore-card">
             <span class="live-tag">LIVE</span>
-            <div class="explore-icon">💰</div>
+            <div class="explore-icon"><svg><use href="#icon-wallet"/></svg></div>
             <h3>Personal Loan</h3>
             <p>Real rates, real eligibility — and cheaper options worth checking first.</p>
           </a>
           <a href="home-loan.html" class="explore-card">
             <span class="live-tag">LIVE</span>
-            <div class="explore-icon">🏠</div>
+            <div class="explore-icon"><svg><use href="#icon-home"/></svg></div>
             <h3>Home Loan</h3>
             <p>New purchase or balance transfer — what to verify before you commit.</p>
           </a>
           <a href="loan-against-property.html" class="explore-card">
             <span class="live-tag">LIVE</span>
-            <div class="explore-icon">🏘️</div>
+            <div class="explore-icon"><svg><use href="#icon-property"/></svg></div>
             <h3>Loan Against Property</h3>
             <p>Larger amounts, lower rates than personal loans — and the real risk to weigh.</p>
           </a>
@@ -453,58 +501,42 @@ footer { background: var(--navy); border-top: 1px solid rgba(201,168,68,0.12); p
       </div>
 
       <div class="explore-group">
-        <div class="explore-group-title">Motor &amp; Life Insurance</div>
-        <div class="explore-grid">
+        <div class="explore-group-title">General &amp; Life Insurance</div>
+        <div class="explore-grid explore-grid--odd-fix">
           <a href="two-wheeler-third-party-insurance.html" class="explore-card">
             <span class="live-tag">LIVE</span>
-            <div class="explore-icon">🛵</div>
+            <div class="explore-icon"><svg><use href="#icon-bike"/></svg></div>
             <h3>2W Insurance</h3>
             <p>Third-party bike insurance — current IRDAI rates explained.</p>
           </a>
           <a href="four-wheeler-third-party-insurance.html" class="explore-card">
             <span class="live-tag">LIVE</span>
-            <div class="explore-icon">🚙</div>
+            <div class="explore-icon"><svg><use href="#icon-car"/></svg></div>
             <h3>4W Insurance</h3>
             <p>Third-party car insurance — mandatory cover, no jargon.</p>
           </a>
           <a href="commercial-vehicle-insurance.html" class="explore-card">
             <span class="live-tag">LIVE</span>
-            <div class="explore-icon">🚛</div>
+            <div class="explore-icon"><svg><use href="#icon-truck"/></svg></div>
             <h3>Commercial Vehicle</h3>
             <p>GCV &amp; PCV insurance for trucks, taxis, and fleets.</p>
           </a>
+          <a href="travel-insurance.html" class="explore-card">
+            <span class="live-tag">LIVE</span>
+            <div class="explore-icon"><svg><use href="#icon-plane"/></svg></div>
+            <h3>Travel Insurance</h3>
+            <p>Individual and family floater cover for international trips.</p>
+          </a>
           <a href="term-life-insurance.html" class="explore-card">
             <span class="live-tag">LIVE</span>
-            <div class="explore-icon">🛡️</div>
+            <div class="explore-icon"><svg><use href="#icon-shield"/></svg></div>
             <h3>Term Life Insurance</h3>
             <p>Real cover amounts, honest premium estimates.</p>
           </a>
         </div>
       </div>
 
-      <div class="explore-group">
-        <div class="explore-group-title">Coming Soon</div>
-        <div class="explore-grid">
-          <div class="explore-card explore-card--soon">
-            <span class="live-tag">SOON</span>
-            <div class="explore-icon">🏠</div>
-            <h3>Real Estate</h3>
-            <p>1/2/3 BHK guidance across West Delhi — in progress.</p>
-          </div>
-          <div class="explore-card explore-card--soon">
-            <span class="live-tag">SOON</span>
-            <div class="explore-icon">📊</div>
-            <h3>Mutual Funds</h3>
-            <p>SIP and fund basics — not live yet, honestly.</p>
-          </div>
-          <div class="explore-card explore-card--soon">
-            <span class="live-tag">SOON</span>
-            <div class="explore-icon">💳</div>
-            <h3>Credit Cards &amp; Score</h3>
-            <p>CIBIL building and credit card guidance — planned.</p>
-          </div>
-        </div>
-      </div>
+      <p style="color:var(--muted);font-size:0.82rem;margin-top:2.2rem;font-weight:300;">Also planned: Real Estate, Mutual Funds, and Credit Card &amp; Score guidance — not live yet, and we'd rather tell you that than pretend otherwise.</p>
     </div>
   </div>
 
@@ -565,13 +597,13 @@ footer { background: var(--navy); border-top: 1px solid rgba(201,168,68,0.12); p
       <p class="lead on-dark" style="margin:0.75rem auto 0;max-width:480px;">For loan enquiries, insurance questions, or general financial guidance — reach out directly.</p>
       <div class="cta-channels">
         <a href="https://wa.me/917838355855" target="_blank" rel="noopener noreferrer" class="cta-card">
-          <div class="cta-card-icon">💬</div><h4>WhatsApp</h4><p>+91 78383 55855</p>
+          <div class="cta-card-icon"><svg><use href="#icon-chat"/></svg></div><h4>WhatsApp</h4><p>+91 78383 55855</p>
         </a>
         <a href="https://youtube.com/@artharohan" target="_blank" rel="noopener noreferrer" class="cta-card">
-          <div class="cta-card-icon">▶️</div><h4>YouTube</h4><p>@artharohan</p>
+          <div class="cta-card-icon"><svg><use href="#icon-play"/></svg></div><h4>YouTube</h4><p>@artharohan</p>
         </a>
         <a href="mailto:artharohanventures@gmail.com" class="cta-card">
-          <div class="cta-card-icon">📧</div><h4>Email</h4><p>artharohanventures@gmail.com</p>
+          <div class="cta-card-icon"><svg><use href="#icon-mail"/></svg></div><h4>Email</h4><p>artharohanventures@gmail.com</p>
         </a>
       </div>
     </div>
@@ -585,11 +617,11 @@ footer { background: var(--navy); border-top: 1px solid rgba(201,168,68,0.12); p
     <div class="footer-brand">अर्थारोहण &nbsp;·&nbsp; ARTHAROHAN</div>
     <div class="footer-tagline">Sahi Jaankari. Sahi Faisla.</div>
     <ul class="footer-nav">
-      <li><a onclick="showPage('home')">Home</a></li>
-      <li><a onclick="showPage('about')">About</a></li>
-      <li><a onclick="showPage('services')">Services</a></li>
+      <li><a href="https://artharohan.in">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
       <li><a href="business-loans.html">Business Loans</a></li>
-      <li><a onclick="showPage('contact')">Contact</a></li>
+      <li><a href="contact.html">Contact</a></li>
       <li><a href="https://youtube.com/@artharohan" target="_blank" rel="noopener noreferrer">YouTube</a></li>
     </ul>
     <p class="footer-copy">© 2026 Artharohan Ventures · UDYAM-DL-11-0113585 · artharohan.in · All rights reserved.</p>
@@ -597,268 +629,6 @@ footer { background: var(--navy); border-top: 1px solid rgba(201,168,68,0.12); p
 
 </div><!-- /home -->
 
-
-<!-- ============================================================
-     ABOUT PAGE
-     ============================================================ -->
-<div id="about" class="page">
-  <div class="about-hero">
-    <div class="about-hero-grid">
-      <div>
-        <span class="eyebrow">About Artharohan</span>
-        <h1 class="h1 on-dark">Built to Bridge<br>the Financial<br>Knowledge Gap</h1>
-        <p class="lead on-dark" style="margin-top:1rem;">Artharohan was built on one belief: that every Indian — regardless of education, income, or background — deserves access to clear, honest, and actionable financial information.</p>
-        <p class="lead on-dark" style="margin-top:1rem;">We explain first, honestly, whether or not it leads anywhere. And when you're ready for hands-on help with a loan, insurance, or property decision — we're the same people, with the same transparency, every fee shown upfront.</p>
-        <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
-          <a href="https://youtube.com/@artharohan" target="_blank" rel="noopener noreferrer" class="btn btn--gold">Subscribe on YouTube</a>
-          <a onclick="showPage('contact')" class="btn btn--outline">Get In Touch</a>
-        </div>
-      </div>
-      <div class="quote-box">
-        <p class="quote-text" style="font-size:1.25rem;">"अर्थारोहण — आपके बेहतर वित्तीय भविष्य की शुरुआत।"</p>
-        <div class="divider"></div>
-        <p style="color:var(--muted);font-size:0.85rem;line-height:1.7;font-weight:300;">Artharohan — The beginning of your better financial future. Every video, every explanation, every piece of content is built with this purpose.</p>
-        <div class="divider"></div>
-        <p style="color:#2A3A52;font-size:0.7rem;letter-spacing:1px;">Artharohan Ventures · UDYAM-DL-11-0113585<br>New Delhi, India</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="section-wrap section-wrap--cream">
-    <div class="inner">
-      <span class="eyebrow">Our Values</span>
-      <h2 class="h2">What Artharohan Stands For</h2>
-      <div class="values-grid">
-        <div class="value-card"><h4>Honest, Even When It Costs Us</h4><p>If your profile isn't ready, or the answer is "not yet," we say so — even when it means no business today.</p></div>
-        <div class="value-card"><h4>No Hidden Agenda</h4><p>We are transparent about who we are, what we do, and how any fees work — before you ever commit.</p></div>
-        <div class="value-card"><h4>Practical First</h4><p>Theory without application is useless. Every topic we cover comes with real-world context and actionable next steps.</p></div>
-        <div class="value-card"><h4>Accessible Always</h4><p>Financial guidance should be in a language people actually speak. That's why our content is in Hinglish.</p></div>
-        <div class="value-card"><h4>Honest About Risk</h4><p>We will always tell you what can go wrong — not just what looks good on paper. Informed means fully informed.</p></div>
-        <div class="value-card"><h4>Long-Term Thinking</h4><p>We are building a lasting resource for financial guidance in Delhi NCR. Every page is built to stay useful.</p></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="disclaimer-bar">
-    <p>Disclaimer: Artharohan is a financial guidance platform registered under UDYAM-DL-11-0113585. Content is educational; where hands-on assistance is provided, approvals and terms rest with the respective institution.</p>
-  </div>
-
-  <footer>
-    <div class="footer-brand">अर्थारोहण &nbsp;·&nbsp; ARTHAROHAN</div>
-    <div class="footer-tagline">Sahi Jaankari. Sahi Faisla.</div>
-    <ul class="footer-nav">
-      <li><a onclick="showPage('home')">Home</a></li>
-      <li><a onclick="showPage('about')">About</a></li>
-      <li><a onclick="showPage('services')">Services</a></li>
-      <li><a onclick="showPage('contact')">Contact</a></li>
-    </ul>
-    <p class="footer-copy">© 2026 Artharohan Ventures · UDYAM-DL-11-0113585 · artharohan.in</p>
-  </footer>
-</div><!-- /about -->
-
-
-<!-- ============================================================
-     SERVICES PAGE
-     ============================================================ -->
-<div id="services" class="page">
-  <div class="services-hero">
-    <div class="inner">
-      <span class="eyebrow">Our Coverage</span>
-      <h1 class="h1 on-dark">Every Financial Product<br>You Need to Understand</h1>
-      <p class="lead on-dark" style="margin-top:0.75rem;">We cover the full spectrum of personal and business financial products — with complete transparency about risks, benefits, and what to watch out for.</p>
-    </div>
-  </div>
-
-  <div class="section-wrap section-wrap--cream">
-    <div class="inner">
-      <div class="services-detail-grid">
-
-        <a href="business-loans.html" class="svc-card">
-          <span class="live-badge">LIVE</span>
-          <div class="svc-icon">🏦</div>
-          <h3 class="h3">Business Loans</h3>
-          <p>From Mudra Loan to unsecured credit — eligibility, documents, processing timelines, and what actually increases your approval chances.</p>
-          <div class="tag-row"><span class="tag">Mudra Loan</span><span class="tag">Unsecured</span><span class="tag">Working Capital</span></div>
-        </a>
-
-        <a href="car-loan.html" class="svc-card">
-          <span class="live-badge">LIVE</span>
-          <div class="svc-icon">🚗</div>
-          <h3 class="h3">Car Loan</h3>
-          <p>New and used car finance — interest rate factors, down payment, tenure, and how to buy right without agent pressure.</p>
-          <div class="tag-row"><span class="tag">New Car</span><span class="tag">Used Car</span><span class="tag">Eligibility</span></div>
-        </a>
-
-        <a href="personal-loan.html" class="svc-card">
-          <span class="live-badge">LIVE</span>
-          <div class="svc-icon">💰</div>
-          <h3 class="h3">Personal Loans</h3>
-          <p>When to take one, when not to. Interest rate comparison, processing fee traps, and how your CIBIL score affects the terms offered.</p>
-          <div class="tag-row"><span class="tag">Unsecured</span><span class="tag">CIBIL-Based Rates</span><span class="tag">Debt-Trap Aware</span></div>
-        </a>
-
-        <a href="home-loan.html" class="svc-card">
-          <span class="live-badge">LIVE</span>
-          <div class="svc-icon">🏠</div>
-          <h3 class="h3">Home Loans</h3>
-          <p>New purchase or balance transfer — the lowest-rate loan on this site, with what to verify about the property before you commit.</p>
-          <div class="tag-row"><span class="tag">Up to 30 Yrs</span><span class="tag">Balance Transfer</span><span class="tag">RERA Check</span></div>
-        </a>
-
-        <a href="loan-against-property.html" class="svc-card">
-          <span class="live-badge">LIVE</span>
-          <div class="svc-icon">🏘️</div>
-          <h3 class="h3">Loan Against Property</h3>
-          <p>Larger amounts, lower rates than a personal loan — using a property you already own, with a clear-eyed look at the risk.</p>
-          <div class="tag-row"><span class="tag">Any Purpose</span><span class="tag">Up to 65% LTV</span><span class="tag">Risk-Aware</span></div>
-        </a>
-
-        <a href="term-life-insurance.html" class="svc-card">
-          <span class="live-badge">LIVE</span>
-          <div class="svc-icon">🛡️</div>
-          <h3 class="h3">Term Life Insurance</h3>
-          <p>Real cover amounts, honest premium estimates, and why most people are either underinsured or paying too much.</p>
-          <div class="tag-row"><span class="tag">Term Plan</span><span class="tag">Cover Amount</span></div>
-        </a>
-
-        <a href="two-wheeler-third-party-insurance.html" class="svc-card">
-          <span class="live-badge">LIVE</span>
-          <div class="svc-icon">🛵</div>
-          <h3 class="h3">2W &amp; 4W Insurance</h3>
-          <p>Mandatory third-party cover for bikes and cars — current IRDAI rates explained without jargon.</p>
-          <div class="tag-row"><span class="tag">IRDAI Rates</span><span class="tag">Mandatory Cover</span></div>
-        </a>
-
-        <a href="commercial-vehicle-insurance.html" class="svc-card">
-          <span class="live-badge">LIVE</span>
-          <div class="svc-icon">🚛</div>
-          <h3 class="h3">Commercial Vehicle Insurance</h3>
-          <p>GCV and PCV cover explained — how premiums are calculated, and how to buy or renew without overpaying.</p>
-          <div class="tag-row"><span class="tag">GCV</span><span class="tag">PCV</span></div>
-        </a>
-
-        <div class="svc-card" style="cursor:default;">
-          <div class="svc-icon">📊</div>
-          <h3 class="h3">Mutual Funds</h3>
-          <p>SIP, fund selection without being sold to, expense ratio impact over time, and how to review your portfolio.</p>
-          <div class="tag-row"><span class="tag">Coming Soon</span></div>
-        </div>
-
-        <div class="svc-card" style="cursor:default;">
-          <div class="svc-icon">🏘️</div>
-          <h3 class="h3">Real Estate</h3>
-          <p>1/2/3 BHK guidance across West Delhi — RERA verification, coverage areas, and honest starting prices.</p>
-          <div class="tag-row"><span class="tag">In Progress</span></div>
-        </div>
-
-        <div class="svc-card" style="cursor:default;">
-          <div class="svc-icon">💳</div>
-          <h3 class="h3">Credit Cards &amp; Credit Score</h3>
-          <p>How CIBIL score is calculated, how to build it from zero, and how to use credit cards to your advantage.</p>
-          <div class="tag-row"><span class="tag">Coming Soon</span></div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <div class="disclaimer-bar">
-    <p>Disclaimer: All information is for educational purposes. Where Artharohan provides hands-on assistance, approvals and terms rest with the respective bank, NBFC, or insurer. Consult a qualified advisor before making any financial decision.</p>
-  </div>
-
-  <footer>
-    <div class="footer-brand">अर्थारोहण &nbsp;·&nbsp; ARTHAROHAN</div>
-    <div class="footer-tagline">Sahi Jaankari. Sahi Faisla.</div>
-    <ul class="footer-nav">
-      <li><a onclick="showPage('home')">Home</a></li>
-      <li><a onclick="showPage('about')">About</a></li>
-      <li><a onclick="showPage('services')">Services</a></li>
-      <li><a onclick="showPage('contact')">Contact</a></li>
-    </ul>
-    <p class="footer-copy">© 2026 Artharohan Ventures · UDYAM-DL-11-0113585 · artharohan.in</p>
-  </footer>
-</div><!-- /services -->
-
-
-<!-- ============================================================
-     CONTACT PAGE
-     ============================================================ -->
-<div id="contact" class="page">
-  <div class="contact-hero">
-    <div class="inner">
-      <span class="eyebrow">Get In Touch</span>
-      <h1 class="h1 on-dark">Ask Anything.<br>We'll Be Straight with You.</h1>
-      <p class="lead on-dark" style="margin-top:0.75rem;">For loan enquiries, insurance questions, or any financial topic you need clarity on — reach out. Every message is handled personally.</p>
-    </div>
-  </div>
-
-  <div class="section-wrap section-wrap--cream">
-    <div class="inner">
-      <div class="contact-cards-row" style="margin-bottom:3rem;">
-        <a href="https://wa.me/917838355855" target="_blank" rel="noopener noreferrer" class="contact-info-card">
-          <div class="ci-icon">💬</div><h4>WhatsApp</h4><p>+91 78383 55855</p>
-        </a>
-        <a href="https://youtube.com/@artharohan" target="_blank" rel="noopener noreferrer" class="contact-info-card">
-          <div class="ci-icon">▶️</div><h4>YouTube</h4><p>@artharohan</p>
-        </a>
-        <a href="mailto:artharohanventures@gmail.com" class="contact-info-card">
-          <div class="ci-icon">📧</div><h4>Email</h4><p>artharohanventures@gmail.com</p>
-        </a>
-      </div>
-
-      <div class="form-wrap">
-        <h2 class="h2" style="font-size:1.5rem;">Send Us a Message</h2>
-        <p class="lead" style="font-size:0.88rem;margin-bottom:1.8rem;max-width:100%;">Fill in the form below and we'll respond via WhatsApp — usually within a few hours on business days.</p>
-        <form id="contactForm" onsubmit="handleForm(event)" novalidate>
-          <div class="f-group">
-            <label for="fname">Your Name</label>
-            <input type="text" id="fname" name="fname" placeholder="Full name" required autocomplete="name">
-          </div>
-          <div class="f-group">
-            <label for="fphone">Phone Number</label>
-            <input type="tel" id="fphone" name="fphone" placeholder="+91 XXXXX XXXXX" required autocomplete="tel">
-          </div>
-          <div class="f-group">
-            <label for="ftopic">I Need Help With</label>
-            <select id="ftopic" name="ftopic" required>
-              <option value="">Select a topic</option>
-              <option value="Business Loan">Business Loan</option>
-              <option value="Car Loan">Car Loan</option>
-              <option value="Personal Loan">Personal Loan</option>
-              <option value="Home Loan">Home Loan</option>
-              <option value="Loan Against Property">Loan Against Property</option>
-              <option value="Insurance">Insurance</option>
-              <option value="Real Estate">Real Estate</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
-          <div class="f-group">
-            <label for="fmessage">Your Question</label>
-            <textarea id="fmessage" name="fmessage" placeholder="Tell us what you'd like to understand or what you need help with..."></textarea>
-          </div>
-          <button type="submit" class="f-submit">Continue to WhatsApp →</button>
-          <p class="form-note">Tapping the button above will open WhatsApp with your message pre-filled. Your enquiry goes directly to Artharohan — no third-party services.</p>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <div class="disclaimer-bar">
-    <p>Disclaimer: Reaching out via this form connects you to Artharohan for guidance. We do not provide formal financial advice or legally binding recommendations. Always consult a qualified advisor for decisions specific to your situation.</p>
-  </div>
-
-  <footer>
-    <div class="footer-brand">अर्थारोहण &nbsp;·&nbsp; ARTHAROHAN</div>
-    <div class="footer-tagline">Sahi Jaankari. Sahi Faisla.</div>
-    <ul class="footer-nav">
-      <li><a onclick="showPage('home')">Home</a></li>
-      <li><a onclick="showPage('about')">About</a></li>
-      <li><a onclick="showPage('services')">Services</a></li>
-      <li><a onclick="showPage('contact')">Contact</a></li>
-    </ul>
-    <p class="footer-copy">© 2026 Artharohan Ventures · UDYAM-DL-11-0113585 · artharohan.in</p>
-  </footer>
-</div><!-- /contact -->
 
 
 <!-- WhatsApp float -->
@@ -878,22 +648,6 @@ document.addEventListener('click', function(e){
     document.querySelectorAll('.nav-dropdown.open').forEach(function(el){ el.classList.remove('open'); });
   }
 });
-
-function showPage(id) {
-  document.querySelectorAll('.page').forEach(function(p) { p.classList.remove('active'); });
-  document.getElementById(id).classList.add('active');
-  window.scrollTo({ top: 0, behavior: 'instant' });
-  updateNavActive(id);
-  closeMobileNav();
-}
-
-function updateNavActive(id) {
-  var ids = ['home', 'about', 'services', 'contact'];
-  ids.forEach(function(pid) {
-    var el = document.getElementById('nl-' + pid);
-    if (el) el.classList.toggle('active', pid === id);
-  });
-}
 
 function toggleMobileNav() {
   var mn = document.getElementById('mobileNav');
