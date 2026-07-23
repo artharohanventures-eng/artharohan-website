@@ -149,13 +149,10 @@ footer { background: var(--navy); border-top: 1px solid rgba(201,168,68,0.12); p
 .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 40px; }
 .ascent-panel { width: 100%; }
 .ascent-chart-svg { width: 100%; height: auto; }
-.lbl-name svg { width: 18px !important; height: 18px !important; flex-shrink: 0; }
-.ascent-labels { display: grid; grid-template-columns: repeat(4,1fr); gap: 8px; text-align: center; margin-top: 4px; padding-bottom: 44px; }
-.ascent-labels a { display: block; text-decoration: none; padding: 10px 6px; border-radius: 6px; transition: background 0.2s; }
-.ascent-labels a:hover { background: rgba(201,168,68,0.08); }
-.ascent-labels .lbl-name { color: var(--gold-light); font-size: 1.05rem; font-weight: 600; margin-bottom: 3px; display: flex; align-items: center; justify-content: center; gap: 6px; }
-.ascent-labels .lbl-desc { color: var(--muted); font-size: 0.88rem; font-weight: 300; }
-.ascent-caption { text-align: center; margin: -6px 0 22px; }
+.ascent-chart-svg a { cursor: pointer; }
+.ascent-chart-svg a:hover circle { stroke: var(--gold-light); }
+.ascent-chart-svg a:hover text { fill: var(--gold); }
+.ascent-caption { text-align: center; margin: -6px 0 48px; }
 .ascent-caption .ac-word { font-family: 'Playfair Display', serif; color: var(--gold-light); font-size: 0.95rem; letter-spacing: 0.5px; }
 .ascent-caption .ac-sep { color: rgba(201,168,68,0.35); margin: 0 14px; font-size: 0.8rem; }
 .ascent-caption .ac-mean { color: var(--muted); font-size: 0.7rem; letter-spacing: 1.5px; text-transform: uppercase; display: block; margin-top: 3px; }
@@ -290,7 +287,7 @@ footer { background: var(--navy); border-top: 1px solid rgba(201,168,68,0.12); p
   .services-detail-grid { grid-template-columns: 1fr; }
   .cta-channels { gap: 1rem; }
   .cta-card { min-width: 140px; padding: 18px 16px; }
-  .ascent-labels { grid-template-columns: repeat(2,1fr); }
+  /* ascent icons scale naturally with the SVG viewBox on mobile */
 }
 </style>
 </head>
@@ -343,7 +340,7 @@ footer { background: var(--navy); border-top: 1px solid rgba(201,168,68,0.12); p
            A real growth-chart graphic, not a bare line: gradient
            fill, grid, glow at the peak. -->
       <div class="ascent-panel">
-        <svg class="ascent-chart-svg" viewBox="0 0 900 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ascent-chart-svg" viewBox="0 0 900 300" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <radialGradient id="dawnGlow" cx="50%" cy="50%" r="50%">
               <stop offset="0%" stop-color="#E8D5A3" stop-opacity="0.9"/>
@@ -371,10 +368,34 @@ footer { background: var(--navy); border-top: 1px solid rgba(201,168,68,0.12); p
           <path d="M 55 245 C 140 235, 150 195, 220 205 C 300 217, 320 175, 400 160 C 480 145, 520 190, 590 165 C 650 143, 660 105, 705 70"
                 stroke="#C9A844" stroke-width="3" fill="none" stroke-linecap="round" stroke-dasharray="1 14" opacity="0.9"/>
 
-          <circle cx="55" cy="245" r="6" fill="#0B1628" stroke="#C9A844" stroke-width="2.5"/>
-          <circle cx="220" cy="205" r="6" fill="#0B1628" stroke="#C9A844" stroke-width="2.5"/>
-          <circle cx="400" cy="160" r="6" fill="#0B1628" stroke="#C9A844" stroke-width="2.5"/>
-          <circle cx="590" cy="165" r="6" fill="#0B1628" stroke="#C9A844" stroke-width="2.5"/>
+          <a href="business-loans.html">
+            <g transform="translate(55,245)">
+              <circle r="22" fill="#0B1628" stroke="#C9A844" stroke-width="2.5"/>
+              <use href="#icon-bank" x="-11" y="-11" width="22" height="22" color="#C9A844"/>
+              <text x="0" y="44" text-anchor="middle" fill="#E8D5A3" font-size="16" font-weight="600" font-family="Inter, sans-serif">Loans</text>
+            </g>
+          </a>
+          <a href="two-wheeler-third-party-insurance.html">
+            <g transform="translate(220,205)">
+              <circle r="22" fill="#0B1628" stroke="#C9A844" stroke-width="2.5"/>
+              <use href="#icon-shield" x="-11" y="-11" width="22" height="22" color="#C9A844"/>
+              <text x="0" y="44" text-anchor="middle" fill="#E8D5A3" font-size="16" font-weight="600" font-family="Inter, sans-serif">Insurance</text>
+            </g>
+          </a>
+          <a href="services.html">
+            <g transform="translate(400,160)">
+              <circle r="22" fill="#0B1628" stroke="#C9A844" stroke-width="2.5"/>
+              <use href="#icon-property" x="-11" y="-11" width="22" height="22" color="#C9A844"/>
+              <text x="0" y="44" text-anchor="middle" fill="#E8D5A3" font-size="16" font-weight="600" font-family="Inter, sans-serif">Real Estate</text>
+            </g>
+          </a>
+          <a href="services.html">
+            <g transform="translate(590,165)">
+              <circle r="22" fill="#0B1628" stroke="#C9A844" stroke-width="2.5"/>
+              <use href="#icon-chart" x="-11" y="-11" width="22" height="22" color="#C9A844"/>
+              <text x="0" y="44" text-anchor="middle" fill="#E8D5A3" font-size="16" font-weight="600" font-family="Inter, sans-serif">Investments</text>
+            </g>
+          </a>
 
           <circle cx="705" cy="70" r="7" fill="#E8D5A3"/>
           <line x1="705" y1="70" x2="705" y2="42" stroke="#E8D5A3" stroke-width="2"/>
@@ -384,13 +405,6 @@ footer { background: var(--navy); border-top: 1px solid rgba(201,168,68,0.12); p
         <div class="ascent-caption">
           <span class="ac-word">अर्थ</span><span class="ac-sep">·</span><span class="ac-word">आरोहण</span>
           <span class="ac-mean">Your Financial Ascent</span>
-        </div>
-
-        <div class="ascent-labels">
-          <a href="business-loans.html"><div class="lbl-name"><svg width="18" height="18" style="vertical-align:-3px;margin-right:5px;color:var(--gold-light);"><use href="#icon-bank"/></svg>Loans</div><div class="lbl-desc">Business, Car, Personal</div></a>
-          <a href="two-wheeler-third-party-insurance.html"><div class="lbl-name"><svg width="18" height="18" style="vertical-align:-3px;margin-right:5px;color:var(--gold-light);"><use href="#icon-shield"/></svg>Insurance</div><div class="lbl-desc">Motor, Travel, Life</div></a>
-          <a href="services.html"><div class="lbl-name"><svg width="18" height="18" style="vertical-align:-3px;margin-right:5px;color:var(--gold-light);"><use href="#icon-property"/></svg>Real Estate</div><div class="lbl-desc">Coming soon</div></a>
-          <a href="services.html"><div class="lbl-name"><svg width="18" height="18" style="vertical-align:-3px;margin-right:5px;color:var(--gold-light);"><use href="#icon-chart"/></svg>Investments</div><div class="lbl-desc">Coming soon</div></a>
         </div>
       </div>
     </div>
