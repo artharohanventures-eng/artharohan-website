@@ -8,11 +8,9 @@
    1. Put this where the nav should appear:
         <div id="site-nav"></div>
    2. Right before loading this script, set which nav item is
-      "current" for this page, and whether this page is the
-      homepage (index.html) or a standalone page:
+      "current" for this page:
         <script>
           var SITE_NAV_CURRENT = "business-loans"; // see list below
-          var SITE_NAV_IS_HOME = false;
         </script>
         <script src="nav.js"></script>
 
@@ -23,6 +21,16 @@
      "two-wheeler", "four-wheeler", "commercial-vehicle",
      "travel-insurance", "insurance-hub", "term-plan"
 
+   NOTE: Home, About, Services, and Contact are now real,
+   separate pages (index.html, about.html, services.html,
+   contact.html) — same as every other page on the site.
+   There is no more single-page-app toggle behavior, and no
+   more SITE_NAV_IS_HOME flag. Every page just links to real
+   URLs, everywhere, always. The old branching logic (different
+   link behavior depending on which page loaded nav.js) was a
+   real source of confusion and bugs, and is removed rather
+   than patched.
+
    TO ADD A NEW PAGE LATER:
    1. Add one <li> inside the correct dropdown below
       (desktop AND mobile section)
@@ -31,8 +39,6 @@
    ============================================================ */
 
 (function () {
-  // Inject the CSS needed for dropdowns/mobile menu to work correctly,
-  // so no page ever needs to have this copied into its own <style> block.
   if (!document.getElementById("nav-shared-styles")) {
     var css = document.createElement("style");
     css.id = "nav-shared-styles";
@@ -48,7 +54,6 @@
   }
 
   var current = window.SITE_NAV_CURRENT || "";
-  var isHome = !!window.SITE_NAV_IS_HOME;
 
   var groupOf = {
     "business-loans": "loans",
@@ -73,22 +78,14 @@
     return activeGroup === group ? ' class="active"' : "";
   }
 
-  var home, about, services, contact;
-  if (isHome) {
-    home = '<a id="nl-home" onclick="showPage(\'home\')"' + cls("home") + ">Home</a>";
-    about = '<a id="nl-about" onclick="showPage(\'about\')"' + cls("about") + ">About</a>";
-    services = '<a id="nl-services" onclick="showPage(\'services\')"' + cls("services") + ">Services</a>";
-    contact = '<a id="nl-contact" onclick="showPage(\'contact\')" class="nav-cta">Get In Touch</a>';
-  } else {
-    home = '<a href="https://artharohan.in">Home</a>';
-    about = '<a href="https://artharohan.in/#about">About</a>';
-    services = '<a href="https://artharohan.in/#services">Services</a>';
-    contact = '<a href="https://artharohan.in/#contact" class="nav-cta">Get In Touch</a>';
-  }
+  var home = '<a href="https://artharohan.in"' + cls("home") + '>Home</a>';
+  var about = '<a href="https://artharohan.in/about.html"' + cls("about") + '>About</a>';
+  var services = '<a href="https://artharohan.in/services.html"' + cls("services") + '>Services</a>';
+  var contact = '<a href="https://artharohan.in/contact.html" class="nav-cta">Get In Touch</a>';
 
   var desktopNav =
     '<nav>' +
-      '<div class="nav-logo" ' + (isHome ? 'onclick="showPage(\'home\')"' : 'onclick="window.location.href=\'https://artharohan.in\'"') + '>' +
+      '<div class="nav-logo" onclick="window.location.href=\'https://artharohan.in\'">' +
         '<div class="nav-mark">\u0905</div>' +
         '<span class="nav-brand">ARTHAROHAN</span>' +
       '</div>' +
@@ -129,35 +126,23 @@
       '</button>' +
     '</nav>';
 
-  var mHome, mAbout, mServices, mContact;
-  if (isHome) {
-    mHome = '<a onclick="showPage(\'home\');closeMobileNav()">Home</a>';
-    mAbout = '<a onclick="showPage(\'about\');closeMobileNav()">About</a>';
-    mServices = '<a onclick="showPage(\'services\');closeMobileNav()">Services</a>';
-    mContact = '<a onclick="showPage(\'contact\');closeMobileNav()" class="nav-cta">Get In Touch</a>';
-  } else {
-    mHome = '<a href="https://artharohan.in">Home</a>';
-    mAbout = '<a href="https://artharohan.in/#about">About</a>';
-    mServices = '<a href="https://artharohan.in/#services">Services</a>';
-    mContact = '<a href="https://artharohan.in/#contact" class="nav-cta">Get In Touch</a>';
-  }
-  var goldStyle = 'style="color:var(--gold);font-weight:600;"';
-
   var mobileNav =
     '<div class="mobile-nav" id="mobileNav">' +
-      mHome + mAbout + mServices +
-      '<a href="business-loans.html" onclick="closeMobileNav()" ' + goldStyle + '>Business Loans</a>' +
-      '<a href="car-loan.html" onclick="closeMobileNav()" ' + goldStyle + '>Car Loan</a>' +
-      '<a href="personal-loan.html" onclick="closeMobileNav()" ' + goldStyle + '>Personal Loan</a>' +
-      '<a href="home-loan.html" onclick="closeMobileNav()" ' + goldStyle + '>Home Loan</a>' +
-      '<a href="loan-against-property.html" onclick="closeMobileNav()" ' + goldStyle + '>Loan Against Property</a>' +
-      '<a href="insurance.html" onclick="closeMobileNav()" ' + goldStyle + '>All Insurance</a>' +
-      '<a href="two-wheeler-third-party-insurance.html" onclick="closeMobileNav()" ' + goldStyle + '>2W Insurance</a>' +
-      '<a href="four-wheeler-third-party-insurance.html" onclick="closeMobileNav()" ' + goldStyle + '>4W Insurance</a>' +
-      '<a href="commercial-vehicle-insurance.html" onclick="closeMobileNav()" ' + goldStyle + '>Commercial Vehicle</a>' +
-      '<a href="travel-insurance.html" onclick="closeMobileNav()" ' + goldStyle + '>Travel Insurance</a>' +
-      '<a href="term-life-insurance.html" onclick="closeMobileNav()" ' + goldStyle + '>Term Plan</a>' +
-      mContact +
+      '<a href="https://artharohan.in" onclick="closeMobileNav()">Home</a>' +
+      '<a href="https://artharohan.in/about.html" onclick="closeMobileNav()">About</a>' +
+      '<a href="https://artharohan.in/services.html" onclick="closeMobileNav()">Services</a>' +
+      '<a href="business-loans.html" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Business Loans</a>' +
+      '<a href="car-loan.html" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Car Loan</a>' +
+      '<a href="personal-loan.html" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Personal Loan</a>' +
+      '<a href="home-loan.html" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Home Loan</a>' +
+      '<a href="loan-against-property.html" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Loan Against Property</a>' +
+      '<a href="insurance.html" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">All Insurance</a>' +
+      '<a href="two-wheeler-third-party-insurance.html" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">2W Insurance</a>' +
+      '<a href="four-wheeler-third-party-insurance.html" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">4W Insurance</a>' +
+      '<a href="commercial-vehicle-insurance.html" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Commercial Vehicle</a>' +
+      '<a href="travel-insurance.html" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Travel Insurance</a>' +
+      '<a href="term-life-insurance.html" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Term Plan</a>' +
+      '<a href="https://artharohan.in/contact.html" onclick="closeMobileNav()" class="nav-cta">Get In Touch</a>' +
     '</div>';
 
   var mount = document.getElementById("site-nav");
