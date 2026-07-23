@@ -18,10 +18,12 @@
 
    VALID VALUES FOR SITE_NAV_CURRENT:
      "home", "about", "services", "contact",
-     "business-loans", "two-wheeler", "four-wheeler",
-     "term-plan", "real-estate" (once that page exists)
+     "business-loans", "car-loan", "personal-loan", "home-loan",
+     "loan-against-property", "real-estate",
+     "two-wheeler", "four-wheeler", "commercial-vehicle",
+     "travel-insurance", "insurance-hub", "term-plan"
 
-   TO ADD A NEW PAGE LATER (e.g. Real Estate):
+   TO ADD A NEW PAGE LATER:
    1. Add one <li> inside the correct dropdown below
       (desktop AND mobile section)
    2. Add its name to the "groupOf" lookup below
@@ -50,14 +52,14 @@
 
   var groupOf = {
     "business-loans": "loans",
-     "car-loan": "loans",
+    "car-loan": "loans",
     "personal-loan": "loans",
     "home-loan": "loans",
     "loan-against-property": "loans",
     "real-estate": "loans",
     "two-wheeler": "insurance",
     "four-wheeler": "insurance",
-     "commercial-vehicle": "insurance",
+    "commercial-vehicle": "insurance",
     "travel-insurance": "insurance",
     "insurance-hub": "insurance",
     "term-plan": "life"
@@ -95,11 +97,10 @@
         '<li>' + about + '</li>' +
         '<li>' + services + '</li>' +
         '<li class="nav-dropdown" id="loansDropdown">' +
-     
           '<a onclick="toggleNavDropdown(\'loansDropdown\')"' + dropCls("loans") + '>Loans \u25be</a>' +
           '<ul class="nav-dropdown-menu">' +
             '<li><a href="business-loans.html"' + cls("business-loans") + '>Business Loans</a></li>' +
-     '<li><a href="car-loan.html"' + cls("car-loan") + '>Car Loan</a></li>' +
+            '<li><a href="car-loan.html"' + cls("car-loan") + '>Car Loan</a></li>' +
             '<li><a href="personal-loan.html"' + cls("personal-loan") + '>Personal Loan</a></li>' +
             '<li><a href="home-loan.html"' + cls("home-loan") + '>Home Loan</a></li>' +
             '<li><a href="loan-against-property.html"' + cls("loan-against-property") + '>Loan Against Property</a></li>' +
@@ -111,7 +112,8 @@
             '<li><a href="insurance.html"' + cls("insurance-hub") + '>All Insurance ↗</a></li>' +
             '<li><a href="two-wheeler-third-party-insurance.html"' + cls("two-wheeler") + '>2W Insurance</a></li>' +
             '<li><a href="four-wheeler-third-party-insurance.html"' + cls("four-wheeler") + '>4W Insurance</a></li>' +
-     '<li><a href="commercial-vehicle-insurance.html"' + cls("commercial-vehicle") + '>Commercial Vehicle</a></li>' +
+            '<li><a href="commercial-vehicle-insurance.html"' + cls("commercial-vehicle") + '>Commercial Vehicle</a></li>' +
+            '<li><a href="travel-insurance.html"' + cls("travel-insurance") + '>Travel Insurance</a></li>' +
           '</ul>' +
         '</li>' +
         '<li class="nav-dropdown" id="lifeDropdown">' +
@@ -145,14 +147,15 @@
     '<div class="mobile-nav" id="mobileNav">' +
       mHome + mAbout + mServices +
       '<a href="business-loans.html" onclick="closeMobileNav()" ' + goldStyle + '>Business Loans</a>' +
-     '<a href="car-loan.html" onclick="closeMobileNav()" ' + goldStyle + '>Car Loan</a>' +
+      '<a href="car-loan.html" onclick="closeMobileNav()" ' + goldStyle + '>Car Loan</a>' +
       '<a href="personal-loan.html" onclick="closeMobileNav()" ' + goldStyle + '>Personal Loan</a>' +
       '<a href="home-loan.html" onclick="closeMobileNav()" ' + goldStyle + '>Home Loan</a>' +
       '<a href="loan-against-property.html" onclick="closeMobileNav()" ' + goldStyle + '>Loan Against Property</a>' +
       '<a href="insurance.html" onclick="closeMobileNav()" ' + goldStyle + '>All Insurance</a>' +
       '<a href="two-wheeler-third-party-insurance.html" onclick="closeMobileNav()" ' + goldStyle + '>2W Insurance</a>' +
       '<a href="four-wheeler-third-party-insurance.html" onclick="closeMobileNav()" ' + goldStyle + '>4W Insurance</a>' +
-     '<a href="commercial-vehicle-insurance.html" onclick="closeMobileNav()" ' + goldStyle + '>Commercial Vehicle</a>' +
+      '<a href="commercial-vehicle-insurance.html" onclick="closeMobileNav()" ' + goldStyle + '>Commercial Vehicle</a>' +
+      '<a href="travel-insurance.html" onclick="closeMobileNav()" ' + goldStyle + '>Travel Insurance</a>' +
       '<a href="term-life-insurance.html" onclick="closeMobileNav()" ' + goldStyle + '>Term Plan</a>' +
       mContact +
     '</div>';
