@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Two Wheeler Insurance Delhi NCR — Premium, NCB & Honest Guidance | Artharohan</title>
-<meta name="description" content="Two wheeler insurance guidance for Delhi NCR — third-party vs comprehensive, real premium estimates, No Claim Bonus explained, and what to check before you buy. No brokerage pressure.">
-<meta name="keywords" content="two wheeler insurance delhi ncr, bike insurance premium, two wheeler third party insurance, no claim bonus, comprehensive bike insurance">
-<meta property="og:title" content="Two Wheeler Insurance Delhi NCR — Honest Guidance | Artharohan">
-<meta property="og:description" content="Third-party vs comprehensive, premium estimates, and NCB explained honestly — including what to check before you buy.">
+<title>Two Wheeler Insurance — Honest Guidance, Not A Guessed Premium | Artharohan</title>
+<meta name="description" content="Two wheeler insurance guidance — third-party vs comprehensive, real premium estimates, No Claim Bonus explained, and what to check before you buy. No brokerage pressure.">
+<meta name="keywords" content="two wheeler insurance, bike insurance premium, two wheeler third party insurance, no claim bonus, comprehensive bike insurance">
+<meta property="og:title" content="Two Wheeler Insurance — Honest Guidance | Artharohan">
+<meta property="og:description" content="Answer a few questions — get a real recommendation on third-party vs comprehensive, plus honest premium ranges.">
 <meta property="og:url" content="https://artharohan.in/two-wheeler-third-party-insurance">
 <link rel="canonical" href="https://artharohan.in/two-wheeler-third-party-insurance">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -182,8 +182,54 @@ input[type="range"]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;b
 .ncb-step .pct{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--navy);font-weight:700;margin-top:4px}
 .ncb-step.reached .pct{color:var(--gold)}
 
+.calc-box{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:24px;align-items:start}
+.calc-result-panel{background:var(--navy);border-radius:10px;padding:24px}
+.calc-result-label{color:var(--muted);font-size:0.75rem;text-transform:uppercase;letter-spacing:0.5px}
+
+.advisor-wrap{background:var(--navy-mid);padding:56px 5%}
+.advisor-inner{max-width:700px;margin:0 auto}
+.advisor-inner .eyebrow{color:var(--gold-light)}
+.advisor-inner .h2{color:var(--white)}
+.advisor-inner .lead{color:var(--muted)}
+.advisor-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px;min-height:0}
+.advisor-tag{background:rgba(201,168,68,0.12);border:1px solid rgba(201,168,68,0.35);color:var(--gold-light);font-size:0.78rem;padding:6px 14px;border-radius:20px;cursor:pointer;transition:background 0.15s}
+.advisor-tag:hover{background:rgba(201,168,68,0.24)}
+.advisor-panel{background:var(--white);border-radius:14px;padding:44px;margin-top:20px;box-shadow:0 20px 50px -15px rgba(0,0,0,0.35)}
+.advisor-ticks{display:flex;gap:6px;margin-bottom:32px}
+.advisor-tick{flex:1;height:3px;border-radius:2px;background:#e5ddc8}
+.advisor-tick.done{background:var(--gold)}
+.advisor-tick.current{background:var(--navy)}
+.advisor-step-count{font-size:0.7rem;color:#a8863a;text-transform:uppercase;letter-spacing:1.2px;font-weight:700;margin-bottom:12px}
+.advisor-q{font-family:'Playfair Display',serif;font-weight:700;color:var(--navy);font-size:1.35rem;margin-bottom:8px;line-height:1.35}
+.advisor-hint{font-size:0.82rem;color:var(--muted);font-style:italic;margin-bottom:24px;line-height:1.5}
+.advisor-list{display:flex;flex-direction:column}
+.advisor-row{display:flex;align-items:center;gap:16px;padding:17px 6px;border-bottom:1px solid rgba(11,22,40,0.08);cursor:pointer;transition:padding-left 0.15s}
+.advisor-row:last-child{border-bottom:none}
+.advisor-row:hover{padding-left:12px}
+.advisor-row-dot{width:17px;height:17px;border-radius:50%;border:1.5px solid rgba(11,22,40,0.22);flex-shrink:0;transition:all 0.15s}
+.advisor-row.selected .advisor-row-dot{border-color:var(--gold);background:var(--gold)}
+.advisor-row-label{font-size:1rem;color:var(--navy);font-weight:500}
+.advisor-row.selected .advisor-row-label{font-weight:700}
+.advisor-nav{display:flex;justify-content:space-between;margin-top:30px}
+.advisor-nav button:disabled{opacity:0.35;cursor:not-allowed}
+.advisor-result{background:var(--navy);border-radius:14px;padding:36px;margin-top:28px;color:var(--text-dim)}
+.advisor-result-badge{display:inline-block;background:rgba(201,168,68,0.15);color:var(--gold-light);padding:6px 16px;border-radius:20px;font-size:0.78rem;font-weight:700;letter-spacing:0.3px;margin-bottom:14px}
+.advisor-result h3{color:var(--white);font-size:1.5rem;margin-bottom:4px}
+.advisor-result-sub{color:var(--muted);font-size:0.9rem;margin-bottom:6px}
+.advisor-result-row{border-top:1px solid rgba(201,168,68,0.15);padding:16px 0}
+.advisor-result-row .lbl{color:var(--gold-light);font-size:0.74rem;text-transform:uppercase;letter-spacing:0.6px;margin-bottom:6px;font-weight:700}
+.advisor-result-row .val{color:var(--text-dim);font-size:0.92rem;line-height:1.65}
+.advisor-result-row ul{list-style:none;display:flex;flex-direction:column;gap:6px}
+.advisor-result-row li{padding-left:20px;position:relative;font-size:0.9rem}
+.advisor-restart{background:none;border:none;color:var(--muted);font-size:0.78rem;text-decoration:underline;cursor:pointer;margin-top:18px}
+.advisor-result-edit{display:flex;flex-wrap:wrap;gap:8px;margin-top:0.4rem}
+.advisor-edit-chip{background:rgba(201,168,68,0.12);border:1px solid rgba(201,168,68,0.3);color:var(--gold-light);font-size:0.76rem;padding:6px 12px;border-radius:14px;cursor:pointer}
+.advisor-edit-chip:hover{background:rgba(201,168,68,0.22)}
+@media(max-width:600px){ .advisor-panel{padding:30px 22px} .advisor-q{font-size:1.15rem} }
+
 @media(max-width:900px){
   .emi-field-grid{grid-template-columns:1fr}
+  .calc-box{grid-template-columns:1fr}
 }
 @media(max-width:860px){
   .form-grid{grid-template-columns:1fr}
@@ -207,6 +253,7 @@ input[type="range"]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;b
 
 <nav class="subnav">
   <div class="subnav-inner">
+    <a href="#advisor" style="color:var(--gold);">Get My Recommendation</a>
     <a href="#premium-calc">Premium Calculator</a>
     <a href="#tp-vs-comp">TP vs Comprehensive</a>
     <a href="#ncb">No Claim Bonus</a>
@@ -223,18 +270,17 @@ input[type="range"]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;b
   <div class="hero-inner">
     <div class="hero-text">
       <div class="hero-tag">🛵 Mandatory by Law · Every State</div>
-      <h1>Two Wheeler Insurance — Third-Party or Comprehensive, Explained Honestly</h1>
-      <p>Third-party insurance is legally mandatory for every registered two-wheeler in India — riding without it is a punishable offence. Comprehensive cover is optional, but it's the only kind that protects your own bike. Here's what actually matters before you buy.</p>
-      <p class="fine">This page covers new and renewal policies for scooters, motorcycles, and electric two-wheelers, anywhere in India.</p>
+      <h1>Not Sure Which Two Wheeler Insurance You Need?</h1>
+      <p>Answer a few questions — we'll tell you plainly whether Third-Party or Comprehensive actually makes sense for your bike, which add-ons are worth it, and roughly what to expect to pay. Takes under 2 minutes.</p>
+      <p class="fine">Covers new purchases, renewals, and lapsed policies — for scooters, motorcycles, and electric two-wheelers, anywhere in India.</p>
       <div class="trust-row">
         <span class="trust-chip">✓ No Brokerage Ever</span>
         <span class="trust-chip">✓ Zero Upfront Fee</span>
-        <span class="trust-chip">✓ Honest, Even If The Answer Is "Not Yet"</span>
+        <span class="trust-chip">✓ A Real Recommendation, Not Just An Article</span>
       </div>
       <div class="btn-row">
-        <a href="https://wa.me/917838355855?text=Hello%20Artharohan!%20I%20need%20help%20with%20Two%20Wheeler%20Insurance." target="_blank" rel="noopener noreferrer" class="btn btn-gold">Get Help on WhatsApp →</a>
-        <a href="#premium-calc" class="btn btn-outline">Estimate My Premium →</a>
-        <a href="#tp-vs-comp" class="btn btn-outline">Third-Party or Comprehensive?</a>
+        <a href="#advisor" class="btn btn-gold">Get My Recommendation →</a>
+        <a href="https://wa.me/917838355855?text=Hello%20Artharohan!%20I%20need%20help%20with%20Two%20Wheeler%20Insurance." target="_blank" rel="noopener noreferrer" class="btn btn-outline">Get Help on WhatsApp →</a>
       </div>
     </div>
     <div class="hero-illustration">
@@ -267,11 +313,32 @@ input[type="range"]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;b
   <div><div class="val">Cashless</div><div class="lbl">Garage Network</div></div>
 </div>
 
+<section class="advisor-wrap" id="advisor">
+  <div class="advisor-inner">
+    <span class="eyebrow">A Few Questions · Under 2 Minutes</span>
+    <h2 class="h2">Get Your Two Wheeler Recommendation</h2>
+    <p class="lead">Answer honestly about your actual bike. The recommendation, add-on advice, and premium range at the end are built from your real answers — not generic copy.</p>
+
+    <div class="advisor-tags" id="advisorTags"></div>
+
+    <div class="advisor-panel" id="advisorCard">
+      <div class="advisor-ticks" id="advisorTicks"></div>
+      <div id="advisorStepArea"></div>
+      <div class="advisor-nav">
+        <button id="advisorBackBtn" class="btn btn-outline" onclick="advisorBack()" style="display:none;">← Back</button>
+        <button id="advisorNextBtn" class="btn btn-gold" onclick="advisorNext()" disabled>Next →</button>
+      </div>
+    </div>
+
+    <div class="advisor-result" id="advisorResult" style="display:none;"></div>
+  </div>
+</section>
+
 <section class="emi-section" id="premium-calc">
   <div class="emi-grid">
-      <span class="eyebrow">Plan Before You Buy</span>
+      <span class="eyebrow">Prefer To Explore Yourself?</span>
       <h2 class="h2">Two Wheeler Premium Calculator</h2>
-      <p class="lead" style="color:var(--muted);margin-left:auto;margin-right:auto;">Third-party rates are fixed by IRDAI, not the insurer — so that part of your premium is exact, not an estimate. Own-damage cover and add-ons vary by insurer, so those are shown as a realistic range.</p>
+      <p class="lead" style="color:var(--muted);margin-left:auto;margin-right:auto;">Third-party is shown exact — it's fixed by IRDAI. Move the sliders below to see how own-damage cover and add-ons change your total.</p>
       <div class="emi-trust-row">
         <div class="emi-trust-item"><div class="dot"></div><span>IRDAI-fixed third-party rate, not an estimate</span></div>
         <div class="emi-trust-item"><div class="dot"></div><span>No sign-up required</span></div>
@@ -669,9 +736,13 @@ input[type="range"]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;b
         <h3>🚗 4W Car Insurance</h3>
         <p>Third-party rates and comprehensive cover for cars, explained the same honest way.</p>
       </a>
-      <a href="car-loan.html" class="compare-card" style="display:block;">
-        <h3>🚙 Car Loan</h3>
-        <p>Buying a car? New and used car finance, eligibility, and honest guidance.</p>
+      <a href="commercial-vehicle-insurance.html" class="compare-card" style="display:block;">
+        <h3>🚛 Commercial Vehicle Insurance</h3>
+        <p>Trucks, taxis, autos, buses — GCV & PCV, real rates.</p>
+      </a>
+      <a href="travel-insurance.html" class="compare-card" style="display:block;">
+        <h3>✈️ Travel Insurance</h3>
+        <p>Travelling abroad? Individual and family floater cover, explained.</p>
       </a>
       <a href="term-life-insurance.html" class="compare-card" style="display:block;">
         <h3>🛡️ Term Life Insurance</h3>
@@ -728,10 +799,12 @@ input[type="range"]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;b
     <li><a href="https://artharohan.in/#about">About</a></li>
     <li><a href="https://artharohan.in/#services">Services</a></li>
     <li><a href="https://artharohan.in/four-wheeler-third-party-insurance.html">4W Insurance</a></li>
+    <li><a href="https://artharohan.in/commercial-vehicle-insurance.html">Commercial Vehicle</a></li>
+    <li><a href="https://artharohan.in/travel-insurance.html">Travel Insurance</a></li>
     <li><a href="https://artharohan.in/term-life-insurance.html">Term Life</a></li>
     <li><a href="https://artharohan.in/#contact">Contact</a></li>
   </ul>
-  <p class="footer-copy">© 2026 Artharohan Ventures · UDYAM-DL-11-0113585 · artharohan.in · Delhi NCR · All rights reserved.</p>
+  <p class="footer-copy">© 2026 Artharohan Ventures · UDYAM-DL-11-0113585 · artharohan.in · All rights reserved.</p>
 </footer>
 
 <a href="https://wa.me/917838355855?text=Hello%20Artharohan!%20I%20need%20help%20with%20Two%20Wheeler%20Insurance." target="_blank" rel="noopener noreferrer" class="wa-sticky" title="WhatsApp Artharohan" aria-label="WhatsApp Artharohan">💬</a>
@@ -757,6 +830,249 @@ function submitTwForm(e){
   var msg = "Hello Artharohan! My name is " + name + " (" + phone + "). I need help with Two Wheeler Insurance. Type: " + pt + ".";
   window.open("https://wa.me/917838355855?text=" + encodeURIComponent(msg), "_blank");
 }
+
+/* ============================================================
+   TWO WHEELER ADVISOR — decision-engine wizard
+   ============================================================ */
+var advisorSteps = [
+  { key:'policyStatus', q:"What's your situation right now?",
+    opts:[['Renewing soon','renewing'],['Already expired','expired'],['New bike, first policy','new'],['Just comparing, no urgency','comparing']] },
+  { key:'cc', q:"What's your bike's engine capacity?",
+    opts:[['Up to 75cc','cc0'],['75–150cc','cc1'],['150–350cc','cc2'],['350cc+','cc3']] },
+  { key:'bikeAge', q:"How old is the bike?",
+    opts:[['New / under 1 yr','new'],['1–3 years','young'],['3–5 years','mid'],['5+ years','old']] },
+  { key:'idvBand', q:"Roughly what's the bike worth today?",
+    opts:[['Under ₹30,000','low'],['₹30,000–60,000','mid'],['₹60,000–1,50,000','high'],['Above ₹1,50,000','vhigh']] },
+  { key:'loan', q:"Any active loan against the bike?",
+    opts:[['Yes, loan active','yes'],['No, fully owned','no']] },
+  { key:'usage', q:"How do you use it?",
+    opts:[['Daily commute','daily'],['Rarely used','rare']] },
+  { key:'pillion', q:"Do you regularly ride with a pillion passenger?",
+    hint:"Pillion cover isn't automatic, even under comprehensive — most riders don't realize it's a separate add-on until it's too late.",
+    opts:[['Yes, regularly','yes'],['Rarely or never','no']] },
+  { key:'claims', q:"Any own-damage claim in the last 3 years?",
+    opts:[['Yes, claimed','yes'],['No claims','no']] },
+  { key:'ncb', q:"Your current No Claim Bonus?",
+    opts:[['Not sure','unsure'],['0% (New)','0'],['20%','20'],['25%','25'],['35%','35'],['45%','45'],['50%','50']] }
+];
+var advisorAnswers = {};
+var currentStepKey = null;
+
+function getActiveSteps(){
+  return advisorSteps.filter(function(s){ return !s.condition || s.condition(advisorAnswers); });
+}
+function getCurrentIndex(active){
+  if(currentStepKey === null) return 0;
+  for(var i=0;i<active.length;i++){ if(active[i].key === currentStepKey) return i; }
+  return 0;
+}
+function stepText(field, a){ return typeof field === 'function' ? field(a) : field; }
+
+function renderAdvisorStep(){
+  var active = getActiveSteps();
+  if(currentStepKey === null) currentStepKey = active[0].key;
+  var idx = getCurrentIndex(active);
+  var step = active[idx];
+
+  var ticksHtml = '';
+  active.forEach(function(s, i){
+    var cls = 'advisor-tick';
+    if(i < idx) cls += ' done';
+    else if(i === idx) cls += ' current';
+    ticksHtml += '<div class="' + cls + '"></div>';
+  });
+  document.getElementById('advisorTicks').innerHTML = ticksHtml;
+
+  var html = '<div class="advisor-step-count">Question ' + (idx+1) + ' of ' + active.length + '</div>';
+  html += '<div class="advisor-q">' + stepText(step.q, advisorAnswers) + '</div>';
+  var hintVal = stepText(step.hint, advisorAnswers);
+  if(hintVal){ html += '<div class="advisor-hint">' + hintVal + '</div>'; }
+  html += '<div class="advisor-list">';
+  step.opts.forEach(function(opt){
+    var selected = advisorAnswers[step.key] === opt[1] ? ' selected' : '';
+    html += '<div class="advisor-row' + selected + '" onclick="advisorSelect(\'' + step.key + '\',\'' + opt[1] + '\')"><span class="advisor-row-dot"></span><span class="advisor-row-label">' + opt[0] + '</span></div>';
+  });
+  html += '</div>';
+  document.getElementById('advisorStepArea').innerHTML = html;
+  document.getElementById('advisorBackBtn').style.display = idx > 0 ? 'inline-block' : 'none';
+  document.getElementById('advisorNextBtn').textContent = (idx === active.length - 1) ? 'Get My Recommendation →' : 'Next →';
+  document.getElementById('advisorNextBtn').disabled = !advisorAnswers[step.key];
+  renderAdvisorTags();
+}
+
+function renderAdvisorTags(){
+  var active = getActiveSteps();
+  var html = '';
+  active.forEach(function(step){
+    var ans = advisorAnswers[step.key];
+    if(!ans) return;
+    var label = '';
+    for(var j=0;j<step.opts.length;j++){ if(step.opts[j][1] === ans){ label = step.opts[j][0]; break; } }
+    html += '<span class="advisor-tag" onclick="advisorJumpTo(\'' + step.key + '\')">' + label + '</span>';
+  });
+  document.getElementById('advisorTags').innerHTML = html;
+}
+
+function advisorJumpTo(key){ currentStepKey = key; renderAdvisorStep(); }
+function advisorSelect(key, value){ advisorAnswers[key] = value; renderAdvisorStep(); }
+
+function advisorNext(){
+  var active = getActiveSteps();
+  var idx = getCurrentIndex(active);
+  if(idx < active.length - 1){ currentStepKey = active[idx+1].key; renderAdvisorStep(); }
+  else { showAdvisorResult(); }
+}
+function advisorBack(){
+  var active = getActiveSteps();
+  var idx = getCurrentIndex(active);
+  if(idx > 0){ currentStepKey = active[idx-1].key; renderAdvisorStep(); }
+}
+function advisorRestart(){
+  advisorAnswers = {}; currentStepKey = null;
+  document.getElementById('advisorResult').style.display = 'none';
+  document.getElementById('advisorCard').style.display = 'block';
+  renderAdvisorStep();
+}
+function advisorEditFromResult(key){
+  document.getElementById('advisorResult').style.display = 'none';
+  document.getElementById('advisorCard').style.display = 'block';
+  currentStepKey = key;
+  renderAdvisorStep();
+  document.getElementById('advisorCard').scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+function showAdvisorResult(){
+  var a = advisorAnswers;
+  var active = getActiveSteps();
+  var advCcRates = [482, 714, 1366, 2804];
+  var advCcLabelMap = { cc0:'Up to 75cc', cc1:'75–150cc', cc2:'150–350cc', cc3:'350cc+' };
+  var advCcIndexMap = { cc0:0, cc1:1, cc2:2, cc3:3 };
+  var idvMidMap = { low:20000, mid:45000, high:100000, vhigh:180000 };
+  var idvLabelMap = { low:'Under ₹30,000', mid:'₹30,000–60,000', high:'₹60,000–1,50,000', vhigh:'Above ₹1,50,000' };
+
+  var tpRate = advCcRates[advCcIndexMap[a.cc]];
+  var paCover = 350;
+  var idv = idvMidMap[a.idvBand];
+
+  var ncbPct;
+  if(a.claims === 'yes'){ ncbPct = 0; }
+  else if(a.ncb === 'unsure'){
+    var ageDefault = { new:0, young:25, mid:35, old:50 };
+    ncbPct = ageDefault[a.bikeAge];
+  } else { ncbPct = parseInt(a.ncb) || 0; }
+
+  var loanActive = a.loan === 'yes';
+  var newOrYoung = (a.bikeAge === 'new' || a.bikeAge === 'young');
+  var highValue = (a.idvBand === 'high' || a.idvBand === 'vhigh');
+  var oldLowValue = (a.bikeAge === 'old' && a.idvBand === 'low');
+  var rarely = (a.usage === 'rare');
+
+  var recommendation, reason;
+  if(loanActive){
+    recommendation = 'comprehensive';
+    reason = "Your loan provider almost certainly requires comprehensive cover as a condition of financing — this isn't really optional while the loan is active.";
+  } else if(newOrYoung || highValue){
+    recommendation = 'comprehensive';
+    reason = "Your bike is " + (newOrYoung ? "still fairly new" : "worth enough") + " that third-party-only would leave a real financial gap if it's stolen or totalled. The payout on comprehensive at this stage is worth more than the extra premium.";
+  } else if(oldLowValue && rarely){
+    recommendation = 'tp';
+    reason = "Your bike's current value is low enough, and it's rarely used, that a comprehensive payout wouldn't be large — third-party (which is mandatory anyway) plus your own emergency fund is a reasonable, honest option here.";
+  } else {
+    recommendation = 'comprehensive';
+    reason = "Nothing about your situation rules out a real loss — comprehensive is the safer default, though it's a closer call than the loan or new-bike cases above.";
+  }
+
+  var addonsWorth = [], addonsSkip = [];
+  if(newOrYoung){
+    addonsWorth.push('Zero Depreciation — without it, a newer bike\'s claim payout is cut hard for part depreciation.');
+  } else {
+    addonsSkip.push('Zero Depreciation — your bike\'s parts are already depreciated enough that this covers less than it costs.');
+  }
+  if(a.usage === 'daily'){
+    addonsWorth.push('Roadside Assistance — daily riding raises the odds you\'ll actually use it.');
+  } else {
+    addonsSkip.push('Roadside Assistance — skippable if this isn\'t your daily ride.');
+  }
+  if(a.pillion === 'yes'){
+    addonsWorth.push('Pillion / Co-Passenger Cover — you\'ve said you regularly ride with someone else, and this is not automatically included even under comprehensive.');
+  } else {
+    addonsSkip.push('Pillion / Co-Passenger Cover — skippable if you rarely or never carry a passenger.');
+  }
+
+  var claimAdvice = (a.claims === 'yes')
+    ? "You've claimed in the last 3 years — your NCB may have reset to 0%, which affects your comprehensive premium significantly. Use the \"Should I Claim?\" tool below before your next repair to avoid this again unnecessarily."
+    : "No claims in the last 3 years — you're likely holding real NCB value. Protect it: for small repairs, check the \"Should I Claim?\" math below before filing.";
+
+  var renewalMap = {
+    renewing: "Renew before expiry — even one day uninsured is illegal and some insurers add inspection requirements after a lapse.",
+    expired: "Your policy has lapsed — renew immediately; a lapsed policy this long may trigger a mandatory vehicle inspection before a new one is issued.",
+    new: "As a new bike, comprehensive (or at least the compulsory PA + TP) needs to be in place before you ride it out.",
+    comparing: "No urgency, but confirm your current policy's exact renewal date so you're not caught off guard."
+  };
+
+  var riskLine = (recommendation === 'tp')
+    ? "One honest risk either way: if the bike is stolen or totalled, third-party pays you nothing toward replacing it — that cost would be fully on you."
+    : "";
+
+  var odBase = idv * 0.03;
+  var odNetPoint = (odBase * 0.8) * (1 - ncbPct/100);
+  var subtotalPoint = tpRate + paCover + odNetPoint;
+  var pointEstimate = Math.round(subtotalPoint * 1.18);
+
+  var odNetLow  = (odBase * 1.0) * (1 - ncbPct/100);
+  var odNetHigh = (odBase * 0.5) * (1 - ncbPct/100);
+  var totalHigh = Math.round((tpRate + paCover + odNetLow) * 1.18);
+  var totalLow  = Math.round((tpRate + paCover + odNetHigh) * 1.18);
+  var tpOnlyTotal = Math.round((tpRate + paCover) * 1.18);
+
+  var badgeText = (recommendation === 'comprehensive') ? '✅ We Recommend: Comprehensive' : '✅ We Recommend: Third-Party Only';
+  var premiumLine = (recommendation === 'comprehensive')
+    ? ('₹' + totalLow.toLocaleString('en-IN') + ' – ₹' + totalHigh.toLocaleString('en-IN') + '/year (tentative range, not a quote)')
+    : ('₹' + tpOnlyTotal.toLocaleString('en-IN') + '/year (exact, IRDAI-fixed)');
+
+  var html = '';
+  html += '<div class="advisor-result-badge">' + badgeText + '</div>';
+  html += '<h3>Here\'s What We\'d Actually Do In Your Position</h3>';
+  html += '<div class="advisor-result-sub">' + advCcLabelMap[a.cc] + ' · ' + idvLabelMap[a.idvBand] + ' bike · ' + (loanActive ? 'Loan active' : 'No loan') + '</div>';
+
+  html += '<div class="advisor-result-row"><div class="lbl">Why</div><div class="val">' + reason + (riskLine ? ' ' + riskLine : '') + '</div></div>';
+
+  html += '<div class="advisor-result-row"><div class="lbl">Add-Ons Worth It</div><div class="val"><ul>';
+  addonsWorth.forEach(function(t){ html += '<li>✔ ' + t + '</li>'; });
+  if(addonsWorth.length === 0) html += '<li>None strongly indicated for your situation — keep it simple.</li>';
+  html += '</ul></div></div>';
+
+  html += '<div class="advisor-result-row"><div class="lbl">Add-Ons You Can Skip</div><div class="val"><ul>';
+  addonsSkip.forEach(function(t){ html += '<li>— ' + t + '</li>'; });
+  if(addonsSkip.length === 0) html += '<li>Every add-on above applies to your situation — no obvious skips here.</li>';
+  html += '</ul></div></div>';
+
+  html += '<div class="advisor-result-row"><div class="lbl">Claim Advice</div><div class="val">' + claimAdvice + '</div></div>';
+  html += '<div class="advisor-result-row"><div class="lbl">Renewal / Timing</div><div class="val">' + renewalMap[a.policyStatus] + '</div></div>';
+  html += '<div class="advisor-result-row"><div class="lbl">Expected Premium</div><div class="val">' + premiumLine + '</div></div>';
+
+  var waMsg = "Hello Artharohan! I used the Two Wheeler Insurance Advisor. My answers: " + advCcLabelMap[a.cc] + ", bike age " + a.bikeAge + ", value " + idvLabelMap[a.idvBand] + ", loan " + a.loan + ", usage " + a.usage + ", pillion " + a.pillion + ", claims " + a.claims + ", NCB " + (a.ncb === 'unsure' ? 'not sure' : a.ncb + '%') + ". Recommendation: " + (recommendation === 'comprehensive' ? 'Comprehensive' : 'Third-Party Only') + ", expected premium " + premiumLine + ". I'd like verified quotes.";
+  html += '<a href="https://wa.me/917838355855?text=' + encodeURIComponent(waMsg) + '" target="_blank" rel="noopener noreferrer" class="btn btn-wa" style="margin-top:1.4rem;display:block;text-align:center;padding:13px;background:#25D366;color:#fff;border-radius:6px;font-weight:700;text-decoration:none;font-size:0.92rem;">💬 Get My Verified Quotes on WhatsApp →</a>';
+  html += '<div class="advisor-result-row"><div class="lbl">Change An Answer</div><div class="advisor-result-edit" id="advisorResultEdit"></div></div>';
+  html += '<div><button class="advisor-restart" onclick="advisorRestart()">Start over with different answers</button></div>';
+
+  document.getElementById('advisorResult').innerHTML = html;
+  document.getElementById('advisorResult').style.display = 'block';
+  document.getElementById('advisorCard').style.display = 'none';
+
+  var editHtml = '';
+  active.forEach(function(step){
+    var ansVal = advisorAnswers[step.key];
+    var label = '—';
+    for(var j=0;j<step.opts.length;j++){ if(step.opts[j][1] === ansVal){ label = step.opts[j][0]; break; } }
+    editHtml += '<span class="advisor-edit-chip" onclick="advisorEditFromResult(\'' + step.key + '\')">' + label + ' ✎</span>';
+  });
+  document.getElementById('advisorResultEdit').innerHTML = editHtml;
+
+  document.getElementById('advisorResult').scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+window.addEventListener('DOMContentLoaded', renderAdvisorStep);
 
 var currentPolicyType = 'tp';
 var ccRates = [482, 714, 1366, 2804];
@@ -837,10 +1153,9 @@ function calcPremium(){
     var waMsgTp = "Hello Artharohan! I used the Two Wheeler Insurance calculator — Third-Party Only, Exact Premium ₹" + Math.round(total).toLocaleString('en-IN') + "/year. I'd like to proceed.";
     document.getElementById('calcWaLinkTp').href = "https://wa.me/917838355855?text=" + encodeURIComponent(waMsgTp);
   } else {
-    // Honest range: hold IDV, NCB, add-ons fixed, vary only the insurer discount across its full 0-50% span
     var odBaseForRange = idv * (3 / 100);
-    var odNetLow = (odBaseForRange * (1 - 0/100)) * (1 - ncbPct/100);   // 0% insurer discount = costliest
-    var odNetHigh = (odBaseForRange * (1 - 50/100)) * (1 - ncbPct/100); // 50% insurer discount = cheapest
+    var odNetLow = (odBaseForRange * (1 - 0/100)) * (1 - ncbPct/100);
+    var odNetHigh = (odBaseForRange * (1 - 50/100)) * (1 - ncbPct/100);
     var subtotalLow = tpRate + paCover + odNetLow + addonsTotal;
     var subtotalHigh = tpRate + paCover + odNetHigh + addonsTotal;
     var totalLow = Math.round(subtotalHigh * 1.18);
