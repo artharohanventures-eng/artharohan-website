@@ -148,11 +148,12 @@ footer { background: var(--navy); border-top: 1px solid rgba(201,168,68,0.12); p
 .hero-sub { color: var(--muted); font-size: 1.08rem; line-height: 1.75; margin-bottom: 2rem; font-weight: 300; max-width: 640px; }
 .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 40px; }
 .ascent-panel { width: 100%; }
-.ascent-panel svg { width: 100%; height: auto; }
+.ascent-chart-svg { width: 100%; height: auto; }
+.lbl-name svg { width: 18px !important; height: 18px !important; flex-shrink: 0; }
 .ascent-labels { display: grid; grid-template-columns: repeat(4,1fr); gap: 8px; text-align: center; margin-top: 4px; padding-bottom: 44px; }
 .ascent-labels a { display: block; text-decoration: none; padding: 10px 6px; border-radius: 6px; transition: background 0.2s; }
 .ascent-labels a:hover { background: rgba(201,168,68,0.08); }
-.ascent-labels .lbl-name { color: var(--gold-light); font-size: 1.05rem; font-weight: 600; margin-bottom: 3px; }
+.ascent-labels .lbl-name { color: var(--gold-light); font-size: 1.05rem; font-weight: 600; margin-bottom: 3px; display: flex; align-items: center; justify-content: center; gap: 6px; }
 .ascent-labels .lbl-desc { color: var(--muted); font-size: 0.88rem; font-weight: 300; }
 .ascent-caption { text-align: center; margin: -6px 0 22px; }
 .ascent-caption .ac-word { font-family: 'Playfair Display', serif; color: var(--gold-light); font-size: 0.95rem; letter-spacing: 0.5px; }
@@ -342,7 +343,7 @@ footer { background: var(--navy); border-top: 1px solid rgba(201,168,68,0.12); p
            A real growth-chart graphic, not a bare line: gradient
            fill, grid, glow at the peak. -->
       <div class="ascent-panel">
-        <svg viewBox="0 0 900 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ascent-chart-svg" viewBox="0 0 900 260" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <radialGradient id="dawnGlow" cx="50%" cy="50%" r="50%">
               <stop offset="0%" stop-color="#E8D5A3" stop-opacity="0.9"/>
