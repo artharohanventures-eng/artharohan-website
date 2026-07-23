@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Artharohan — Ask Anything, We'll Be Straight with You</title>
+<meta name="description" content="For loan enquiries, insurance questions, or any financial topic you need clarity on — reach Artharohan on WhatsApp, YouTube, or email. Every message handled personally.">
+<meta name="keywords" content="contact artharohan, artharohan whatsapp, artharohan email">
+<link rel="canonical" href="https://artharohan.in/contact.html">
+<meta property="og:title" content="Contact Artharohan">
+<meta property="og:description" content="Ask anything about loans, insurance, or your finances. Every message is handled personally.">
+<meta property="og:url" content="https://artharohan.in/contact.html">
+<meta property="og:type" content="website">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "@id": "https://artharohan.in/contact.html",
+  "url": "https://artharohan.in/contact.html",
+  "name": "Contact Artharohan",
+  "inLanguage": "en-IN",
+  "isPartOf": { "@id": "https://artharohan.in/#website" }
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0B1628; --navy-mid: #0F1F3D; --navy-light: #1A2F52;
+  --gold: #C9A844; --gold-light: #E8D5A3; --gold-dim: #8A7230;
+  --cream: #F8F5EE; --muted: #8A9EBF; --body-text: #4A5E7A; --white: #FFFFFF;
+  --nav-h: 68px;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { font-family: 'Inter', sans-serif; background: var(--cream); color: var(--navy); font-size: 16px; line-height: 1.6; padding-top: var(--nav-h); }
+a { color: inherit; }
+
+nav { position: fixed; inset: 0 0 auto 0; background: var(--navy); z-index: 200; height: var(--nav-h); display: flex; align-items: center; justify-content: space-between; padding: 0 5%; border-bottom: 1px solid rgba(201,168,68,0.18); }
+.nav-logo { display: flex; align-items: center; gap: 12px; cursor: pointer; }
+.nav-mark { width: 38px; height: 38px; border-radius: 50%; background: var(--navy-mid); border: 1.5px solid var(--gold); display: flex; align-items: center; justify-content: center; font-size: 18px; color: var(--gold); font-weight: 700; flex-shrink: 0; }
+.nav-brand { font-family: 'Playfair Display', serif; color: var(--gold); font-size: 1.1rem; font-weight: 700; letter-spacing: 1.5px; }
+.nav-links { display: flex; align-items: center; gap: 1.1rem; list-style: none; height: 100%; }
+.nav-links li { display: flex; align-items: center; height: 100%; }
+.nav-links li.nav-dropdown { display: flex; }
+.nav-dropdown { position: relative; }
+.nav-links a { display: flex; align-items: center; height: 100%; color: var(--muted); text-decoration: none; font-size: 0.95rem; font-weight: 500; letter-spacing: 0.3px; transition: color 0.2s; cursor: pointer; white-space: nowrap; }
+.nav-links a:hover, .nav-links a.active { color: var(--gold); }
+.nav-cta { background: var(--gold); color: var(--navy) !important; padding: 8px 18px; border-radius: 4px; font-weight: 600 !important; }
+.nav-cta:hover { background: var(--gold-light) !important; }
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+.hamburger span { display: block; width: 22px; height: 2px; background: var(--gold); border-radius: 2px; transition: all 0.25s; }
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.mobile-nav { display: none; position: fixed; top: var(--nav-h); left: 0; right: 0; background: var(--navy-mid); border-bottom: 1px solid rgba(201,168,68,0.15); z-index: 199; flex-direction: column; padding: 1rem 5%; }
+.mobile-nav.open { display: flex; }
+.mobile-nav a { color: var(--muted); text-decoration: none; font-size: 0.95rem; font-weight: 500; padding: 12px 0; border-bottom: 1px solid rgba(201,168,68,0.08); cursor: pointer; }
+.mobile-nav a:last-child { border-bottom: none; }
+@media(max-width:1024px){ .nav-links{display:none} .hamburger{display:flex} }
+
+.section-wrap { padding: 72px 5%; }
+.section-wrap--cream { background: var(--cream); }
+.inner { max-width: 1100px; margin: 0 auto; }
+.eyebrow { font-size: 0.72rem; color: var(--gold); letter-spacing: 3px; text-transform: uppercase; font-weight: 600; margin-bottom: 0.6rem; display: block; }
+.h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.4rem, 4vw, 3.6rem); font-weight: 900; line-height: 1.12; color: var(--navy); margin-bottom: 1rem; }
+.h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.7rem, 2.8vw, 2.6rem); font-weight: 900; line-height: 1.18; color: var(--navy); margin-bottom: 1rem; }
+.on-dark { color: var(--white); }
+.lead { color: var(--body-text); font-size: 1.05rem; line-height: 1.75; font-weight: 300; max-width: 580px; }
+.lead.on-dark { color: var(--muted); }
+
+.disclaimer-bar { background: var(--navy-mid); border-top: 1px solid rgba(201,168,68,0.08); padding: 20px 5%; text-align: center; }
+.disclaimer-bar p { color: #3A4A62; font-size: 0.72rem; line-height: 1.65; max-width: 900px; margin: 0 auto; }
+footer { background: var(--navy); border-top: 1px solid rgba(201,168,68,0.12); padding: 36px 5%; text-align: center; }
+.footer-brand { font-family: 'Playfair Display', serif; color: var(--gold); font-size: 1.1rem; font-weight: 700; letter-spacing: 2px; margin-bottom: 6px; }
+.footer-tagline { color: var(--muted); font-size: 0.78rem; letter-spacing: 1px; margin-bottom: 18px; }
+.footer-nav { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 16px; list-style: none; }
+.footer-nav a { color: #3A4A62; text-decoration: none; font-size: 0.78rem; cursor: pointer; transition: color 0.2s; }
+.footer-nav a:hover { color: var(--gold); }
+.footer-copy { color: #2A3A52; font-size: 0.72rem; }
+
+.contact-hero { background: var(--navy); padding: 72px 5%; }
+.contact-cards-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; max-width: 900px; margin: 0 auto; }
+.contact-info-card { background: var(--white); border-radius: 10px; padding: 26px; text-align: center; box-shadow: 0 4px 18px rgba(11,22,40,0.05); text-decoration: none; display: block; transition: all 0.2s; }
+.contact-info-card:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(11,22,40,0.1); }
+.ci-icon { margin-bottom: 10px; }
+.ci-icon svg { width: 30px; height: 30px; color: var(--navy); }
+.contact-info-card h4 { color: var(--navy); font-size: 0.8rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 4px; }
+.contact-info-card p { color: var(--body-text); font-size: 0.88rem; }
+.form-wrap { max-width: 580px; margin: 0 auto; background: var(--white); border-radius: 12px; padding: 44px; box-shadow: 0 8px 36px rgba(11,22,40,0.07); }
+.form-wrap .h2 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+.form-wrap .lead { font-size: 0.9rem; margin-bottom: 1.8rem; max-width: 100%; }
+.f-group { margin-bottom: 1.25rem; }
+.f-group label { display: block; font-size: 0.78rem; font-weight: 600; color: var(--navy); margin-bottom: 5px; letter-spacing: 0.4px; }
+.f-group input, .f-group select, .f-group textarea { width: 100%; padding: 11px 14px; border: 1.5px solid #DDE6F0; border-radius: 6px; font-size: 0.9rem; font-family: 'Inter', sans-serif; color: var(--navy); background: var(--cream); transition: border-color 0.2s; outline: none; appearance: none; -webkit-appearance: none; }
+.f-group input:focus, .f-group select:focus, .f-group textarea:focus { border-color: var(--gold); background: var(--white); }
+.f-group textarea { resize: vertical; min-height: 96px; }
+.f-submit { width: 100%; background: var(--gold); color: var(--navy); padding: 13px; border: none; border-radius: 6px; font-size: 0.92rem; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; transition: all 0.2s; letter-spacing: 0.3px; margin-top: 0.5rem; }
+.f-submit:hover { background: var(--gold-light); transform: translateY(-1px); }
+.form-note { font-size: 0.72rem; color: var(--muted); text-align: center; margin-top: 1rem; line-height: 1.5; }
+
+.wa-sticky { position: fixed; bottom: 24px; right: 24px; background: #25d366; width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 26px; text-decoration: none; z-index: 99; box-shadow: 0 4px 16px rgba(0,0,0,0.25); transition: transform 0.2s; }
+.wa-sticky:hover { transform: scale(1.1); }
+
+@media (max-width: 768px) {
+  .form-wrap { padding: 28px 20px; }
+  .section-wrap { padding: 52px 5%; }
+}
+</style>
+</head>
+<body>
+
+<svg style="display:none" aria-hidden="true">
+  <defs>
+    <symbol id="icon-chat" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8.2 9.8c0 3.6 3 6.6 6.6 6.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="icon-play" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 8.5l6 3.5-6 3.5z" fill="currentColor"/></symbol>
+    <symbol id="icon-mail" viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M2.5 7.5l9.5 6.5 9.5-6.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<div id="site-nav"></div>
+<script>
+  var SITE_NAV_CURRENT = "contact";
+</script>
+<script src="nav.js"></script>
+
+<div class="contact-hero">
+  <div class="inner">
+    <span class="eyebrow">Get In Touch</span>
+    <h1 class="h1 on-dark">Ask Anything.<br>We'll Be Straight with You.</h1>
+    <p class="lead on-dark" style="margin-top:0.75rem;">For loan enquiries, insurance questions, or any financial topic you need clarity on — reach out. Every message is handled personally.</p>
+  </div>
+</div>
+
+<div class="section-wrap section-wrap--cream">
+  <div class="inner">
+    <div class="contact-cards-row" style="margin-bottom:3rem;">
+      <a href="https://wa.me/917838355855" target="_blank" rel="noopener noreferrer" class="contact-info-card">
+        <div class="ci-icon"><svg><use href="#icon-chat"/></svg></div><h4>WhatsApp</h4><p>+91 78383 55855</p>
+      </a>
+      <a href="https://youtube.com/@artharohan" target="_blank" rel="noopener noreferrer" class="contact-info-card">
+        <div class="ci-icon"><svg><use href="#icon-play"/></svg></div><h4>YouTube</h4><p>@artharohan</p>
+      </a>
+      <a href="mailto:artharohanventures@gmail.com" class="contact-info-card">
+        <div class="ci-icon"><svg><use href="#icon-mail"/></svg></div><h4>Email</h4><p>artharohanventures@gmail.com</p>
+      </a>
+    </div>
+
+    <div class="form-wrap">
+      <h2 class="h2" style="font-size:1.5rem;">Send Us a Message</h2>
+      <p class="lead" style="font-size:0.9rem;margin-bottom:1.8rem;max-width:100%;">Fill in the form below and we'll respond via WhatsApp — usually within a few hours on business days.</p>
+      <form id="contactForm" onsubmit="handleForm(event)" novalidate>
+        <div class="f-group">
+          <label for="fname">Your Name</label>
+          <input type="text" id="fname" name="fname" placeholder="Full name" required autocomplete="name">
+        </div>
+        <div class="f-group">
+          <label for="fphone">Phone Number</label>
+          <input type="tel" id="fphone" name="fphone" placeholder="+91 XXXXX XXXXX" required autocomplete="tel">
+        </div>
+        <div class="f-group">
+          <label for="ftopic">I Need Help With</label>
+          <select id="ftopic" name="ftopic" required>
+            <option value="">Select a topic</option>
+            <option value="Business Loan">Business Loan</option>
+            <option value="Car Loan">Car Loan</option>
+            <option value="Personal Loan">Personal Loan</option>
+            <option value="Home Loan">Home Loan</option>
+            <option value="Loan Against Property">Loan Against Property</option>
+            <option value="Insurance">Insurance</option>
+            <option value="Real Estate">Real Estate</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="f-group">
+          <label for="fmessage">Your Question</label>
+          <textarea id="fmessage" name="fmessage" placeholder="Tell us what you'd like to understand or what you need help with..."></textarea>
+        </div>
+        <button type="submit" class="f-submit">Continue to WhatsApp →</button>
+        <p class="form-note">Tapping the button above will open WhatsApp with your message pre-filled. Your enquiry goes directly to Artharohan — no third-party services.</p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="disclaimer-bar">
+  <p>Disclaimer: Reaching out via this form connects you to Artharohan for guidance. We do not provide formal financial advice or legally binding recommendations. Always consult a qualified advisor for decisions specific to your situation.</p>
+</div>
+
+<footer>
+  <div class="footer-brand">अर्थारोहण &nbsp;·&nbsp; ARTHAROHAN</div>
+  <div class="footer-tagline">Sahi Jaankari. Sahi Faisla.</div>
+  <ul class="footer-nav">
+    <li><a href="https://artharohan.in">Home</a></li>
+    <li><a href="https://artharohan.in/about.html">About</a></li>
+    <li><a href="https://artharohan.in/services.html">Services</a></li>
+    <li><a href="https://artharohan.in/contact.html">Contact</a></li>
+  </ul>
+  <p class="footer-copy">© 2026 Artharohan Ventures · UDYAM-DL-11-0113585 · artharohan.in</p>
+</footer>
+
+<a href="https://wa.me/917838355855" target="_blank" rel="noopener noreferrer" class="wa-sticky" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">💬</a>
+
+<script>
+function handleForm(e) {
+  e.preventDefault();
+  var name    = document.getElementById('fname').value.trim();
+  var phone   = document.getElementById('fphone').value.trim();
+  var topic   = document.getElementById('ftopic').value;
+  var message = document.getElementById('fmessage').value.trim();
+
+  if (!name || !phone || !topic) {
+    alert('Please fill in your name, phone number, and select a topic.');
+    return;
+  }
+
+  var text = 'Hello Artharohan!\n\n'
+    + 'Name: ' + name + '\n'
+    + 'Phone: ' + phone + '\n'
+    + 'Topic: ' + topic + '\n'
+    + (message ? '\nQuestion: ' + message : '');
+
+  var waUrl = 'https://wa.me/917838355855?text=' + encodeURIComponent(text);
+  window.open(waUrl, '_blank', 'noopener,noreferrer');
+}
+</script>
+
+</body>
+</html>
