@@ -4,6 +4,10 @@
    This is the ONLY place the navigation menu should be edited.
    Every page loads this file and gets the same nav automatically.
 
+   FIXED 26-Jul-2026: all internal links now use clean canonical
+   URLs (e.g. /business-loans) instead of .html — matches the
+   canonical/og:url tags already in every page's <head>.
+
    HOW TO USE ON A NEW PAGE:
    1. Put this where the nav should appear:
         <div id="site-nav"></div>
@@ -20,16 +24,6 @@
      "loan-against-property", "real-estate",
      "two-wheeler", "four-wheeler", "commercial-vehicle",
      "travel-insurance", "insurance-hub", "term-plan"
-
-   NOTE: Home, About, Services, and Contact are now real,
-   separate pages (index.html, about.html, services.html,
-   contact.html) — same as every other page on the site.
-   There is no more single-page-app toggle behavior, and no
-   more SITE_NAV_IS_HOME flag. Every page just links to real
-   URLs, everywhere, always. The old branching logic (different
-   link behavior depending on which page loaded nav.js) was a
-   real source of confusion and bugs, and is removed rather
-   than patched.
 
    TO ADD A NEW PAGE LATER:
    1. Add one <li> inside the correct dropdown below
@@ -78,14 +72,14 @@
     return activeGroup === group ? ' class="active"' : "";
   }
 
-  var home = '<a href="https://artharohan.in"' + cls("home") + '>Home</a>';
-  var about = '<a href="https://artharohan.in/about.html"' + cls("about") + '>About</a>';
-  var services = '<a href="https://artharohan.in/services.html"' + cls("services") + '>Services</a>';
-  var contact = '<a href="https://artharohan.in/contact.html" class="nav-cta">Get In Touch</a>';
+  var home = '<a href="https://artharohan.in/"' + cls("home") + '>Home</a>';
+  var about = '<a href="https://artharohan.in/about"' + cls("about") + '>About</a>';
+  var services = '<a href="https://artharohan.in/services"' + cls("services") + '>Services</a>';
+  var contact = '<a href="https://artharohan.in/contact" class="nav-cta">Get In Touch</a>';
 
   var desktopNav =
     '<nav>' +
-      '<div class="nav-logo" onclick="window.location.href=\'https://artharohan.in\'">' +
+      '<div class="nav-logo" onclick="window.location.href=\'https://artharohan.in/\'">' +
         '<div class="nav-mark">\u0905</div>' +
         '<span class="nav-brand">ARTHAROHAN</span>' +
       '</div>' +
@@ -96,27 +90,27 @@
         '<li class="nav-dropdown" id="loansDropdown">' +
           '<a onclick="toggleNavDropdown(\'loansDropdown\')"' + dropCls("loans") + '>Loans \u25be</a>' +
           '<ul class="nav-dropdown-menu">' +
-            '<li><a href="business-loans.html"' + cls("business-loans") + '>Business Loans</a></li>' +
-            '<li><a href="car-loan.html"' + cls("car-loan") + '>Car Loan</a></li>' +
-            '<li><a href="personal-loan.html"' + cls("personal-loan") + '>Personal Loan</a></li>' +
-            '<li><a href="home-loan.html"' + cls("home-loan") + '>Home Loan</a></li>' +
-            '<li><a href="loan-against-property.html"' + cls("loan-against-property") + '>Loan Against Property</a></li>' +
+            '<li><a href="/business-loans"' + cls("business-loans") + '>Business Loans</a></li>' +
+            '<li><a href="/car-loan"' + cls("car-loan") + '>Car Loan</a></li>' +
+            '<li><a href="/personal-loan"' + cls("personal-loan") + '>Personal Loan</a></li>' +
+            '<li><a href="/home-loan"' + cls("home-loan") + '>Home Loan</a></li>' +
+            '<li><a href="/loan-against-property"' + cls("loan-against-property") + '>Loan Against Property</a></li>' +
           '</ul>' +
         '</li>' +
         '<li class="nav-dropdown" id="insDropdown">' +
           '<a onclick="toggleNavDropdown(\'insDropdown\')"' + dropCls("insurance") + '>General Insurance \u25be</a>' +
           '<ul class="nav-dropdown-menu">' +
-            '<li><a href="insurance.html"' + cls("insurance-hub") + '>All Insurance ↗</a></li>' +
-            '<li><a href="two-wheeler-third-party-insurance.html"' + cls("two-wheeler") + '>2W Insurance</a></li>' +
-            '<li><a href="four-wheeler-third-party-insurance.html"' + cls("four-wheeler") + '>4W Insurance</a></li>' +
-            '<li><a href="commercial-vehicle-insurance.html"' + cls("commercial-vehicle") + '>Commercial Vehicle</a></li>' +
-            '<li><a href="travel-insurance.html"' + cls("travel-insurance") + '>Travel Insurance</a></li>' +
+            '<li><a href="/insurance"' + cls("insurance-hub") + '>All Insurance ↗</a></li>' +
+            '<li><a href="/two-wheeler-third-party-insurance"' + cls("two-wheeler") + '>2W Insurance</a></li>' +
+            '<li><a href="/four-wheeler-third-party-insurance"' + cls("four-wheeler") + '>4W Insurance</a></li>' +
+            '<li><a href="/commercial-vehicle-insurance"' + cls("commercial-vehicle") + '>Commercial Vehicle</a></li>' +
+            '<li><a href="/travel-insurance"' + cls("travel-insurance") + '>Travel Insurance</a></li>' +
           '</ul>' +
         '</li>' +
         '<li class="nav-dropdown" id="lifeDropdown">' +
           '<a onclick="toggleNavDropdown(\'lifeDropdown\')"' + dropCls("life") + '>Life Insurance \u25be</a>' +
           '<ul class="nav-dropdown-menu">' +
-            '<li><a href="term-life-insurance.html"' + cls("term-plan") + '>Term Plan</a></li>' +
+            '<li><a href="/term-life-insurance"' + cls("term-plan") + '>Term Plan</a></li>' +
           '</ul>' +
         '</li>' +
         '<li>' + contact + '</li>' +
@@ -128,21 +122,21 @@
 
   var mobileNav =
     '<div class="mobile-nav" id="mobileNav">' +
-      '<a href="https://artharohan.in" onclick="closeMobileNav()">Home</a>' +
-      '<a href="https://artharohan.in/about.html" onclick="closeMobileNav()">About</a>' +
-      '<a href="https://artharohan.in/services.html" onclick="closeMobileNav()">Services</a>' +
-      '<a href="business-loans.html" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Business Loans</a>' +
-      '<a href="car-loan.html" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Car Loan</a>' +
-      '<a href="personal-loan.html" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Personal Loan</a>' +
-      '<a href="home-loan.html" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Home Loan</a>' +
-      '<a href="loan-against-property.html" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Loan Against Property</a>' +
-      '<a href="insurance.html" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">All Insurance</a>' +
-      '<a href="two-wheeler-third-party-insurance.html" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">2W Insurance</a>' +
-      '<a href="four-wheeler-third-party-insurance.html" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">4W Insurance</a>' +
-      '<a href="commercial-vehicle-insurance.html" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Commercial Vehicle</a>' +
-      '<a href="travel-insurance.html" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Travel Insurance</a>' +
-      '<a href="term-life-insurance.html" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Term Plan</a>' +
-      '<a href="https://artharohan.in/contact.html" onclick="closeMobileNav()" class="nav-cta">Get In Touch</a>' +
+      '<a href="https://artharohan.in/" onclick="closeMobileNav()">Home</a>' +
+      '<a href="https://artharohan.in/about" onclick="closeMobileNav()">About</a>' +
+      '<a href="https://artharohan.in/services" onclick="closeMobileNav()">Services</a>' +
+      '<a href="/business-loans" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Business Loans</a>' +
+      '<a href="/car-loan" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Car Loan</a>' +
+      '<a href="/personal-loan" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Personal Loan</a>' +
+      '<a href="/home-loan" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Home Loan</a>' +
+      '<a href="/loan-against-property" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Loan Against Property</a>' +
+      '<a href="/insurance" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">All Insurance</a>' +
+      '<a href="/two-wheeler-third-party-insurance" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">2W Insurance</a>' +
+      '<a href="/four-wheeler-third-party-insurance" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">4W Insurance</a>' +
+      '<a href="/commercial-vehicle-insurance" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Commercial Vehicle</a>' +
+      '<a href="/travel-insurance" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Travel Insurance</a>' +
+      '<a href="/term-life-insurance" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Term Plan</a>' +
+      '<a href="https://artharohan.in/contact" onclick="closeMobileNav()" class="nav-cta">Get In Touch</a>' +
     '</div>';
 
   var mount = document.getElementById("site-nav");
