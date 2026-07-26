@@ -74,6 +74,8 @@
 }
 </script>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
 <style>
@@ -385,7 +387,7 @@ input[type="range"]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;b
 
       <div class="emi-field" id="cvSeatsField" style="display:none;">
         <div class="emi-field-top">
-          <label>Licensed Seating Capacity</label>
+          <label for="cvSeats">Licensed Seating Capacity</label>
           <span class="emi-field-val" id="cvSeatsDisplay">4</span>
         </div>
         <input type="range" id="cvSeats" min="1" max="60" step="1" value="4" oninput="calcCvPremium()">
@@ -404,21 +406,21 @@ input[type="range"]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;b
         <div class="emi-field-grid">
           <div class="emi-field">
             <div class="emi-field-top">
-              <label>Insured Declared Value (IDV)</label>
+              <label for="cvIdv">Insured Declared Value (IDV)</label>
               <span class="emi-field-val" id="cvIdvDisplay">₹8,00,000</span>
             </div>
             <input type="range" id="cvIdv" min="100000" max="6000000" step="50000" value="800000" oninput="calcCvPremium()">
           </div>
           <div class="emi-field">
             <div class="emi-field-top">
-              <label>No Claim Bonus</label>
+              <label for="cvNcbSlab">No Claim Bonus</label>
               <span class="emi-field-val" id="cvNcbDisplayLabel">5+ Yrs — 50%</span>
             </div>
             <input type="range" id="cvNcbSlab" min="0" max="5" step="1" value="5" oninput="calcCvPremium()">
           </div>
           <div class="emi-field" style="grid-column:1/-1;">
             <div class="emi-field-top">
-              <label>Insurer Discount on Own Damage</label>
+              <label for="cvInsurerDiscount">Insurer Discount on Own Damage</label>
               <span class="emi-field-val" id="cvInsurerDiscountDisplay">20%</span>
             </div>
             <input type="range" id="cvInsurerDiscount" min="0" max="50" step="5" value="20" oninput="calcCvPremium()">

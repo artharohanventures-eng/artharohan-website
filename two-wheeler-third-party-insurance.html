@@ -108,6 +108,8 @@
   ]
 }
 </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
 <style>
@@ -445,21 +447,21 @@ input[type="range"]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;b
         <div class="emi-field-grid">
           <div class="emi-field">
             <div class="emi-field-top">
-              <label>Insured Declared Value (IDV)</label>
+              <label for="idv">Insured Declared Value (IDV)</label>
               <span class="emi-field-val" id="idvDisplay">₹70,000</span>
             </div>
             <input type="range" id="idv" min="20000" max="300000" step="5000" value="70000" oninput="calcPremium()">
           </div>
           <div class="emi-field">
             <div class="emi-field-top">
-              <label>No Claim Bonus</label>
+              <label for="ncbSlab">No Claim Bonus</label>
               <span class="emi-field-val" id="ncbDisplayLabel">5+ Yrs — 50%</span>
             </div>
             <input type="range" id="ncbSlab" min="0" max="5" step="1" value="5" oninput="calcPremium()">
           </div>
           <div class="emi-field" style="grid-column:1/-1;">
             <div class="emi-field-top">
-              <label>Insurer & Make Discount on Own Damage</label>
+              <label for="insurerDiscount">Insurer & Make Discount on Own Damage</label>
               <span class="emi-field-val" id="insurerDiscountDisplay">20%</span>
             </div>
             <input type="range" id="insurerDiscount" min="0" max="50" step="5" value="20" oninput="calcPremium()">

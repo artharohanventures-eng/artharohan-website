@@ -56,6 +56,8 @@
 }
 </script>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
 <style>
@@ -328,28 +330,28 @@ input[type="range"]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;b
       <div class="emi-field-grid">
         <div class="emi-field">
           <div class="emi-field-top">
-            <label>Your Age</label>
+            <label for="tlAge">Your Age</label>
             <span class="emi-field-val" id="tlAgeDisplay">30</span>
           </div>
           <input type="range" id="tlAge" min="21" max="60" step="1" value="30" oninput="calcCoverAmount()">
         </div>
         <div class="emi-field">
           <div class="emi-field-top">
-            <label>Annual Income (₹)</label>
+            <label for="tlIncome">Annual Income (₹)</label>
             <span class="emi-field-val" id="tlIncomeDisplay">₹10,00,000</span>
           </div>
           <input type="range" id="tlIncome" min="300000" max="10000000" step="50000" value="1000000" oninput="calcCoverAmount()">
         </div>
         <div class="emi-field">
           <div class="emi-field-top">
-            <label>Outstanding Loans (Home/Business/Other)</label>
+            <label for="tlLiability">Outstanding Loans (Home/Business/Other)</label>
             <span class="emi-field-val" id="tlLiabilityDisplay">₹30,00,000</span>
           </div>
           <input type="range" id="tlLiability" min="0" max="20000000" step="100000" value="3000000" oninput="calcCoverAmount()">
         </div>
         <div class="emi-field">
           <div class="emi-field-top">
-            <label>Existing Life Cover Already Held</label>
+            <label for="tlExisting">Existing Life Cover Already Held</label>
             <span class="emi-field-val" id="tlExistingDisplay">₹0</span>
           </div>
           <input type="range" id="tlExisting" min="0" max="10000000" step="50000" value="0" oninput="calcCoverAmount()">
