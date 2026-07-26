@@ -88,7 +88,7 @@
         '<li>' + about + '</li>' +
         '<li>' + services + '</li>' +
         '<li class="nav-dropdown" id="loansDropdown">' +
-          '<a onclick="toggleNavDropdown(\'loansDropdown\')"' + dropCls("loans") + '>Loans \u25be</a>' +
+          '<a href="/services" onclick="event.preventDefault();toggleNavDropdown(\'loansDropdown\')"' + dropCls("loans") + '>Loans \u25be</a>' +
           '<ul class="nav-dropdown-menu">' +
             '<li><a href="/business-loans"' + cls("business-loans") + '>Business Loans</a></li>' +
             '<li><a href="/car-loan"' + cls("car-loan") + '>Car Loan</a></li>' +
@@ -98,7 +98,7 @@
           '</ul>' +
         '</li>' +
         '<li class="nav-dropdown" id="insDropdown">' +
-          '<a onclick="toggleNavDropdown(\'insDropdown\')"' + dropCls("insurance") + '>General Insurance \u25be</a>' +
+          '<a href="/insurance" onclick="event.preventDefault();toggleNavDropdown(\'insDropdown\')"' + dropCls("insurance") + '>General Insurance \u25be</a>' +
           '<ul class="nav-dropdown-menu">' +
             '<li><a href="/insurance"' + cls("insurance-hub") + '>All Insurance ↗</a></li>' +
             '<li><a href="/two-wheeler-third-party-insurance"' + cls("two-wheeler") + '>2W Insurance</a></li>' +
@@ -108,7 +108,7 @@
           '</ul>' +
         '</li>' +
         '<li class="nav-dropdown" id="lifeDropdown">' +
-          '<a onclick="toggleNavDropdown(\'lifeDropdown\')"' + dropCls("life") + '>Life Insurance \u25be</a>' +
+          '<a href="/term-life-insurance" onclick="event.preventDefault();toggleNavDropdown(\'lifeDropdown\')"' + dropCls("life") + '>Life Insurance \u25be</a>' +
           '<ul class="nav-dropdown-menu">' +
             '<li><a href="/term-life-insurance"' + cls("term-plan") + '>Term Plan</a></li>' +
           '</ul>' +
