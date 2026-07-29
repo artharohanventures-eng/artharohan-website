@@ -55,7 +55,7 @@
     "personal-loan": "loans",
     "home-loan": "loans",
     "loan-against-property": "loans",
-    "real-estate": "loans",
+    "real-estate": "real-estate",
     "two-wheeler": "insurance",
     "four-wheeler": "insurance",
     "commercial-vehicle": "insurance",
@@ -113,6 +113,12 @@
             '<li><a href="/term-life-insurance"' + cls("term-plan") + '>Term Plan</a></li>' +
           '</ul>' +
         '</li>' +
+        '<li class="nav-dropdown" id="reDropdown">' +
+          '<a href="/real-estate" onclick="event.preventDefault();toggleNavDropdown(\'reDropdown\')"' + dropCls("real-estate") + '>Real Estate \u25be</a>' +
+          '<ul class="nav-dropdown-menu">' +
+            '<li><a href="/real-estate"' + cls("real-estate") + '>Overview</a></li>' +
+          '</ul>' +
+        '</li>' +
         '<li>' + contact + '</li>' +
       '</ul>' +
       '<button class="hamburger" id="hbg" onclick="toggleMobileNav()" aria-label="Toggle menu">' +
@@ -136,6 +142,7 @@
       '<a href="/commercial-vehicle-insurance" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Commercial Vehicle</a>' +
       '<a href="/travel-insurance" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Travel Insurance</a>' +
       '<a href="/term-life-insurance" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Term Plan</a>' +
+      '<a href="/real-estate" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Real Estate</a>' +
       '<a href="https://artharohan.in/contact" onclick="closeMobileNav()" class="nav-cta">Get In Touch</a>' +
     '</div>';
 
