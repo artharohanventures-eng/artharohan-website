@@ -57,6 +57,7 @@
     "loan-against-property": "loans",
     "real-estate": "real-estate",
     "real-estate-uttam-nagar": "real-estate",
+    "real-estate-tilak-nagar": "real-estate",
     "two-wheeler": "insurance",
     "four-wheeler": "insurance",
     "commercial-vehicle": "insurance",
@@ -119,6 +120,7 @@
           '<ul class="nav-dropdown-menu">' +
             '<li><a href="/real-estate"' + cls("real-estate") + '>Overview</a></li>' +
             '<li><a href="/real-estate-uttam-nagar"' + cls("real-estate-uttam-nagar") + '>Uttam Nagar</a></li>' +
+            '<li><a href="/real-estate-tilak-nagar"' + cls("real-estate-tilak-nagar") + '>Tilak Nagar</a></li>' +
           '</ul>' +
         '</li>' +
         '<li>' + contact + '</li>' +
@@ -146,6 +148,7 @@
       '<a href="/term-life-insurance" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Term Plan</a>' +
       '<a href="/real-estate" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Real Estate</a>' +
       '<a href="/real-estate-uttam-nagar" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Uttam Nagar</a>' +
+      '<a href="/real-estate-tilak-nagar" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Tilak Nagar</a>' +
       '<a href="https://artharohan.in/contact" onclick="closeMobileNav()" class="nav-cta">Get In Touch</a>' +
     '</div>';
 
