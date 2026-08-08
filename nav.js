@@ -4,10 +4,14 @@
    This is the ONLY place the navigation menu should be edited.
    Every page loads this file and gets the same nav automatically.
 
-   FIXED 08-Aug-2026: dropdown parent links (Loans, Insurance,
-   Life Insurance, Real Estate) now navigate normally on click.
-   Dropdowns open on hover (desktop) via CSS instead of blocking
-   the click with event.preventDefault().
+   FIXED 08-Aug-2026 (earlier): dropdown parent links now navigate
+   normally on click; dropdowns open on hover (desktop) via CSS.
+
+   ADDED 08-Aug-2026: site-wide conversion tracking. Any click on
+   a WhatsApp (wa.me) link or a tel: link now fires a GA4 event
+   automatically, on every page that loads this file. This is the
+   fix for "we have no idea which page/button actually produces a
+   WhatsApp click" — one edit here, tracked everywhere, forever.
 
    HOW TO USE ON A NEW PAGE:
    1. Put this where the nav should appear:
@@ -60,6 +64,7 @@
     "real-estate": "real-estate",
     "real-estate-uttam-nagar": "real-estate",
     "real-estate-tilak-nagar": "real-estate",
+    "real-estate-janakpuri": "real-estate",
     "two-wheeler": "insurance",
     "four-wheeler": "insurance",
     "commercial-vehicle": "insurance",
@@ -123,6 +128,7 @@
             '<li><a href="/real-estate"' + cls("real-estate") + '>Overview</a></li>' +
             '<li><a href="/real-estate-uttam-nagar"' + cls("real-estate-uttam-nagar") + '>Uttam Nagar</a></li>' +
             '<li><a href="/real-estate-tilak-nagar"' + cls("real-estate-tilak-nagar") + '>Tilak Nagar</a></li>' +
+            '<li><a href="/real-estate-janakpuri"' + cls("real-estate-janakpuri") + '>Janakpuri</a></li>' +
           '</ul>' +
         '</li>' +
         '<li>' + contact + '</li>' +
@@ -151,6 +157,7 @@
       '<a href="/real-estate" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Real Estate</a>' +
       '<a href="/real-estate-uttam-nagar" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Uttam Nagar</a>' +
       '<a href="/real-estate-tilak-nagar" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Tilak Nagar</a>' +
+      '<a href="/real-estate-janakpuri" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Janakpuri</a>' +
       '<a href="https://artharohan.in/contact" onclick="closeMobileNav()" class="nav-cta">Get In Touch</a>' +
     '</div>';
 
@@ -192,4 +199,32 @@
     if (mn) mn.classList.remove("open");
     if (hbg) hbg.classList.remove("open");
   };
+
+  /* ============================================================
+     SITE-WIDE CONVERSION TRACKING
+     Fires on every WhatsApp (wa.me) click and every tel: click,
+     anywhere on the site, automatically — no per-page setup.
+     Shows up in GA4 as events "whatsapp_click" and "phone_click".
+     ============================================================ */
+  document.addEventListener("click", function (e) {
+    if (typeof gtag !== "function") return;
+
+    var waLink = e.target.closest('a[href*="wa.me"], a[href*="api.whatsapp.com"]');
+    if (waLink) {
+      gtag("event", "whatsapp_click", {
+        link_url: waLink.href,
+        page_path: window.location.pathname,
+        page_title: document.title
+      });
+    }
+
+    var telLink = e.target.closest('a[href^="tel:"]');
+    if (telLink) {
+      gtag("event", "phone_click", {
+        link_url: telLink.href,
+        page_path: window.location.pathname,
+        page_title: document.title
+      });
+    }
+  });
 })();
