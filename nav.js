@@ -66,6 +66,7 @@
     "real-estate-tilak-nagar": "real-estate",
     "real-estate-janakpuri": "real-estate",
     "real-estate-vikaspuri": "real-estate",
+    "real-estate-ashok-nagar": "real-estate",
     "two-wheeler": "insurance",
     "four-wheeler": "insurance",
     "commercial-vehicle": "insurance",
@@ -131,6 +132,7 @@
             '<li><a href="/real-estate-tilak-nagar"' + cls("real-estate-tilak-nagar") + '>Tilak Nagar</a></li>' +
             '<li><a href="/real-estate-janakpuri"' + cls("real-estate-janakpuri") + '>Janakpuri</a></li>' +
             '<li><a href="/real-estate-vikaspuri"' + cls("real-estate-vikaspuri") + '>Vikaspuri</a></li>' +
+            '<li><a href="/real-estate-ashok-nagar"' + cls("real-estate-ashok-nagar") + '>Ashok Nagar</a></li>' +
           '</ul>' +
         '</li>' +
         '<li>' + contact + '</li>' +
@@ -161,6 +163,7 @@
       '<a href="/real-estate-tilak-nagar" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Tilak Nagar</a>' +
       '<a href="/real-estate-janakpuri" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Janakpuri</a>' +
       '<a href="/real-estate-vikaspuri" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Vikaspuri</a>' +
+      '<a href="/real-estate-ashok-nagar" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Ashok Nagar</a>' +
       '<a href="https://artharohan.in/contact" onclick="closeMobileNav()" class="nav-cta">Get In Touch</a>' +
     '</div>';
 
