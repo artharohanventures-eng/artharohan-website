@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7484251090394351"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZYJ4T9ENWL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZYJ4T9ENWL');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compound Interest Calculator — See How Money Grows | Artharohan</title>
+<meta name="description" content="Free compound interest calculator. Enter your principal, rate, and time period to see how a lump sum grows. Real formula, honest disclaimers, no sign-up.">
+<link rel="canonical" href="https://artharohan.in/compound-interest-calculator">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:title" content="Compound Interest Calculator | Artharohan">
+<meta property="og:description" content="See how a lump sum grows over time with compound interest. Free, honest, real formula.">
+<meta property="og:url" content="https://artharohan.in/compound-interest-calculator">
+<meta property="og:image" content="https://artharohan.in/og-image.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://artharohan.in/og-image.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://artharohan.in/compound-interest-calculator",
+      "url": "https://artharohan.in/compound-interest-calculator",
+      "name": "Compound Interest Calculator",
+      "description": "Free compound interest calculator to project the future value of a lump sum investment.",
+      "inLanguage": "en-IN",
+      "isPartOf": { "@id": "https://artharohan.in/#website" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the compound interest formula?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A = P x (1+r)^t, where A is the final amount, P is the principal (starting amount), r is the annual interest rate as a decimal, and t is the number of years. This calculator uses annual compounding, the most commonly used convention for this type of illustration." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between compound interest and simple interest?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Simple interest is calculated only on the original principal every year. Compound interest is calculated on the principal plus all previously accumulated interest, so the growth accelerates over time. Over long periods, this difference becomes very significant." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this calculator for a specific investment product?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. This is a generic, illustrative calculator showing how compound growth works mathematically. It does not represent the guaranteed return of any specific bank deposit, bond, or investment product. Actual rates vary by product and are subject to change." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0B1E3D; --navy-light: #142B52; --navy-mid: #16305C;
+    --gold: #C9A84A; --gold-light: #DDBE6E;
+    --cream: #F3EFE6; --muted: #B9C2D0; --nav-h: 68px;
+  }
+  * { box-sizing: border-box; }
+  body { font-family: "Inter", sans-serif; background: var(--navy); color: var(--muted); margin: 0; padding-top: var(--nav-h); }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 44px 5% 80px; }
+  .kicker { font-size: 0.76rem; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 14px; display: block; }
+  h1 { font-family: "Playfair Display", serif; color: var(--cream); font-size: clamp(1.9rem, 3.8vw, 2.6rem); line-height: 1.2; margin: 0 0 14px; }
+  h2 { font-family: "Playfair Display", serif; color: var(--cream); font-size: clamp(1.4rem, 2.4vw, 1.75rem); margin: 0 0 14px; }
+  .lede { font-size: 1.02rem; line-height: 1.7; color: var(--muted); max-width: 62ch; margin-bottom: 36px; }
+  p { line-height: 1.7; }
+  a { color: var(--gold-light); }
+
+  .calc-box { background: var(--navy-light); border: 1px solid rgba(201,168,68,0.25); border-radius: 14px; padding: 30px 28px; margin-bottom: 40px; }
+  .calc-inputs { display: grid; gap: 24px; margin-bottom: 28px; }
+  .calc-field-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+  .calc-field-top label { font-size: 0.85rem; font-weight: 600; color: var(--cream); }
+  .calc-field-val-wrap { font-family: monospace; font-size: 1rem; font-weight: 700; color: var(--gold-light); display: flex; align-items: center; gap: 4px; }
+  .field-num { width: 90px; background: var(--navy); border: 1px solid rgba(201,168,68,0.3); border-radius: 4px; color: var(--gold-light); font-family: monospace; font-size: 0.95rem; font-weight: 700; padding: 4px 6px; text-align: right; }
+  .field-num:focus { outline: none; border-color: var(--gold); }
+  @media (max-width: 380px) { .field-num { width: 74px; } }
+  input[type="range"] { width: 100%; height: 4px; border-radius: 2px; background: rgba(201,168,68,0.2); appearance: none; -webkit-appearance: none; outline: none; }
+  input[type="range"]::-webkit-slider-thumb { appearance: none; -webkit-appearance: none; width: 20px; height: 20px; border-radius: 50%; background: var(--gold); cursor: pointer; border: 3px solid var(--navy-light); box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+  input[type="range"]::-moz-range-thumb { width: 20px; height: 20px; border-radius: 50%; background: var(--gold); cursor: pointer; border: 3px solid var(--navy-light); }
+
+  .result-box { background: var(--navy); border-radius: 12px; padding: 26px 24px; text-align: center; }
+  .result-label { color: var(--muted); font-size: 0.82rem; margin-bottom: 6px; }
+  .result-val { font-family: monospace; color: var(--gold-light); font-size: 2.2rem; font-weight: 700; margin-bottom: 18px; }
+  .result-sub-row { display: flex; justify-content: space-around; border-top: 1px solid rgba(201,168,68,0.15); padding-top: 14px; flex-wrap: wrap; gap: 12px; }
+  .result-sub-row div { text-align: center; min-width: 120px; }
+  .result-sub-row span { display: block; color: var(--muted); font-size: 0.74rem; }
+  .result-sub-row b { color: var(--cream); font-family: monospace; font-size: 0.95rem; }
+
+  .btn-wa { display: block; width: 100%; text-align: center; background: #25D366; color: #fff; font-weight: 700; padding: 14px; border-radius: 8px; text-decoration: none; margin-top: 20px; font-size: 0.95rem; }
+  .btn-wa:hover { background: #20bd5a; }
+
+  .disclaimer-box { background: rgba(201,168,68,0.06); border: 1px solid rgba(201,168,68,0.2); border-radius: 8px; padding: 16px 20px; font-size: 0.82rem; line-height: 1.65; color: var(--muted); margin-top: 16px; }
+  .disclaimer-box strong { color: var(--gold-light); }
+
+  .content-section { margin-bottom: 40px; }
+  .content-section p { color: var(--muted); font-size: 0.96rem; }
+
+  .faq-item { border-bottom: 1px solid rgba(201,168,68,0.1); padding: 16px 0; }
+  .faq-item h3 { font-size: 0.98rem; color: var(--cream); margin: 0 0 8px; font-weight: 600; }
+  .faq-item p { font-size: 0.9rem; margin: 0; }
+
+  .cross-sell { background: var(--navy-light); border: 1px solid rgba(201,168,68,0.2); border-radius: 12px; padding: 28px 26px; margin: 36px 0; }
+  .cross-sell h2 { font-size: clamp(1.2rem, 2vw, 1.5rem); }
+  .cross-sell-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .cross-sell-card { background: var(--navy); border: 1px solid rgba(201,168,68,0.15); border-radius: 10px; padding: 20px; text-decoration: none; display: block; transition: border-color 0.2s; }
+  .cross-sell-card:hover { border-color: rgba(201,168,68,0.5); }
+  .cs-icon { font-size: 1.4rem; display: block; margin-bottom: 8px; }
+  .cross-sell-card h3 { font-family: "Playfair Display", serif; color: var(--gold-light); font-size: 1rem; margin: 0 0 6px; }
+  .cross-sell-card p { color: var(--muted); font-size: 0.86rem; margin: 0; line-height: 1.5; }
+  @media (max-width: 600px) { .cross-sell-grid { grid-template-columns: 1fr; } }
+
+  .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 18px; }
+  .related-card { background: var(--navy-light); border: 1px solid rgba(201,168,68,0.15); border-radius: 10px; padding: 20px; text-decoration: none; display: block; transition: border-color 0.2s, transform 0.2s; }
+  .related-card:hover { border-color: rgba(201,168,68,0.5); transform: translateY(-2px); }
+  .rc-icon { font-size: 1.3rem; display: block; margin-bottom: 8px; }
+  .related-card h3 { font-family: "Playfair Display", serif; color: var(--gold-light); font-size: 0.98rem; margin: 0 0 6px; }
+  .related-card p { color: var(--muted); font-size: 0.85rem; margin: 0; line-height: 1.5; }
+
+  .ad-slot { margin: 8px 0 36px; min-height: 90px; max-height: 90px; overflow: hidden; text-align: center; }
+
+  footer { padding: 36px 5%; text-align: center; background: var(--navy); border-top: 1px solid rgba(201,168,68,0.1); margin-top: 40px; }
+  .footer-brand { font-family: "Playfair Display",serif; color: var(--gold); font-size: 1rem; font-weight: 700; }
+  .footer-tagline { color: var(--muted); font-size: 0.8rem; margin-top: 4px; margin-bottom: 16px; }
+  .footer-nav { list-style: none; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; font-size: 0.85rem; margin-bottom: 14px; padding: 0; }
+  .footer-nav a { color: var(--muted); text-decoration: none; }
+  .footer-nav a:hover { color: var(--gold); }
+  .footer-copy { font-size: 0.75rem; color: var(--muted); }
+
+  nav { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h); display: flex; align-items: center; justify-content: space-between; padding: 0 5%; background: var(--navy); z-index: 200; border-bottom: 1px solid rgba(201,168,68,0.15); }
+  .nav-logo { display: flex; align-items: center; gap: 10px; }
+  .nav-mark { width: 34px; height: 34px; border: 1.5px solid var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--gold); font-weight: 700; font-size: 0.9rem; }
+  .nav-brand { font-family: "Playfair Display",serif; color: var(--gold); font-size: 1.1rem; font-weight: 700; letter-spacing: 1.5px; }
+  .nav-links { display: flex; align-items: center; gap: 1.7rem; list-style: none; height: 100%; margin: 0; padding: 0; }
+  .nav-links a { display: flex; align-items: center; height: 100%; color: var(--muted); text-decoration: none; font-size: 0.85rem; font-weight: 500; cursor: pointer; white-space: nowrap; }
+  .nav-links a.active { color: var(--gold); }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+  .hamburger span { display: block; width: 22px; height: 2px; background: var(--gold); border-radius: 2px; }
+  .mobile-nav { display: none; position: fixed; top: var(--nav-h); left: 0; right: 0; bottom: 0; background: var(--navy-mid); z-index: 199; flex-direction: column; padding: 1rem 5%; overflow-y: auto; }
+  .mobile-nav.open { display: flex; }
+  .mobile-nav a { color: var(--muted); font-size: 0.95rem; font-weight: 500; padding: 12px 0; border-bottom: 1px solid rgba(201,168,68,0.08); }
+  @media (max-width: 900px) { .nav-links { display: none; } .hamburger { display: flex; } }
+  .nav-cta { background: var(--gold); color: var(--navy) !important; padding: 8px 16px; border-radius: 4px; font-weight: 700 !important; }
+
+  @media (max-width: 600px) { .result-val { font-size: 1.7rem; } }
+</style>
+</head>
+<body>
+
+<div id="site-nav"></div>
+<script>
+  var SITE_NAV_CURRENT = "compound-interest-calculator";
+</script>
+<script src="nav.js"></script>
+
+<div style="background:var(--navy-light);padding:9px 5%;font-size:0.76rem;color:var(--muted);text-align:center;">Free tool · No sign-up required</div>
+
+<div class="wrap">
+  <span class="kicker">Free Tool</span>
+  <h1>Compound Interest Calculator</h1>
+  <p class="lede">See how a lump sum could grow over time. Move the sliders or type your own numbers, get the real math instantly, no sign-up.</p>
+
+  <div class="calc-box">
+    <div class="calc-inputs">
+      <div>
+        <div class="calc-field-top"><label for="ci-principal">Principal Amount</label><span class="calc-field-val-wrap">₹<input type="number" id="ci-principal-num" class="field-num" value="100000" min="1000" max="10000000" step="1000"></span></div>
+        <input type="range" id="ci-principal" min="1000" max="10000000" step="1000" value="100000">
+      </div>
+      <div>
+        <div class="calc-field-top"><label for="ci-rate">Annual Interest Rate</label><span class="calc-field-val-wrap"><input type="number" id="ci-rate-num" class="field-num" value="8" min="1" max="20" step="0.25">%</span></div>
+        <input type="range" id="ci-rate" min="1" max="20" step="0.25" value="8">
+      </div>
+      <div>
+        <div class="calc-field-top"><label for="ci-years">Time Period</label><span class="calc-field-val-wrap"><input type="number" id="ci-years-num" class="field-num" value="10" min="1" max="40" step="1">yrs</span></div>
+        <input type="range" id="ci-years" min="1" max="40" step="1" value="10">
+      </div>
+    </div>
+
+    <div class="result-box">
+      <div class="result-label">Final Value</div>
+      <div class="result-val" id="fv-display">₹2,15,892</div>
+      <div class="result-sub-row">
+        <div><span>Principal</span><b id="principal-display">₹1,00,000</b></div>
+        <div><span>Interest Gained</span><b id="gain-display">₹1,15,892</b></div>
+      </div>
+    </div>
+
+    <a href="#" id="ci-wa-btn" target="_blank" rel="noopener noreferrer" class="btn-wa">💬 Talk to Us About Your Goal →</a>
+
+    <div class="disclaimer-box">
+      <strong>Important:</strong> This is an illustrative calculation using annual compounding, not a guarantee or a promise of return. It does not represent any specific bank deposit, bond, or investment product. Actual rates vary by product, lender, and market conditions, and are subject to change. This calculator does not recommend any specific investment product. For personalized investment advice, consult a SEBI-registered investment adviser.
+    </div>
+  </div>
+
+  <script>
+    function fmtINR(n) { return '₹' + Math.round(n).toLocaleString('en-IN'); }
+
+    function linkSliderAndNumber(sliderId, numId, onChange) {
+      var slider = document.getElementById(sliderId);
+      var num = document.getElementById(numId);
+
+      slider.addEventListener('input', function () {
+        num.value = slider.value;
+        onChange();
+      });
+
+      num.addEventListener('input', function () {
+        var val = parseFloat(num.value);
+        if (!isNaN(val)) {
+          var min = parseFloat(slider.min), max = parseFloat(slider.max);
+          slider.value = Math.max(min, Math.min(max, val));
+          onChange();
+        }
+      });
+
+      num.addEventListener('blur', function () {
+        var min = parseFloat(slider.min), max = parseFloat(slider.max);
+        var val = parseFloat(num.value);
+        if (isNaN(val)) val = min;
+        val = Math.max(min, Math.min(max, val));
+        num.value = val;
+        slider.value = val;
+        onChange();
+      });
+    }
+
+    function calcCI() {
+      var P = parseFloat(document.getElementById('ci-principal-num').value) || 0;
+      var annualRate = parseFloat(document.getElementById('ci-rate-num').value) || 0;
+      var years = parseFloat(document.getElementById('ci-years-num').value) || 0;
+      var r = annualRate / 100;
+
+      var fv = P * Math.pow(1 + r, years);
+      var gain = fv - P;
+
+      document.getElementById('fv-display').textContent = fmtINR(fv);
+      document.getElementById('principal-display').textContent = fmtINR(P);
+      document.getElementById('gain-display').textContent = fmtINR(gain);
+
+      var waText = 'Hello Artharohan! I used the Compound Interest calculator:\n\n'
+        + 'Principal: ' + fmtINR(P) + '\n'
+        + 'Annual Rate: ' + annualRate.toFixed(2) + '%\n'
+        + 'Time Period: ' + years + ' years\n'
+        + 'Final Value: ' + fmtINR(fv) + '\n\n'
+        + 'I would like to talk about my investment goal.';
+      document.getElementById('ci-wa-btn').href = 'https://wa.me/917838355855?text=' + encodeURIComponent(waText);
+    }
+
+    linkSliderAndNumber('ci-principal', 'ci-principal-num', calcCI);
+    linkSliderAndNumber('ci-rate', 'ci-rate-num', calcCI);
+    linkSliderAndNumber('ci-years', 'ci-years-num', calcCI);
+    calcCI();
+  </script>
+
+  <div class="cross-sell">
+    <h2 style="margin-bottom:6px;">Don't have a lump sum to invest?</h2>
+    <p style="color:var(--muted);font-size:0.95rem;margin-bottom:20px;">Most people build wealth monthly, not all at once. These are worth a look too.</p>
+    <div class="cross-sell-grid">
+      <a href="/sip-calculator" class="cross-sell-card">
+        <span class="cs-icon">📈</span>
+        <h3>SIP Calculator</h3>
+        <p>See what a monthly investment could grow into instead of a lump sum.</p>
+      </a>
+      <a href="/term-life-insurance" class="cross-sell-card">
+        <span class="cs-icon">🛡️</span>
+        <h3>Term Life Insurance</h3>
+        <p>Protect the family that benefits from this wealth, while you build it.</p>
+      </a>
+    </div>
+  </div>
+
+  <div class="ad-slot">
+    <ins class="adsbygoogle"
+      style="display:inline-block;width:100%;max-width:728px;height:90px"
+      data-ad-client="ca-pub-7484251090394351"
+      data-ad-slot="0000000000"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <div class="content-section">
+    <h2>How This Calculator Works</h2>
+    <p>Compound interest grows your money on both the original amount and all previously earned interest, not just the original amount alone. This calculator uses the standard annual compounding formula:</p>
+    <p style="font-family:monospace;background:var(--navy-light);padding:14px 18px;border-radius:8px;font-size:0.88rem;">A = P &times; (1+r)^t</p>
+    <p>Where P is your principal (starting amount), r is the annual interest rate as a decimal, and t is the number of years. This is the standard mathematical formula commonly used to illustrate compound growth, using annual compounding as the convention.</p>
+  </div>
+
+  <div class="content-section">
+    <h2>Why Time Matters More Than Rate</h2>
+    <p>Try the years slider at 5, then 20, then 40, keeping the rate fixed. The growth isn't linear, it accelerates, because each year's interest starts earning interest of its own. This is why starting early, even with a smaller amount, often outperforms starting later with more money. Compound interest rewards time in the market far more than it rewards timing the market.</p>
+  </div>
+
+  <div class="content-section">
+    <h2>Common Questions</h2>
+    <div class="faq-item">
+      <h3>What is the compound interest formula?</h3>
+      <p>A = P &times; (1+r)^t, using annual compounding — shown in full above.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What's the difference between compound and simple interest?</h3>
+      <p>Simple interest is calculated only on the original principal each year. Compound interest is calculated on the principal plus all previously earned interest, so growth accelerates over time.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is this calculator for a specific investment product?</h3>
+      <p>No. It's a generic, illustrative tool showing how compound growth works mathematically. It doesn't represent any specific deposit, bond, or investment product's guaranteed return.</p>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>Related</h2>
+    <div class="related-grid">
+      <a href="/sip-calculator" class="related-card">
+        <span class="rc-icon">📈</span>
+        <h3>SIP Calculator</h3>
+        <p>The same growth math, applied to monthly investments instead of a lump sum.</p>
+      </a>
+      <a href="/home-loan-emi-calculator" class="related-card">
+        <span class="rc-icon">🏠</span>
+        <h3>Home Loan EMI Calculator</h3>
+        <p>Planning a large purchase instead of investing? Check your EMI here.</p>
+      </a>
+      <a href="/tools" class="related-card">
+        <span class="rc-icon">🧮</span>
+        <h3>All Tools</h3>
+        <p>Every free calculator on the site, in one place.</p>
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-brand">अर्थारोहण &nbsp;·&nbsp; ARTHAROHAN</div>
+  <div class="footer-tagline">Sahi Jaankari. Sahi Faisla.</div>
+  <ul class="footer-nav">
+    <li><a href="https://artharohan.in">Home</a></li>
+    <li><a href="https://artharohan.in/about">About</a></li>
+    <li><a href="https://artharohan.in/services">Services</a></li>
+    <li><a href="https://artharohan.in/home-loan">Home Loan</a></li>
+    <li><a href="https://artharohan.in/business-loans">Business Loans</a></li>
+    <li><a href="https://artharohan.in/insurance">All Insurance</a></li>
+    <li><a href="https://artharohan.in/real-estate">Real Estate</a></li>
+    <li><a href="https://artharohan.in/tools">Tools</a></li>
+    <li><a href="https://artharohan.in/contact">Contact</a></li>
+    <li><a href="https://artharohan.in/privacy-policy">Privacy Policy</a></li>
+    <li><a href="https://artharohan.in/terms">Terms</a></li>
+  </ul>
+  <p class="footer-copy">© 2026 Artharohan Ventures · UDYAM-DL-11-0113585 · artharohan.in · Delhi NCR · All rights reserved.</p>
+</footer>
+
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"31559885dd864c759d90c333d138c11b","r":1}' crossorigin="anonymous"></script>
+</body>
+</html>
