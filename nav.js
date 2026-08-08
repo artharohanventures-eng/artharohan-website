@@ -72,7 +72,13 @@
     "commercial-vehicle": "insurance",
     "travel-insurance": "insurance",
     "insurance-hub": "insurance",
-    "term-plan": "life"
+    "term-plan": "life",
+    "tools-hub": "tools",
+    "sip-calculator": "tools",
+    "home-loan-emi-calculator": "tools",
+    "personal-loan-emi-calculator": "tools",
+    "compound-interest-calculator": "tools",
+    "business-loan-emi-calculator": "tools"
   };
   var activeGroup = groupOf[current] || "";
 
@@ -135,6 +141,17 @@
             '<li><a href="/real-estate-ashok-nagar"' + cls("real-estate-ashok-nagar") + '>Ashok Nagar</a></li>' +
           '</ul>' +
         '</li>' +
+        '<li class="nav-dropdown" id="toolsDropdown">' +
+          '<a href="/tools"' + dropCls("tools") + '>Tools \u25be</a>' +
+          '<ul class="nav-dropdown-menu">' +
+            '<li><a href="/tools"' + cls("tools-hub") + '>All Tools ↗</a></li>' +
+            '<li><a href="/sip-calculator"' + cls("sip-calculator") + '>SIP Calculator</a></li>' +
+            '<li><a href="/home-loan-emi-calculator"' + cls("home-loan-emi-calculator") + '>Home Loan EMI</a></li>' +
+            '<li><a href="/personal-loan-emi-calculator"' + cls("personal-loan-emi-calculator") + '>Personal Loan EMI</a></li>' +
+            '<li><a href="/compound-interest-calculator"' + cls("compound-interest-calculator") + '>Compound Interest</a></li>' +
+            '<li><a href="/business-loan-emi-calculator"' + cls("business-loan-emi-calculator") + '>Business Loan EMI</a></li>' +
+          '</ul>' +
+        '</li>' +
         '<li>' + contact + '</li>' +
       '</ul>' +
       '<button class="hamburger" id="hbg" onclick="toggleMobileNav()" aria-label="Toggle menu">' +
@@ -164,6 +181,12 @@
       '<a href="/real-estate-janakpuri" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Janakpuri</a>' +
       '<a href="/real-estate-vikaspuri" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Vikaspuri</a>' +
       '<a href="/real-estate-ashok-nagar" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Ashok Nagar</a>' +
+      '<a href="/tools" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">All Tools</a>' +
+      '<a href="/sip-calculator" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">SIP Calculator</a>' +
+      '<a href="/home-loan-emi-calculator" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Home Loan EMI</a>' +
+      '<a href="/personal-loan-emi-calculator" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Personal Loan EMI</a>' +
+      '<a href="/compound-interest-calculator" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Compound Interest</a>' +
+      '<a href="/business-loan-emi-calculator" onclick="closeMobileNav()" style="color:var(--gold);font-weight:600;">Business Loan EMI</a>' +
       '<a href="https://artharohan.in/contact" onclick="closeMobileNav()" class="nav-cta">Get In Touch</a>' +
     '</div>';
 
