@@ -4,9 +4,10 @@
    This is the ONLY place the navigation menu should be edited.
    Every page loads this file and gets the same nav automatically.
 
-   FIXED 26-Jul-2026: all internal links now use clean canonical
-   URLs (e.g. /business-loans) instead of .html — matches the
-   canonical/og:url tags already in every page's <head>.
+   FIXED 08-Aug-2026: dropdown parent links (Loans, Insurance,
+   Life Insurance, Real Estate) now navigate normally on click.
+   Dropdowns open on hover (desktop) via CSS instead of blocking
+   the click with event.preventDefault().
 
    HOW TO USE ON A NEW PAGE:
    1. Put this where the nav should appear:
@@ -41,6 +42,7 @@
       ".nav-dropdown{position:relative;}" +
       ".nav-dropdown-menu{display:none;position:absolute;top:100%;right:0;background:var(--navy-light);min-width:190px;list-style:none;margin:0;padding:8px 0;border-radius:8px;box-shadow:0 10px 24px rgba(0,0,0,0.35);z-index:500;}" +
       ".nav-dropdown.open .nav-dropdown-menu{display:block;}" +
+      ".nav-dropdown:hover .nav-dropdown-menu{display:block;}" +
       ".nav-dropdown-menu li{height:auto;}" +
       ".nav-dropdown-menu li a{height:auto;padding:10px 16px;white-space:nowrap;color:var(--cream);}" +
       ".nav-dropdown-menu li a:hover{background:rgba(255,255,255,0.06);}";
@@ -90,7 +92,7 @@
         '<li>' + about + '</li>' +
         '<li>' + services + '</li>' +
         '<li class="nav-dropdown" id="loansDropdown">' +
-          '<a href="/services" onclick="event.preventDefault();toggleNavDropdown(\'loansDropdown\')"' + dropCls("loans") + '>Loans \u25be</a>' +
+          '<a href="/services"' + dropCls("loans") + '>Loans \u25be</a>' +
           '<ul class="nav-dropdown-menu">' +
             '<li><a href="/business-loans"' + cls("business-loans") + '>Business Loans</a></li>' +
             '<li><a href="/car-loan"' + cls("car-loan") + '>Car Loan</a></li>' +
@@ -100,7 +102,7 @@
           '</ul>' +
         '</li>' +
         '<li class="nav-dropdown" id="insDropdown">' +
-          '<a href="/insurance" onclick="event.preventDefault();toggleNavDropdown(\'insDropdown\')"' + dropCls("insurance") + '>General Insurance \u25be</a>' +
+          '<a href="/insurance"' + dropCls("insurance") + '>General Insurance \u25be</a>' +
           '<ul class="nav-dropdown-menu">' +
             '<li><a href="/insurance"' + cls("insurance-hub") + '>All Insurance ↗</a></li>' +
             '<li><a href="/two-wheeler-third-party-insurance"' + cls("two-wheeler") + '>2W Insurance</a></li>' +
@@ -110,13 +112,13 @@
           '</ul>' +
         '</li>' +
         '<li class="nav-dropdown" id="lifeDropdown">' +
-          '<a href="/term-life-insurance" onclick="event.preventDefault();toggleNavDropdown(\'lifeDropdown\')"' + dropCls("life") + '>Life Insurance \u25be</a>' +
+          '<a href="/term-life-insurance"' + dropCls("life") + '>Life Insurance \u25be</a>' +
           '<ul class="nav-dropdown-menu">' +
             '<li><a href="/term-life-insurance"' + cls("term-plan") + '>Term Plan</a></li>' +
           '</ul>' +
         '</li>' +
         '<li class="nav-dropdown" id="reDropdown">' +
-          '<a href="/real-estate" onclick="event.preventDefault();toggleNavDropdown(\'reDropdown\')"' + dropCls("real-estate") + '>Real Estate \u25be</a>' +
+          '<a href="/real-estate"' + dropCls("real-estate") + '>Real Estate \u25be</a>' +
           '<ul class="nav-dropdown-menu">' +
             '<li><a href="/real-estate"' + cls("real-estate") + '>Overview</a></li>' +
             '<li><a href="/real-estate-uttam-nagar"' + cls("real-estate-uttam-nagar") + '>Uttam Nagar</a></li>' +
