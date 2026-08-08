@@ -85,6 +85,10 @@
   .calc-inputs { display: grid; gap: 24px; margin-bottom: 28px; }
   .calc-field-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
   .calc-field-top label { font-size: 0.85rem; font-weight: 600; color: var(--cream); }
+  .calc-field-val-wrap { font-family: monospace; font-size: 1rem; font-weight: 700; color: var(--gold-light); display: flex; align-items: center; gap: 4px; }
+  .field-num { width: 90px; background: var(--navy); border: 1px solid rgba(201,168,68,0.3); border-radius: 4px; color: var(--gold-light); font-family: monospace; font-size: 0.95rem; font-weight: 700; padding: 4px 6px; text-align: right; }
+  .field-num:focus { outline: none; border-color: var(--gold); }
+  @media (max-width: 380px) { .field-num { width: 74px; } }
   .calc-field-val { font-family: monospace; font-size: 1rem; font-weight: 700; color: var(--gold-light); }
   input[type="range"] { width: 100%; height: 4px; border-radius: 2px; background: rgba(201,168,68,0.2); appearance: none; -webkit-appearance: none; outline: none; }
   input[type="range"]::-webkit-slider-thumb { appearance: none; -webkit-appearance: none; width: 20px; height: 20px; border-radius: 50%; background: var(--gold); cursor: pointer; border: 3px solid var(--navy-light); box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
@@ -174,15 +178,15 @@
   <div class="calc-box">
     <div class="calc-inputs">
       <div>
-        <div class="calc-field-top"><label for="loan-amount">Loan Amount</label><span class="calc-field-val" id="amt-display">₹30,00,000</span></div>
+        <div class="calc-field-top"><label for="loan-amount">Loan Amount</label><span class="calc-field-val-wrap">₹<input type="number" id="loan-amount-num" class="field-num" value="3000000" min="500000" max="30000000" step="100000"></span></div>
         <input type="range" id="loan-amount" min="500000" max="30000000" step="100000" value="3000000">
       </div>
       <div>
-        <div class="calc-field-top"><label for="loan-rate">Interest Rate</label><span class="calc-field-val" id="rate-display">8.5%</span></div>
+        <div class="calc-field-top"><label for="loan-rate">Interest Rate</label><span class="calc-field-val-wrap"><input type="number" id="loan-rate-num" class="field-num" value="8.5" min="6.5" max="14" step="0.05">%</span></div>
         <input type="range" id="loan-rate" min="6.5" max="14" step="0.05" value="8.5">
       </div>
       <div>
-        <div class="calc-field-top"><label for="loan-tenure">Tenure</label><span class="calc-field-val" id="tenure-display">20 years</span></div>
+        <div class="calc-field-top"><label for="loan-tenure">Tenure</label><span class="calc-field-val-wrap"><input type="number" id="loan-tenure-num" class="field-num" value="20" min="1" max="30" step="1">yrs</span></div>
         <input type="range" id="loan-tenure" min="1" max="30" step="1" value="20">
       </div>
     </div>
@@ -205,18 +209,44 @@
 
   <script>
     function fmtINR(n) { return '₹' + Math.round(n).toLocaleString('en-IN'); }
+
+    function linkSliderAndNumber(sliderId, numId, onChange) {
+      var slider = document.getElementById(sliderId);
+      var num = document.getElementById(numId);
+
+      slider.addEventListener('input', function () {
+        num.value = slider.value;
+        onChange();
+      });
+
+      num.addEventListener('input', function () {
+        var val = parseFloat(num.value);
+        if (!isNaN(val)) {
+          var min = parseFloat(slider.min), max = parseFloat(slider.max);
+          slider.value = Math.max(min, Math.min(max, val));
+          onChange();
+        }
+      });
+
+      num.addEventListener('blur', function () {
+        var min = parseFloat(slider.min), max = parseFloat(slider.max);
+        var val = parseFloat(num.value);
+        if (isNaN(val)) val = min;
+        val = Math.max(min, Math.min(max, val));
+        num.value = val;
+        slider.value = val;
+        onChange();
+      });
+    }
+
     function calcEMI() {
-      var P = parseFloat(document.getElementById('loan-amount').value);
-      var annualRate = parseFloat(document.getElementById('loan-rate').value);
-      var years = parseFloat(document.getElementById('loan-tenure').value);
+      var P = parseFloat(document.getElementById('loan-amount-num').value) || 0;
+      var annualRate = parseFloat(document.getElementById('loan-rate-num').value) || 0;
+      var years = parseFloat(document.getElementById('loan-tenure-num').value) || 0;
       var n = years * 12;
       var r = annualRate / 12 / 100;
 
-      document.getElementById('amt-display').textContent = fmtINR(P);
-      document.getElementById('rate-display').textContent = annualRate.toFixed(2) + '%';
-      document.getElementById('tenure-display').textContent = years + (years == 1 ? ' year' : ' years');
-
-      var emi = P * r * Math.pow(1 + r, n) / (Math.pow(1 + r, n) - 1);
+      var emi = r > 0 ? P * r * Math.pow(1 + r, n) / (Math.pow(1 + r, n) - 1) : P / n;
       var totalPayment = emi * n;
       var totalInterest = totalPayment - P;
 
@@ -232,9 +262,10 @@
         + 'Can you confirm this against real lenders?';
       document.getElementById('emi-wa-btn').href = 'https://wa.me/917838355855?text=' + encodeURIComponent(waText);
     }
-    ['loan-amount', 'loan-rate', 'loan-tenure'].forEach(function(id) {
-      document.getElementById(id).addEventListener('input', calcEMI);
-    });
+
+    linkSliderAndNumber('loan-amount', 'loan-amount-num', calcEMI);
+    linkSliderAndNumber('loan-rate', 'loan-rate-num', calcEMI);
+    linkSliderAndNumber('loan-tenure', 'loan-tenure-num', calcEMI);
     calcEMI();
   </script>
 
