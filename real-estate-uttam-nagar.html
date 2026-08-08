@@ -64,7 +64,7 @@
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "21/9, 21 Block, Ashok Nagar",
-    "addressLocality": "Tilak Nagar, West Delhi",
+    "addressLocality": "Uttam Nagar, West Delhi",
     "addressRegion": "Delhi",
     "postalCode": "110018",
     "addressCountry": "IN"
@@ -101,14 +101,16 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
 
 <style>
   :root {
     --navy: #0B1E3D; --navy-light: #142B52; --navy-mid: #16305C;
-    --gold: #C9A84A; --gold-light: #DDBE6E;
+    --gold: #E8B93D; --gold-light: #F4CE6E;
+    --emerald: #3ECF8E; --emerald-dark: #0A2E1F;
     --cream: #F3EFE6; --muted: #B9C2D0; --nav-h: 68px;
   }
+  .mono { font-family: "JetBrains Mono", monospace; }
   .inner { max-width: 1100px; margin: 0 auto; }
   nav { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h); display: flex; align-items: center; justify-content: space-between; padding: 0 5%; background: var(--navy); z-index: 200; border-bottom: 1px solid rgba(201,168,68,0.15); }
   .nav-logo { display: flex; align-items: center; gap: 10px; }
@@ -151,14 +153,29 @@
   }
 
   /* ===== Hero with top-right image ===== */
-  .hero { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 44px; align-items: center; margin-bottom: 64px; }
+  .hero { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 44px; align-items: center; margin-bottom: 40px; }
   .hero h1 {
-    font-family: "Playfair Display", serif;
+    font-family: "Archivo Black", sans-serif;
     color: var(--cream, #F3EFE6);
-    font-size: clamp(2rem, 4vw, 2.8rem);
-    line-height: 1.2; margin: 0 0 20px; max-width: 17ch;
+    font-size: clamp(1.9rem, 3.6vw, 2.6rem);
+    line-height: 1.18; margin: 0 0 20px; max-width: 15ch;
   }
   .hero p { font-size: 1.08rem; line-height: 1.7; color: var(--muted); max-width: 50ch; margin: 0; }
+  .price-reveal {
+    background: rgba(232,185,61,0.06); border: 1px solid rgba(232,185,61,0.3);
+    border-radius: 10px; padding: 22px 24px; margin: 24px 0 0; max-width: 480px;
+  }
+  .price-reveal .label { font-size: 0.7rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); font-weight: 700; margin-bottom: 10px; }
+  .price-reveal .nums { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+  .price-reveal .old-price { font-family: "JetBrains Mono", monospace; font-size: 1.15rem; color: #7A8399; text-decoration: line-through; text-decoration-color: #C15757; }
+  .price-reveal .new-price { font-family: "JetBrains Mono", monospace; font-size: 1.5rem; color: var(--emerald); font-weight: 600; }
+  .price-reveal .note { font-size: 0.85rem; color: var(--muted); margin-top: 10px; line-height: 1.6; }
+  .mid-cta {
+    display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;
+    background: rgba(232,185,61,0.07); border: 1px solid rgba(232,185,61,0.3);
+    border-radius: 10px; padding: 20px 24px; margin: 0 0 60px; font-size: 0.95rem; line-height: 1.5;
+  }
+  .mid-cta strong { color: var(--cream); }
   .hero-img {
     position: relative;
     border-radius: 10px;
@@ -177,9 +194,9 @@
   }
 
   h2.section-title {
-    font-family: "Playfair Display", serif;
+    font-family: "Archivo Black", sans-serif;
     color: var(--cream, #F3EFE6);
-    font-size: clamp(1.5rem, 2.6vw, 1.9rem);
+    font-size: clamp(1.25rem, 2.2vw, 1.6rem);
     margin: 0 0 8px;
   }
   p.section-sub { font-size: 0.95rem; color: var(--gold); margin: 0 0 28px; }
@@ -253,11 +270,11 @@
   }
   .contact-form select:focus, .contact-form input:focus { outline: none; border-bottom-color: var(--gold); }
   .contact-submit {
-    grid-column: 1 / -1; margin-top: 10px; background: var(--gold); color: var(--navy);
+    grid-column: 1 / -1; margin-top: 10px; background: var(--emerald); color: var(--emerald-dark);
     border: none; border-radius: 4px; font-weight: 700; font-size: 0.95rem;
     padding: 14px 26px; cursor: pointer; justify-self: start;
   }
-  .contact-submit:hover { background: var(--gold-light, var(--gold)); }
+  .contact-submit:hover { background: #5DDCA3; }
 
   @media (max-width: 700px) {
     .contact-form { grid-template-columns: 1fr; }
@@ -271,11 +288,12 @@
   .cta-card { background: var(--navy-light); border: 1px solid rgba(201,168,68,0.35); border-radius: 12px; padding: 32px 28px; }
   .cta-card h3 { font-family: "Playfair Display", serif; color: var(--cream, #F3EFE6); font-size: 1.25rem; margin: 0 0 10px; }
   .cta-card p { font-size: 0.92rem; color: var(--muted); line-height: 1.6; margin-bottom: 20px; }
-  .cta-card a.btn-gold {
-    display: block; text-align: center; background: var(--gold); color: var(--navy);
+  a.btn-gold {
+    display: inline-block; text-align: center; background: var(--gold); color: var(--navy);
     font-weight: 700; padding: 13px 20px; border-radius: 4px; text-decoration: none; font-size: 0.92rem; margin-bottom: 10px;
   }
-  .cta-card a.btn-gold:hover { background: var(--gold-light, var(--gold)); }
+  .cta-card a.btn-gold { display: block; }
+  a.btn-gold:hover { background: var(--gold-light, var(--gold)); }
   .cta-card a.btn-outline {
     display: block; text-align: center; background: transparent; color: var(--gold);
     font-weight: 600; padding: 12px 20px; border-radius: 4px; text-decoration: none; font-size: 0.92rem;
@@ -436,15 +454,17 @@
   <section class="hero" style="margin-bottom:44px;">
     <div>
       <span class="kicker">Uttam Nagar · West Delhi</span>
-      <h1>Buying a Flat in Uttam Nagar? Read This Before You Pay a Single Rupee.</h1>
+      <h1>The Price You're Quoted Isn't Always the Real Price.</h1>
       <p>Real prices. Real colonies. Blue Line connectivity. We'll help you buy right.</p>
-      <div class="meta-row">
-        <span>6 minute read</span>
-        <span class="dot">·</span>
-        <span>Last Updated: July 2026</span>
-        <span class="dot">·</span>
-        <span>Written by Artharohan Ventures</span>
+      <div class="price-reveal">
+        <div class="label">How broker markup works &middot; illustrative example</div>
+        <div class="nums">
+          <span class="old-price">₹45,00,000</span>
+          <span class="new-price">₹41,00,000</span>
+        </div>
+        <div class="note">A ₹4L markup is common when you go through an unknown middleman. We work direct on WhatsApp, no hidden markup, so the number you see is the number that's real.</div>
       </div>
+      <a href="https://wa.me/917838355855?text=Hi%20Artharohan%2C%20I%27m%20looking%20at%20property%20in%20Uttam%20Nagar." target="_blank" rel="noopener noreferrer" class="btn-gold" style="display:inline-block; margin-top:22px; padding:14px 28px; font-weight:700;">Message Us on WhatsApp — Get Today's Listings →</a>
     </div>
     <div class="hero-img">
       <img src="/uttam-nagar-west-metro-station.webp" alt="Uttam Nagar West metro station on the Delhi Metro Blue Line, between Nawada and Uttam Nagar East" width="1024" height="576" fetchpriority="high">
@@ -476,23 +496,23 @@
     <p class="section-sub">Real listings. So you know if a quoted price is fair.</p>
     <div style="display:flex; flex-direction:column; gap:14px; margin-bottom:22px;">
       <div>
-        <div style="display:flex; justify-content:space-between; font-size:0.9rem; margin-bottom:5px;"><span><span class="icon-tag">🏠</span><strong style="color:var(--cream);">1 BHK</strong></span><span style="color:var(--gold); font-weight:600;">₹12L - ₹38L</span></div>
+        <div style="display:flex; justify-content:space-between; font-size:0.9rem; margin-bottom:5px;"><span><span class="icon-tag">🏠</span><strong style="color:var(--cream);">1 BHK</strong></span><span class="mono" style="color:var(--gold); font-weight:600;">₹12L - ₹38L</span></div>
         <div style="background:rgba(201,168,68,0.12); border-radius:4px; height:10px; overflow:hidden;"><div style="width:22%; background:var(--gold); height:100%;"></div></div>
       </div>
       <div>
-        <div style="display:flex; justify-content:space-between; font-size:0.9rem; margin-bottom:5px;"><span><span class="icon-tag">🏠</span><strong style="color:var(--cream);">2 BHK</strong></span><span style="color:var(--gold); font-weight:600;">₹20L - ₹82L</span></div>
+        <div style="display:flex; justify-content:space-between; font-size:0.9rem; margin-bottom:5px;"><span><span class="icon-tag">🏠</span><strong style="color:var(--cream);">2 BHK</strong></span><span class="mono" style="color:var(--gold); font-weight:600;">₹20L - ₹82L</span></div>
         <div style="background:rgba(201,168,68,0.12); border-radius:4px; height:10px; overflow:hidden;"><div style="width:48%; background:var(--gold); height:100%;"></div></div>
       </div>
       <div>
-        <div style="display:flex; justify-content:space-between; font-size:0.9rem; margin-bottom:5px;"><span><span class="icon-tag">🏠</span><strong style="color:var(--cream);">3 BHK</strong></span><span style="color:var(--gold); font-weight:600;">₹35L - ₹1.31Cr</span></div>
+        <div style="display:flex; justify-content:space-between; font-size:0.9rem; margin-bottom:5px;"><span><span class="icon-tag">🏠</span><strong style="color:var(--cream);">3 BHK</strong></span><span class="mono" style="color:var(--gold); font-weight:600;">₹35L - ₹1.31Cr</span></div>
         <div style="background:rgba(201,168,68,0.12); border-radius:4px; height:10px; overflow:hidden;"><div style="width:75%; background:var(--gold); height:100%;"></div></div>
       </div>
       <div>
-        <div style="display:flex; justify-content:space-between; font-size:0.9rem; margin-bottom:5px;"><span><span class="icon-tag">🏠</span><strong style="color:var(--cream);">4 BHK</strong></span><span style="color:var(--gold); font-weight:600;">₹44L - ₹3.18Cr</span></div>
+        <div style="display:flex; justify-content:space-between; font-size:0.9rem; margin-bottom:5px;"><span><span class="icon-tag">🏠</span><strong style="color:var(--cream);">4 BHK</strong></span><span class="mono" style="color:var(--gold); font-weight:600;">₹44L - ₹3.18Cr</span></div>
         <div style="background:rgba(201,168,68,0.12); border-radius:4px; height:10px; overflow:hidden;"><div style="width:90%; background:var(--gold); height:100%;"></div></div>
       </div>
       <div>
-        <div style="display:flex; justify-content:space-between; font-size:0.9rem; margin-bottom:5px;"><span><span class="icon-tag">🏠</span><strong style="color:var(--cream);">4+ BHK</strong></span><span style="color:var(--gold); font-weight:600;">₹65L - ₹5.92Cr</span></div>
+        <div style="display:flex; justify-content:space-between; font-size:0.9rem; margin-bottom:5px;"><span><span class="icon-tag">🏠</span><strong style="color:var(--cream);">4+ BHK</strong></span><span class="mono" style="color:var(--gold); font-weight:600;">₹65L - ₹5.92Cr</span></div>
         <div style="background:rgba(201,168,68,0.12); border-radius:4px; height:10px; overflow:hidden;"><div style="width:100%; background:var(--gold); height:100%;"></div></div>
       </div>
     </div>
@@ -504,62 +524,61 @@
     </div>
   </section>
 
-  <section class="block">
-    <h2 class="section-title">Resale or new build?</h2>
-    <p style="font-size:0.95rem; line-height:1.6; color:var(--muted);">Almost entirely resale and builder floors here, not branded projects. Not sure which one you're looking at? <a href="#requirement-form" style="color:var(--gold);">Send us the listing</a>, we'll tell you straight. Full comparison on our <a href="/real-estate" style="color:var(--gold);">Real Estate hub</a>. Also considering <a href="/real-estate-tilak-nagar" style="color:var(--gold);">Tilak Nagar</a>? We'll give you an honest side-by-side.</p>
-  </section>
+  <div class="mid-cta">
+    <div>
+      <strong>Seen a price that looks too good, or too high?</strong> Send it to us on WhatsApp — we'll tell you straight if it's fair.
+    </div>
+    <a href="https://wa.me/917838355855?text=Hi%20Artharohan%2C%20can%20you%20check%20if%20this%20Uttam%20Nagar%20price%20is%20fair%3F" target="_blank" rel="noopener noreferrer" class="btn-gold" style="white-space:nowrap;">Check This Price →</a>
+  </div>
 
   <section class="block">
-    <h2 class="section-title">Which colony fits your budget?</h2>
-    <table class="compare-table">
-      <thead><tr><th>Colony</th><th>Budget</th><th>Metro</th><th>Builder Floors</th><th>Best For</th></tr></thead>
-      <tbody>
-        <tr><td><span class="icon-tag">🚇</span>Uttam Nagar West</td><td>₹₹₹</td><td>Walking</td><td>High</td><td>Convenience buyers</td></tr>
-        <tr><td><span class="icon-tag">🏘️</span>Mohan Garden</td><td>₹₹</td><td>Auto ride</td><td>High</td><td>Families</td></tr>
-        <tr><td><span class="icon-tag">🏘️</span>Bindapur</td><td>₹₹</td><td>Short walk</td><td>High</td><td>First-time buyers</td></tr>
-        <tr><td><span class="icon-tag">🏘️</span>Vikas Nagar</td><td>₹</td><td>Short walk</td><td>Medium</td><td>Budget buyers</td></tr>
-        <tr><td><span class="icon-tag">🚇</span>Nawada</td><td>₹₹</td><td>Walking</td><td>Medium</td><td>Upgrade-seekers</td></tr>
-        <tr><td><span class="icon-tag">🏘️</span>Kiran Garden / Mansa Ram Park</td><td>₹</td><td>Auto ride</td><td>High</td><td>Investors</td></tr>
-        <tr><td><span class="icon-tag">🏘️</span>JJ Colony / New Uttam Nagar</td><td>₹₹</td><td>Auto ride</td><td>Medium</td><td>Market-proximity buyers</td></tr>
-      </tbody>
-    </table>
-    <p style="font-size:0.9rem; color:var(--muted); margin-top:14px;">Tell us your colony and <a href="https://wa.me/917838355855?text=Hi%20Artharohan%2C%20I%27m%20considering%20a%20specific%20colony%20in%20Uttam%20Nagar." target="_blank" rel="noopener noreferrer" style="color:var(--gold);">get the honest read</a> on that exact block.</p>
+    <h2 class="section-title" style="font-size:1.1rem;">Builder floors, block by block</h2>
+    <p class="section-sub" style="margin-bottom:16px;">Almost entirely resale and builder floors here, not branded projects — <a href="/real-estate" style="color:var(--gold);">full comparison on our Real Estate hub</a>, or considering <a href="/real-estate-tilak-nagar" style="color:var(--gold);">Tilak Nagar</a> too? We'll give you an honest side-by-side.</p>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px;">
+      <div style="background:var(--navy-light); border-left:3px solid var(--gold); border-radius:0 6px 6px 0; padding:12px 14px;">
+        <div style="font-weight:600; font-size:0.85rem; color:var(--cream);">Uttam Nagar West</div>
+        <div style="font-size:0.78rem; color:var(--muted); margin-top:3px;">High builder floor availability &middot; Walking to metro</div>
+      </div>
+      <div style="background:var(--navy-light); border-left:3px solid var(--gold); border-radius:0 6px 6px 0; padding:12px 14px;">
+        <div style="font-weight:600; font-size:0.85rem; color:var(--cream);">Mohan Garden</div>
+        <div style="font-size:0.78rem; color:var(--muted); margin-top:3px;">High builder floor availability &middot; Family-friendly</div>
+      </div>
+      <div style="background:var(--navy-light); border-left:3px solid var(--gold); border-radius:0 6px 6px 0; padding:12px 14px;">
+        <div style="font-weight:600; font-size:0.85rem; color:var(--cream);">Bindapur</div>
+        <div style="font-size:0.78rem; color:var(--muted); margin-top:3px;">High builder floor availability &middot; First-time buyers</div>
+      </div>
+      <div style="background:var(--navy-light); border-left:3px solid var(--gold); border-radius:0 6px 6px 0; padding:12px 14px;">
+        <div style="font-weight:600; font-size:0.85rem; color:var(--cream);">Vikas Nagar</div>
+        <div style="font-size:0.78rem; color:var(--muted); margin-top:3px;">Medium builder floor availability &middot; Budget-friendly</div>
+      </div>
+    </div>
   </section>
+
+  <div class="mid-cta">
+    <div>
+      <strong>New listings added daily.</strong> Tell us your colony and budget — we'll tell you what's realistic today, not after you've wasted a weekend.
+    </div>
+    <a href="https://wa.me/917838355855?text=Hi%20Artharohan%2C%20I%27m%20considering%20a%20specific%20colony%20in%20Uttam%20Nagar." target="_blank" rel="noopener noreferrer" class="btn-gold" style="white-space:nowrap;">WhatsApp Us Now →</a>
+  </div>
 
   <section class="block" id="connectivity">
     <h2 class="section-title">Getting around</h2>
-    <div style="display:flex; flex-wrap:wrap; gap:12px; margin-bottom:16px;">
+    <div style="display:flex; flex-wrap:wrap; gap:12px; margin-bottom:14px;">
       <div class="trust-badges"><span>🚇 3 Blue Line stations</span></div>
       <div class="trust-badges"><span>🛍️ Arya Samaj Road market</span></div>
       <div class="trust-badges"><span>🏪 Hastsal Road wholesale hub</span></div>
-      <div class="trust-badges"><span>🗺️ Borders Dwarka</span></div>
+      <div class="trust-badges"><span>🏥 4 major hospitals nearby</span></div>
+      <div class="trust-badges"><span>🏫 Vidya Memorial, Gagan Bharti & more</span></div>
     </div>
-    <p style="font-size:0.9rem; color:var(--muted);">Uttam Nagar East, West, and Nawada stations cover the area. Najafgarh Road is the main arterial route. <a href="#requirement-form" style="color:var(--gold);">Tell us what matters to you</a>, we'll factor it in. Need <a href="/home-loan" style="color:var(--gold);">financing</a> too? We'll check eligibility first.</p>
+    <p style="font-size:0.85rem; color:var(--muted); font-style:italic;">Locality data sourced from 99acres, Dwello. Verify current status directly before relying on any single facility.</p>
   </section>
 
-  <section class="block">
-    <h2 class="section-title">What's actually nearby</h2>
-    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px;">
-      <div>
-        <div style="font-size:0.72rem; color:var(--gold); text-transform:uppercase; letter-spacing:1px; font-weight:700; margin-bottom:8px;">🛍️ Markets</div>
-        <p style="font-size:0.88rem; color:var(--muted); margin:0; line-height:1.6;">Arya Samaj Road, Hastsal Road wholesale market, Shani Bazar (Saturdays)</p>
-      </div>
-      <div>
-        <div style="font-size:0.72rem; color:var(--gold); text-transform:uppercase; letter-spacing:1px; font-weight:700; margin-bottom:8px;">🏥 Hospitals</div>
-        <p style="font-size:0.88rem; color:var(--muted); margin:0; line-height:1.6;">Gandhi Hospital, SR Malik Hospital, Mata Roop Rani Maggo Hospital, B.M. Gupta Hospital</p>
-      </div>
-      <div>
-        <div style="font-size:0.72rem; color:var(--gold); text-transform:uppercase; letter-spacing:1px; font-weight:700; margin-bottom:8px;">🏫 Schools</div>
-        <p style="font-size:0.88rem; color:var(--muted); margin:0; line-height:1.6;">Vidya Memorial, Gagan Bharti, Holy Convent School</p>
-      </div>
+  <div class="mid-cta" style="background:var(--emerald-dark); border-color:rgba(62,207,142,0.35);">
+    <div>
+      <strong style="color:var(--emerald);">Families upgrading from rent. Investors buying near the metro.</strong> That's who buys here — talk to us before you offer, not after.
     </div>
-    <p style="font-size:0.78rem; color:var(--muted); margin-top:14px; font-style:italic;">Names sourced from 99acres, Dwello locality data. Verify current status directly before relying on any single facility.</p>
-  </section>
-
-  <section class="block">
-    <h2 class="section-title">Ready to move?</h2>
-    <p style="font-size:0.95rem; line-height:1.6; color:var(--muted);">Families upgrading from rent and investors buying builder floors near the metro, that's who buys here. <a href="https://wa.me/917838355855?text=Hi%20Artharohan%2C%20I%27d%20like%20advice%20on%20buying%20in%20Uttam%20Nagar." target="_blank" rel="noopener noreferrer" style="color:var(--gold);">Talk to us before you offer</a>, not after. Already own property nearby? See what a <a href="/loan-against-property" style="color:var(--gold);">loan against property</a> unlocks.</p>
-  </section>
+    <a href="https://wa.me/917838355855?text=Hi%20Artharohan%2C%20I%27d%20like%20advice%20on%20buying%20in%20Uttam%20Nagar." target="_blank" rel="noopener noreferrer" style="display:inline-block; background:var(--emerald); color:var(--emerald-dark); font-weight:700; padding:13px 22px; border-radius:4px; text-decoration:none; font-size:0.92rem; white-space:nowrap;">Talk to Us on WhatsApp →</a>
+  </div>
 
 </div>
 
