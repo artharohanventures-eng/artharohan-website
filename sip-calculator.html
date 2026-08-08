@@ -84,6 +84,10 @@
   .calc-inputs { display: grid; gap: 24px; margin-bottom: 28px; }
   .calc-field-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
   .calc-field-top label { font-size: 0.85rem; font-weight: 600; color: var(--cream); }
+  .calc-field-val-wrap { font-family: monospace; font-size: 1rem; font-weight: 700; color: var(--gold-light); display: flex; align-items: center; gap: 4px; }
+  .field-num { width: 90px; background: var(--navy); border: 1px solid rgba(201,168,68,0.3); border-radius: 4px; color: var(--gold-light); font-family: monospace; font-size: 0.95rem; font-weight: 700; padding: 4px 6px; text-align: right; }
+  .field-num:focus { outline: none; border-color: var(--gold); }
+  @media (max-width: 380px) { .field-num { width: 74px; } }
   .calc-field-val { font-family: monospace; font-size: 1rem; font-weight: 700; color: var(--gold-light); }
   input[type="range"] { width: 100%; height: 4px; border-radius: 2px; background: rgba(201,168,68,0.2); appearance: none; -webkit-appearance: none; outline: none; }
   input[type="range"]::-webkit-slider-thumb { appearance: none; -webkit-appearance: none; width: 20px; height: 20px; border-radius: 50%; background: var(--gold); cursor: pointer; border: 3px solid var(--navy-light); box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
@@ -174,15 +178,15 @@
   <div class="calc-box">
     <div class="calc-inputs">
       <div>
-        <div class="calc-field-top"><label for="sip-amount">Monthly Investment</label><span class="calc-field-val" id="amt-display">₹5,000</span></div>
+        <div class="calc-field-top"><label for="sip-amount">Monthly Investment</label><span class="calc-field-val-wrap">₹<input type="number" id="sip-amount-num" class="field-num" value="5000" min="500" max="200000" step="500"></span></div>
         <input type="range" id="sip-amount" min="500" max="200000" step="500" value="5000">
       </div>
       <div>
-        <div class="calc-field-top"><label for="sip-rate">Expected Annual Return</label><span class="calc-field-val" id="rate-display">12.0%</span></div>
+        <div class="calc-field-top"><label for="sip-rate">Expected Annual Return</label><span class="calc-field-val-wrap"><input type="number" id="sip-rate-num" class="field-num" value="12" min="4" max="20" step="0.5">%</span></div>
         <input type="range" id="sip-rate" min="4" max="20" step="0.5" value="12">
       </div>
       <div>
-        <div class="calc-field-top"><label for="sip-years">Time Period</label><span class="calc-field-val" id="years-display">10 years</span></div>
+        <div class="calc-field-top"><label for="sip-years">Time Period</label><span class="calc-field-val-wrap"><input type="number" id="sip-years-num" class="field-num" value="10" min="1" max="35" step="1">yrs</span></div>
         <input type="range" id="sip-years" min="1" max="35" step="1" value="10">
       </div>
     </div>
@@ -205,18 +209,44 @@
 
   <script>
     function fmtINR(n) { return '₹' + Math.round(n).toLocaleString('en-IN'); }
+
+    function linkSliderAndNumber(sliderId, numId, onChange) {
+      var slider = document.getElementById(sliderId);
+      var num = document.getElementById(numId);
+
+      slider.addEventListener('input', function () {
+        num.value = slider.value;
+        onChange();
+      });
+
+      num.addEventListener('input', function () {
+        var val = parseFloat(num.value);
+        if (!isNaN(val)) {
+          var min = parseFloat(slider.min), max = parseFloat(slider.max);
+          slider.value = Math.max(min, Math.min(max, val));
+          onChange();
+        }
+      });
+
+      num.addEventListener('blur', function () {
+        var min = parseFloat(slider.min), max = parseFloat(slider.max);
+        var val = parseFloat(num.value);
+        if (isNaN(val)) val = min;
+        val = Math.max(min, Math.min(max, val));
+        num.value = val;
+        slider.value = val;
+        onChange();
+      });
+    }
+
     function calcSIP() {
-      var P = parseFloat(document.getElementById('sip-amount').value);
-      var annualRate = parseFloat(document.getElementById('sip-rate').value);
-      var years = parseFloat(document.getElementById('sip-years').value);
+      var P = parseFloat(document.getElementById('sip-amount-num').value) || 0;
+      var annualRate = parseFloat(document.getElementById('sip-rate-num').value) || 0;
+      var years = parseFloat(document.getElementById('sip-years-num').value) || 0;
       var n = years * 12;
       var i = annualRate / 12 / 100;
 
-      document.getElementById('amt-display').textContent = fmtINR(P);
-      document.getElementById('rate-display').textContent = annualRate.toFixed(1) + '%';
-      document.getElementById('years-display').textContent = years + (years == 1 ? ' year' : ' years');
-
-      var fv = P * ((Math.pow(1 + i, n) - 1) / i) * (1 + i);
+      var fv = i > 0 ? P * ((Math.pow(1 + i, n) - 1) / i) * (1 + i) : P * n;
       var invested = P * n;
       var gain = fv - invested;
 
@@ -232,12 +262,12 @@
         + 'I would like to talk about my investment goal.';
       document.getElementById('sip-wa-btn').href = 'https://wa.me/917838355855?text=' + encodeURIComponent(waText);
     }
-    ['sip-amount', 'sip-rate', 'sip-years'].forEach(function(id) {
-      document.getElementById(id).addEventListener('input', calcSIP);
-    });
+
+    linkSliderAndNumber('sip-amount', 'sip-amount-num', calcSIP);
+    linkSliderAndNumber('sip-rate', 'sip-rate-num', calcSIP);
+    linkSliderAndNumber('sip-years', 'sip-years-num', calcSIP);
     calcSIP();
   </script>
-
   <div class="cross-sell">
     <h2 style="margin-bottom:6px;">Investing for a goal, not just a habit?</h2>
     <p style="color:var(--muted);font-size:0.95rem;margin-bottom:20px;">SIPs build wealth over years. If that wealth is meant for a house, or your family's protection along the way, these are worth a look too.</p>
