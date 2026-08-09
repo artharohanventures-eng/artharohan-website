@@ -243,7 +243,10 @@
       var P = parseFloat(document.getElementById('loan-amount-num').value) || 0;
       var annualRate = parseFloat(document.getElementById('loan-rate-num').value) || 0;
       var years = parseFloat(document.getElementById('loan-tenure-num').value) || 0;
-      var n = years * 12;
+      P = Math.max(P, 0);
+      annualRate = Math.max(annualRate, 0);
+      years = Math.max(years, 0.5);
+      var n = Math.max(years * 12, 1);
       var r = annualRate / 12 / 100;
 
       var emi = r > 0 ? P * r * Math.pow(1 + r, n) / (Math.pow(1 + r, n) - 1) : P / n;
