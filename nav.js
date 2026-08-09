@@ -1,5 +1,5 @@
 /* ============================================================
-   ARTHAROHAN — SHARED SITE NAVIGATION
+   ARTHAROHAN, SHARED SITE NAVIGATION
    ============================================================
    This is the ONLY place the navigation menu should be edited.
    Every page loads this file and gets the same nav automatically.
@@ -11,7 +11,7 @@
    a WhatsApp (wa.me) link or a tel: link now fires a GA4 event
    automatically, on every page that loads this file. This is the
    fix for "we have no idea which page/button actually produces a
-   WhatsApp click" — one edit here, tracked everywhere, forever.
+   WhatsApp click", one edit here, tracked everywhere, forever.
 
    HOW TO USE ON A NEW PAGE:
    1. Put this where the nav should appear:
@@ -34,7 +34,7 @@
    1. Add one <li> inside the correct dropdown below
       (desktop AND mobile section)
    2. Add its name to the "groupOf" lookup below
-   3. Done — every page picks up the change automatically.
+   3. Done, every page picks up the change automatically.
    ============================================================ */
 
 (function () {
@@ -83,10 +83,10 @@
   var activeGroup = groupOf[current] || "";
 
   function cls(name) {
-    return current === name ? ' class="active"' : "";
+    return current === name ? ' class="active"': "";
   }
   function dropCls(group) {
-    return activeGroup === group ? ' class="active"' : "";
+    return activeGroup === group ? ' class="active"': "";
   }
 
   var home = '<a href="https://artharohan.in/"' + cls("home") + '>Home</a>';
@@ -232,7 +232,7 @@
   /* ============================================================
      SITE-WIDE CONVERSION TRACKING
      Fires on every WhatsApp (wa.me) click and every tel: click,
-     anywhere on the site, automatically — no per-page setup.
+     anywhere on the site, automatically, no per-page setup.
      Shows up in GA4 as events "whatsapp_click" and "phone_click".
      ============================================================ */
   document.addEventListener("click", function (e) {

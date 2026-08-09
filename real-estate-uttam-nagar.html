@@ -106,7 +106,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
 
 <style>
-  :root {
+:root {
     --navy: #0B1E3D; --navy-light: #142B52; --navy-mid: #16305C;
     --gold: #E8B93D; --gold-light: #F4CE6E;
     --emerald: #3ECF8E; --emerald-dark: #0A2E1F;
@@ -466,7 +466,7 @@
         </div>
         <div class="note">A ₹4L markup is common when you go through an unknown middleman. We work direct on WhatsApp, no hidden markup, so the number you see is the number that's real.</div>
       </div>
-      <a href="https://wa.me/917838355855?text=Hi%20Artharohan%2C%20I%27m%20looking%20at%20property%20in%20Uttam%20Nagar." target="_blank" rel="noopener noreferrer" class="btn-gold" style="display:inline-block; margin-top:22px; padding:14px 28px; font-weight:700;">Message Us on WhatsApp — Get Today's Listings →</a>
+      <a href="https://wa.me/917838355855?text=Hi%20Artharohan%2C%20I%27m%20looking%20at%20property%20in%20Uttam%20Nagar." target="_blank" rel="noopener noreferrer" class="btn-gold" style="display:inline-block; margin-top:22px; padding:14px 28px; font-weight:700;">Message Us on WhatsApp, Get Today's Listings →</a>
     </div>
     <div class="hero-img">
       <img src="/uttam-nagar-west-metro-station.webp" alt="Uttam Nagar West metro station on the Delhi Metro Blue Line, between Nawada and Uttam Nagar East" width="1024" height="576" fetchpriority="high">
@@ -528,14 +528,14 @@
 
   <div class="mid-cta">
     <div>
-      <strong>Seen a price that looks too good, or too high?</strong> Send it to us on WhatsApp — we'll tell you straight if it's fair.
+      <strong>Seen a price that looks too good, or too high?</strong> Send it to us on WhatsApp, we'll tell you straight if it's fair.
     </div>
     <a href="https://wa.me/917838355855?text=Hi%20Artharohan%2C%20can%20you%20check%20if%20this%20Uttam%20Nagar%20price%20is%20fair%3F" target="_blank" rel="noopener noreferrer" class="btn-gold" style="white-space:nowrap;">Check This Price →</a>
   </div>
 
   <section class="block">
     <h2 class="section-title" style="font-size:1.1rem;">Builder floors, block by block</h2>
-    <p class="section-sub" style="margin-bottom:16px;">Almost entirely resale and builder floors here, not branded projects — <a href="/real-estate" style="color:var(--gold);">full comparison on our Real Estate hub</a>, or considering <a href="/real-estate-tilak-nagar" style="color:var(--gold);">Tilak Nagar</a> too? We'll give you an honest side-by-side.</p>
+    <p class="section-sub" style="margin-bottom:16px;">Almost entirely resale and builder floors here, not branded projects, <a href="/real-estate" style="color:var(--gold);">full comparison on our Real Estate hub</a>, or considering <a href="/real-estate-tilak-nagar" style="color:var(--gold);">Tilak Nagar</a> too? We'll give you an honest side-by-side.</p>
     <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px;">
       <div style="background:var(--navy-light); border-left:3px solid var(--gold); border-radius:0 6px 6px 0; padding:12px 14px;">
         <div style="font-weight:600; font-size:0.85rem; color:var(--cream);">Uttam Nagar West</div>
@@ -558,7 +558,7 @@
 
   <div class="mid-cta">
     <div>
-      <strong>New listings added daily.</strong> Tell us your colony and budget — we'll tell you what's realistic today, not after you've wasted a weekend.
+      <strong>New listings added daily.</strong> Tell us your colony and budget, we'll tell you what's realistic today, not after you've wasted a weekend.
     </div>
     <a href="https://wa.me/917838355855?text=Hi%20Artharohan%2C%20I%27m%20considering%20a%20specific%20colony%20in%20Uttam%20Nagar." target="_blank" rel="noopener noreferrer" class="btn-gold" style="white-space:nowrap;">WhatsApp Us Now →</a>
   </div>
@@ -577,7 +577,7 @@
 
   <div class="mid-cta" style="background:var(--emerald-dark); border-color:rgba(62,207,142,0.35);">
     <div>
-      <strong style="color:var(--emerald);">Families upgrading from rent. Investors buying near the metro.</strong> That's who buys here — talk to us before you offer, not after.
+      <strong style="color:var(--emerald);">Families upgrading from rent. Investors buying near the metro.</strong> That's who buys here, talk to us before you offer, not after.
     </div>
     <a href="https://wa.me/917838355855?text=Hi%20Artharohan%2C%20I%27d%20like%20advice%20on%20buying%20in%20Uttam%20Nagar." target="_blank" rel="noopener noreferrer" style="display:inline-block; background:var(--emerald); color:var(--emerald-dark); font-weight:700; padding:13px 22px; border-radius:4px; text-decoration:none; font-size:0.92rem; white-space:nowrap;">Talk to Us on WhatsApp →</a>
   </div>
@@ -690,9 +690,9 @@ function submitUNForm(e){
   var lines = [
     'Hi Artharohan, I have a property requirement in Uttam Nagar:',
     'Looking to: ' + intent,
-    bhk ? ('BHK: ' + bhk) : null,
-    colony ? ('Preferred colony: ' + colony) : null,
-    budget ? ('Budget: ' + budget) : null
+    bhk ? ('BHK: ' + bhk): null,
+    colony ? ('Preferred colony: ' + colony): null,
+    budget ? ('Budget: ' + budget): null
   ].filter(Boolean);
   var message = encodeURIComponent(lines.join('\n'));
   window.open('https://wa.me/917838355855?text=' + message, '_blank');
