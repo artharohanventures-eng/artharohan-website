@@ -56,6 +56,7 @@
   var current = window.SITE_NAV_CURRENT || "";
 
   var groupOf = {
+    "loans-hub": "loans",
     "business-loans": "loans",
     "car-loan": "loans",
     "personal-loan": "loans",
@@ -105,7 +106,7 @@
         '<li>' + about + '</li>' +
         '<li>' + services + '</li>' +
         '<li class="nav-dropdown" id="loansDropdown">' +
-          '<a href="/services"' + dropCls("loans") + '>Loans \u25be</a>' +
+          '<a href="/loans"' + dropCls("loans") + '>Loans \u25be</a>' +
           '<ul class="nav-dropdown-menu">' +
             '<li><a href="/business-loans"' + cls("business-loans") + '>Business Loans</a></li>' +
             '<li><a href="/car-loan"' + cls("car-loan") + '>Car Loan</a></li>' +
