@@ -280,6 +280,31 @@ input[type="range"]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;b
 }
 .disclaimer-bar{background:var(--navy-mid,#12203a);padding:20px 5%;text-align:center}
 .disclaimer-bar p{color:#7d8aa3;font-size:0.72rem;line-height:1.65;max-width:960px;margin:0 auto}
+
+/* quick-check card (reused from the ads page, namespaced qc-) */
+.qc-card{background:#fff;border-radius:14px;padding:24px 22px 20px}
+.qc-title{font-weight:700;color:var(--navy);font-size:1.05rem;margin-bottom:4px}
+.qc-sub{font-size:0.82rem;color:#6b7587;margin-bottom:14px}
+.qc-progress{display:flex;justify-content:space-between;font-size:0.78rem;color:#6b7587;font-weight:600;margin-bottom:8px}
+.qc-bar{height:6px;background:#e3e7ef;border-radius:99px;overflow:hidden;margin-bottom:16px}
+.qc-bar i{display:block;height:100%;width:33%;background:var(--gold);border-radius:99px;transition:width .25s}
+.qc-q{font-size:1.1rem;font-weight:800;color:#1d2433;margin-bottom:12px}
+.qc-chips{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.qc-chip{border:1.5px solid #e3e7ef;background:#fff;color:#1d2433;border-radius:12px;padding:14px 10px;font-size:0.95rem;font-weight:700;cursor:pointer;text-align:center;font-family:inherit}
+.qc-chip:hover,.qc-chip:active{border-color:var(--gold);background:#fffaf0}
+.qc-chip.wide{grid-column:1/-1}
+.qc-step{display:none}
+.qc-step.on{display:block}
+.qc-back{background:none;border:none;color:#6b7587;font-size:0.85rem;margin-top:14px;cursor:pointer;font-family:inherit;text-decoration:underline}
+.qc-estimate{background:#fffaf0;border:1.5px solid var(--gold);border-radius:12px;padding:14px;margin-bottom:12px;color:#1d2433;font-size:0.92rem}
+.qc-estimate .big{display:block;font-size:1.3rem;font-weight:800;color:var(--navy);margin:2px 0 6px}
+.qc-estimate small{display:block;color:#6b7587;font-size:0.76rem;margin-top:8px;line-height:1.45}
+.qc-summary{background:#f4f6fa;border-radius:12px;padding:12px 14px;margin-bottom:14px;font-size:0.92rem;color:#1d2433}
+.qc-wa{display:block;text-align:center;background:#1FAF5A;color:#fff;font-weight:800;font-size:1.02rem;padding:15px;border-radius:10px;text-decoration:none}
+.qc-wa:hover{background:#168a46}
+.qc-note{font-size:0.78rem;color:#6b7587;text-align:center;margin-top:10px}
+.qc-self{text-align:center;font-size:0.85rem;color:#6b7587;margin-top:16px;border-top:1px solid #e3e7ef;padding-top:12px}
+.qc-self a{color:var(--navy);font-weight:700;text-decoration:underline}
 </style>
 </head>
 <body>
@@ -617,32 +642,56 @@ input[type="range"]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;b
         <div class="fp"><div class="fp-dot"></div><p>No upfront fee. No spam. One honest conversation about your loan.</p></div>
       </div>
     </div>
-    <div class="form-box">
-      <p class="form-box-title">Personal Loan Enquiry</p>
-      <form id="plForm" onsubmit="submitPlForm(event)" novalidate>
-        <div class="fg">
-          <label for="n">Your Name</label>
-          <input type="text" id="n" name="n" placeholder="Full name" required autocomplete="name">
+    <div class="form-box qc-card" id="check">
+      <p class="qc-title">Salaried employee? Quick check in 3 taps</p>
+      <p class="qc-sub">See an indicative EMI instantly, then we check your options on WhatsApp. Free.</p>
+      <div class="qc-progress"><span id="qcStepLabel">Step 1 of 3</span><span id="qcTimeLabel">Takes 20 seconds</span></div>
+      <div class="qc-bar"><i id="qcBarFill"></i></div>
+
+      <div class="qc-step on" data-step="1">
+        <div class="qc-q">How much do you need?</div>
+        <div class="qc-chips">
+          <button type="button" class="qc-chip" data-key="amount" data-val="Up to 1 lakh">Up to &#8377;1 lakh</button>
+          <button type="button" class="qc-chip" data-key="amount" data-val="2 to 3 lakh">&#8377;2 to 3 lakh</button>
+          <button type="button" class="qc-chip" data-key="amount" data-val="4 to 5 lakh">&#8377;4 to 5 lakh</button>
+          <button type="button" class="qc-chip" data-key="amount" data-val="6 to 10 lakh">&#8377;6 to 10 lakh</button>
+          <button type="button" class="qc-chip wide" data-key="amount" data-val="Above 10 lakh">Above &#8377;10 lakh</button>
         </div>
-        <div class="fg">
-          <label for="p">Phone Number</label>
-          <input type="tel" id="p" name="p" placeholder="+91 XXXXX XXXXX" required autocomplete="tel">
+      </div>
+
+      <div class="qc-step" data-step="2">
+        <div class="qc-q">Your monthly take-home salary?</div>
+        <div class="qc-chips">
+          <button type="button" class="qc-chip" data-key="salary" data-val="Below 25,000">Below &#8377;25,000</button>
+          <button type="button" class="qc-chip" data-key="salary" data-val="25,000 to 40,000">&#8377;25,000 to 40,000</button>
+          <button type="button" class="qc-chip" data-key="salary" data-val="40,000 to 60,000">&#8377;40,000 to 60,000</button>
+          <button type="button" class="qc-chip" data-key="salary" data-val="60,000 to 1 lakh">&#8377;60,000 to 1 lakh</button>
+          <button type="button" class="qc-chip wide" data-key="salary" data-val="Above 1 lakh">Above &#8377;1 lakh</button>
         </div>
-        <div class="fg">
-          <label for="pu">Purpose</label>
-          <select id="pu" name="pu" required>
-            <option value="">Select purpose</option>
-            <option value="Medical">Medical Emergency</option>
-            <option value="Wedding">Wedding</option>
-            <option value="Debt Consolidation">Debt Consolidation</option>
-            <option value="Travel">Travel</option>
-            <option value="Home Renovation">Home Renovation</option>
-            <option value="Other">Other</option>
-          </select>
+        <button type="button" class="qc-back" data-back="1">Back</button>
+      </div>
+
+      <div class="qc-step" data-step="3">
+        <div class="qc-q">Where do you work?</div>
+        <div class="qc-chips">
+          <button type="button" class="qc-chip" data-key="employer" data-val="Private company">Private company</button>
+          <button type="button" class="qc-chip" data-key="employer" data-val="MNC">MNC</button>
+          <button type="button" class="qc-chip" data-key="employer" data-val="Government or PSU">Government / PSU</button>
+          <button type="button" class="qc-chip" data-key="employer" data-val="Other">Other</button>
         </div>
-        <button type="submit" class="form-submit">Get Free Guidance on WhatsApp →</button>
-        <p class="form-note">Tapping above opens WhatsApp with your details pre-filled. Goes directly to Artharohan. No third-party access. No upfront fee.</p>
-      </form>
+        <button type="button" class="qc-back" data-back="2">Back</button>
+      </div>
+
+      <div class="qc-step" data-step="4">
+        <div class="qc-q">Your quick estimate</div>
+        <div class="qc-estimate" id="qcEstimate"></div>
+        <div class="qc-summary" id="qcSummary"></div>
+        <a class="qc-wa" id="qcSend" href="https://wa.me/917838355855" target="_blank" rel="noopener noreferrer">Send on WhatsApp &rarr;</a>
+        <p class="qc-note">Opens WhatsApp with your answers filled in. No form, no OTP. We do not check your CIBIL here.</p>
+        <button type="button" class="qc-back" data-back="1">Change my answers</button>
+      </div>
+
+      <p class="qc-self">Self-employed? <a href="https://wa.me/917838355855?text=Hello%20Artharohan!%20I%20am%20self-employed%20and%20need%20help%20with%20a%20Personal%20Loan." target="_blank" rel="noopener noreferrer">Message us directly</a></p>
     </div>
   </div>
 </div>
@@ -691,14 +740,6 @@ function toggleFaq(btn){
   btn.parentElement.classList.toggle('open');
 }
 
-function submitPlForm(e){
-  e.preventDefault();
-  var name = document.getElementById('n').value;
-  var phone = document.getElementById('p').value;
-  var purpose = document.getElementById('pu').value;
-  var msg = "Hello Artharohan! My name is " + name + " (" + phone + "). I need help with a personal loan. Purpose: " + purpose + ".";
-  window.open("https://wa.me/917838355855?text=" + encodeURIComponent(msg), "_blank");
-}
 
 function calcPlEMI(){
   var P = parseFloat(document.getElementById('loanAmt').value) || 0;
@@ -783,6 +824,68 @@ function toggleAmort(){
   el.style.display = isOpen ? 'none': 'block';
   btn.textContent = isOpen ? 'Show Year-by-Year Breakdown ▼': 'Hide Year-by-Year Breakdown ▲';
 }
+
+
+(function(){
+  var NUMBER = "917838355855";
+  var data = {amount:"", salary:"", employer:""};
+  var started = false;
+  var AMT = {"Up to 1 lakh":100000,"2 to 3 lakh":250000,"4 to 5 lakh":450000,"6 to 10 lakh":800000,"Above 10 lakh":1200000};
+  var SAL = {"Below 25,000":20000,"25,000 to 40,000":32500,"40,000 to 60,000":50000,"60,000 to 1 lakh":80000,"Above 1 lakh":120000};
+  function emi(P, annual, n){ var r = annual/12/100; var f = Math.pow(1+r,n); return P*r*f/(f-1); }
+  function salLabel(){ return /^(Below|Above) /.test(data.salary) ? data.salary.replace(/^(Below|Above) /,"$1 Rs ") : "Rs " + data.salary; }
+  function inr(x){ return Math.round(x).toLocaleString("en-IN"); }
+  function estimateHtml(){
+    var P = AMT[data.amount], S = SAL[data.salary];
+    if(!P || !S){ return ""; }
+    var lo = emi(P,12,36), hi = emi(P,18,36), mid = emi(P,15,36);
+    var share = mid / S, verdict;
+    if(share <= 0.35){ verdict = "This looks comfortable against your salary, before counting any existing EMIs."; }
+    else if(share <= 0.5){ verdict = "This is on the higher side. Lenders also count your existing EMIs, so the final amount may be lower."; }
+    else { verdict = "This is high against your salary. A smaller amount or a longer period usually works better. We can look at options with you."; }
+    var lead = data.amount === "Up to 1 lakh" ? "For a loan of up to Rs 1,00,000" : data.amount === "Above 10 lakh" ? "For a loan of about Rs 12,00,000" : "For a loan of about Rs " + inr(P);
+    return lead + " over 36 months, the monthly EMI is roughly" +
+      '<span class="big">Rs ' + inr(lo) + ' to Rs ' + inr(hi) + '</span>' + verdict +
+      '<small>Indicative only, worked out at 12% to 18% a year. Your actual rate, EMI and approval are decided by the lender.</small>';
+  }
+  function track(name, params){ try{ if(typeof gtag === "function"){ gtag("event", name, params || {}); } }catch(e){} }
+  function waUrl(){
+    var msg = "Hi Artharohan, I am a salaried employee.\n" +
+              "Loan needed: " + data.amount + "\n" +
+              "Monthly take-home: " + salLabel() + "\n" +
+              "Employer type: " + data.employer + "\n" +
+              "Please check my personal loan options.";
+    return "https://wa.me/" + NUMBER + "?text=" + encodeURIComponent(msg);
+  }
+  function showStep(n){
+    var steps = document.querySelectorAll("#check .qc-step");
+    for(var i=0;i<steps.length;i++){ steps[i].classList.toggle("on", steps[i].getAttribute("data-step") === String(n)); }
+    var shown = Math.min(n,3);
+    document.getElementById("qcStepLabel").textContent = n === 4 ? "Done" : "Step " + n + " of 3";
+    document.getElementById("qcTimeLabel").textContent = n === 4 ? "One tap left" : "Takes 20 seconds";
+    document.getElementById("qcBarFill").style.width = (n === 4 ? 100 : shown*33) + "%";
+    if(n === 4){
+      document.getElementById("qcEstimate").innerHTML = estimateHtml();
+      document.getElementById("qcSummary").innerHTML = "Sending: <b>" + data.amount + "</b> loan, salary <b>" + salLabel() + "</b>, <b>" + data.employer + "</b>";
+      document.getElementById("qcSend").setAttribute("href", waUrl());
+    }
+  }
+  var chips = document.querySelectorAll("#check .qc-chip");
+  for(var c=0;c<chips.length;c++){
+    chips[c].addEventListener("click", function(){
+      var key = this.getAttribute("data-key");
+      data[key] = this.getAttribute("data-val");
+      if(!started){ started = true; track("quick_check_start", {page_name:"pl_page"}); }
+      var next = key === "amount" ? 2 : key === "salary" ? 3 : 4;
+      track("quick_check_step", {page_name:"pl_page", step:next-1, answer:data[key]});
+      showStep(next);
+    });
+  }
+  var backs = document.querySelectorAll("#check .qc-back");
+  for(var b=0;b<backs.length;b++){
+    backs[b].addEventListener("click", function(){ showStep(parseInt(this.getAttribute("data-back"),10)); });
+  }
+})();
 
 window.addEventListener('DOMContentLoaded', calcPlEMI);
 </script>
